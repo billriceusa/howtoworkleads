@@ -38,12 +38,10 @@ const staticPages = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries = staticPages.map((path) => ({
+  return staticPages.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
-    changeFrequency: path === '' ? 'daily' : 'weekly' as const,
+    changeFrequency: (path === '' ? 'daily' : 'weekly') as 'daily' | 'weekly',
     priority: path === '' ? 1 : path.split('/').length <= 2 ? 0.8 : 0.6,
   }))
-
-  return staticEntries
 }

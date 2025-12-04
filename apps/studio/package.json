@@ -11,17 +11,17 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@sanity/icons": "^2.8.0",
-    "@sanity/vision": "^3.23.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sanity": "^3.23.0",
-    "styled-components": "^6.1.1"
+    "@sanity/icons": "^3.4.0",
+    "@sanity/vision": "^3.57.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.57.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "@types/react": "^18.2.42",
-    "@types/react-dom": "^18.2.17",
-    "eslint": "^8.55.0",
-    "typescript": "^5.3.0"
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.5.0"
   }
 }
