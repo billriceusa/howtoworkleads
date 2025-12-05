@@ -1,69 +1,116 @@
-import Link from 'next/link'
-import { Button, Card, CardTitle, CardDescription } from '@/components/ui'
+import { client } from '@/lib/sanity/client'
+import { allCategoriesQuery } from '@/lib/sanity/queries'
+import { Button } from '@/components/ui'
 import { Hero, NewsletterForm, FeatureCard, ArticleCard } from '@/components/content'
 import { OrganizationJsonLd, WebSiteJsonLd } from '@/components/seo'
 
-const categories = [
+// Fetch categories from Sanity
+async function getCategories() {
+  try {
+    const categories = await client.fetch(allCategoriesQuery)
+    return categories
+  } catch (error) {
+    console.error('Error fetching categories:', error)
+    return []
+  }
+}
+
+// Fetch featured articles (latest landing pages)
+async function getFeaturedArticles() {
+  try {
+    const articles = await client.fetch(`
+      *[_type == "landingPage"] | order(publishedAt desc) [0...3] {
+        _id,
+        title,
+        seoDescription,
+        slug,
+        category-> {
+          title,
+          slug
+        }
+      }
+    `)
+    return articles
+  } catch (error) {
+    console.error('Error fetching featured articles:', error)
+    return []
+  }
+}
+
+// Category icons mapping
+const categoryIcons: Record<string, React.ReactNode> = {
+  'lead-management': (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+    </svg>
+  ),
+  'sales-process': (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+  ),
+  'crm-systems': (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+    </svg>
+  ),
+  'buying-leads': (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+}
+
+// Default icon for categories without a specific one
+const defaultIcon = (
+  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+  </svg>
+)
+
+// Static fallback categories
+const fallbackCategories = [
   {
     title: 'Lead Management',
     description: 'Master the art of organizing, tracking, and nurturing your internet leads for maximum conversions.',
-    href: '/lead-management',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-      </svg>
-    ),
+    slug: { current: 'lead-management' },
   },
   {
     title: 'Sales Process',
     description: 'Proven strategies for working real-time and aged leads through effective sales sequences.',
-    href: '/sales-process',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    slug: { current: 'sales-process' },
   },
   {
     title: 'CRM Systems',
     description: 'Build powerful sales systems using High Level, Close, and other top CRM platforms.',
-    href: '/crm-systems',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-      </svg>
-    ),
+    slug: { current: 'crm-systems' },
   },
   {
     title: 'Buying Leads',
     description: 'Expert guidance on purchasing quality leads including mortgage, insurance, and solar leads.',
-    href: '/buying-leads',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    slug: { current: 'buying-leads' },
   },
 ]
 
-const featuredArticles = [
+// Static fallback articles
+const fallbackArticles = [
   {
     title: 'How to Work Real-Time Leads',
-    description: 'The complete guide to maximizing conversions from fresh, real-time internet leads.',
-    href: '/sales-process/working-real-time-leads',
-    category: 'Sales Process',
+    seoDescription: 'The complete guide to maximizing conversions from fresh, real-time internet leads.',
+    slug: { current: 'working-real-time-leads' },
+    category: { title: 'Sales Process', slug: { current: 'sales-process' } },
   },
   {
     title: 'Email Sequences That Convert',
-    description: 'Build automated email sequences that nurture leads and drive sales.',
-    href: '/lead-management/email-sequences',
-    category: 'Lead Management',
+    seoDescription: 'Build automated email sequences that nurture leads and drive sales.',
+    slug: { current: 'email-sequences' },
+    category: { title: 'Lead Management', slug: { current: 'lead-management' } },
   },
   {
     title: 'How to Buy Quality Leads',
-    description: 'Everything you need to know about purchasing leads from vendors.',
-    href: '/buying-leads/how-to-buy-leads',
-    category: 'Buying Leads',
+    seoDescription: 'Everything you need to know about purchasing leads from vendors.',
+    slug: { current: 'how-to-buy-leads' },
+    category: { title: 'Buying Leads', slug: { current: 'buying-leads' } },
   },
 ]
 
@@ -82,7 +129,16 @@ const features = [
   },
 ]
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [sanityCategories, sanityArticles] = await Promise.all([
+    getCategories(),
+    getFeaturedArticles(),
+  ])
+
+  // Use Sanity data if available, otherwise use fallbacks
+  const categories = sanityCategories.length > 0 ? sanityCategories : fallbackCategories
+  const featuredArticles = sanityArticles.length > 0 ? sanityArticles : fallbackArticles
+
   return (
     <>
       <OrganizationJsonLd />
@@ -93,7 +149,7 @@ export default function HomePage() {
         headline="Master the Art of Converting Internet Leads"
         subheadline="Proven strategies, expert guides, and practical tools to help sales professionals turn more leads into paying customers."
         ctaText="Start Learning"
-        ctaLink="/lead-management"
+        ctaLink={`/${categories[0]?.slug?.current || 'lead-management'}`}
         secondaryCtaText="Browse Resources"
         secondaryCtaLink="/buying-leads"
       />
@@ -145,13 +201,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {categories.map((category) => (
+            {categories.map((category: any) => (
               <FeatureCard
                 key={category.title}
                 title={category.title}
-                description={category.description}
-                href={category.href}
-                icon={category.icon}
+                description={category.description || `Explore our ${category.title.toLowerCase()} resources.`}
+                href={`/${category.slug?.current || category.slug}`}
+                icon={categoryIcons[category.slug?.current || category.slug] || defaultIcon}
               />
             ))}
           </div>
@@ -169,19 +225,19 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {featuredArticles.map((article) => (
+            {featuredArticles.map((article: any) => (
               <ArticleCard
-                key={article.href}
+                key={article.title}
                 title={article.title}
-                description={article.description}
-                href={article.href}
-                category={article.category}
+                description={article.seoDescription}
+                href={`/${article.category?.slug?.current || 'resources'}/${article.slug?.current || article.slug}`}
+                category={article.category?.title}
               />
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <Button href="/lead-management" variant="outline" size="lg">
+            <Button href={`/${categories[0]?.slug?.current || 'lead-management'}`} variant="outline" size="lg">
               View All Guides
             </Button>
           </div>
