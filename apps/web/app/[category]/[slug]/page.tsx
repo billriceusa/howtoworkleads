@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { client } from '@/lib/sanity/client'
+import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { landingPageQuery, landingPagePathsQuery } from '@/lib/sanity/queries'
 import { Hero, TableOfContents, CTASection, ArticleCard, NewsletterForm } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
@@ -16,11 +16,18 @@ interface LandingPageProps {
 }
 
 async function getLandingPage(slug: string) {
-  return client.fetch(landingPageQuery, { slug })
+  return sanityFetch<any>(landingPageQuery, { slug })
 }
 
 export async function generateStaticParams() {
-  const pages = await client.fetch(landingPagePathsQuery)
+  if (!isSanityConfigured) {
+    // Return empty array when Sanity is not configured - pages will be generated on demand
+    return []
+  }
+  const pages = await sanityFetch<any[]>(landingPagePathsQuery)
+  if (!pages) {
+    return []
+  }
   return pages.map((page: { slug: string; category: string }) => ({
     category: page.category,
     slug: page.slug,

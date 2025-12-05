@@ -1,42 +1,17 @@
 import Link from 'next/link'
+import { getNavigation } from '@/lib/sanity/navigation'
 
-const footerNavigation = {
-  leadManagement: [
-    { name: 'Buying Leads', href: '/lead-management/buying-leads' },
-    { name: 'Cleaning & Verifying Data', href: '/lead-management/cleaning-verifying-data' },
-    { name: 'Email Sequences', href: '/lead-management/email-sequences' },
-    { name: 'Building Your Email List', href: '/lead-management/building-email-list' },
-    { name: 'Effective Call Campaigns', href: '/lead-management/effective-call-campaigns' },
-  ],
-  salesProcess: [
-    { name: 'Working Real-Time Leads', href: '/sales-process/working-real-time-leads' },
-    { name: 'Warming Up Aged Leads', href: '/sales-process/warming-aged-leads' },
-    { name: 'Managing Your Pipeline', href: '/sales-process/managing-pipeline' },
-    { name: 'Omni-Channel Sequences', href: '/sales-process/omni-channel-sequences' },
-  ],
-  buyingLeads: [
-    { name: 'Aged Leads', href: '/buying-leads/aged-leads' },
-    { name: 'Mortgage Leads', href: '/buying-leads/mortgage-leads' },
-    { name: 'Insurance Leads', href: '/buying-leads/insurance-leads' },
-    { name: 'Solar Leads', href: '/buying-leads/solar-leads' },
-    { name: 'How to Buy Leads', href: '/buying-leads/how-to-buy-leads' },
-    { name: 'Lead ROI Calculator', href: '/buying-leads/lead-roi-calculator' },
-  ],
-  resources: [
-    { name: 'Lead Buying Checklist', href: '/buying-leads/lead-buying-checklist' },
-    { name: 'Compliance Checklist', href: '/buying-leads/compliance-checklist' },
-    { name: 'CRM Systems', href: '/crm-systems' },
-    { name: 'Blog', href: '/blog' },
-  ],
-  company: [
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms of Service', href: '/terms-of-service' },
-  ],
-}
+// Static company links (not in Sanity CMS)
+const companyLinks = [
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Privacy Policy', href: '/privacy-policy' },
+  { name: 'Terms of Service', href: '/terms-of-service' },
+]
 
-export function Footer() {
+export async function Footer() {
+  const navigation = await getNavigation()
+
   return (
     <footer className="bg-gray-900" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -89,79 +64,89 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - Dynamic from Sanity */}
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                  Lead Management
-                </h3>
-                <ul className="mt-4 space-y-3">
-                  {footerNavigation.leadManagement.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-gray-400 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                  Sales Process
-                </h3>
-                <ul className="mt-4 space-y-3">
-                  {footerNavigation.salesProcess.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-gray-400 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {navigation.categories.slice(0, 2).map((category) => (
+                <div key={category._id} className={category === navigation.categories[1] ? 'mt-10 md:mt-0' : ''}>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                    {category.title}
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {category.articles.map((article) => (
+                      <li key={article._id}>
+                        <Link
+                          href={`/${category.slug}/${article.slug}`}
+                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                        >
+                          {article.title}
+                        </Link>
+                      </li>
+                    ))}
+                    {category.articles.length === 0 && (
+                      <li>
+                        <Link
+                          href={`/${category.slug}`}
+                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                        >
+                          View All {category.title}
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              ))}
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                  Buying Leads
-                </h3>
-                <ul className="mt-4 space-y-3">
-                  {footerNavigation.buyingLeads.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-gray-400 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                  Company
-                </h3>
-                <ul className="mt-4 space-y-3">
-                  {footerNavigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-gray-400 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {navigation.categories.slice(2, 4).map((category, index) => (
+                <div key={category._id} className={index > 0 ? 'mt-10 md:mt-0' : ''}>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                    {category.title}
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {category.articles.map((article) => (
+                      <li key={article._id}>
+                        <Link
+                          href={`/${category.slug}/${article.slug}`}
+                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                        >
+                          {article.title}
+                        </Link>
+                      </li>
+                    ))}
+                    {category.articles.length === 0 && (
+                      <li>
+                        <Link
+                          href={`/${category.slug}`}
+                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                        >
+                          View All {category.title}
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              ))}
+              {/* Company Links - Static */}
+              {navigation.categories.length < 4 && (
+                <div className="mt-10 md:mt-0">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                    Company
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {companyLinks.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
