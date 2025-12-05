@@ -4,6 +4,9 @@ import { Button } from '@/components/ui'
 import { Hero, NewsletterForm, FeatureCard, ArticleCard } from '@/components/content'
 import { OrganizationJsonLd, WebSiteJsonLd } from '@/components/seo'
 
+// Enable ISR - revalidate home page every 60 seconds
+export const revalidate = 60
+
 // Fetch categories from Sanity
 async function getCategories() {
   const categories = await sanityFetch<any[]>(allCategoriesQuery)
