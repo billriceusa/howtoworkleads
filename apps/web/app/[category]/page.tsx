@@ -6,6 +6,12 @@ import { Hero, ArticleCard, CTASection } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { fallbackNavigation } from '@/lib/sanity/navigation'
 
+// Enable ISR - revalidate pages every 60 seconds
+export const revalidate = 60
+
+// Allow dynamic params for on-demand page generation
+export const dynamicParams = true
+
 interface CategoryPageProps {
   params: { category: string }
 }

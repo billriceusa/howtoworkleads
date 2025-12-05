@@ -11,6 +11,12 @@ import { extractHeadings, absoluteUrl } from '@/lib/utils'
 import Image from 'next/image'
 import { Accordion } from '@/components/ui'
 
+// Enable ISR - revalidate pages every 60 seconds
+export const revalidate = 60
+
+// Allow dynamic params for on-demand page generation
+export const dynamicParams = true
+
 interface LandingPageProps {
   params: { category: string; slug: string }
 }
