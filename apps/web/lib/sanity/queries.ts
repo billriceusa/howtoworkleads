@@ -75,7 +75,15 @@ export const categoryPageQuery = groq`
     seoTitle,
     seoDescription,
     description,
-    heroSection,
+    heroSection {
+      headline,
+      subheadline,
+      ctaText,
+      ctaLink,
+      secondaryCtaText,
+      secondaryCtaLink,
+      backgroundImage
+    },
     "articles": *[_type == "landingPage" && references(^._id)] | order(publishedAt desc) {
       _id,
       title,
@@ -146,17 +154,17 @@ export const allBlogPostsQuery = groq`
   }
 `
 
-// Navigation query
+// Navigation query - fetches categories with their articles for navigation
 export const navigationQuery = groq`
   {
     "categories": *[_type == "categoryPage"] | order(order asc) {
       _id,
       title,
-      slug,
+      "slug": slug.current,
       "articles": *[_type == "landingPage" && references(^._id)] | order(title asc) [0...5] {
         _id,
         title,
-        slug
+        "slug": slug.current
       }
     }
   }

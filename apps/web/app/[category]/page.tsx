@@ -1,20 +1,32 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { client } from '@/lib/sanity/client'
+import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { categoryPageQuery, allCategoriesQuery } from '@/lib/sanity/queries'
 import { Hero, ArticleCard, CTASection } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
+import { fallbackNavigation } from '@/lib/sanity/navigation'
 
 interface CategoryPageProps {
   params: { category: string }
 }
 
 async function getCategory(slug: string) {
-  return client.fetch(categoryPageQuery, { slug })
+  return sanityFetch<any>(categoryPageQuery, { slug })
 }
 
 export async function generateStaticParams() {
-  const categories = await client.fetch(allCategoriesQuery)
+  if (!isSanityConfigured) {
+    // Return fallback paths when Sanity is not configured
+    return fallbackNavigation.categories.map((category) => ({
+      category: category.slug,
+    }))
+  }
+  const categories = await sanityFetch<any[]>(allCategoriesQuery)
+  if (!categories) {
+    return fallbackNavigation.categories.map((category) => ({
+      category: category.slug,
+    }))
+  }
   return categories.map((category: { slug: { current: string } }) => ({
     category: category.slug.current,
   }))
@@ -57,6 +69,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         subheadline={category.heroSection?.subheadline || category.description}
         ctaText={category.heroSection?.ctaText}
         ctaLink={category.heroSection?.ctaLink}
+        secondaryCtaText={category.heroSection?.secondaryCtaText}
+        secondaryCtaLink={category.heroSection?.secondaryCtaLink}
         size="md"
       />
 

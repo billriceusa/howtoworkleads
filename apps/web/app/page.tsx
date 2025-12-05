@@ -1,4 +1,4 @@
-import { client } from '@/lib/sanity/client'
+import { sanityFetch } from '@/lib/sanity/client'
 import { allCategoriesQuery } from '@/lib/sanity/queries'
 import { Button } from '@/components/ui'
 import { Hero, NewsletterForm, FeatureCard, ArticleCard } from '@/components/content'
@@ -6,35 +6,25 @@ import { OrganizationJsonLd, WebSiteJsonLd } from '@/components/seo'
 
 // Fetch categories from Sanity
 async function getCategories() {
-  try {
-    const categories = await client.fetch(allCategoriesQuery)
-    return categories
-  } catch (error) {
-    console.error('Error fetching categories:', error)
-    return []
-  }
+  const categories = await sanityFetch<any[]>(allCategoriesQuery)
+  return categories || []
 }
 
 // Fetch featured articles (latest landing pages)
 async function getFeaturedArticles() {
-  try {
-    const articles = await client.fetch(`
-      *[_type == "landingPage"] | order(publishedAt desc) [0...3] {
-        _id,
+  const articles = await sanityFetch<any[]>(`
+    *[_type == "landingPage"] | order(publishedAt desc) [0...3] {
+      _id,
+      title,
+      seoDescription,
+      slug,
+      category-> {
         title,
-        seoDescription,
-        slug,
-        category-> {
-          title,
-          slug
-        }
+        slug
       }
-    `)
-    return articles
-  } catch (error) {
-    console.error('Error fetching featured articles:', error)
-    return []
-  }
+    }
+  `)
+  return articles || []
 }
 
 // Category icons mapping
