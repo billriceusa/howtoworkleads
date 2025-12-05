@@ -141,10 +141,10 @@ export default async function HomePage() {
       <Hero
         headline="Master the Art of Converting Internet Leads"
         subheadline="Proven strategies, expert guides, and practical tools to help sales professionals turn more leads into paying customers."
-        ctaText="Start Learning"
-        ctaLink={`/${categories[0]?.slug?.current || 'lead-management'}`}
-        secondaryCtaText="Browse Resources"
-        secondaryCtaLink="/buying-leads"
+        ctaText="Get a Custom Lead Quote"
+        ctaLink="/lead-order"
+        secondaryCtaText="Book a Lead Strategy Call"
+        secondaryCtaLink="https://calendar.app.google/6WQdrfLe2xHDKa8Y8"
       />
 
       {/* Value Proposition */}
