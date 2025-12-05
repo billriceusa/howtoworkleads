@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Initialize Resend lazily to avoid build errors when API key is not set
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY environment variable is not set')
+  }
+  return new Resend(apiKey)
+}
 
 // Lead type labels for email display
 const LEAD_TYPE_LABELS: Record<string, string> = {
@@ -90,6 +97,9 @@ export async function POST(request: NextRequest) {
 
     // Format quantity for display
     const quantityDisplay = data.quantity === 'custom' ? data.customQuantity : (QUANTITY_LABELS[data.quantity] || data.quantity)
+
+    // Get Resend client
+    const resend = getResendClient()
 
     // Send confirmation email to the contact
     const confirmationEmail = await resend.emails.send({
