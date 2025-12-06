@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { GoogleAnalytics } from '@/components/analytics'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -69,6 +70,7 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
+        <GoogleAnalytics />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
