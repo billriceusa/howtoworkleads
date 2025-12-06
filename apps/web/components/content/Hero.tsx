@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui'
+import { Button, Markdown } from '@/components/ui'
 import { cn } from '@/lib/utils'
 
 interface HeroProps {
@@ -55,14 +55,14 @@ export function Hero({
           {headline}
         </h1>
         {subheadline && (
-          <p
+          <div
             className={cn(
               'mt-6 text-lg text-gray-600 sm:text-xl',
               centered && 'mx-auto max-w-2xl'
             )}
           >
-            {subheadline}
-          </p>
+            <Markdown content={subheadline} />
+          </div>
         )}
         {(ctaText || secondaryCtaText) && (
           <div

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui'
+import { Button, Markdown } from '@/components/ui'
 import { cn } from '@/lib/utils'
 
 interface CTASectionProps {
@@ -36,7 +36,9 @@ export function CTASection({
     >
       <h2 className="text-2xl font-bold sm:text-3xl">{headline}</h2>
       {description && (
-        <p className="mt-4 text-lg opacity-90 max-w-2xl mx-auto">{description}</p>
+        <div className="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
+          <Markdown content={description} />
+        </div>
       )}
       <div className="mt-8">
         <Button

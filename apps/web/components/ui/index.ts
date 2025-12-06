@@ -3,3 +3,4 @@ export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 export { Badge } from './Badge'
 export { Input, Textarea } from './Input'
 export { Accordion } from './Accordion'
+export { Markdown } from './Markdown'
