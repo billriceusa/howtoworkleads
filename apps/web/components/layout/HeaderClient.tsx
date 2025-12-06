@@ -10,6 +10,11 @@ interface HeaderClientProps {
   navigation: NavigationData
 }
 
+// Helper to ensure slugs don't have leading/trailing slashes
+function cleanSlug(slug: string): string {
+  return slug.replace(/^\/+|\/+$/g, '')
+}
+
 export function HeaderClient({ navigation }: HeaderClientProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -65,7 +70,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                     {category.articles.map((article) => (
                       <Link
                         key={article._id}
-                        href={`/${category.slug}/${article.slug}`}
+                        href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-800"
                       >
                         {article.title}
@@ -135,7 +140,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                       {category.articles.map((article) => (
                         <Link
                           key={article._id}
-                          href={`/${category.slug}/${article.slug}`}
+                          href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
                           className="block px-4 py-1.5 text-sm text-gray-600 hover:text-primary-800"
                           onClick={() => setMobileMenuOpen(false)}
                         >
