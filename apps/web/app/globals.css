@@ -3,16 +3,46 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Brand Colors */
+    --color-yellow: #FFD500;
+    --color-yellow-hover: #E6C000;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    /* Neutrals */
+    --gray-900: #1A1A1A;
+    --gray-500: #666666;
+    --gray-300: #E0E0E0;
+    --gray-100: #F5F5F5;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-white text-gray-800 antialiased;
+    @apply bg-white text-secondary-800 antialiased;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Headlines use Georgia */
+  h1, h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    color: var(--color-black);
+  }
+
+  h3, h4, h5, h6 {
+    font-family: Inter, system-ui, sans-serif;
+    font-weight: 600;
+    color: var(--color-black);
   }
 
   ::selection {
-    @apply bg-primary-100 text-primary-900;
+    @apply bg-brand-yellow text-black;
   }
 }
 
@@ -26,62 +56,82 @@
   }
 
   .prose-custom {
-    @apply prose prose-lg prose-gray max-w-none;
+    @apply prose prose-lg max-w-none;
     @apply prose-headings:scroll-mt-24;
-    @apply prose-a:text-primary-700 prose-a:no-underline hover:prose-a:text-primary-800 hover:prose-a:underline;
-    @apply prose-img:rounded-lg prose-img:shadow-md;
+    @apply prose-a:text-black prose-a:no-underline hover:prose-a:text-brand-yellow hover:prose-a:underline;
+    @apply prose-img:rounded-none prose-img:shadow-md;
   }
 
+  /* Buttons - Brand Style Guide Compliant */
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-all duration-200;
+    @apply inline-flex items-center justify-center px-8 py-4 font-semibold transition-all duration-200;
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 14px;
   }
 
   .btn-primary {
-    @apply btn bg-primary-800 text-white;
-    @apply hover:bg-primary-700;
-    @apply focus:ring-primary-500;
+    @apply btn bg-brand-yellow text-black;
+    @apply hover:bg-brand-yellow-hover hover:scale-[1.02];
+    @apply focus:ring-brand-yellow;
   }
 
   .btn-secondary {
-    @apply btn bg-secondary-700 text-white;
-    @apply hover:bg-secondary-600;
-    @apply focus:ring-secondary-500;
+    @apply btn border-2 border-black bg-transparent text-black;
+    @apply hover:bg-black hover:text-white;
+    @apply focus:ring-black;
   }
 
   .btn-accent {
-    @apply btn bg-accent-600 text-white;
-    @apply hover:bg-accent-500;
-    @apply focus:ring-accent-500;
+    @apply btn bg-brand-yellow text-black;
+    @apply hover:bg-brand-yellow-hover;
+    @apply focus:ring-brand-yellow;
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary-800 bg-transparent text-primary-800;
-    @apply hover:bg-primary-800 hover:text-white;
-    @apply focus:ring-primary-500;
+    @apply btn border-2 border-black bg-transparent text-black;
+    @apply hover:bg-black hover:text-white;
+    @apply focus:ring-black;
   }
 
   .btn-ghost {
-    @apply btn bg-transparent text-primary-800;
-    @apply hover:bg-primary-50;
-    @apply focus:ring-primary-500;
+    @apply btn bg-transparent text-black;
+    @apply hover:bg-secondary-100;
+    @apply focus:ring-secondary-300;
   }
 
+  /* Ghost button for dark backgrounds */
+  .btn-ghost-dark {
+    @apply btn border-2 border-white bg-transparent text-white;
+    @apply hover:bg-white hover:text-black;
+    @apply focus:ring-white;
+  }
+
+  /* Cards - Square corners per brand guide */
   .card {
-    @apply rounded-xl bg-white p-6 shadow-md transition-shadow duration-200;
-    @apply hover:shadow-lg;
+    @apply bg-white p-6 shadow-md transition-all duration-200;
+    border-radius: 0;
+  }
+
+  .card:hover {
+    @apply shadow-lg;
+    transform: translateY(-4px);
   }
 
   .card-bordered {
-    @apply card border border-gray-200;
+    @apply card border border-secondary-300;
   }
 
+  /* Badges/Tags - Square, brand yellow */
   .badge {
-    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+    @apply inline-flex items-center px-3 py-1.5 text-xs font-semibold uppercase tracking-wide;
+    border-radius: 0;
   }
 
   .badge-primary {
-    @apply badge bg-primary-100 text-primary-800;
+    @apply badge bg-brand-yellow text-black;
   }
 
   .badge-secondary {
@@ -89,15 +139,35 @@
   }
 
   .badge-accent {
-    @apply badge bg-accent-100 text-accent-800;
+    @apply badge bg-brand-yellow text-black;
   }
 
+  /* Category Label - Per brand guide specifications */
+  .label {
+    font-family: Inter, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .label-dark {
+    @apply label text-secondary-800;
+  }
+
+  .label-light {
+    @apply label text-brand-yellow;
+  }
+
+  /* Form inputs - Square corners */
   .input {
-    @apply w-full rounded-lg border border-gray-300 px-4 py-3;
-    @apply focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20;
-    @apply placeholder:text-gray-400;
+    @apply w-full border-2 border-secondary-300 px-4 py-3;
+    border-radius: 0;
+    @apply focus:border-black focus:outline-none focus:ring-2 focus:ring-black/20;
+    @apply placeholder:text-secondary-500;
   }
 
+  /* Sections */
   .section {
     @apply py-16 sm:py-20 lg:py-24;
   }
@@ -107,11 +177,27 @@
   }
 
   .section-title {
-    @apply text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+    @apply text-3xl font-bold tracking-tight text-black sm:text-4xl;
+    font-family: Georgia, 'Times New Roman', serif;
   }
 
   .section-description {
-    @apply mt-4 text-lg text-gray-600;
+    @apply mt-4 text-lg text-secondary-500;
+  }
+
+  /* Navigation link style */
+  .nav-link {
+    @apply text-sm font-medium uppercase tracking-wide text-secondary-800 transition-colors;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-link:hover {
+    @apply text-brand-yellow;
+  }
+
+  .nav-link-active {
+    @apply nav-link text-brand-yellow;
+    border-bottom: 3px solid var(--color-yellow);
   }
 }
 
@@ -120,9 +206,7 @@
     text-wrap: balance;
   }
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary-800 to-secondary-700 bg-clip-text text-transparent;
-  }
+  /* Removed gradient-text as it's not in brand guide */
 
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
@@ -150,5 +234,14 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Font utilities */
+  .font-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  .font-body {
+    font-family: Inter, system-ui, sans-serif;
   }
 }

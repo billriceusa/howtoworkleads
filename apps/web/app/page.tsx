@@ -137,7 +137,7 @@ export default async function HomePage() {
       <OrganizationJsonLd />
       <WebSiteJsonLd />
 
-      {/* Hero Section */}
+      {/* Hero Section - Brand compliant white background */}
       <Hero
         headline="Master the Art of Converting Internet Leads"
         subheadline="Proven strategies, expert guides, and practical tools to help sales professionals turn more leads into paying customers."
@@ -147,7 +147,7 @@ export default async function HomePage() {
         secondaryCtaLink="https://calendar.app.google/6WQdrfLe2xHDKa8Y8"
       />
 
-      {/* Value Proposition */}
+      {/* Value Proposition - White background */}
       <section className="section bg-white">
         <div className="container-wide">
           <div className="section-header">
@@ -160,9 +160,9 @@ export default async function HomePage() {
           <div className="grid gap-8 md:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-none bg-brand-yellow">
                   <svg
-                    className="h-6 w-6 text-primary-800"
+                    className="h-6 w-6 text-black"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -175,16 +175,16 @@ export default async function HomePage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                <p className="mt-2 text-gray-600">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
+                <p className="mt-2 text-secondary-500">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Category Navigation */}
-      <section className="section bg-gray-50">
+      {/* Category Navigation - Light gray background */}
+      <section className="section bg-secondary-100">
         <div className="container-wide">
           <div className="section-header">
             <h2 className="section-title">Explore Our Resources</h2>
@@ -207,7 +207,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Featured Articles */}
+      {/* Featured Articles - White background */}
       <section className="section bg-white">
         <div className="container-wide">
           <div className="section-header">
@@ -237,33 +237,33 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="section bg-primary-800 text-white">
+      {/* Social Proof - Black background with yellow accents (brand compliant) */}
+      <section className="section bg-black text-white">
         <div className="container-wide text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold font-serif sm:text-4xl">
             Trusted by Sales Teams Everywhere
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-100">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">
             Join thousands of sales professionals who use our strategies to increase their close rates and grow their revenue.
           </p>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             <div>
-              <div className="text-4xl font-bold">10K+</div>
-              <div className="mt-1 text-primary-200">Monthly Readers</div>
+              <div className="text-4xl font-bold text-brand-yellow">10K+</div>
+              <div className="mt-1 text-white/70">Monthly Readers</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">50+</div>
-              <div className="mt-1 text-primary-200">In-Depth Guides</div>
+              <div className="text-4xl font-bold text-brand-yellow">50+</div>
+              <div className="mt-1 text-white/70">In-Depth Guides</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">15+</div>
-              <div className="mt-1 text-primary-200">Years Experience</div>
+              <div className="text-4xl font-bold text-brand-yellow">15+</div>
+              <div className="mt-1 text-white/70">Years Experience</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Newsletter */}
+      {/* Newsletter - White background */}
       <section className="section bg-white">
         <div className="container-narrow">
           <NewsletterForm

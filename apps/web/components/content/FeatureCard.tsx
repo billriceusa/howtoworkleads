@@ -19,14 +19,14 @@ export function FeatureCard({
   const content = (
     <>
       {icon && (
-        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100 text-primary-800">
+        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-none bg-brand-yellow text-black">
           {icon}
         </div>
       )}
-      <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-      <p className="mt-2 text-gray-600">{description}</p>
+      <h3 className="text-lg font-semibold text-black">{title}</h3>
+      <p className="mt-2 text-secondary-500">{description}</p>
       {href && (
-        <span className="mt-4 inline-flex items-center text-sm font-medium text-primary-800 group-hover:text-primary-600">
+        <span className="mt-4 inline-flex items-center text-sm font-medium text-black group-hover:text-brand-yellow">
           Learn more
           <svg
             className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -46,9 +46,10 @@ export function FeatureCard({
     </>
   )
 
+  // Brand-compliant: square corners
   const baseStyles = cn(
-    'block rounded-xl border border-gray-200 bg-white p-6 transition-all',
-    href && 'group hover:shadow-lg hover:-translate-y-1 hover:border-primary-200',
+    'block rounded-none border border-secondary-300 bg-white p-6 transition-all',
+    href && 'group hover:shadow-lg hover:-translate-y-1 hover:border-brand-yellow',
     className
   )
 

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getNavigation } from '@/lib/sanity/navigation'
+import { Logo } from '@/components/ui'
 
 // Helper to ensure slugs don't have leading/trailing slashes
 function cleanSlug(slug: string): string {
@@ -19,7 +20,7 @@ export async function Footer() {
   const navigation = await getNavigation()
 
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="bg-black" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -27,16 +28,14 @@ export async function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="text-2xl font-bold text-white">
-              HowToWork<span className="text-accent-500">Leads</span>
-            </Link>
-            <p className="text-sm text-gray-400 max-w-xs">
+            <Logo variant="dark" size="md" showEndorsement={true} />
+            <p className="text-sm text-white/70 max-w-xs">
               Expert strategies and resources to help sales professionals convert internet leads into revenue.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://twitter.com"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-white/70 hover:text-brand-yellow transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,7 +46,7 @@ export async function Footer() {
               </a>
               <a
                 href="https://linkedin.com"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-white/70 hover:text-brand-yellow transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -58,7 +57,7 @@ export async function Footer() {
               </a>
               <a
                 href="https://youtube.com"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-white/70 hover:text-brand-yellow transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -75,7 +74,7 @@ export async function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {navigation.categories.slice(0, 2).map((category) => (
                 <div key={category._id} className={category === navigation.categories[1] ? 'mt-10 md:mt-0' : ''}>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
                     {category.title}
                   </h3>
                   <ul className="mt-4 space-y-3">
@@ -83,7 +82,7 @@ export async function Footer() {
                       <li key={article._id}>
                         <Link
                           href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
-                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                          className="text-sm text-white/70 hover:text-white transition-colors"
                         >
                           {article.title}
                         </Link>
@@ -93,7 +92,7 @@ export async function Footer() {
                       <li>
                         <Link
                           href={`/${cleanSlug(category.slug)}`}
-                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                          className="text-sm text-white/70 hover:text-white transition-colors"
                         >
                           View All {category.title}
                         </Link>
@@ -106,7 +105,7 @@ export async function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {navigation.categories.slice(2, 4).map((category, index) => (
                 <div key={category._id} className={index > 0 ? 'mt-10 md:mt-0' : ''}>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
                     {category.title}
                   </h3>
                   <ul className="mt-4 space-y-3">
@@ -114,7 +113,7 @@ export async function Footer() {
                       <li key={article._id}>
                         <Link
                           href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
-                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                          className="text-sm text-white/70 hover:text-white transition-colors"
                         >
                           {article.title}
                         </Link>
@@ -124,7 +123,7 @@ export async function Footer() {
                       <li>
                         <Link
                           href={`/${cleanSlug(category.slug)}`}
-                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                          className="text-sm text-white/70 hover:text-white transition-colors"
                         >
                           View All {category.title}
                         </Link>
@@ -136,7 +135,7 @@ export async function Footer() {
               {/* Company Links - Static */}
               {navigation.categories.length < 4 && (
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
                     Company
                   </h3>
                   <ul className="mt-4 space-y-3">
@@ -144,7 +143,7 @@ export async function Footer() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                          className="text-sm text-white/70 hover:text-white transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -158,8 +157,8 @@ export async function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-gray-800 pt-8">
-          <p className="text-sm text-gray-400 text-center">
+        <div className="mt-12 border-t border-white/20 pt-8">
+          <p className="text-sm text-white/70 text-center">
             &copy; {new Date().getFullYear()} HowToWorkLeads. All rights reserved.
           </p>
         </div>

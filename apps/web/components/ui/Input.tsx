@@ -16,7 +16,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="mb-2 block text-sm font-medium text-gray-700"
+            className="mb-2 block text-sm font-semibold text-secondary-800"
           >
             {label}
           </label>
@@ -25,12 +25,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={inputId}
           className={cn(
-            'w-full rounded-lg border px-4 py-3 transition-colors',
-            'placeholder:text-gray-400',
+            // Brand-compliant: square corners, 2px border
+            'w-full rounded-none border-2 px-4 py-3 transition-colors',
+            'placeholder:text-secondary-500',
             'focus:outline-none focus:ring-2',
             error
               ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-              : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500/20',
+              : 'border-secondary-300 focus:border-black focus:ring-black/20',
             className
           )}
           aria-invalid={error ? 'true' : 'false'}
@@ -43,7 +44,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           </p>
         )}
         {helperText && !error && (
-          <p className="mt-2 text-sm text-gray-500">{helperText}</p>
+          <p className="mt-2 text-sm text-secondary-500">{helperText}</p>
         )}
       </div>
     )
@@ -67,7 +68,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={textareaId}
-            className="mb-2 block text-sm font-medium text-gray-700"
+            className="mb-2 block text-sm font-semibold text-secondary-800"
           >
             {label}
           </label>
@@ -76,12 +77,13 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           id={textareaId}
           className={cn(
-            'w-full rounded-lg border px-4 py-3 transition-colors',
-            'placeholder:text-gray-400',
+            // Brand-compliant: square corners, 2px border
+            'w-full rounded-none border-2 px-4 py-3 transition-colors',
+            'placeholder:text-secondary-500',
             'focus:outline-none focus:ring-2',
             error
               ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-              : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500/20',
+              : 'border-secondary-300 focus:border-black focus:ring-black/20',
             className
           )}
           aria-invalid={error ? 'true' : 'false'}
@@ -94,7 +96,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           </p>
         )}
         {helperText && !error && (
-          <p className="mt-2 text-sm text-gray-500">{helperText}</p>
+          <p className="mt-2 text-sm text-secondary-500">{helperText}</p>
         )}
       </div>
     )

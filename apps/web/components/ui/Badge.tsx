@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-type BadgeVariant = 'primary' | 'secondary' | 'accent' | 'success' | 'warning' | 'neutral'
+type BadgeVariant = 'primary' | 'secondary' | 'neutral'
 
 interface BadgeProps {
   variant?: BadgeVariant
@@ -8,20 +8,22 @@ interface BadgeProps {
   children: React.ReactNode
 }
 
+// Brand-compliant badge styles: square corners, brand yellow as primary
 const variantStyles: Record<BadgeVariant, string> = {
-  primary: 'bg-primary-100 text-primary-800',
+  // Brand yellow background - used for category tags
+  primary: 'bg-brand-yellow text-black',
+  // Light gray background - used for secondary/muted tags
   secondary: 'bg-secondary-100 text-secondary-800',
-  accent: 'bg-accent-100 text-accent-800',
-  success: 'bg-green-100 text-green-800',
-  warning: 'bg-yellow-100 text-yellow-800',
-  neutral: 'bg-gray-100 text-gray-800',
+  // Neutral gray
+  neutral: 'bg-secondary-100 text-secondary-800',
 }
 
 export function Badge({ variant = 'primary', className, children }: BadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-full px-3 py-1 text-sm font-medium',
+        // Brand-compliant: square corners, uppercase, consistent sizing
+        'inline-flex items-center rounded-none px-3 py-1.5 text-xs font-semibold uppercase tracking-wide',
         variantStyles[variant],
         className
       )}
