@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import { getNavigation } from '@/lib/sanity/navigation'
 
+// Helper to ensure slugs don't have leading/trailing slashes
+function cleanSlug(slug: string): string {
+  return slug.replace(/^\/+|\/+$/g, '')
+}
+
 // Static company links (not in Sanity CMS)
 const companyLinks = [
   { name: 'About', href: '/about' },
@@ -76,7 +81,7 @@ export async function Footer() {
                     {category.articles.map((article) => (
                       <li key={article._id}>
                         <Link
-                          href={`/${category.slug}/${article.slug}`}
+                          href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           {article.title}
@@ -86,7 +91,7 @@ export async function Footer() {
                     {category.articles.length === 0 && (
                       <li>
                         <Link
-                          href={`/${category.slug}`}
+                          href={`/${cleanSlug(category.slug)}`}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           View All {category.title}
@@ -107,7 +112,7 @@ export async function Footer() {
                     {category.articles.map((article) => (
                       <li key={article._id}>
                         <Link
-                          href={`/${category.slug}/${article.slug}`}
+                          href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           {article.title}
@@ -117,7 +122,7 @@ export async function Footer() {
                     {category.articles.length === 0 && (
                       <li>
                         <Link
-                          href={`/${category.slug}`}
+                          href={`/${cleanSlug(category.slug)}`}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           View All {category.title}
