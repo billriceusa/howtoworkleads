@@ -4,6 +4,7 @@ import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { categoryPageQuery, allCategoriesQuery } from '@/lib/sanity/queries'
 import { Hero, ArticleCard, CTASection } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
+import { Markdown } from '@/components/ui'
 import { fallbackNavigation } from '@/lib/sanity/navigation'
 
 // Enable ISR - revalidate pages every 60 seconds
@@ -84,8 +85,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <Breadcrumbs items={breadcrumbs} className="mb-8" />
 
         {category.description && (
-          <div className="prose-custom mb-12 max-w-3xl">
-            <p className="text-lg text-gray-600">{category.description}</p>
+          <div className="prose-custom mb-12 max-w-3xl text-lg text-gray-600">
+            <Markdown content={category.description} />
           </div>
         )}
 

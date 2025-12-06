@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { Markdown } from './Markdown'
 
 interface AccordionItem {
   id: string
@@ -85,7 +86,9 @@ function AccordionItemComponent({ item, isOpen, onToggle }: AccordionItemCompone
           isOpen ? 'max-h-96' : 'max-h-0'
         )}
       >
-        <div className="px-6 pb-4 text-gray-600">{item.answer}</div>
+        <div className="px-6 pb-4 text-gray-600">
+          <Markdown content={item.answer} />
+        </div>
       </div>
     </div>
   )
