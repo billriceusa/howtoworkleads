@@ -15,7 +15,7 @@ export default function LeadOrderPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white py-16 sm:py-20">
+      <section className="bg-black text-white py-16 sm:py-20">
         <div className="container-narrow text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
             Request Your Custom Lead Quote

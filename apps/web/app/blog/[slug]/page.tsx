@@ -110,8 +110,13 @@ const portableTextComponents = {
   },
   marks: {
     link: ({ children, value }: any) => {
-      const target = value.openInNewTab ? '_blank' : undefined
-      const rel = value.openInNewTab ? 'noopener noreferrer' : undefined
+      // Check if this is an external link (starts with http:// or https:// and not howtoworkleads.com)
+      const isExternal = value.href?.startsWith('http://') || value.href?.startsWith('https://')
+      const isExternalSite = isExternal && !value.href?.includes('howtoworkleads.com')
+      // Open in new tab if explicitly set OR if it's an external site
+      const shouldOpenNewTab = value.openInNewTab || isExternalSite
+      const target = shouldOpenNewTab ? '_blank' : undefined
+      const rel = shouldOpenNewTab ? 'noopener noreferrer' : undefined
       return (
         <a href={value.href} target={target} rel={rel}>
           {children}

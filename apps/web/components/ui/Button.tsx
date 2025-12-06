@@ -63,6 +63,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     )
 
     if (href) {
+      // Check if this is an external link (starts with http:// or https:// and not howtoworkleads.com)
+      const isExternal = href.startsWith('http://') || href.startsWith('https://')
+      const isExternalSite = isExternal && !href.includes('howtoworkleads.com')
+
+      if (isExternalSite) {
+        return (
+          <a
+            href={href}
+            className={combinedClassName}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {children}
+          </a>
+        )
+      }
+
       return (
         <Link href={href} className={combinedClassName}>
           {children}
