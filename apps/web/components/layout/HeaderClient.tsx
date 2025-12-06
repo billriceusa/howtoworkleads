@@ -87,8 +87,8 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
 
           {/* CTA Button */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
-            <Button href="/contact" variant="primary" size="sm">
-              Get Started
+            <Button href="/lead-order" variant="primary" size="sm">
+              Buy Leads
             </Button>
           </div>
 
@@ -147,8 +147,8 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 </div>
               ))}
               <div className="px-4 pt-4">
-                <Button href="/contact" variant="primary" className="w-full">
-                  Get Started
+                <Button href="/lead-order" variant="primary" className="w-full">
+                  Buy Leads
                 </Button>
               </div>
             </div>
