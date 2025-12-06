@@ -581,7 +581,7 @@ export function LeadOrderForm() {
         ) : (
           <Button
             type="button"
-            variant="accent"
+            variant="primary"
             onClick={handleSubmit}
             isLoading={status === 'loading'}
           >
