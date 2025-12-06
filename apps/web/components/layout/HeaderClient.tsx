@@ -88,6 +88,14 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 )}
               </div>
             ))}
+
+            {/* Blog Link */}
+            <Link
+              href="/blog"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-800 transition-colors"
+            >
+              Blog
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -151,6 +159,16 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                   )}
                 </div>
               ))}
+              {/* Blog Link */}
+              <div className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/blog"
+                  className="block px-4 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Blog
+                </Link>
+              </div>
               <div className="px-4 pt-4">
                 <Button href="/lead-order" variant="primary" className="w-full">
                   Buy Leads
