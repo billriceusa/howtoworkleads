@@ -20,7 +20,7 @@ export default function LeadOrderPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
             Request Your Custom Lead Quote
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
             Tell me about the leads you need, and I&apos;ll find the best options for your business.
             Get started with a quick questionnaire below.
           </p>
@@ -163,7 +163,7 @@ export default function LeadOrderPage() {
           <h2 className="text-3xl font-bold sm:text-4xl">
             Ready to Get Started?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-primary-100">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-300">
             Fill out the form above, or book a call to discuss your lead needs in detail.
           </p>
           <div className="mt-8">
