@@ -22,7 +22,7 @@ export function ArticleCard({
   readTime,
 }: ArticleCardProps) {
   return (
-    <article className="group relative flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-all hover:shadow-lg hover:-translate-y-1">
+    <article className="group relative flex flex-col rounded-none border border-secondary-300 bg-white p-6 transition-all hover:shadow-lg hover:-translate-y-1">
       {category && (
         <div className="mb-3">
           {categoryHref ? (
@@ -35,7 +35,7 @@ export function ArticleCard({
         </div>
       )}
 
-      <h3 className="text-xl font-semibold text-gray-900 group-hover:text-primary-800 transition-colors">
+      <h3 className="text-xl font-semibold text-black group-hover:text-brand-yellow transition-colors">
         <Link href={href}>
           <span className="absolute inset-0" />
           {title}
@@ -43,11 +43,11 @@ export function ArticleCard({
       </h3>
 
       {description && (
-        <p className="mt-3 text-gray-600 line-clamp-3">{description}</p>
+        <p className="mt-3 text-secondary-500 line-clamp-3">{description}</p>
       )}
 
       {(publishedAt || readTime) && (
-        <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+        <div className="mt-4 flex items-center gap-4 text-sm text-secondary-500">
           {publishedAt && <time dateTime={publishedAt}>{formatDate(publishedAt)}</time>}
           {publishedAt && readTime && <span>&middot;</span>}
           {readTime && <span>{readTime}</span>}

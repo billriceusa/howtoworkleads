@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui'
+import { Button, Logo } from '@/components/ui'
 import type { NavigationData } from '@/lib/sanity/navigation'
 
 interface HeaderClientProps {
@@ -25,11 +25,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-800">
-                HowToWork<span className="text-accent-600">Leads</span>
-              </span>
-            </Link>
+            <Logo variant="light" size="md" showEndorsement={false} />
           </div>
 
           {/* Desktop Navigation */}
@@ -44,8 +40,8 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 <Link
                   href={`/${category.slug}`}
                   className={cn(
-                    'inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-800 transition-colors',
-                    activeDropdown === category.slug && 'text-primary-800'
+                    'inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors',
+                    activeDropdown === category.slug && 'text-brand-yellow'
                   )}
                 >
                   {category.title}
@@ -66,20 +62,20 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
 
                 {/* Dropdown - only show if category has articles */}
                 {activeDropdown === category.slug && category.articles.length > 0 && (
-                  <div className="absolute left-0 top-full w-64 rounded-lg bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
+                  <div className="absolute left-0 top-full w-64 rounded-none bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
                     {category.articles.map((article) => (
                       <Link
                         key={article._id}
                         href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-800"
+                        className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
                       >
                         {article.title}
                       </Link>
                     ))}
-                    <div className="mt-2 border-t border-gray-100 pt-2">
+                    <div className="mt-2 border-t border-secondary-300 pt-2">
                       <Link
                         href={`/${category.slug}`}
-                        className="block px-4 py-2 text-sm font-medium text-primary-800 hover:bg-primary-50"
+                        className="block px-4 py-2 text-sm font-medium text-black hover:bg-secondary-100"
                       >
                         View All &rarr;
                       </Link>
@@ -92,7 +88,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
             {/* Blog Link */}
             <Link
               href="/blog"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-800 transition-colors"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors"
             >
               Blog
             </Link>
@@ -110,7 +106,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className="inline-flex items-center justify-center rounded-none p-2 text-secondary-800 hover:bg-secondary-100 hover:text-black"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
             >
@@ -135,10 +131,10 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
           <div id="mobile-menu" className="lg:hidden">
             <div className="space-y-1 pb-4 pt-2">
               {navigation.categories.map((category) => (
-                <div key={category._id} className="border-b border-gray-100 pb-2">
+                <div key={category._id} className="border-b border-secondary-300 pb-2">
                   <Link
                     href={`/${category.slug}`}
-                    className="block px-4 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                    className="block px-4 py-2 text-base font-medium uppercase tracking-wide text-black hover:bg-secondary-100"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {category.title}
@@ -149,7 +145,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                         <Link
                           key={article._id}
                           href={`/${cleanSlug(category.slug)}/${cleanSlug(article.slug)}`}
-                          className="block px-4 py-1.5 text-sm text-gray-600 hover:text-primary-800"
+                          className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {article.title}
@@ -160,10 +156,10 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 </div>
               ))}
               {/* Blog Link */}
-              <div className="border-b border-gray-100 pb-2">
+              <div className="border-b border-secondary-300 pb-2">
                 <Link
                   href="/blog"
-                  className="block px-4 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                  className="block px-4 py-2 text-base font-medium uppercase tracking-wide text-black hover:bg-secondary-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Blog

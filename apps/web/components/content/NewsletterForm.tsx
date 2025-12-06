@@ -40,14 +40,15 @@ export function NewsletterForm({
   return (
     <div
       className={cn(
-        'rounded-2xl bg-gray-50 p-8 sm:p-10',
+        // Brand-compliant: square corners, light gray background
+        'rounded-none bg-secondary-100 p-8 sm:p-10',
         className
       )}
     >
       <div className={cn(variant === 'inline' && 'sm:flex sm:items-center sm:justify-between sm:gap-8')}>
         <div className={cn(variant === 'inline' ? 'sm:flex-1' : 'text-center')}>
-          <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">{title}</h3>
-          <p className="mt-2 text-gray-600">{description}</p>
+          <h3 className="text-xl font-bold text-black sm:text-2xl font-serif">{title}</h3>
+          <p className="mt-2 text-secondary-500">{description}</p>
         </div>
 
         <form

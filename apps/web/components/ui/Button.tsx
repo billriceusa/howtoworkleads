@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
-type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'outline' | 'ghost'
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'ghost-dark'
 type ButtonSize = 'sm' | 'md' | 'lg'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,18 +12,24 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean
 }
 
+// Brand-compliant button styles
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: 'bg-primary-800 text-white hover:bg-primary-700 focus:ring-primary-500',
-  secondary: 'bg-secondary-700 text-white hover:bg-secondary-600 focus:ring-secondary-500',
-  accent: 'bg-accent-600 text-white hover:bg-accent-500 focus:ring-accent-500',
-  outline: 'border-2 border-primary-800 bg-transparent text-primary-800 hover:bg-primary-800 hover:text-white focus:ring-primary-500',
-  ghost: 'bg-transparent text-primary-800 hover:bg-primary-50 focus:ring-primary-500',
+  // Yellow background, black text - primary CTA
+  primary: 'bg-brand-yellow text-black hover:bg-brand-yellow-hover hover:scale-[1.02] focus:ring-brand-yellow',
+  // Black border, transparent background - secondary action
+  secondary: 'border-2 border-black bg-transparent text-black hover:bg-black hover:text-white focus:ring-black',
+  // Same as secondary - outline style
+  outline: 'border-2 border-black bg-transparent text-black hover:bg-black hover:text-white focus:ring-black',
+  // Ghost for light backgrounds
+  ghost: 'bg-transparent text-black hover:bg-secondary-100 focus:ring-secondary-300',
+  // Ghost for dark backgrounds
+  'ghost-dark': 'border-2 border-white bg-transparent text-white hover:bg-white hover:text-black focus:ring-white',
 }
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-base',
-  lg: 'px-8 py-4 text-lg',
+  sm: 'px-4 py-2 text-xs',
+  md: 'px-6 py-3 text-sm',
+  lg: 'px-8 py-4 text-sm',
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -40,8 +46,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const baseStyles =
-      'inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+    // Brand-compliant base styles: square corners, uppercase, letter-spacing
+    const baseStyles = cn(
+      'inline-flex items-center justify-center font-semibold transition-all duration-200',
+      'focus:outline-none focus:ring-2 focus:ring-offset-2',
+      'disabled:opacity-50 disabled:cursor-not-allowed',
+      'uppercase tracking-wide',
+      'rounded-none' // Square corners per brand guide
+    )
 
     const combinedClassName = cn(
       baseStyles,

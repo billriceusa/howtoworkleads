@@ -39,7 +39,8 @@ export function Hero({
   return (
     <section
       className={cn(
-        'bg-gradient-to-br from-primary-50 via-white to-secondary-50',
+        // Brand-compliant: white-dominant background
+        'bg-white',
         sizeStyles[size],
         className
       )}
@@ -47,7 +48,8 @@ export function Hero({
       <div className={cn('container-wide', centered && 'text-center')}>
         <h1
           className={cn(
-            'font-bold tracking-tight text-gray-900',
+            // Brand-compliant: Georgia font for headlines, black text
+            'font-bold tracking-tight text-black font-serif',
             headlineSizes[size],
             centered && 'mx-auto max-w-4xl'
           )}
@@ -57,7 +59,8 @@ export function Hero({
         {subheadline && (
           <div
             className={cn(
-              'mt-6 text-lg text-gray-600 sm:text-xl',
+              // Brand-compliant: dark gray body text
+              'mt-6 text-lg text-secondary-800 sm:text-xl',
               centered && 'mx-auto max-w-2xl'
             )}
           >

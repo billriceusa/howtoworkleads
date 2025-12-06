@@ -68,6 +68,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        {/* Georgia is a system font, no need to load */}
       </head>
       <body className="flex min-h-screen flex-col font-sans">
         <GoogleAnalytics />
