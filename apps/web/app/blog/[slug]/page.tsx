@@ -8,7 +8,7 @@ import { urlForImage } from '@/lib/sanity/image'
 import { Hero, CTASection, NewsletterForm } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd } from '@/components/seo'
-import { Badge } from '@/components/ui'
+import { Badge, Markdown } from '@/components/ui'
 import { PortableText } from '@portabletext/react'
 import { formatDate, absoluteUrl } from '@/lib/utils'
 
@@ -259,7 +259,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div>
                       <p className="font-medium text-gray-900">{post.author.name}</p>
                       {post.author.bio && (
-                        <p className="mt-1 text-sm text-gray-600">{post.author.bio}</p>
+                        <Markdown content={post.author.bio} className="mt-1 text-sm text-gray-600" />
                       )}
                     </div>
                   </div>
