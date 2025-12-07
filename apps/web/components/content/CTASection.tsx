@@ -34,7 +34,7 @@ export function CTASection({
         className
       )}
     >
-      <h2 className="text-2xl font-bold sm:text-3xl">{headline}</h2>
+      <h2 className="text-2xl font-bold sm:text-3xl text-white">{headline}</h2>
       {description && (
         <div className="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
           <Markdown content={description} />

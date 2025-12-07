@@ -240,7 +240,7 @@ export default async function HomePage() {
       {/* Social Proof - Black background with yellow accents (brand compliant) */}
       <section className="section bg-black text-white">
         <div className="container-wide text-center">
-          <h2 className="text-3xl font-bold font-serif sm:text-4xl">
+          <h2 className="text-3xl font-bold font-serif sm:text-4xl text-white">
             Trusted by Sales Teams Everywhere
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">

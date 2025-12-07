@@ -17,7 +17,7 @@ export default function LeadOrderPage() {
       {/* Hero Section */}
       <section className="bg-black text-white py-16 sm:py-20">
         <div className="container-narrow text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             Request Your Custom Lead Quote
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
@@ -160,7 +160,7 @@ export default function LeadOrderPage() {
       {/* CTA Section */}
       <section className="section bg-primary-800 text-white">
         <div className="container-narrow text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl text-white">
             Ready to Get Started?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-gray-300">
