@@ -10,6 +10,7 @@ function cleanSlug(slug: string): string {
 // Static company links (not in Sanity CMS)
 const companyLinks = [
   { name: 'Blog', href: '/blog' },
+  { name: 'Resources', href: '/resources' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
   { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -103,8 +104,8 @@ export async function Footer() {
               ))}
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              {navigation.categories.slice(2, 4).map((category, index) => (
-                <div key={category._id} className={index > 0 ? 'mt-10 md:mt-0' : ''}>
+              {navigation.categories.slice(2, 3).map((category) => (
+                <div key={category._id}>
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
                     {category.title}
                   </h3>
@@ -133,25 +134,23 @@ export async function Footer() {
                 </div>
               ))}
               {/* Company Links - Static */}
-              {navigation.categories.length < 4 && (
-                <div className="mt-10 md:mt-0">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
-                    Company
-                  </h3>
-                  <ul className="mt-4 space-y-3">
-                    {companyLinks.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="text-sm text-white/70 hover:text-white transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
+                  Company
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {companyLinks.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-sm text-white/70 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

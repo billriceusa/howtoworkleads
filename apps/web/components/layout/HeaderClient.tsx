@@ -92,6 +92,22 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
             >
               Blog
             </Link>
+
+            {/* Resources Link */}
+            <Link
+              href="/resources"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors"
+            >
+              Resources
+            </Link>
+
+            {/* About Link */}
+            <Link
+              href="/about"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors"
+            >
+              About
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -163,6 +179,26 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Blog
+                </Link>
+              </div>
+              {/* Resources Link */}
+              <div className="border-b border-secondary-300 pb-2">
+                <Link
+                  href="/resources"
+                  className="block px-4 py-2 text-base font-medium uppercase tracking-wide text-black hover:bg-secondary-100"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Resources
+                </Link>
+              </div>
+              {/* About Link */}
+              <div className="border-b border-secondary-300 pb-2">
+                <Link
+                  href="/about"
+                  className="block px-4 py-2 text-base font-medium uppercase tracking-wide text-black hover:bg-secondary-100"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About
                 </Link>
               </div>
               <div className="px-4 pt-4">
