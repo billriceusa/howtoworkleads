@@ -24,16 +24,29 @@ export function NewsletterForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
+    setMessage('')
 
-    // Simulate API call - replace with actual newsletter integration
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to subscribe')
+      }
+
       setStatus('success')
-      setMessage('Thanks for subscribing! Check your inbox to confirm.')
+      setMessage(data.message || 'Thanks for subscribing!')
       setEmail('')
-    } catch {
+    } catch (error) {
       setStatus('error')
-      setMessage('Something went wrong. Please try again.')
+      setMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
     }
   }
 
