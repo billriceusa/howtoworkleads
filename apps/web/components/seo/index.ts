@@ -4,4 +4,6 @@ export {
   HowToJsonLd,
   OrganizationJsonLd,
   WebSiteJsonLd,
+  BreadcrumbJsonLd,
+  WebPageJsonLd,
 } from './JsonLd'

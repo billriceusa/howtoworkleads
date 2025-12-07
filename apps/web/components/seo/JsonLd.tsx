@@ -6,6 +6,9 @@ interface ArticleJsonLdProps {
   datePublished?: string
   dateModified?: string
   authorName?: string
+  authorJobTitle?: string
+  authorUrl?: string
+  speakable?: boolean
 }
 
 export function ArticleJsonLd({
@@ -16,7 +19,12 @@ export function ArticleJsonLd({
   datePublished,
   dateModified,
   authorName,
+  authorJobTitle,
+  authorUrl,
+  speakable = true,
 }: ArticleJsonLdProps) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -30,6 +38,8 @@ export function ArticleJsonLd({
       author: {
         '@type': 'Person',
         name: authorName,
+        ...(authorJobTitle && { jobTitle: authorJobTitle }),
+        ...(authorUrl && { url: authorUrl }),
       },
     }),
     publisher: {
@@ -37,8 +47,20 @@ export function ArticleJsonLd({
       name: 'HowToWorkLeads',
       logo: {
         '@type': 'ImageObject',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'}/logo.png`,
+        url: `${baseUrl}/logo.png`,
       },
+    },
+    // Speakable schema for voice assistants and AI
+    ...(speakable && {
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.article-summary', '.quick-answer'],
+      },
+    }),
+    // Main entity for better AI understanding
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
     },
   }
 
@@ -157,6 +179,93 @@ export function WebSiteJsonLd({
         urlTemplate: `${baseUrl}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  )
+}
+
+interface BreadcrumbItem {
+  name: string
+  url: string
+}
+
+interface BreadcrumbJsonLdProps {
+  items: BreadcrumbItem[]
+}
+
+export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  )
+}
+
+interface WebPageJsonLdProps {
+  title: string
+  description: string
+  url: string
+  datePublished?: string
+  dateModified?: string
+  breadcrumbs?: BreadcrumbItem[]
+}
+
+export function WebPageJsonLd({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  breadcrumbs,
+}: WebPageJsonLdProps) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description: description,
+    url: url,
+    ...(datePublished && { datePublished }),
+    ...(dateModified && { dateModified }),
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'HowToWorkLeads',
+      url: baseUrl,
+    },
+    ...(breadcrumbs && {
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.name,
+          item: item.url,
+        })),
+      },
+    }),
+    // Speakable for AI/voice assistants
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '.article-summary', '.quick-answer'],
     },
   }
 
