@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
 
 // Static pages that always exist
 const staticPages = [
@@ -31,6 +31,7 @@ const staticPages = [
   '/buying-leads/lead-buying-checklist',
   '/buying-leads/lead-roi-calculator',
   '/buying-leads/compliance-checklist',
+  '/resources',
   '/about',
   '/contact',
   '/privacy-policy',
