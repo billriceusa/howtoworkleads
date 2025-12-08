@@ -290,10 +290,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* CTA Section */}
         <div className="mt-16">
           <CTASection
-            headline="Ready to Convert More Leads?"
-            description="Explore our guides and resources to build a complete lead conversion system."
-            ctaText="Browse All Resources"
-            ctaLink="/"
+            headline="Hit your Sales and Revenue Goals, Every Month"
+            features={[
+              "Stop worrying about leads. Buy them on demand.",
+              "Learn to convert any lead with proper lead management.",
+              "Build and nurture a huge database into an endless stream of leads."
+            ]}
+            ctaText="Get a Custom Lead Quote"
+            ctaLink="/lead-order"
+            secondaryCtaText="Book a Lead Strategy Call"
+            secondaryCtaLink="https://calendar.app.google/6WQdrfLe2xHDKa8Y8"
             variant="primary"
           />
         </div>
