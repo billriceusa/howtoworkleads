@@ -39,6 +39,22 @@ export default defineType({
       group: 'content',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'contentType',
+      title: 'Content Type',
+      type: 'string',
+      group: 'content',
+      description: 'Determines how this page is displayed on category pages',
+      options: {
+        list: [
+          { title: 'Resource', value: 'resource' },
+          { title: 'Article', value: 'article' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'article',
+      validation: (Rule) => Rule.required(),
+    }),
 
     // Hero Section
     defineField({

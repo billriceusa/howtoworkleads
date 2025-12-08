@@ -90,28 +90,54 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         )}
 
-        {/* Articles Grid */}
-        {category.articles && category.articles.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {category.articles.map((article: any) => (
-              <ArticleCard
-                key={article._id}
-                title={article.title}
-                description={article.seoDescription || article.heroSection?.headline}
-                href={`/${params.category}/${article.slug.current}`}
-                category={category.title}
-                publishedAt={article.publishedAt}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-            <h3 className="text-xl font-semibold text-gray-900">Content Coming Soon</h3>
-            <p className="mt-2 text-gray-600">
-              We&apos;re working on comprehensive guides for this category.
-            </p>
-          </div>
+        {/* Resources Section */}
+        {category.resources && category.resources.length > 0 && (
+          <section className="mb-16">
+            <h2 className="mb-6 text-2xl font-bold text-black">Resources</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {category.resources.map((resource: any) => (
+                <ArticleCard
+                  key={resource._id}
+                  title={resource.title}
+                  description={resource.seoDescription || resource.heroSection?.headline}
+                  href={`/${params.category}/${resource.slug.current}`}
+                  category={category.title}
+                  publishedAt={resource.publishedAt}
+                />
+              ))}
+            </div>
+          </section>
         )}
+
+        {/* Articles Section */}
+        {category.articles && category.articles.length > 0 && (
+          <section className="mb-16">
+            <h2 className="mb-6 text-2xl font-bold text-black">Articles</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {category.articles.map((article: any) => (
+                <ArticleCard
+                  key={article._id}
+                  title={article.title}
+                  description={article.seoDescription || article.heroSection?.headline}
+                  href={`/${params.category}/${article.slug.current}`}
+                  category={category.title}
+                  publishedAt={article.publishedAt}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Empty State */}
+        {(!category.resources || category.resources.length === 0) &&
+          (!category.articles || category.articles.length === 0) && (
+            <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
+              <h3 className="text-xl font-semibold text-gray-900">Content Coming Soon</h3>
+              <p className="mt-2 text-gray-600">
+                We&apos;re working on comprehensive guides for this category.
+              </p>
+            </div>
+          )}
 
         {/* CTA Section */}
         <div className="mt-16">
