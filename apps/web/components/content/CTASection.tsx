@@ -30,7 +30,7 @@ export function CTASection({
     accent: 'bg-accent-600 text-white',
   }
 
-  const buttonVariant = variant === 'primary' ? 'outline' : 'primary'
+  const buttonVariant = variant === 'primary' ? 'primary' : 'outline'
 
   return (
     <section
