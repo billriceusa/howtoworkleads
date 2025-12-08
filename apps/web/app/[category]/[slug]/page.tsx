@@ -9,7 +9,31 @@ import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/lib/sanity/image'
 import { extractHeadings, absoluteUrl } from '@/lib/utils'
 import Image from 'next/image'
-import { Accordion } from '@/components/ui'
+import { Accordion, Markdown } from '@/components/ui'
+
+// Helper function to detect markdown syntax in text
+function containsMarkdown(text: string): boolean {
+  const markdownPatterns = [
+    /^\s*#{1,6}\s+/m,           // Headings: # ## ### etc.
+    /\[.+?\]\(.+?\)/,           // Links: [text](url)
+    /\*\*.+?\*\*/,              // Bold: **text**
+    /\*.+?\*/,                  // Italic: *text*
+    /`[^`]+`/,                  // Inline code: `code`
+    /^\s*[-*+]\s+/m,            // Unordered lists
+    /^\s*\d+\.\s+/m,            // Ordered lists
+    /^\s*>/m,                   // Blockquotes
+  ]
+  return markdownPatterns.some(pattern => pattern.test(text))
+}
+
+// Extract plain text from Portable Text children
+function extractTextFromChildren(children: any[]): string {
+  if (!children) return ''
+  return children
+    .filter((child: any) => child._type === 'span')
+    .map((child: any) => child.text || '')
+    .join('')
+}
 
 // Enable ISR - revalidate pages every 60 seconds
 export const revalidate = 60
@@ -115,6 +139,18 @@ const portableTextComponents = {
     },
   },
   block: {
+    normal: ({ children, value }: any) => {
+      // Extract the raw text to check for markdown
+      const rawText = extractTextFromChildren(value?.children)
+
+      // If the text contains markdown syntax, render it through the Markdown component
+      if (containsMarkdown(rawText)) {
+        return <Markdown content={rawText} className="[&>p]:mb-0" />
+      }
+
+      // Otherwise, render normally
+      return <p>{children}</p>
+    },
     h2: ({ children, value }: any) => {
       const text = value.children?.map((child: any) => child.text).join('') || ''
       const slug = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-')
