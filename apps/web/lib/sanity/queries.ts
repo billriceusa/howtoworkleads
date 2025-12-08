@@ -16,6 +16,8 @@ export const landingPageQuery = groq`
       subheadline,
       ctaText,
       ctaLink,
+      secondaryCtaText,
+      secondaryCtaLink,
       backgroundImage
     },
     tableOfContents,

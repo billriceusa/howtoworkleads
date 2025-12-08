@@ -166,6 +166,8 @@ export default async function LandingPage({ params }: LandingPageProps) {
         subheadline={page.heroSection?.subheadline}
         ctaText={page.heroSection?.ctaText}
         ctaLink={page.heroSection?.ctaLink}
+        secondaryCtaText={page.heroSection?.secondaryCtaText}
+        secondaryCtaLink={page.heroSection?.secondaryCtaLink}
         size="md"
       />
 
