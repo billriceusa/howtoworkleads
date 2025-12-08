@@ -84,7 +84,7 @@ export const categoryPageQuery = groq`
       secondaryCtaLink,
       backgroundImage
     },
-    "articles": *[_type == "landingPage" && references(^._id)] | order(publishedAt desc) {
+    "resources": *[_type == "landingPage" && references(^._id)] | order(publishedAt desc) {
       _id,
       title,
       slug,
@@ -93,6 +93,14 @@ export const categoryPageQuery = groq`
       heroSection {
         headline
       }
+    },
+    "articles": *[_type == "blogPost" && references(^._id)] | order(publishedAt desc) {
+      _id,
+      title,
+      slug,
+      excerpt,
+      publishedAt,
+      mainImage
     }
   }
 `
