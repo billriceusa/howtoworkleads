@@ -1,48 +1,109 @@
 import { MetadataRoute } from 'next'
+import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
+import { sitemapQuery } from '@/lib/sanity/queries'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
 
-// Static pages that always exist
-const staticPages = [
-  '',
-  '/lead-management',
-  '/lead-management/buying-leads',
-  '/lead-management/cleaning-verifying-data',
-  '/lead-management/email-sequences',
-  '/lead-management/building-email-list',
-  '/lead-management/effective-call-campaigns',
-  '/sales-process',
-  '/sales-process/working-real-time-leads',
-  '/sales-process/warming-aged-leads',
-  '/sales-process/managing-pipeline',
-  '/sales-process/omni-channel-sequences',
-  '/crm-systems',
-  '/crm-systems/highlevel-close-sales-system',
-  '/buying-leads',
-  '/buying-leads/aged-leads',
-  '/buying-leads/mortgage-leads',
-  '/buying-leads/insurance-leads',
-  '/buying-leads/insurance-leads/life-insurance-leads',
-  '/buying-leads/insurance-leads/iul-leads',
-  '/buying-leads/insurance-leads/auto-insurance-leads',
-  '/buying-leads/insurance-leads/health-insurance-leads',
-  '/buying-leads/solar-leads',
-  '/buying-leads/how-to-buy-leads',
-  '/buying-leads/lead-buying-checklist',
-  '/buying-leads/lead-roi-calculator',
-  '/buying-leads/compliance-checklist',
-  '/resources',
-  '/about',
-  '/contact',
-  '/privacy-policy',
-  '/terms-of-service',
-]
+interface SitemapData {
+  landingPages: Array<{
+    slug: string
+    category: string
+    updatedAt?: string
+    publishedAt?: string
+  }>
+  categoryPages: Array<{
+    slug: string
+    updatedAt?: string
+  }>
+  blogPosts: Array<{
+    slug: string
+    updatedAt?: string
+    publishedAt?: string
+  }>
+}
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return staticPages.map((path) => ({
-    url: `${baseUrl}${path}`,
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const entries: MetadataRoute.Sitemap = []
+
+  // Homepage - always exists
+  entries.push({
+    url: baseUrl,
     lastModified: new Date(),
-    changeFrequency: (path === '' ? 'daily' : 'weekly') as 'daily' | 'weekly',
-    priority: path === '' ? 1 : path.split('/').length <= 2 ? 0.8 : 0.6,
-  }))
+    changeFrequency: 'daily',
+    priority: 1,
+  })
+
+  // Static pages that have dedicated routes
+  const staticRoutes = [
+    { path: '/blog', priority: 0.8 },
+    { path: '/lead-order', priority: 0.7 },
+  ]
+
+  for (const route of staticRoutes) {
+    entries.push({
+      url: `${baseUrl}${route.path}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: route.priority,
+    })
+  }
+
+  // Fetch dynamic content from Sanity
+  if (isSanityConfigured) {
+    const data = await sanityFetch<SitemapData>(sitemapQuery)
+
+    if (data) {
+      // Add category pages
+      if (data.categoryPages) {
+        for (const category of data.categoryPages) {
+          if (category.slug) {
+            entries.push({
+              url: `${baseUrl}/${category.slug}`,
+              lastModified: category.updatedAt ? new Date(category.updatedAt) : new Date(),
+              changeFrequency: 'weekly',
+              priority: 0.8,
+            })
+          }
+        }
+      }
+
+      // Add landing pages (articles under categories)
+      if (data.landingPages) {
+        for (const page of data.landingPages) {
+          if (page.slug && page.category) {
+            entries.push({
+              url: `${baseUrl}/${page.category}/${page.slug}`,
+              lastModified: page.updatedAt
+                ? new Date(page.updatedAt)
+                : page.publishedAt
+                  ? new Date(page.publishedAt)
+                  : new Date(),
+              changeFrequency: 'weekly',
+              priority: 0.6,
+            })
+          }
+        }
+      }
+
+      // Add blog posts
+      if (data.blogPosts) {
+        for (const post of data.blogPosts) {
+          if (post.slug) {
+            entries.push({
+              url: `${baseUrl}/blog/${post.slug}`,
+              lastModified: post.updatedAt
+                ? new Date(post.updatedAt)
+                : post.publishedAt
+                  ? new Date(post.publishedAt)
+                  : new Date(),
+              changeFrequency: 'monthly',
+              priority: 0.5,
+            })
+          }
+        }
+      }
+    }
+  }
+
+  return entries
 }
