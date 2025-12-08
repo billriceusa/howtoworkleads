@@ -4,8 +4,11 @@ import { cn } from '@/lib/utils'
 interface CTASectionProps {
   headline: string
   description?: string
+  features?: string[]
   ctaText: string
   ctaLink: string
+  secondaryCtaText?: string
+  secondaryCtaLink?: string
   variant?: 'primary' | 'secondary' | 'accent'
   className?: string
 }
@@ -13,8 +16,11 @@ interface CTASectionProps {
 export function CTASection({
   headline,
   description,
+  features,
   ctaText,
   ctaLink,
+  secondaryCtaText,
+  secondaryCtaLink,
   variant = 'primary',
   className,
 }: CTASectionProps) {
@@ -40,7 +46,19 @@ export function CTASection({
           <Markdown content={description} />
         </div>
       )}
-      <div className="mt-8">
+      {features && features.length > 0 && (
+        <ol className="mt-6 space-y-3 text-left max-w-2xl mx-auto">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-start gap-3 text-lg opacity-90">
+              <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-white/20 text-white font-semibold text-sm">
+                {index + 1}
+              </span>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ol>
+      )}
+      <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
         <Button
           href={ctaLink}
           variant={buttonVariant}
@@ -51,6 +69,15 @@ export function CTASection({
         >
           {ctaText}
         </Button>
+        {secondaryCtaText && secondaryCtaLink && (
+          <Button
+            href={secondaryCtaLink}
+            variant="ghost-dark"
+            size="lg"
+          >
+            {secondaryCtaText}
+          </Button>
+        )}
       </div>
     </section>
   )
