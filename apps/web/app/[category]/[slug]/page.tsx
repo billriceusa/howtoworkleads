@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import React from 'react'
 import { notFound } from 'next/navigation'
 import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { landingPageQuery, landingPagePathsQuery } from '@/lib/sanity/queries'
@@ -13,11 +14,12 @@ import { Accordion, Markdown } from '@/components/ui'
 
 // Helper function to detect markdown syntax in text
 function containsMarkdown(text: string): boolean {
+  if (!text || typeof text !== 'string') return false
   const markdownPatterns = [
     /^\s*#{1,6}\s+/m,           // Headings: # ## ### etc.
     /\[.+?\]\(.+?\)/,           // Links: [text](url)
-    /\*\*.+?\*\*/,              // Bold: **text**
-    /\*.+?\*/,                  // Italic: *text*
+    /\*\*[^*]+\*\*/,            // Bold: **text**
+    /(?<!\*)\*[^*]+\*(?!\*)/,   // Italic: *text* (not preceded/followed by *)
     /`[^`]+`/,                  // Inline code: `code`
     /^\s*[-*+]\s+/m,            // Unordered lists
     /^\s*\d+\.\s+/m,            // Ordered lists
@@ -26,13 +28,27 @@ function containsMarkdown(text: string): boolean {
   return markdownPatterns.some(pattern => pattern.test(text))
 }
 
-// Extract plain text from Portable Text children
-function extractTextFromChildren(children: any[]): string {
-  if (!children) return ''
+// Extract plain text from Portable Text block value
+function extractTextFromBlock(value: any): string {
+  if (!value) return ''
+
+  // Handle array of children (standard Portable Text structure)
+  const children = value.children || value
+  if (!Array.isArray(children)) return ''
+
   return children
-    .filter((child: any) => child._type === 'span')
+    .filter((child: any) => child && (child._type === 'span' || child.text !== undefined))
     .map((child: any) => child.text || '')
     .join('')
+}
+
+// Process text content - render as markdown if it contains markdown syntax
+function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
+  const rawText = extractTextFromBlock(value)
+  if (containsMarkdown(rawText)) {
+    return <Markdown content={rawText} />
+  }
+  return children
 }
 
 // Enable ISR - revalidate pages every 60 seconds
@@ -139,27 +155,46 @@ const portableTextComponents = {
     },
   },
   block: {
+    // Default handler for blocks without a specific style or with style: 'normal'
     normal: ({ children, value }: any) => {
-      // Extract the raw text to check for markdown
-      const rawText = extractTextFromChildren(value?.children)
-
-      // If the text contains markdown syntax, render it through the Markdown component
-      if (containsMarkdown(rawText)) {
-        return <Markdown content={rawText} className="[&>p]:mb-0" />
+      const processed = processTextContent(value, children)
+      // If markdown was detected, wrap in div instead of p to allow block elements
+      if (processed !== children) {
+        return <div className="prose-paragraph">{processed}</div>
       }
-
-      // Otherwise, render normally
       return <p>{children}</p>
     },
+    // Headings with markdown processing
     h2: ({ children, value }: any) => {
-      const text = value.children?.map((child: any) => child.text).join('') || ''
-      const slug = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-')
+      const rawText = extractTextFromBlock(value)
+      const slug = rawText.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
+      // Check if the text itself contains markdown (e.g., starts with ##)
+      if (containsMarkdown(rawText)) {
+        return <div className="prose-heading">{processTextContent(value, children)}</div>
+      }
       return <h2 id={slug}>{children}</h2>
     },
     h3: ({ children, value }: any) => {
-      const text = value.children?.map((child: any) => child.text).join('') || ''
-      const slug = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-')
+      const rawText = extractTextFromBlock(value)
+      const slug = rawText.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
+      if (containsMarkdown(rawText)) {
+        return <div className="prose-heading">{processTextContent(value, children)}</div>
+      }
       return <h3 id={slug}>{children}</h3>
+    },
+    h4: ({ children, value }: any) => {
+      const rawText = extractTextFromBlock(value)
+      if (containsMarkdown(rawText)) {
+        return <div className="prose-heading">{processTextContent(value, children)}</div>
+      }
+      return <h4>{children}</h4>
+    },
+    blockquote: ({ children, value }: any) => {
+      const processed = processTextContent(value, children)
+      if (processed !== children) {
+        return <blockquote>{processed}</blockquote>
+      }
+      return <blockquote>{children}</blockquote>
     },
   },
 }
