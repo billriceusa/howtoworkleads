@@ -109,7 +109,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </section>
         )}
 
-        {/* Articles Section */}
+        {/* Articles Section (Blog Posts) */}
         {category.articles && category.articles.length > 0 && (
           <section className="mb-16">
             <h2 className="mb-6 text-2xl font-bold text-black">Articles</h2>
@@ -118,8 +118,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <ArticleCard
                   key={article._id}
                   title={article.title}
-                  description={article.seoDescription || article.heroSection?.headline}
-                  href={`/${params.category}/${article.slug.current}`}
+                  description={article.excerpt}
+                  href={`/blog/${article.slug.current}`}
                   category={category.title}
                   publishedAt={article.publishedAt}
                 />

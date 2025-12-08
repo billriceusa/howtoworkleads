@@ -84,27 +84,23 @@ export const categoryPageQuery = groq`
       secondaryCtaLink,
       backgroundImage
     },
-    "resources": *[_type == "landingPage" && references(^._id) && contentType == "resource"] | order(publishedAt desc) {
+    "resources": *[_type == "landingPage" && references(^._id)] | order(publishedAt desc) {
       _id,
       title,
       slug,
       seoDescription,
       publishedAt,
-      contentType,
       heroSection {
         headline
       }
     },
-    "articles": *[_type == "landingPage" && references(^._id) && (contentType == "article" || !defined(contentType))] | order(publishedAt desc) {
+    "articles": *[_type == "blogPost" && references(^._id)] | order(publishedAt desc) {
       _id,
       title,
       slug,
-      seoDescription,
+      excerpt,
       publishedAt,
-      contentType,
-      heroSection {
-        headline
-      }
+      mainImage
     }
   }
 `
