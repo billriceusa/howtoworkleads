@@ -70,9 +70,15 @@ const config: Config = {
             lineHeight: '1.75',
             a: {
               color: '#000000',
-              textDecoration: 'underline',
+              backgroundColor: '#FFD500',
+              fontWeight: '700',
+              textDecoration: 'none',
+              transition: 'all 150ms ease-in-out',
               '&:hover': {
-                color: '#FFD500',
+                backgroundColor: 'transparent',
+                fontWeight: '400',
+                textDecoration: 'underline',
+                textDecorationColor: '#000000',
               },
             },
             h1: {
