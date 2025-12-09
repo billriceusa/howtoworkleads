@@ -40,11 +40,11 @@ export function Markdown({ content, className, prose = false }: MarkdownProps) {
         p: ({ children }) => (
           <p className="mb-2 last:mb-0">{children}</p>
         ),
-        // Links
+        // Links - Yellow highlight style
         a: ({ href, children }) => (
           <a
             href={href}
-            className="text-primary-700 hover:text-primary-800 hover:underline"
+            className="bg-brand-yellow text-black font-bold no-underline transition-all hover:bg-transparent hover:font-normal hover:underline hover:decoration-black"
             target={href?.startsWith('http') ? '_blank' : undefined}
             rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
           >
