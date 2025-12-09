@@ -85,29 +85,58 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
               </div>
             ))}
 
-            {/* Blog Link */}
-            <Link
-              href="/blog"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors"
+            {/* Resources Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveDropdown('resources')}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              Blog
-            </Link>
+              <Link
+                href="/resources"
+                className={cn(
+                  'inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors',
+                  activeDropdown === 'resources' && 'text-brand-yellow'
+                )}
+              >
+                Resources
+                <svg
+                  className={cn(
+                    'ml-1 h-4 w-4 transition-transform',
+                    activeDropdown === 'resources' && 'rotate-180'
+                  )}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
 
-            {/* Resources Link */}
-            <Link
-              href="/resources"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors"
-            >
-              Resources
-            </Link>
-
-            {/* About Link */}
-            <Link
-              href="/about"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium uppercase tracking-wide text-secondary-800 hover:text-brand-yellow transition-colors"
-            >
-              About
-            </Link>
+              {activeDropdown === 'resources' && (
+                <div className="absolute left-0 top-full w-48 rounded-none bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
+                  <Link
+                    href="/blog"
+                    className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
+                  >
+                    About
+                  </Link>
+                  <div className="mt-2 border-t border-secondary-300 pt-2">
+                    <Link
+                      href="/resources"
+                      className="block px-4 py-2 text-sm font-medium text-black hover:bg-secondary-100"
+                    >
+                      All Resources &rarr;
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* CTA Button */}
@@ -171,17 +200,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                   )}
                 </div>
               ))}
-              {/* Blog Link */}
-              <div className="border-b border-secondary-300 pb-2">
-                <Link
-                  href="/blog"
-                  className="block px-4 py-2 text-base font-medium uppercase tracking-wide text-black hover:bg-secondary-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Blog
-                </Link>
-              </div>
-              {/* Resources Link */}
+              {/* Resources Section */}
               <div className="border-b border-secondary-300 pb-2">
                 <Link
                   href="/resources"
@@ -190,16 +209,22 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 >
                   Resources
                 </Link>
-              </div>
-              {/* About Link */}
-              <div className="border-b border-secondary-300 pb-2">
-                <Link
-                  href="/about"
-                  className="block px-4 py-2 text-base font-medium uppercase tracking-wide text-black hover:bg-secondary-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </Link>
+                <div className="ml-4 space-y-1">
+                  <Link
+                    href="/blog"
+                    className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About
+                  </Link>
+                </div>
               </div>
               <div className="px-4 pt-4">
                 <Button href="/lead-order" variant="primary" className="w-full">
