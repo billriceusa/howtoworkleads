@@ -2,6 +2,9 @@ import { MetadataRoute } from 'next'
 import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { sitemapQuery } from '@/lib/sanity/queries'
 
+// Enable ISR - regenerate sitemap every 60 seconds
+export const revalidate = 60
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
 
 interface SitemapData {
@@ -50,7 +53,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Fetch dynamic content from Sanity
   if (isSanityConfigured) {
-    const data = await sanityFetch<SitemapData>(sitemapQuery)
+    const data = await sanityFetch<SitemapData>(sitemapQuery, {}, {
+      next: { revalidate: 60 }
+    })
 
     if (data) {
       // Add category pages
