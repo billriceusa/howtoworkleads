@@ -30,7 +30,9 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-1">
-            {navigation.categories.map((category) => (
+            {navigation.categories
+              .filter((category) => category.slug !== 'resources')
+              .map((category) => (
               <div
                 key={category._id}
                 className="relative"
@@ -175,7 +177,9 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
         {mobileMenuOpen && (
           <div id="mobile-menu" className="lg:hidden">
             <div className="space-y-1 pb-4 pt-2">
-              {navigation.categories.map((category) => (
+              {navigation.categories
+                .filter((category) => category.slug !== 'resources')
+                .map((category) => (
                 <div key={category._id} className="border-b border-secondary-300 pb-2">
                   <Link
                     href={`/${category.slug}`}
