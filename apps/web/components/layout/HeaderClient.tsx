@@ -142,10 +142,13 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+          <div className="hidden lg:flex lg:flex-col lg:items-center lg:space-y-1">
             <Button href="https://agedleadstore.com/all-lead-types/" variant="primary" size="sm">
               Buy Leads
             </Button>
+            <span className="text-[10px] font-semibold text-secondary-500">
+              Promo Code: BILLRICE
+            </span>
           </div>
 
           {/* Mobile menu button */}
@@ -230,10 +233,13 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                   </Link>
                 </div>
               </div>
-              <div className="px-4 pt-4">
+              <div className="px-4 pt-4 text-center">
                 <Button href="https://agedleadstore.com/all-lead-types/" variant="primary" className="w-full">
                   Buy Leads
                 </Button>
+                <p className="mt-1 text-[10px] font-semibold text-secondary-500">
+                  Promo Code: BILLRICE
+                </p>
               </div>
             </div>
           </div>
