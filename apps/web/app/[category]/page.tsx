@@ -74,10 +74,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Hero
         headline={category.heroSection?.headline || category.title}
         subheadline={category.heroSection?.subheadline || category.description}
-        ctaText={category.heroSection?.ctaText}
-        ctaLink={category.heroSection?.ctaLink}
+        ctaText="Buy Aged Leads"
+        ctaLink="https://agedleadstore.com/all-lead-types/"
         secondaryCtaText={category.heroSection?.secondaryCtaText}
         secondaryCtaLink={category.heroSection?.secondaryCtaLink}
+        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+        downloadText="Free Guide: How to Work Consumer Data"
+        downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
         size="md"
       />
 

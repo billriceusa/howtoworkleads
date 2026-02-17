@@ -235,10 +235,13 @@ export default async function LandingPage({ params }: LandingPageProps) {
       <Hero
         headline={page.heroSection?.headline || page.title}
         subheadline={page.heroSection?.subheadline}
-        ctaText={page.heroSection?.ctaText}
-        ctaLink={page.heroSection?.ctaLink}
+        ctaText="Buy Aged Leads"
+        ctaLink="https://agedleadstore.com/all-lead-types/"
         secondaryCtaText={page.heroSection?.secondaryCtaText}
         secondaryCtaLink={page.heroSection?.secondaryCtaLink}
+        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+        downloadText="Free Guide: How to Work Consumer Data"
+        downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
         size="md"
       />
 
@@ -267,8 +270,11 @@ export default async function LandingPage({ params }: LandingPageProps) {
                         <CTASection
                           headline={block.headline}
                           description={block.description}
-                          ctaText={block.ctaText}
-                          ctaLink={block.ctaLink}
+                          ctaText="Buy Aged Leads"
+                          ctaLink="https://agedleadstore.com/all-lead-types/"
+                          subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+                          downloadText="Free Guide: How to Work Consumer Data"
+                          downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
                           variant={block.variant || 'primary'}
                         />
                       </div>
