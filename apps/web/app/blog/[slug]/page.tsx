@@ -103,7 +103,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
-  const ogImage = post.mainImage ? urlForImage(post.mainImage).width(1200).height(630).url() : undefined
+  const ogImage = post.mainImage?.asset ? urlForImage(post.mainImage).width(1200).height(630).url() : undefined
 
   return {
     title: post.seoTitle || post.title,
@@ -272,7 +272,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         title={post.seoTitle || post.title}
         description={post.seoDescription || post.excerpt || ''}
         url={absoluteUrl(`/blog/${params.slug}`)}
-        imageUrl={post.mainImage ? urlForImage(post.mainImage).width(1200).url() : undefined}
+        imageUrl={post.mainImage?.asset ? urlForImage(post.mainImage).width(1200).url() : undefined}
         datePublished={post.publishedAt}
         dateModified={post.updatedAt}
         authorName={post.author?.name}

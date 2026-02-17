@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
     }
   }
 
-  const ogImage = page.ogImage ? urlForImage(page.ogImage).width(1200).height(630).url() : undefined
+  const ogImage = page.ogImage?.asset ? urlForImage(page.ogImage).width(1200).height(630).url() : undefined
 
   return {
     title: page.seoTitle || page.title,
@@ -225,7 +225,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
         title={page.seoTitle || page.title}
         description={page.seoDescription || ''}
         url={absoluteUrl(`/${params.category}/${params.slug}`)}
-        imageUrl={page.ogImage ? urlForImage(page.ogImage).width(1200).url() : undefined}
+        imageUrl={page.ogImage?.asset ? urlForImage(page.ogImage).width(1200).url() : undefined}
         datePublished={page.publishedAt}
         dateModified={page.updatedAt}
         authorName={page.author?.name}
