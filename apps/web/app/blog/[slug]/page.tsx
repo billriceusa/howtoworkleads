@@ -147,6 +147,47 @@ const portableTextComponents = {
         </figure>
       )
     },
+    comparisonTable: ({ value }: any) => {
+      if (!value?.columns || !value?.rows) return null
+      return (
+        <div className="not-prose my-8 overflow-x-auto">
+          {value.title && (
+            <h4 className="mb-3 text-lg font-semibold text-gray-900">{value.title}</h4>
+          )}
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-gray-900 text-white">
+                {value.columns.map((col: string, i: number) => (
+                  <th key={i} className="px-4 py-3 text-left font-semibold">
+                    {col}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {value.rows.map((row: any, i: number) => (
+                <tr
+                  key={row._key || i}
+                  className={`border-b border-gray-200 ${
+                    row.isHighlighted
+                      ? 'bg-yellow-50 font-semibold'
+                      : i % 2 === 0
+                        ? 'bg-white'
+                        : 'bg-gray-50'
+                  }`}
+                >
+                  {row.cells?.map((cell: string, j: number) => (
+                    <td key={j} className={`px-4 py-3 ${j === 0 ? 'font-medium' : ''}`}>
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    },
   },
   marks: {
     link: ({ children, value }: any) => {
