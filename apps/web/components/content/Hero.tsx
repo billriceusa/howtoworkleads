@@ -8,6 +8,9 @@ interface HeroProps {
   ctaLink?: string
   secondaryCtaText?: string
   secondaryCtaLink?: string
+  subtext?: string
+  downloadText?: string
+  downloadLink?: string
   centered?: boolean
   size?: 'sm' | 'md' | 'lg'
   className?: string
@@ -20,6 +23,9 @@ export function Hero({
   ctaLink,
   secondaryCtaText,
   secondaryCtaLink,
+  subtext,
+  downloadText,
+  downloadLink,
   centered = true,
   size = 'lg',
   className,
@@ -70,19 +76,39 @@ export function Hero({
         {(ctaText || secondaryCtaText) && (
           <div
             className={cn(
-              'mt-10 flex flex-wrap gap-4',
-              centered && 'justify-center'
+              'mt-10 flex flex-col gap-4',
+              centered && 'items-center'
             )}
           >
-            {ctaText && ctaLink && (
-              <Button href={ctaLink} variant="primary" size="lg">
-                {ctaText}
-              </Button>
+            <div
+              className={cn(
+                'flex flex-wrap gap-4',
+                centered && 'justify-center'
+              )}
+            >
+              {ctaText && ctaLink && (
+                <Button href={ctaLink} variant="primary" size="lg">
+                  {ctaText}
+                </Button>
+              )}
+              {secondaryCtaText && secondaryCtaLink && (
+                <Button href={secondaryCtaLink} variant="outline" size="lg">
+                  {secondaryCtaText}
+                </Button>
+              )}
+            </div>
+            {subtext && (
+              <p className="text-sm font-bold text-secondary-600">{subtext}</p>
             )}
-            {secondaryCtaText && secondaryCtaLink && (
-              <Button href={secondaryCtaLink} variant="outline" size="lg">
-                {secondaryCtaText}
-              </Button>
+            {downloadText && downloadLink && (
+              <a
+                href={downloadLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-primary-800 underline hover:text-primary-900 transition-colors"
+              >
+                {downloadText}
+              </a>
             )}
           </div>
         )}

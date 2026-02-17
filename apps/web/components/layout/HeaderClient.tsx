@@ -143,7 +143,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
 
           {/* CTA Button */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
-            <Button href="/lead-order" variant="primary" size="sm">
+            <Button href="https://agedleadstore.com/all-lead-types/" variant="primary" size="sm">
               Buy Leads
             </Button>
           </div>
@@ -231,7 +231,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 </div>
               </div>
               <div className="px-4 pt-4">
-                <Button href="/lead-order" variant="primary" className="w-full">
+                <Button href="https://agedleadstore.com/all-lead-types/" variant="primary" className="w-full">
                   Buy Leads
                 </Button>
               </div>

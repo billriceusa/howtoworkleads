@@ -9,6 +9,9 @@ interface CTASectionProps {
   ctaLink: string
   secondaryCtaText?: string
   secondaryCtaLink?: string
+  subtext?: string
+  downloadText?: string
+  downloadLink?: string
   variant?: 'primary' | 'secondary' | 'accent'
   className?: string
 }
@@ -21,6 +24,9 @@ export function CTASection({
   ctaLink,
   secondaryCtaText,
   secondaryCtaLink,
+  subtext,
+  downloadText,
+  downloadLink,
   variant = 'primary',
   className,
 }: CTASectionProps) {
@@ -58,25 +64,40 @@ export function CTASection({
           ))}
         </ol>
       )}
-      <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Button
-          href={ctaLink}
-          variant={buttonVariant}
-          size="lg"
-          className={cn(
-            variant !== 'primary' && 'bg-white text-gray-900 hover:bg-gray-100'
-          )}
-        >
-          {ctaText}
-        </Button>
-        {secondaryCtaText && secondaryCtaLink && (
+      <div className="mt-8 flex flex-col items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
-            href={secondaryCtaLink}
-            variant="ghost-dark"
+            href={ctaLink}
+            variant={buttonVariant}
             size="lg"
+            className={cn(
+              variant !== 'primary' && 'bg-white text-gray-900 hover:bg-gray-100'
+            )}
           >
-            {secondaryCtaText}
+            {ctaText}
           </Button>
+          {secondaryCtaText && secondaryCtaLink && (
+            <Button
+              href={secondaryCtaLink}
+              variant="ghost-dark"
+              size="lg"
+            >
+              {secondaryCtaText}
+            </Button>
+          )}
+        </div>
+        {subtext && (
+          <p className="text-sm font-bold opacity-90">{subtext}</p>
+        )}
+        {downloadText && downloadLink && (
+          <a
+            href={downloadLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm underline opacity-80 hover:opacity-100 transition-opacity"
+          >
+            {downloadText}
+          </a>
         )}
       </div>
     </section>

@@ -367,10 +367,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               "Learn to convert any lead with proper lead management.",
               "Build and nurture a huge database into an endless stream of leads."
             ]}
-            ctaText="Get a Custom Lead Quote"
-            ctaLink="/lead-order"
+            ctaText="Buy Aged Leads"
+            ctaLink="https://agedleadstore.com/all-lead-types/"
             secondaryCtaText="Book a Lead Strategy Call"
             secondaryCtaLink="https://calendar.app.google/6WQdrfLe2xHDKa8Y8"
+            subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+            downloadText="Free Guide: How to Work Consumer Data"
+            downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
             variant="primary"
           />
         </div>
