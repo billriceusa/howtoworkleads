@@ -77,6 +77,31 @@ export const categoryPageQuery = groq`
     seoTitle,
     seoDescription,
     description,
+    ogImage,
+    content[] {
+      _type,
+      _key,
+      _type == "contentBlock" => {
+        content[] {
+          ...,
+          markDefs[] {
+            ...,
+            _type == "internalLink" => {
+              "reference": @.reference-> { slug }
+            }
+          }
+        }
+      },
+      _type == "ctaSection" => {
+        headline,
+        description,
+        ctaText,
+        ctaLink,
+        secondaryCtaText,
+        secondaryCtaLink,
+        subtext
+      }
+    },
     heroSection {
       headline,
       subheadline,

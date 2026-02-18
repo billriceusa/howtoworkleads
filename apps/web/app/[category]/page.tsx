@@ -6,9 +6,53 @@ import { Hero, ArticleCard, CTASection } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { Markdown } from '@/components/ui'
 import { fallbackNavigation } from '@/lib/sanity/navigation'
+import { PortableText } from '@portabletext/react'
+import { urlForImage } from '@/lib/sanity/image'
+import Image from 'next/image'
 
 // Enable ISR - revalidate pages every 60 seconds
 export const revalidate = 60
+
+const portableTextComponents = {
+  types: {
+    image: ({ value }: any) => {
+      if (!value?.asset) return null
+      return (
+        <figure className="my-8">
+          <Image
+            src={urlForImage(value).width(800).url()}
+            alt={value.alt || ''}
+            width={800}
+            height={450}
+            className="rounded-lg"
+          />
+          {value.caption && (
+            <figcaption className="mt-2 text-center text-sm text-gray-500">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      )
+    },
+  },
+  marks: {
+    link: ({ children, value }: any) => {
+      const isExternal = value.href?.startsWith('http://') || value.href?.startsWith('https://')
+      const isExternalSite = isExternal && !value.href?.includes('howtoworkleads.com')
+      const shouldOpenNewTab = value.openInNewTab || isExternalSite
+      const target = shouldOpenNewTab ? '_blank' : undefined
+      const rel = shouldOpenNewTab ? 'noopener noreferrer' : undefined
+      return (
+        <a href={value.href} target={target} rel={rel}>
+          {children}
+        </a>
+      )
+    },
+    internalLink: ({ children, value }: any) => {
+      return <a href={`/${value.reference?.slug?.current}`}>{children}</a>
+    },
+  },
+}
 
 // Allow dynamic params for on-demand page generation
 export const dynamicParams = true
@@ -91,6 +135,42 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="prose-custom mb-12 max-w-3xl text-lg text-gray-600">
             <Markdown content={category.description} />
           </div>
+        )}
+
+        {/* Pillar Content Blocks */}
+        {category.content && category.content.length > 0 && (
+          <article className="prose-custom mb-16 max-w-3xl">
+            {category.content.map((block: any, index: number) => {
+              switch (block._type) {
+                case 'contentBlock':
+                  return (
+                    <div key={block._key || index}>
+                      <PortableText
+                        value={block.content}
+                        components={portableTextComponents}
+                      />
+                    </div>
+                  )
+                case 'ctaSection':
+                  return (
+                    <div key={block._key || index} className="not-prose my-12">
+                      <CTASection
+                        headline={block.headline}
+                        description={block.description}
+                        ctaText="Buy Aged Leads"
+                        ctaLink="https://agedleadstore.com/all-lead-types/"
+                        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+                        downloadText="Free Guide: How to Work Consumer Data"
+                        downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+                        variant="secondary"
+                      />
+                    </div>
+                  )
+                default:
+                  return null
+              }
+            })}
+          </article>
         )}
 
         {/* Resources Section */}

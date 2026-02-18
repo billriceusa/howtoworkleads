@@ -271,7 +271,7 @@ export default async function HomePage() {
         <div className="container-narrow">
           <NewsletterForm
             title="Get Weekly Sales Tips"
-            description="Join our newsletter for the latest strategies on converting internet leads into customers."
+            description="Join The Lead Brief for weekly strategies on converting internet leads into customers."
           />
         </div>
       </section>

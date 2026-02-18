@@ -10,7 +10,7 @@ interface NewsletterFormProps {
 
 export function NewsletterForm({
   title = 'Get sales tips delivered to your inbox',
-  description = 'Join thousands of sales professionals who receive our weekly insights on converting leads into customers.',
+  description = 'Join The Lead Brief — weekly insights for sales professionals on converting leads into customers.',
   className,
   variant = 'stacked',
 }: NewsletterFormProps) {
@@ -32,7 +32,7 @@ export function NewsletterForm({
             variant="primary"
             size="lg"
           >
-            Subscribe to My Newsletter
+            Subscribe to The Lead Brief
           </Button>
         </div>
       </div>
