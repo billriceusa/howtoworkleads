@@ -115,7 +115,13 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
               </Link>
 
               {activeDropdown === 'resources' && (
-                <div className="absolute left-0 top-full w-48 rounded-none bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="absolute left-0 top-full w-64 rounded-none bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
+                  <Link
+                    href="/resources/email-starter-stack"
+                    className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
+                  >
+                    Email Starter Stack Guide
+                  </Link>
                   <Link
                     href="/blog"
                     className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
@@ -217,6 +223,13 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                   Resources
                 </Link>
                 <div className="ml-4 space-y-1">
+                  <Link
+                    href="/resources/email-starter-stack"
+                    className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Email Starter Stack Guide
+                  </Link>
                   <Link
                     href="/blog"
                     className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
