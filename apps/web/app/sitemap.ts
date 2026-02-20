@@ -40,6 +40,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     { path: '/blog', priority: 0.8 },
     { path: '/lead-order', priority: 0.7 },
+    { path: '/tools/aged-lead-roi-calculator', priority: 0.7 },
+    { path: '/tools/compliance-checklist', priority: 0.7 },
   ]
 
   for (const route of staticRoutes) {
