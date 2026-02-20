@@ -78,9 +78,11 @@ export async function generateStaticParams() {
       category: category.slug,
     }))
   }
-  return categories.map((category: { slug: { current: string } }) => ({
-    category: category.slug.current,
-  }))
+  return categories
+    .filter((category: any) => category.slug?.current)
+    .map((category: { slug: { current: string } }) => ({
+      category: category.slug.current,
+    }))
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
