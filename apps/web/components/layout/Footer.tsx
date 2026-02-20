@@ -9,6 +9,7 @@ function cleanSlug(slug: string): string {
 
 // Static company links (not in Sanity CMS)
 const companyLinks = [
+  { name: 'Aged Leads Guide', href: '/aged-leads' },
   { name: 'Tools', href: '/tools' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' },

@@ -9,6 +9,43 @@ import { fallbackNavigation } from '@/lib/sanity/navigation'
 import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/lib/sanity/image'
 import Image from 'next/image'
+import React from 'react'
+
+// Helper function to detect markdown syntax in text
+function containsMarkdown(text: string): boolean {
+  if (!text || typeof text !== 'string') return false
+  const markdownPatterns = [
+    /^\s*#{1,6}\s+/m,           // Headings: # ## ### etc.
+    /\[.+?\]\(.+?\)/,           // Links: [text](url)
+    /\*\*[^*]+\*\*/,            // Bold: **text**
+    /(?<!\*)\*[^*]+\*(?!\*)/,   // Italic: *text* (not preceded/followed by *)
+    /`[^`]+`/,                  // Inline code: `code`
+    /^\s*[-*+]\s+/m,            // Unordered lists
+    /^\s*\d+\.\s+/m,            // Ordered lists
+    /^\s*>/m,                   // Blockquotes
+  ]
+  return markdownPatterns.some(pattern => pattern.test(text))
+}
+
+// Extract plain text from Portable Text block value
+function extractTextFromBlock(value: any): string {
+  if (!value) return ''
+  const children = value.children || value
+  if (!Array.isArray(children)) return ''
+  return children
+    .filter((child: any) => child && (child._type === 'span' || child.text !== undefined))
+    .map((child: any) => child.text || '')
+    .join('')
+}
+
+// Process text content - render as markdown if it contains markdown syntax
+function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
+  const rawText = extractTextFromBlock(value)
+  if (containsMarkdown(rawText)) {
+    return <Markdown content={rawText} />
+  }
+  return children
+}
 
 // Enable ISR - revalidate pages every 60 seconds
 export const revalidate = 60
@@ -50,6 +87,45 @@ const portableTextComponents = {
     },
     internalLink: ({ children, value }: any) => {
       return <a href={`/${value.reference?.slug?.current}`}>{children}</a>
+    },
+  },
+  block: {
+    normal: ({ children, value }: any) => {
+      const processed = processTextContent(value, children)
+      if (processed !== children) {
+        return <div className="prose-paragraph">{processed}</div>
+      }
+      return <p>{children}</p>
+    },
+    h2: ({ children, value }: any) => {
+      const rawText = extractTextFromBlock(value)
+      const slug = rawText.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
+      if (containsMarkdown(rawText)) {
+        return <div className="prose-heading">{processTextContent(value, children)}</div>
+      }
+      return <h2 id={slug}>{children}</h2>
+    },
+    h3: ({ children, value }: any) => {
+      const rawText = extractTextFromBlock(value)
+      const slug = rawText.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
+      if (containsMarkdown(rawText)) {
+        return <div className="prose-heading">{processTextContent(value, children)}</div>
+      }
+      return <h3 id={slug}>{children}</h3>
+    },
+    h4: ({ children, value }: any) => {
+      const rawText = extractTextFromBlock(value)
+      if (containsMarkdown(rawText)) {
+        return <div className="prose-heading">{processTextContent(value, children)}</div>
+      }
+      return <h4>{children}</h4>
+    },
+    blockquote: ({ children, value }: any) => {
+      const processed = processTextContent(value, children)
+      if (processed !== children) {
+        return <blockquote>{processed}</blockquote>
+      }
+      return <blockquote>{children}</blockquote>
     },
   },
 }

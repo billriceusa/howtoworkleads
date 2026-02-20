@@ -31,7 +31,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-1">
             {navigation.categories
-              .filter((category) => category.slug !== 'resources')
+              .filter((category) => category.slug !== 'resources' && category.slug !== 'aged-leads')
               .map((category) => (
               <div
                 key={category._id}
@@ -117,6 +117,12 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
               {activeDropdown === 'resources' && (
                 <div className="absolute left-0 top-full w-64 rounded-none bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
                   <Link
+                    href="/aged-leads"
+                    className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
+                  >
+                    The Complete Guide to Aged Leads
+                  </Link>
+                  <Link
                     href="/resources/email-starter-stack"
                     className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
                   >
@@ -193,7 +199,7 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
           <div id="mobile-menu" className="lg:hidden">
             <div className="space-y-1 pb-4 pt-2">
               {navigation.categories
-                .filter((category) => category.slug !== 'resources')
+                .filter((category) => category.slug !== 'resources' && category.slug !== 'aged-leads')
                 .map((category) => (
                 <div key={category._id} className="border-b border-secondary-300 pb-2">
                   <Link
@@ -229,6 +235,13 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                   Resources
                 </Link>
                 <div className="ml-4 space-y-1">
+                  <Link
+                    href="/aged-leads"
+                    className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    The Complete Guide to Aged Leads
+                  </Link>
                   <Link
                     href="/resources/email-starter-stack"
                     className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
