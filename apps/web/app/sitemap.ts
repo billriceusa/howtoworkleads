@@ -39,6 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages that have dedicated routes
   const staticRoutes = [
     { path: '/blog', priority: 0.8 },
+    { path: '/tools', priority: 0.8 },
     { path: '/lead-order', priority: 0.7 },
     { path: '/tools/aged-lead-roi-calculator', priority: 0.7 },
     { path: '/tools/compliance-checklist', priority: 0.7 },

@@ -123,6 +123,12 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                     Email Starter Stack Guide
                   </Link>
                   <Link
+                    href="/tools"
+                    className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
+                  >
+                    Free Tools
+                  </Link>
+                  <Link
                     href="/blog"
                     className="block px-4 py-2 text-sm text-secondary-800 hover:bg-secondary-100 hover:text-black"
                   >
@@ -229,6 +235,13 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Email Starter Stack Guide
+                  </Link>
+                  <Link
+                    href="/tools"
+                    className="block px-4 py-1.5 text-sm text-secondary-500 hover:text-black"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Free Tools
                   </Link>
                   <Link
                     href="/blog"
