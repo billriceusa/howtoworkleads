@@ -1,8 +1,7 @@
 'use client'
 
 import Script from 'next/script'
-
-const GA_MEASUREMENT_ID = 'G-86654ZPS5H'
+import { GA_MEASUREMENT_ID } from '@/lib/analytics'
 
 export function GoogleAnalytics() {
   return (

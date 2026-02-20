@@ -1,6 +1,9 @@
+'use client'
+
 import { forwardRef } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { trackEvent, appendALSUtm } from '@/lib/analytics'
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'ghost-dark'
 type ButtonSize = 'sm' | 'md' | 'lg'
@@ -68,12 +71,22 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       const isExternalSite = isExternal && !href.includes('howtoworkleads.com')
 
       if (isExternalSite) {
+        const isALS = href.includes('agedleadstore.com')
+        const finalHref = isALS ? appendALSUtm(href) : href
+
         return (
           <a
-            href={href}
+            href={finalHref}
             className={combinedClassName}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              trackEvent('cta_click', {
+                link_url: finalHref,
+                link_text: typeof children === 'string' ? children : 'CTA',
+                is_als: isALS ? 'true' : 'false',
+              })
+            }}
           >
             {children}
           </a>
