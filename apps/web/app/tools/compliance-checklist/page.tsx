@@ -155,7 +155,7 @@ export default function ComplianceChecklistPage() {
             ]}
             ctaText="Buy Aged Leads"
             ctaLink="https://agedleadstore.com/all-lead-types/"
-            secondaryCtaText="Subscribe to The Lead Brief"
+            secondaryCtaText="Subscribe to The Aged Lead Playbook"
             secondaryCtaLink="#newsletter"
             utmCampaign="tools-compliance-checklist-bottom"
             variant="primary"

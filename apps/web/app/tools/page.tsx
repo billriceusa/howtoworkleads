@@ -108,7 +108,7 @@ export default function ToolsPage() {
             ]}
             ctaText="Buy Aged Leads"
             ctaLink="https://agedleadstore.com/all-lead-types/"
-            secondaryCtaText="Subscribe to The Lead Brief"
+            secondaryCtaText="Subscribe to The Aged Lead Playbook"
             secondaryCtaLink="#newsletter"
             downloadText="Free Guide: How to Work Consumer Data"
             downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"

@@ -194,7 +194,7 @@ export function LeadOrderForm() {
             href="#newsletter"
             className="text-primary-800 font-semibold hover:underline"
           >
-            subscribe to The Lead Brief
+            subscribe to The Aged Lead Playbook
           </a>
           {' '}for weekly tips on converting more leads.
         </p>

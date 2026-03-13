@@ -143,7 +143,7 @@ export default async function HomePage() {
         subheadline="Proven strategies, expert guides, and practical tools to help sales professionals turn more leads into paying customers."
         ctaText="Buy Aged Leads"
         ctaLink="https://agedleadstore.com/all-lead-types/"
-        secondaryCtaText="Subscribe to The Lead Brief"
+        secondaryCtaText="Subscribe to The Aged Lead Playbook"
         secondaryCtaLink="#newsletter"
         downloadText="Free Guide: How to Work Consumer Data"
         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
@@ -271,7 +271,7 @@ export default async function HomePage() {
         <div className="container-narrow">
           <NewsletterForm
             title="Get Weekly Sales Tips"
-            description="Join The Lead Brief for weekly strategies on converting internet leads into customers."
+            description="Weekly strategies, scripts, and insider tips for turning aged leads into closed deals. Join free."
           />
         </div>
       </section>
