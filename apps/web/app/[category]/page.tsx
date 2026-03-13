@@ -144,12 +144,19 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     }
   }
 
+  const pageUrl = `https://www.howtoworkleads.com/${params.category}`
+
   return {
     title: category.seoTitle || category.title,
     description: category.seoDescription || category.description,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title: `${category.seoTitle || category.title} | How To Work Leads`,
       description: category.seoDescription || category.description,
+      url: pageUrl,
+      siteName: 'How To Work Leads',
     },
   }
 }

@@ -62,13 +62,19 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
 
   const ogImage = page.ogImage?.asset ? urlForImage(page.ogImage).width(1200).height(630).url() : undefined
 
+  const pageUrl = `https://www.howtoworkleads.com/${params.category}/${params.slug}`
+
   return {
     title: page.seoTitle || page.title,
-    description: page.seoDescription,
-    keywords: page.secondaryKeywords,
+    description: page.seoDescription?.trim(),
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title: `${page.seoTitle || page.title} | How To Work Leads`,
-      description: page.seoDescription,
+      description: page.seoDescription?.trim(),
+      url: pageUrl,
+      siteName: 'How To Work Leads',
       type: 'article',
       publishedTime: page.publishedAt,
       modifiedTime: page.updatedAt,
@@ -77,7 +83,7 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
     twitter: {
       card: 'summary_large_image',
       title: page.seoTitle || page.title,
-      description: page.seoDescription,
+      description: page.seoDescription?.trim(),
       images: ogImage ? [ogImage] : undefined,
     },
   }

@@ -27,7 +27,7 @@ export function slugify(text: string): string {
 }
 
 export function absoluteUrl(path: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
   return `${baseUrl}${path}`
 }
 

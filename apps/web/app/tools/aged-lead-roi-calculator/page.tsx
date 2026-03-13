@@ -7,13 +7,18 @@ import { FAQJsonLd, WebPageJsonLd } from '@/components/seo'
 import { absoluteUrl } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Aged Lead ROI Calculator: See Your Real Return by Industry',
+  title: 'Aged Lead ROI Calculator',
   description:
     'Calculate your ROI on aged leads instantly. Enter your industry, lead cost, and close rate to see expected revenue, CPA, and break-even point.',
+  alternates: {
+    canonical: 'https://www.howtoworkleads.com/tools/aged-lead-roi-calculator',
+  },
   openGraph: {
-    title: 'Aged Lead ROI Calculator: See Your Real Return by Industry | How To Work Leads',
+    title: 'Aged Lead ROI Calculator | How To Work Leads',
     description:
       'Calculate your ROI on aged leads instantly. Enter your industry, lead cost, and close rate to see expected revenue, CPA, and break-even point.',
+    url: 'https://www.howtoworkleads.com/tools/aged-lead-roi-calculator',
+    siteName: 'How To Work Leads',
     type: 'website',
   },
 }

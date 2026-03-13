@@ -7,7 +7,7 @@ import { ExitIntentPopup, StickyMobileCTA } from '@/components/content'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
   ),
   title: {
     default: 'How To Work Leads | Master Internet Lead Conversion',
@@ -15,32 +15,27 @@ export const metadata: Metadata = {
   },
   description:
     'Learn proven strategies to convert internet leads into sales. Expert guides on lead management, sales processes, CRM systems, and buying leads.',
-  keywords: [
-    'internet leads',
-    'lead conversion',
-    'sales leads',
-    'lead management',
-    'how to work leads',
-    'buy leads',
-    'sales process',
-    'CRM',
-  ],
-  authors: [{ name: 'How To Work Leads' }],
+  authors: [{ name: 'Bill Rice' }],
   creator: 'How To Work Leads',
+  alternates: {
+    canonical: 'https://www.howtoworkleads.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://howtoworkleads.com',
+    url: 'https://www.howtoworkleads.com',
     siteName: 'How To Work Leads',
     title: 'How To Work Leads | Master Internet Lead Conversion',
     description:
       'Learn proven strategies to convert internet leads into sales. Expert guides on lead management, sales processes, CRM systems, and buying leads.',
+    images: [{ url: '/og-default.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How To Work Leads | Master Internet Lead Conversion',
     description:
       'Learn proven strategies to convert internet leads into sales.',
+    images: ['/og-default.jpg'],
   },
   robots: {
     index: true,

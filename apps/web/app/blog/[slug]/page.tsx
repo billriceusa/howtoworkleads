@@ -76,12 +76,19 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   const ogImage = post.mainImage?.asset ? urlForImage(post.mainImage).width(1200).height(630).url() : undefined
 
+  const pageUrl = `https://www.howtoworkleads.com/blog/${params.slug}`
+
   return {
     title: post.seoTitle || post.title,
     description: post.seoDescription || post.excerpt,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title: `${post.seoTitle || post.title} | How To Work Leads`,
       description: post.seoDescription || post.excerpt,
+      url: pageUrl,
+      siteName: 'How To Work Leads',
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,

@@ -7,13 +7,18 @@ import { FAQJsonLd, HowToJsonLd, WebPageJsonLd } from '@/components/seo'
 import { absoluteUrl } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Lead Compliance Checklist: TCPA, DNC & Email Requirements',
+  title: 'Lead Compliance Checklist',
   description:
     'Interactive compliance checklist for buying and working internet leads. TCPA, DNC, CAN-SPAM, and industry-specific requirements — check every box before your next campaign.',
+  alternates: {
+    canonical: 'https://www.howtoworkleads.com/tools/compliance-checklist',
+  },
   openGraph: {
-    title: 'Lead Compliance Checklist: TCPA, DNC & Email Requirements | How To Work Leads',
+    title: 'Lead Compliance Checklist | How To Work Leads',
     description:
       'Interactive compliance checklist for buying and working internet leads. TCPA, DNC, CAN-SPAM, and industry-specific requirements — check every box before your next campaign.',
+    url: 'https://www.howtoworkleads.com/tools/compliance-checklist',
+    siteName: 'How To Work Leads',
     type: 'website',
   },
 }

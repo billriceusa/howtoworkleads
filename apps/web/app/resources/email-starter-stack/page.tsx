@@ -5,23 +5,18 @@ import { HowToJsonLd } from '@/components/seo'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 
 export const metadata: Metadata = {
-  title: 'Consumer Data Email Starter Stack — Free Guide',
+  title: 'Consumer Data Email Starter Stack',
   description:
     'Step-by-step guide to emailing consumer leads with maximum deliverability and response. Set up in one afternoon for ~$40/month.',
-  keywords: [
-    'cold email guide',
-    'consumer data email',
-    'email outreach',
-    'aged leads email',
-    'GMass',
-    'email deliverability',
-    'CAN-SPAM',
-    'lead email verification',
-  ],
+  alternates: {
+    canonical: 'https://www.howtoworkleads.com/resources/email-starter-stack',
+  },
   openGraph: {
-    title: 'Consumer Data Email Starter Stack — Free Guide | How To Work Leads',
+    title: 'Consumer Data Email Starter Stack | How To Work Leads',
     description:
       'Step-by-step guide to emailing consumer leads with maximum deliverability and response. Set up in one afternoon for ~$40/month.',
+    url: 'https://www.howtoworkleads.com/resources/email-starter-stack',
+    siteName: 'How To Work Leads',
     type: 'article',
   },
 }
