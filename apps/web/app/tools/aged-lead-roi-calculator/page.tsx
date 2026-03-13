@@ -160,9 +160,8 @@ export default function ROICalculatorPage() {
             ]}
             ctaText="Buy Aged Leads"
             ctaLink="https://agedleadstore.com/all-lead-types/"
-            secondaryCtaText="Book a Lead Strategy Call"
-            secondaryCtaLink="https://calendar.app.google/6WQdrfLe2xHDKa8Y8"
-            subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+            secondaryCtaText="Subscribe to The Lead Brief"
+            secondaryCtaLink="#newsletter"
             utmCampaign="tools-roi-calculator-bottom"
             variant="primary"
           />

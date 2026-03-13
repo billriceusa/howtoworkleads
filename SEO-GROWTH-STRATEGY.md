@@ -182,9 +182,9 @@ Each brief in `/content-briefs/` follows this structure:
 
 ## Required Elements
 - [ ] FAQ section (3-5 questions) with FAQ schema
-- [ ] CTA: AgedLeadStore affiliate link with promo code BILLRICE
-- [ ] CTA: Book a Lead Strategy Call
-- [ ] CTA: Newsletter signup
+- [ ] CTA: AgedLeadStore affiliate link (no promo codes)
+- [ ] CTA: Subscribe to The Lead Brief (newsletter)
+- [ ] CTA: Free guide download (where applicable)
 - [ ] CTA: Free guide download (where applicable)
 - [ ] Internal links to: [list 3-5 related pages]
 - [ ] External links to: [1-2 authoritative sources]

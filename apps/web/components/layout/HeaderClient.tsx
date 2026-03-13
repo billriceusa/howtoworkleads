@@ -160,13 +160,10 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex lg:flex-col lg:items-center lg:space-y-1">
+          <div className="hidden lg:flex lg:items-center">
             <Button href="https://agedleadstore.com/all-lead-types/" variant="primary" size="sm" utmCampaign="header-nav">
               Buy Leads
             </Button>
-            <span className="text-[10px] font-semibold text-secondary-500">
-              Promo Code: BILLRICE
-            </span>
           </div>
 
           {/* Mobile menu button */}
@@ -276,9 +273,6 @@ export function HeaderClient({ navigation }: HeaderClientProps) {
                 <Button href="https://agedleadstore.com/all-lead-types/" variant="primary" className="w-full" utmCampaign="header-nav-mobile">
                   Buy Leads
                 </Button>
-                <p className="mt-1 text-[10px] font-semibold text-secondary-500">
-                  Promo Code: BILLRICE
-                </p>
               </div>
             </div>
           </div>

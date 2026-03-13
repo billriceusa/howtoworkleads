@@ -216,7 +216,6 @@ export default async function LandingPage({ params }: LandingPageProps) {
         ctaLink="https://agedleadstore.com/all-lead-types/"
         secondaryCtaText={page.heroSection?.secondaryCtaText}
         secondaryCtaLink={page.heroSection?.secondaryCtaLink}
-        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Free Guide: How to Work Consumer Data"
         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
         utmCampaign={`article-${params.slug}-hero`}
@@ -251,8 +250,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
                           description={block.description}
                           ctaText="Buy Aged Leads"
                           ctaLink="https://agedleadstore.com/all-lead-types/"
-                          subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
-                          downloadText="Free Guide: How to Work Consumer Data"
+                                            downloadText="Free Guide: How to Work Consumer Data"
                           downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
                           utmCampaign={`article-${params.slug}-inline`}
                           variant={block.variant || 'primary'}

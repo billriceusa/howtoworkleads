@@ -128,13 +128,9 @@ export function ExitIntentPopup() {
               className="w-full"
               utmCampaign="exit-intent-popup"
             >
-              Buy Aged Leads — 10% Off
+              Buy Aged Leads
             </Button>
           </div>
-
-          <p className="mt-4 text-xs font-bold text-gray-500">
-            Use Promo Code: BILLRICE at AgedLeadStore.com
-          </p>
         </div>
       </div>
     </div>

@@ -27,10 +27,10 @@ export function StickyMobileCTA() {
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0 flex-1">
             <p className="text-sm font-bold text-white truncate">
-              Buy Aged Leads — 10% Off
+              Buy Aged Leads
             </p>
             <p className="text-xs text-gray-400">
-              Code: BILLRICE
+              AgedLeadStore.com
             </p>
           </div>
           <a

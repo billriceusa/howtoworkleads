@@ -51,7 +51,6 @@ export default function EmailStarterStackPage() {
         subheadline="Your step-by-step guide to emailing consumer leads with maximum deliverability and response. Set up in one afternoon for ~$40/month."
         ctaText="Buy Aged Leads"
         ctaLink="https://agedleadstore.com/all-lead-types/"
-        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Download the Free PDF Guide"
         downloadLink="/downloads/Consumer-Data-Email-Starter-Stack-Guide.pdf"
         utmCampaign="email-starter-stack-hero"
@@ -618,8 +617,7 @@ export default function EmailStarterStackPage() {
                   description="Get high-quality aged consumer leads — insurance, mortgage, solar, and more."
                   ctaText="Buy Aged Leads"
                   ctaLink="https://agedleadstore.com/all-lead-types/"
-                  subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
-                  utmCampaign="email-starter-stack-mid"
+                            utmCampaign="email-starter-stack-mid"
                 />
               </div>
 
@@ -868,8 +866,7 @@ export default function EmailStarterStackPage() {
                   description="Insurance, mortgage, solar, and more — verified and ready to work."
                   ctaText="Buy Aged Leads"
                   ctaLink="https://agedleadstore.com/all-lead-types/"
-                  subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
-                  downloadText="Download the Free PDF Guide"
+                            downloadText="Download the Free PDF Guide"
                   downloadLink="/downloads/Consumer-Data-Email-Starter-Stack-Guide.pdf"
                   utmCampaign="email-starter-stack-bottom"
                 />
@@ -956,9 +953,6 @@ export default function EmailStarterStackPage() {
                 >
                   Buy Aged Leads
                 </Button>
-                <p className="mt-3 text-xs font-bold text-brand-yellow">
-                  Promo Code: BILLRICE — 10% off
-                </p>
               </div>
             </div>
           </aside>

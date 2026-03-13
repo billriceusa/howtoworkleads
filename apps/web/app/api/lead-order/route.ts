@@ -135,12 +135,12 @@ export async function POST(request: NextRequest) {
               </ul>
             </div>
 
-            <p style="font-size: 16px;">If you want to book a lead strategy call, you can use this link:</p>
+            <p style="font-size: 16px;">While you wait, check out our weekly newsletter for tips on converting more leads:</p>
 
             <div style="text-align: center; margin: 25px 0;">
-              <a href="https://calendar.app.google/Kc6UTzAM5pn11ocv6"
-                 style="display: inline-block; background: #ea580c; color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
-                Book a Lead Strategy Call
+              <a href="https://www.howtoworkleads.com/#newsletter"
+                 style="display: inline-block; background: #FFD500; color: #000; padding: 14px 28px; text-decoration: none; font-weight: 600; font-size: 16px;">
+                Subscribe to The Lead Brief
               </a>
             </div>
 

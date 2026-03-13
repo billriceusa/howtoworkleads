@@ -181,7 +181,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         ctaLink="https://agedleadstore.com/all-lead-types/"
         secondaryCtaText={category.heroSection?.secondaryCtaText}
         secondaryCtaLink={category.heroSection?.secondaryCtaLink}
-        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Free Guide: How to Work Consumer Data"
         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
         utmCampaign={`category-${params.category}-hero`}
@@ -220,8 +219,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                         description={block.description}
                         ctaText="Buy Aged Leads"
                         ctaLink="https://agedleadstore.com/all-lead-types/"
-                        subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
-                        downloadText="Free Guide: How to Work Consumer Data"
+                                        downloadText="Free Guide: How to Work Consumer Data"
                         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
                         utmCampaign={`category-${params.category}-inline`}
                         variant="secondary"
@@ -296,10 +294,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             ]}
             ctaText="Buy Aged Leads"
             ctaLink="https://agedleadstore.com/all-lead-types/"
-            secondaryCtaText="Book a Lead Strategy Call"
-            secondaryCtaLink="https://calendar.app.google/6WQdrfLe2xHDKa8Y8"
-            subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
-            downloadText="Free Guide: How to Work Consumer Data"
+            secondaryCtaText="Subscribe to The Lead Brief"
+            secondaryCtaLink="#newsletter"
+                downloadText="Free Guide: How to Work Consumer Data"
             downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
             utmCampaign={`category-${params.category}-bottom`}
             variant="primary"

@@ -189,15 +189,14 @@ export function LeadOrderForm() {
           I&apos;ll review your requirements and get back to you shortly with a custom quote.
         </p>
         <p className="text-gray-600 mb-8">
-          Want to discuss your needs right away?{' '}
+          While you wait,{' '}
           <a
-            href="https://calendar.app.google/Kc6UTzAM5pn11ocv6"
+            href="#newsletter"
             className="text-primary-800 font-semibold hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Book a lead strategy call
+            subscribe to The Lead Brief
           </a>
+          {' '}for weekly tips on converting more leads.
         </p>
         <Button
           variant="outline"
