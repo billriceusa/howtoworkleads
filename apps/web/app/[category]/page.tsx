@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { categoryPageQuery, allCategoriesQuery } from '@/lib/sanity/queries'
-import { Hero, ArticleCard, CTASection } from '@/components/content'
+import { Hero, ArticleCard, CTASection, ALSAutoLinker } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { Markdown } from '@/components/ui'
 import { fallbackNavigation } from '@/lib/sanity/navigation'
@@ -10,33 +10,7 @@ import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/lib/sanity/image'
 import Image from 'next/image'
 import React from 'react'
-
-// Helper function to detect markdown syntax in text
-function containsMarkdown(text: string): boolean {
-  if (!text || typeof text !== 'string') return false
-  const markdownPatterns = [
-    /^\s*#{1,6}\s+/m,           // Headings: # ## ### etc.
-    /\[.+?\]\(.+?\)/,           // Links: [text](url)
-    /\*\*[^*]+\*\*/,            // Bold: **text**
-    /(?<!\*)\*[^*]+\*(?!\*)/,   // Italic: *text* (not preceded/followed by *)
-    /`[^`]+`/,                  // Inline code: `code`
-    /^\s*[-*+]\s+/m,            // Unordered lists
-    /^\s*\d+\.\s+/m,            // Ordered lists
-    /^\s*>/m,                   // Blockquotes
-  ]
-  return markdownPatterns.some(pattern => pattern.test(text))
-}
-
-// Extract plain text from Portable Text block value
-function extractTextFromBlock(value: any): string {
-  if (!value) return ''
-  const children = value.children || value
-  if (!Array.isArray(children)) return ''
-  return children
-    .filter((child: any) => child && (child._type === 'span' || child.text !== undefined))
-    .map((child: any) => child.text || '')
-    .join('')
-}
+import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 
 // Process text content - render as markdown if it contains markdown syntax
 function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
@@ -203,6 +177,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Free Guide: How to Work Consumer Data"
         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+        utmCampaign={`category-${params.category}-hero`}
         size="md"
       />
 
@@ -218,6 +193,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {/* Pillar Content Blocks */}
         {category.content && category.content.length > 0 && (
           <article className="prose-custom mb-16 max-w-3xl">
+            <ALSAutoLinker utmCampaign={`category-${params.category}-in-content`}>
             {category.content.map((block: any, index: number) => {
               switch (block._type) {
                 case 'contentBlock':
@@ -240,6 +216,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                         subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
                         downloadText="Free Guide: How to Work Consumer Data"
                         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+                        utmCampaign={`category-${params.category}-inline`}
                         variant="secondary"
                       />
                     </div>
@@ -248,6 +225,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   return null
               }
             })}
+            </ALSAutoLinker>
           </article>
         )}
 
@@ -316,6 +294,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
             downloadText="Free Guide: How to Work Consumer Data"
             downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+            utmCampaign={`category-${params.category}-bottom`}
             variant="primary"
           />
         </div>

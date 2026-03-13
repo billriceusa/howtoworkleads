@@ -3,44 +3,15 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { landingPageQuery, landingPagePathsQuery } from '@/lib/sanity/queries'
-import { Hero, TableOfContents, CTASection, ArticleCard, NewsletterForm } from '@/components/content'
+import { Hero, TableOfContents, CTASection, ArticleCard, NewsletterForm, ALSAutoLinker } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd, FAQJsonLd } from '@/components/seo'
 import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/lib/sanity/image'
 import { extractHeadings, absoluteUrl } from '@/lib/utils'
+import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 import Image from 'next/image'
 import { Accordion, Markdown } from '@/components/ui'
-
-// Helper function to detect markdown syntax in text
-function containsMarkdown(text: string): boolean {
-  if (!text || typeof text !== 'string') return false
-  const markdownPatterns = [
-    /^\s*#{1,6}\s+/m,           // Headings: # ## ### etc.
-    /\[.+?\]\(.+?\)/,           // Links: [text](url)
-    /\*\*[^*]+\*\*/,            // Bold: **text**
-    /(?<!\*)\*[^*]+\*(?!\*)/,   // Italic: *text* (not preceded/followed by *)
-    /`[^`]+`/,                  // Inline code: `code`
-    /^\s*[-*+]\s+/m,            // Unordered lists
-    /^\s*\d+\.\s+/m,            // Ordered lists
-    /^\s*>/m,                   // Blockquotes
-  ]
-  return markdownPatterns.some(pattern => pattern.test(text))
-}
-
-// Extract plain text from Portable Text block value
-function extractTextFromBlock(value: any): string {
-  if (!value) return ''
-
-  // Handle array of children (standard Portable Text structure)
-  const children = value.children || value
-  if (!Array.isArray(children)) return ''
-
-  return children
-    .filter((child: any) => child && (child._type === 'span' || child.text !== undefined))
-    .map((child: any) => child.text || '')
-    .join('')
-}
 
 // Process text content - render as markdown if it contains markdown syntax
 function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
@@ -155,7 +126,7 @@ const portableTextComponents = {
     },
   },
   block: {
-    // Default handler for blocks without a specific style or with style: 'normal'
+    // Default handler — auto-link ALS mentions in plain text spans
     normal: ({ children, value }: any) => {
       const processed = processTextContent(value, children)
       // If markdown was detected, wrap in div instead of p to allow block elements
@@ -242,6 +213,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
         subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Free Guide: How to Work Consumer Data"
         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+        utmCampaign={`article-${params.slug}-hero`}
         size="md"
       />
 
@@ -251,6 +223,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
         <div className="lg:grid lg:grid-cols-12 lg:gap-12">
           {/* Main Content */}
           <article className="lg:col-span-8">
+            <ALSAutoLinker utmCampaign={`article-${params.slug}-in-content`}>
             <div className="prose-custom">
               {page.content?.map((block: any, index: number) => {
                 switch (block._type) {
@@ -275,6 +248,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
                           subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
                           downloadText="Free Guide: How to Work Consumer Data"
                           downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+                          utmCampaign={`article-${params.slug}-inline`}
                           variant={block.variant || 'primary'}
                         />
                       </div>
@@ -346,6 +320,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
             <div className="mt-12">
               <NewsletterForm />
             </div>
+            </ALSAutoLinker>
           </article>
 
           {/* Sidebar */}

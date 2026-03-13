@@ -148,6 +148,7 @@ export default async function HomePage() {
         subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Free Guide: How to Work Consumer Data"
         downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+        utmCampaign="homepage-hero"
       />
 
       {/* Value Proposition - White background */}

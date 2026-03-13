@@ -13,6 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize
   href?: string
   isLoading?: boolean
+  utmCampaign?: string
 }
 
 // Brand-compliant button styles
@@ -43,6 +44,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'md',
       href,
       isLoading,
+      utmCampaign,
       disabled,
       children,
       ...props
@@ -72,7 +74,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
       if (isExternalSite) {
         const isALS = href.includes('agedleadstore.com')
-        const finalHref = isALS ? appendALSUtm(href) : href
+        const finalHref = isALS ? appendALSUtm(href, utmCampaign) : href
 
         return (
           <a
@@ -85,6 +87,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 link_url: finalHref,
                 link_text: typeof children === 'string' ? children : 'CTA',
                 is_als: isALS ? 'true' : 'false',
+                utm_campaign: utmCampaign || 'cta',
               })
             }}
           >

@@ -13,6 +13,7 @@ interface CTASectionProps {
   downloadText?: string
   downloadLink?: string
   variant?: 'primary' | 'secondary' | 'accent'
+  utmCampaign?: string
   className?: string
 }
 
@@ -28,6 +29,7 @@ export function CTASection({
   downloadText,
   downloadLink,
   variant = 'primary',
+  utmCampaign,
   className,
 }: CTASectionProps) {
   const variantStyles = {
@@ -70,6 +72,7 @@ export function CTASection({
             href={ctaLink}
             variant={buttonVariant}
             size="lg"
+            utmCampaign={utmCampaign}
             className={cn(
               variant !== 'primary' && 'bg-white text-gray-900 hover:bg-gray-100'
             )}

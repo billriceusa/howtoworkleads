@@ -13,6 +13,7 @@ interface HeroProps {
   downloadLink?: string
   centered?: boolean
   size?: 'sm' | 'md' | 'lg'
+  utmCampaign?: string
   className?: string
 }
 
@@ -28,6 +29,7 @@ export function Hero({
   downloadLink,
   centered = true,
   size = 'lg',
+  utmCampaign,
   className,
 }: HeroProps) {
   const sizeStyles = {
@@ -87,7 +89,7 @@ export function Hero({
               )}
             >
               {ctaText && ctaLink && (
-                <Button href={ctaLink} variant="primary" size="lg">
+                <Button href={ctaLink} variant="primary" size="lg" utmCampaign={utmCampaign}>
                   {ctaText}
                 </Button>
               )}

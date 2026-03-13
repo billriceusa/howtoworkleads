@@ -6,13 +6,11 @@ declare global {
 
 export const GA_MEASUREMENT_ID = 'G-86654ZPS5H'
 
-const ALS_UTM_PARAMS = 'utm_source=howtoworkleads&utm_medium=website&utm_campaign=cta'
-
 /** Append UTM params to AgedLeadStore URLs */
-export function appendALSUtm(url: string): string {
+export function appendALSUtm(url: string, campaign: string = 'cta'): string {
   if (!url.includes('agedleadstore.com')) return url
   const separator = url.includes('?') ? '&' : '?'
-  return `${url}${separator}${ALS_UTM_PARAMS}`
+  return `${url}${separator}utm_source=howtoworkleads&utm_medium=website&utm_campaign=${campaign}`
 }
 
 /** Fire a GA4 event (safe to call server-side — no-ops gracefully) */

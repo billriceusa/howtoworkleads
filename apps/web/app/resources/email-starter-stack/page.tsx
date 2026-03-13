@@ -59,6 +59,7 @@ export default function EmailStarterStackPage() {
         subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
         downloadText="Download the Free PDF Guide"
         downloadLink="/downloads/Consumer-Data-Email-Starter-Stack-Guide.pdf"
+        utmCampaign="email-starter-stack-hero"
         size="md"
       />
 
@@ -623,6 +624,7 @@ export default function EmailStarterStackPage() {
                   ctaText="Buy Aged Leads"
                   ctaLink="https://agedleadstore.com/all-lead-types/"
                   subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
+                  utmCampaign="email-starter-stack-mid"
                 />
               </div>
 
@@ -874,6 +876,7 @@ export default function EmailStarterStackPage() {
                   subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
                   downloadText="Download the Free PDF Guide"
                   downloadLink="/downloads/Consumer-Data-Email-Starter-Stack-Guide.pdf"
+                  utmCampaign="email-starter-stack-bottom"
                 />
               </div>
 
@@ -954,6 +957,7 @@ export default function EmailStarterStackPage() {
                   href="https://agedleadstore.com/all-lead-types/"
                   variant="ghost-dark"
                   size="md"
+                  utmCampaign="email-starter-stack-sidebar"
                 >
                   Buy Aged Leads
                 </Button>

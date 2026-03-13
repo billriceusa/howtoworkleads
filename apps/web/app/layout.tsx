@@ -3,6 +3,7 @@ import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { GoogleAnalytics } from '@/components/analytics'
+import { ExitIntentPopup, StickyMobileCTA } from '@/components/content'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -75,6 +76,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <ExitIntentPopup />
+        <StickyMobileCTA />
       </body>
     </html>
   )

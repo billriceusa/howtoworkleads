@@ -6,42 +6,13 @@ import Link from 'next/link'
 import { sanityFetch } from '@/lib/sanity/client'
 import { blogPostQuery } from '@/lib/sanity/queries'
 import { urlForImage } from '@/lib/sanity/image'
-import { Hero, CTASection, NewsletterForm } from '@/components/content'
+import { Hero, CTASection, NewsletterForm, ALSAutoLinker } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd } from '@/components/seo'
 import { Badge, Markdown } from '@/components/ui'
 import { PortableText } from '@portabletext/react'
 import { formatDate, absoluteUrl } from '@/lib/utils'
-
-// Helper function to detect markdown syntax in text
-function containsMarkdown(text: string): boolean {
-  if (!text || typeof text !== 'string') return false
-  const markdownPatterns = [
-    /^\s*#{1,6}\s+/m,           // Headings: # ## ### etc.
-    /\[.+?\]\(.+?\)/,           // Links: [text](url)
-    /\*\*[^*]+\*\*/,            // Bold: **text**
-    /(?<!\*)\*[^*]+\*(?!\*)/,   // Italic: *text* (not preceded/followed by *)
-    /`[^`]+`/,                  // Inline code: `code`
-    /^\s*[-*+]\s+/m,            // Unordered lists
-    /^\s*\d+\.\s+/m,            // Ordered lists
-    /^\s*>/m,                   // Blockquotes
-  ]
-  return markdownPatterns.some(pattern => pattern.test(text))
-}
-
-// Extract plain text from Portable Text block value
-function extractTextFromBlock(value: any): string {
-  if (!value) return ''
-
-  // Handle array of children (standard Portable Text structure)
-  const children = value.children || value
-  if (!Array.isArray(children)) return ''
-
-  return children
-    .filter((child: any) => child && (child._type === 'span' || child.text !== undefined))
-    .map((child: any) => child.text || '')
-    .join('')
-}
+import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 
 // Process text content - render as markdown if it contains markdown syntax
 function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
@@ -339,6 +310,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* Content */}
+            <ALSAutoLinker utmCampaign={`blog-${params.slug}-in-content`}>
             <div className="prose-custom">
               {post.content && (
                 <PortableText
@@ -347,6 +319,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 />
               )}
             </div>
+            </ALSAutoLinker>
 
             {/* Newsletter */}
             <div className="mt-12">
@@ -415,6 +388,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             subtext="Use Promo Code: BILLRICE to get 10% off — every order!"
             downloadText="Free Guide: How to Work Consumer Data"
             downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+            utmCampaign={`blog-${params.slug}-bottom`}
             variant="primary"
           />
         </div>
