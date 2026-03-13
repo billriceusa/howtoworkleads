@@ -17,6 +17,15 @@ export const metadata: Metadata = {
     'Learn proven strategies to convert internet leads into sales. Expert guides on lead management, sales processes, CRM systems, and buying leads.',
   authors: [{ name: 'Bill Rice' }],
   creator: 'How To Work Leads',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   alternates: {
     canonical: 'https://www.howtoworkleads.com',
   },
