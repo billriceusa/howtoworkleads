@@ -12,33 +12,20 @@ export async function GET() {
 
 ## About This Site
 
-HowToWorkLeads.com is an educational resource for sales professionals, entrepreneurs, and business owners who want to maximize their return on investment when buying and working internet leads. We cover lead generation, lead management, CRM systems, sales processes, and industry-specific lead strategies.
+HowToWorkLeads.com is an educational resource for sales professionals, entrepreneurs, and business owners who want to maximize their return on investment when buying and working internet leads. We cover lead generation, lead management, CRM systems, sales processes, and industry-specific lead strategies across mortgage, insurance, solar, and other verticals.
 
 ## Main Topics
 
-### Lead Management
-Learn how to effectively manage, organize, and prioritize your leads for maximum conversion rates.
-- [Buying Leads](${baseUrl}/lead-management/buying-leads)
-- [Cleaning & Verifying Data](${baseUrl}/lead-management/cleaning-verifying-data)
-- [Email Sequences](${baseUrl}/lead-management/email-sequences)
-- [Building Email Lists](${baseUrl}/lead-management/building-email-list)
-- [Effective Call Campaigns](${baseUrl}/lead-management/effective-call-campaigns)
-
-### Sales Process
-Master the art of converting leads into customers with proven sales techniques.
-- [Working Real-Time Leads](${baseUrl}/sales-process/working-real-time-leads)
-- [Warming Aged Leads](${baseUrl}/sales-process/warming-aged-leads)
-- [Managing Your Pipeline](${baseUrl}/sales-process/managing-pipeline)
-- [Omni-Channel Sequences](${baseUrl}/sales-process/omni-channel-sequences)
-
-### CRM Systems
-Choose and optimize the right CRM for your lead management needs.
-- [HighLevel Close Sales System](${baseUrl}/crm-systems/highlevel-close-sales-system)
-
-### Buying Leads
+### Buying Leads (${baseUrl}/buying-leads)
 Make informed decisions when purchasing leads for your business.
 - [Aged Leads Guide](${baseUrl}/buying-leads/aged-leads)
 - [Mortgage Leads](${baseUrl}/buying-leads/mortgage-leads)
+- [Buy Purchase Mortgage Leads](${baseUrl}/buying-leads/buy-purchase-mortgage-leads)
+- [Buy Refinance Mortgage Leads](${baseUrl}/buying-leads/buy-refinance-mortgage-leads)
+- [Buy Non-QM Mortgage Leads](${baseUrl}/buying-leads/buy-non-qm-mortgage-leads)
+- [Buy DSCR Loan Leads](${baseUrl}/buying-leads/buy-dscr-loan-leads)
+- [Buy Bank Statement Loan Leads](${baseUrl}/buying-leads/buy-bank-statement-loan-leads)
+- [Buy HELOC Leads](${baseUrl}/buying-leads/buy-heloc-leads)
 - [Insurance Leads](${baseUrl}/buying-leads/insurance-leads)
 - [Solar Leads](${baseUrl}/buying-leads/solar-leads)
 - [How to Buy Leads](${baseUrl}/buying-leads/how-to-buy-leads)
@@ -46,12 +33,60 @@ Make informed decisions when purchasing leads for your business.
 - [Lead ROI Calculator](${baseUrl}/buying-leads/lead-roi-calculator)
 - [Compliance Checklist](${baseUrl}/buying-leads/compliance-checklist)
 
+### Lead Management (${baseUrl}/lead-management)
+Learn how to effectively manage, organize, and prioritize your leads for maximum conversion rates.
+- [Buying Leads](${baseUrl}/lead-management/buying-leads)
+- [Cleaning & Verifying Data](${baseUrl}/lead-management/cleaning-verifying-data)
+- [Email Sequences](${baseUrl}/lead-management/email-sequences)
+- [Building Email Lists](${baseUrl}/lead-management/building-email-list)
+- [Effective Call Campaigns](${baseUrl}/lead-management/effective-call-campaigns)
+
+### Sales Process (${baseUrl}/sales-process)
+Master the art of converting leads into customers with proven sales techniques.
+- [Working Real-Time Leads](${baseUrl}/sales-process/working-real-time-leads)
+- [Warming Aged Leads](${baseUrl}/sales-process/warming-aged-leads)
+- [Managing Your Pipeline](${baseUrl}/sales-process/managing-pipeline)
+- [Omni-Channel Sequences](${baseUrl}/sales-process/omni-channel-sequences)
+
+### CRM Systems (${baseUrl}/crm-systems)
+Choose and optimize the right CRM for your lead management needs.
+- [HighLevel Close Sales System](${baseUrl}/crm-systems/highlevel-close-sales-system)
+
+### Aged Leads (${baseUrl}/aged-leads)
+Deep-dive resources on working aged and recycled leads profitably.
+
+### Resources (${baseUrl}/resources)
+Additional tools, templates, and reference materials for lead professionals.
+
+## Tools
+
+- [Aged Lead ROI Calculator](${baseUrl}/tools/aged-lead-roi-calculator) - Calculate your expected return on investment for aged lead purchases
+- [Compliance Checklist](${baseUrl}/tools/compliance-checklist) - TCPA, CAN-SPAM, and state-specific compliance requirements
+
+## Blog
+
+Our blog features how-to guides and tactical advice, including mortgage-specific lead guides:
+- [How to Work Purchase Mortgage Leads](${baseUrl}/blog/how-to-work-purchase-mortgage-leads)
+- [How to Work Refinance Mortgage Leads](${baseUrl}/blog/how-to-work-refinance-mortgage-leads)
+- [How to Work Non-QM Mortgage Leads](${baseUrl}/blog/how-to-work-non-qm-mortgage-leads)
+- [How to Work DSCR Loan Leads](${baseUrl}/blog/how-to-work-dscr-loan-leads)
+- [How to Work Bank Statement Loan Leads](${baseUrl}/blog/how-to-work-bank-statement-loan-leads)
+- [How to Work HELOC Leads](${baseUrl}/blog/how-to-work-heloc-leads)
+- [The Complete Guide to Aged Leads](${baseUrl}/blog/aged-leads)
+- [All Blog Posts](${baseUrl}/blog)
+
+## Newsletter
+
+**The Aged Lead Playbook** - A weekly newsletter with actionable strategies for working aged leads profitably. Subscribe at ${baseUrl}/#newsletter
+
 ## Key Pages
 
 - [Homepage](${baseUrl}/)
 - [About Us](${baseUrl}/about)
 - [Contact](${baseUrl}/contact)
 - [Blog](${baseUrl}/blog)
+- [Tools](${baseUrl}/tools)
+- [Lead Order](${baseUrl}/lead-order)
 
 ## For More Information
 
