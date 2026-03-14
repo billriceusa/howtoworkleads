@@ -85,6 +85,10 @@ Our blog features how-to guides and tactical advice:
 - [How to Work Annuity Leads](${baseUrl}/blog/how-to-work-annuity-leads)
 - [How to Work Health Insurance Leads](${baseUrl}/blog/how-to-work-health-insurance-leads)
 
+### Compliance Guides
+- [TCPA Compliance for Lead Buyers](${baseUrl}/blog/tcpa-compliance-lead-buyers)
+- [State-by-State Lead Compliance Guide](${baseUrl}/blog/state-by-state-lead-compliance-guide)
+
 ### General Guides
 - [The Complete Guide to Aged Leads](${baseUrl}/blog/aged-leads)
 - [Aged Lead Scripts and Templates](${baseUrl}/blog/aged-lead-scripts-templates)
