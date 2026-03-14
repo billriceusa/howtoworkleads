@@ -65,15 +65,41 @@ Additional tools, templates, and reference materials for lead professionals.
 
 ## Blog
 
-Our blog features how-to guides and tactical advice, including mortgage-specific lead guides:
+Our blog features how-to guides and tactical advice:
+
+### Mortgage Lead Guides
 - [How to Work Purchase Mortgage Leads](${baseUrl}/blog/how-to-work-purchase-mortgage-leads)
 - [How to Work Refinance Mortgage Leads](${baseUrl}/blog/how-to-work-refinance-mortgage-leads)
 - [How to Work Non-QM Mortgage Leads](${baseUrl}/blog/how-to-work-non-qm-mortgage-leads)
 - [How to Work DSCR Loan Leads](${baseUrl}/blog/how-to-work-dscr-loan-leads)
 - [How to Work Bank Statement Loan Leads](${baseUrl}/blog/how-to-work-bank-statement-loan-leads)
 - [How to Work HELOC Leads](${baseUrl}/blog/how-to-work-heloc-leads)
+
+### Insurance Lead Guides
+- [How to Work Medicare Leads](${baseUrl}/blog/how-to-work-medicare-leads)
+- [How to Work Auto Insurance Leads](${baseUrl}/blog/how-to-work-auto-insurance-leads)
+- [How to Work Life Insurance Leads](${baseUrl}/blog/how-to-work-life-insurance-leads)
+- [How to Work Home Improvement Leads](${baseUrl}/blog/how-to-work-home-improvement-leads)
+- [How to Work P&C Insurance Leads](${baseUrl}/blog/how-to-work-pc-insurance-leads)
+- [How to Work IUL Leads](${baseUrl}/blog/how-to-work-iul-leads)
+- [How to Work Annuity Leads](${baseUrl}/blog/how-to-work-annuity-leads)
+- [How to Work Health Insurance Leads](${baseUrl}/blog/how-to-work-health-insurance-leads)
+
+### General Guides
 - [The Complete Guide to Aged Leads](${baseUrl}/blog/aged-leads)
+- [Aged Lead Scripts and Templates](${baseUrl}/blog/aged-lead-scripts-templates)
+- [Aged Lead Follow-Up Cadence](${baseUrl}/blog/aged-lead-follow-up-cadence)
+- [Best CRM for Aged Leads](${baseUrl}/blog/best-crm-aged-leads)
 - [All Blog Posts](${baseUrl}/blog)
+
+## Free Downloads (${baseUrl}/downloads)
+
+Downloadable resources for lead professionals:
+- [Aged Lead Quick-Start Kit](${baseUrl}/downloads/aged-lead-quick-start-kit)
+- [7-Day Follow-Up Cadence Template](${baseUrl}/downloads/7-day-follow-up-cadence)
+- [Insurance Lead Scripts Bundle](${baseUrl}/downloads/insurance-lead-scripts-bundle)
+- [Mortgage Lead Scripts Bundle](${baseUrl}/downloads/mortgage-lead-scripts-bundle)
+- [Lead Vendor Comparison Scorecard](${baseUrl}/downloads/lead-vendor-comparison-scorecard)
 
 ## Newsletter
 

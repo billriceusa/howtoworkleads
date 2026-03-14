@@ -11,6 +11,7 @@ function cleanSlug(slug: string): string {
 const companyLinks = [
   { name: 'Aged Leads Guide', href: '/aged-leads' },
   { name: 'Tools', href: '/tools' },
+  { name: 'Free Downloads', href: '/downloads' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' },
   { name: 'About', href: '/about' },

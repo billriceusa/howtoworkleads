@@ -1,96 +1,59 @@
-# HowToWorkLeads.com — Backlog for Next Session
+# HowToWorkLeads.com — Backlog
 
-**Last updated:** March 13, 2026
-**Site status:** 74 pages live (36 landing + 32 blog + 6 category)
-
----
-
-## Priority 1: Internal Link Remediation (Programmatic)
-
-The internal linking audit (`INTERNAL-LINKING-AUDIT.md`) found 35% compliance with the linking strategy. Fix by patching Sanity content for all 12 new mortgage pages (briefs 31-42):
-
-- Add `/buying-leads` pillar link to every page
-- Add `/buying-leads/buy-aged-leads` link to every page
-- Add `/lead-order` link to all buying guides
-- Add cross-links between buying guides (2+ per page)
-- Add scripts/templates + CRM guide links to all how-to posts
-- Add follow-up cadence link to the 2 how-to posts missing it
-
-**Estimated effort:** 30 min (script the Sanity patches)
+**Last updated:** March 14, 2026
+**Site status:** 74+ pages live (36 landing + 32 blog + 6 category + downloads)
 
 ---
 
-## Priority 2: Lead Magnet PDFs
+## Completed (March 14 Session)
 
-Content is written in `/lead-magnets/` (5 markdown files). Need to:
-
-- [ ] Design as branded PDFs (Canva or similar — HTWL yellow/black brand)
-- [ ] Upload to `/public/downloads/`
-- [ ] Create gated download pages or inline forms that capture email before delivering PDF
-- [ ] Wire into newsletter signup flow (Resend audience 8a35228e)
-
-Assets:
-1. Aged Lead Quick-Start Kit
-2. 7-Day Follow-Up Cadence Template
-3. Insurance Lead Scripts Bundle
-4. Mortgage Lead Scripts Bundle
-5. Lead Vendor Comparison Scorecard
+- [x] **P1: Internal link remediation** — 55 links added across 12 mortgage pages (briefs 31-42) via `scripts/fix-internal-links.mjs`. Compliance ~35% → ~100%.
+- [x] **P2: Lead magnet download infrastructure** — `/downloads` index + 5 gated download pages (`/downloads/[slug]`) + `/api/download` route + email capture → Resend audience + auto-download. "Free Downloads" added to nav.
+- [x] **P3: Newsletter Issue 1 drafted** — Full issue at `newsletters/issue-01.md` + send script at `scripts/send-newsletter.mjs` (supports dry run, test, broadcast modes).
+- [x] **P4: 4 new insurance how-to guides** — briefs 47-50 (P&C, IUL, Annuity, Health Insurance) written + published
+- [x] **P5: SEO infrastructure** — llms.txt updated with insurance guides (43-46) + downloads section. Sitemap updated with all download pages.
 
 ---
 
-## Priority 3: First Newsletter Issue
+## Still Needs Bill's Hands
 
-Strategy + 26-week calendar ready in `NEWSLETTER-STRATEGY.md`.
-
-- [ ] Set up Resend broadcast for Week 1
-- [ ] Subject: "The #1 mistake agents make with aged leads (and the 30-second fix)"
-- [ ] Links to: /blog/how-to-work-aged-leads
-- [ ] Send Tuesday 8 AM ET
-- [ ] Set up welcome email sequence (5-email series in strategy doc)
-
----
-
-## Priority 4: More Content Verticals
-
-### Insurance "How to Work" Guides (not yet written)
-- How to Work P&C Insurance Leads
-- How to Work IUL Leads
-- How to Work Annuity Leads
-- How to Work Health Insurance Leads
-
-### Compliance Cluster
-- TCPA Deep-Dive for Lead Buyers
-- State-by-State Lead Compliance Guide
-- FCC 1:1 Consent Rule (brief 26 exists, already published)
-
-### Scripts & Templates Expansion
-- Voicemail Scripts by Vertical (dedicated page)
-- SMS/Text Templates by Vertical
-- Email Drip Sequences by Vertical (brief 28 exists, already published)
+1. **Lead magnet PDF design** — Design 5 PDFs in Canva (yellow/black brand), upload to `apps/web/public/downloads/` as:
+   - `aged-lead-quick-start-kit.pdf`
+   - `7-day-follow-up-cadence.pdf`
+   - `insurance-lead-scripts-bundle.pdf`
+   - `mortgage-lead-scripts-bundle.pdf`
+   - `lead-vendor-comparison-scorecard.pdf`
+2. **Verify Resend sender** — Confirm `bill@howtoworkleads.com` is verified in Resend for newsletter sends
+3. **Send newsletter test** — Run `node scripts/send-newsletter.mjs newsletters/issue-01.md --test` to preview in inbox
+4. **Pick newsletter launch date** — First Tuesday in April 2026
+5. **Google Search Console** — Add www.howtoworkleads.com, submit sitemap.xml
+6. **Bing Webmaster Tools** — Sign up, add site, submit sitemap
+7. **ALS cross-linking** — Ask Troy to link from ALS blog to HTWL "how to work" guides
+8. **Git push** — Push all changes to deploy to Vercel
 
 ---
 
-## Priority 5: SEO Infrastructure
+## Next Priorities
 
-- [ ] Update llms.txt with insurance how-to guides (43-46) — missed in last update
-- [ ] Submit new pages to GSC for indexing (request URL inspection on all new pages)
-- [ ] Set up Bing Webmaster Tools
+### Content Production
+- [ ] Compliance cluster: TCPA Deep-Dive, State-by-State Compliance Guide
+- [ ] Scripts expansion: Voicemail Scripts by Vertical, SMS/Text Templates by Vertical
+- [ ] More verticals: How to Work Debt Leads, How to Work Real Estate Leads
+
+### Newsletter Operations
+- [ ] Welcome email sequence (5 emails over 10 days — spec in NEWSLETTER-STRATEGY.md)
+- [ ] Set up Resend automation for welcome sequence
+- [ ] Write Issues 2-4 (Month 1 calendar in strategy doc)
+
+### Growth & Optimization
 - [ ] Quarterly Core Web Vitals audit
 - [ ] Monitor AI Overview citations for aged lead queries
+- [ ] A/B test newsletter subject lines
+- [ ] Content upgrade CTAs on high-traffic pages (match lead magnet to page vertical)
 
 ---
 
-## Manual TODO (Needs Bill's Hands)
-
-1. **Google Search Console** — Add www.howtoworkleads.com, submit sitemap.xml
-2. **Bing Webmaster Tools** — Sign up, add site, submit sitemap
-3. **ALS cross-linking** — Ask Troy to link from ALS blog to HTWL "how to work" guides
-4. **Resend audience** — Verify audience 8a35228e is correct for this site
-5. **Lead magnet PDF design** — Use Canva or similar with HTWL brand (yellow/black)
-
----
-
-## Completed (This Session)
+## Previously Completed
 
 - [x] Technical SEO audit + all critical fixes
 - [x] Canonical tags on every page
