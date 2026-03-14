@@ -186,8 +186,9 @@ if (!mdFile || !docId) {
 
 const markdown = readFileSync(mdFile, 'utf-8');
 
-// Strip the title line (H1) and any trailing checklist/metadata sections
+// Strip YAML frontmatter, title line (H1), and trailing checklist/metadata sections
 const cleanMd = markdown
+  .replace(/^---\n[\s\S]*?\n---\n+/, '') // Remove YAML frontmatter block
   .replace(/^# .+\n+/, '') // Remove H1 title
   .replace(/---\n+## Internal Linking Checklist[\s\S]*$/, '') // Remove checklist section
   .replace(/---\n+## Structured Data Needed[\s\S]*$/, '') // Remove structured data section

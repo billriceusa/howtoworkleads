@@ -14,6 +14,24 @@ import { PortableText } from '@portabletext/react'
 import { formatDate, absoluteUrl } from '@/lib/utils'
 import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 
+// Frontmatter field patterns that should never render as visible content
+const FRONTMATTER_PATTERN = /^(slug|seo_title|meta_description|excerpt|category|title|date|author|tags|layout|published|draft|image|description|permalink):\s/i
+
+/**
+ * Filter out Portable Text blocks that contain raw frontmatter metadata.
+ * This catches cases where YAML frontmatter was accidentally imported into
+ * the content field instead of being stripped during markdown-to-Sanity conversion.
+ */
+function filterFrontmatterBlocks(content: any[]): any[] {
+  if (!content) return []
+  return content.filter((block) => {
+    if (block._type !== 'block') return true
+    const text = extractTextFromBlock(block)?.trim()
+    if (!text) return true
+    return !FRONTMATTER_PATTERN.test(text)
+  })
+}
+
 // Process text content - render as markdown if it contains markdown syntax
 function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
   const rawText = extractTextFromBlock(value)
@@ -321,7 +339,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="prose-custom">
               {post.content && (
                 <PortableText
-                  value={post.content}
+                  value={filterFrontmatterBlocks(post.content)}
                   components={portableTextComponents}
                 />
               )}

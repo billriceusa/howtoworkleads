@@ -13,6 +13,19 @@ import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 import Image from 'next/image'
 import { Accordion, Markdown } from '@/components/ui'
 
+// Frontmatter field patterns that should never render as visible content
+const FRONTMATTER_PATTERN = /^(slug|seo_title|meta_description|excerpt|category|title|date|author|tags|layout|published|draft|image|description|permalink):\s/i
+
+function filterFrontmatterBlocks(content: any[]): any[] {
+  if (!content) return []
+  return content.filter((block) => {
+    if (block._type !== 'block') return true
+    const text = extractTextFromBlock(block)?.trim()
+    if (!text) return true
+    return !FRONTMATTER_PATTERN.test(text)
+  })
+}
+
 // Process text content - render as markdown if it contains markdown syntax
 function processTextContent(value: any, children: React.ReactNode): React.ReactNode {
   const rawText = extractTextFromBlock(value)
@@ -236,7 +249,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
                     return (
                       <div key={index}>
                         <PortableText
-                          value={block.content}
+                          value={filterFrontmatterBlocks(block.content)}
                           components={portableTextComponents}
                         />
                       </div>
