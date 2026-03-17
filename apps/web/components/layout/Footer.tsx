@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getNavigation } from '@/lib/sanity/navigation'
 import { Logo } from '@/components/ui'
+import { appendALSUtm } from '@/lib/analytics'
 
 // Helper to ensure slugs don't have leading/trailing slashes
 function cleanSlug(slug: string): string {
@@ -38,7 +39,7 @@ export async function Footer() {
         </div>
 
         {/* Navigation Links Grid - 4 categories + Company */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
           {/* Dynamic category columns */}
           {navigation.categories.slice(0, 4).map((category) => (
             <div key={category._id}>
@@ -84,6 +85,35 @@ export async function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* AgedLeadStore.com */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow">
+              AgedLeadStore.com
+            </h3>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a
+                  href={appendALSUtm('https://agedleadstore.com/all-lead-types/', 'footer')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/70 hover:text-white transition-colors"
+                >
+                  Browse Leads ↗
+                </a>
+              </li>
+              <li>
+                <a
+                  href={appendALSUtm('https://agedleadstore.com/register', 'footer')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/70 hover:text-white transition-colors"
+                >
+                  Create Free Account ↗
+                </a>
+              </li>
             </ul>
           </div>
         </div>

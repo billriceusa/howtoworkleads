@@ -4,7 +4,7 @@
  * Usage:
  *   node scripts/send-newsletter.mjs newsletters/issue-01.md              # dry run
  *   node scripts/send-newsletter.mjs newsletters/issue-01.md --send       # send to audience
- *   node scripts/send-newsletter.mjs newsletters/issue-01.md --test       # send test to bill@howtoworkleads.com
+ *   node scripts/send-newsletter.mjs newsletters/issue-01.md --test       # send test to bill@billricestrategy.com
  *
  * Requires: RESEND_API_KEY in apps/web/.env.local
  */
@@ -26,7 +26,7 @@ if (!RESEND_API_KEY) {
 const AUDIENCE_ID = '8a35228e-149f-4b15-8e24-26a24e3d6e98'
 const FROM = 'Bill Rice <bill@howtoworkleads.com>'
 const REPLY_TO = 'bill@howtoworkleads.com'
-const TEST_EMAIL = 'bill@howtoworkleads.com'
+const TEST_EMAIL = 'bill@billricestrategy.com'
 
 /**
  * Parse newsletter markdown into subject + HTML body.
@@ -51,6 +51,29 @@ function parseNewsletter(markdown) {
  * Emails need inline-friendly HTML (no complex CSS).
  */
 function markdownToHtml(md) {
+  // Pre-process: convert markdown tables to HTML tables as a block
+  md = md.replace(/(\|.+\|\n)+/g, (tableBlock) => {
+    const rows = tableBlock.trim().split('\n')
+    let html = '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-family:Inter,Arial,sans-serif;font-size:16px;">'
+    let isFirstDataRow = true
+    for (const row of rows) {
+      const cells = row.split('|').filter(c => c.trim())
+      // Skip separator rows (|---|---|---|)
+      if (cells.every(c => /^[\s-:]+$/.test(c))) continue
+      if (isFirstDataRow) {
+        // First row is the header
+        const thStyle = 'style="padding:8px 12px;border:1px solid #E5E5E5;text-align:left;background:#F5F5F5;font-weight:bold;"'
+        html += '<tr>' + cells.map(c => `<th ${thStyle}>${c.trim().replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</th>`).join('') + '</tr>'
+        isFirstDataRow = false
+      } else {
+        const tdStyle = 'style="padding:8px 12px;border:1px solid #E5E5E5;text-align:left;"'
+        html += '<tr>' + cells.map(c => `<td ${tdStyle}>${c.trim().replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</td>`).join('') + '</tr>'
+      }
+    }
+    html += '</table>'
+    return html
+  })
+
   let html = md
     // Headers
     .replace(/^## (.+)$/gm, '<h2 style="font-family:Georgia,serif;font-size:22px;color:#1A1A1A;margin:32px 0 12px;">$1</h2>')
@@ -65,24 +88,11 @@ function markdownToHtml(md) {
     .replace(/^---$/gm, '<hr style="border:none;border-top:1px solid #E5E5E5;margin:24px 0;">')
     // Bullet lists
     .replace(/^- (.+)$/gm, '<li style="margin:4px 0;">$1</li>')
-    // Table conversion (simple)
-    .replace(/\|(.+)\|/g, (match) => {
-      const cells = match.split('|').filter(c => c.trim())
-      if (cells.some(c => /^[\s-:]+$/.test(c))) return '' // skip separator rows
-      const isHeader = cells.some(c => /^\*\*/.test(c.trim()))
-      const tag = isHeader ? 'th' : 'td'
-      const style = `style="padding:8px 12px;border:1px solid #E5E5E5;text-align:left;${isHeader ? 'background:#F5F5F5;font-weight:bold;' : ''}"`
-      const row = cells.map(c => `<${tag} ${style}>${c.trim().replace(/\*\*/g, '')}</${tag}>`).join('')
-      return `<tr>${row}</tr>`
-    })
     // Paragraphs (double newline)
     .replace(/\n\n/g, '</p><p style="font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.6;color:#333;margin:0 0 16px;">')
 
   // Wrap list items
   html = html.replace(/(<li[^>]*>.*<\/li>\n?)+/g, (match) => `<ul style="padding-left:20px;margin:12px 0;">${match}</ul>`)
-
-  // Wrap tables
-  html = html.replace(/(<tr>.*<\/tr>\n?)+/g, (match) => `<table style="border-collapse:collapse;width:100%;margin:16px 0;">${match}</table>`)
 
   // Wrap in email container
   return `

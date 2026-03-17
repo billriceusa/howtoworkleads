@@ -106,6 +106,8 @@ Step-by-step GHL configuration with screenshots for pipeline, automations, and t
 
 Open your CRM right now and count how many leads have no next follow-up date scheduled. That number is money sitting on the table. Set up the 7-stage pipeline, import your next batch with source tags, and watch the compound effect kick in.
 
+Need leads to fill your new pipeline? [Browse aged leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-04-cta) — insurance, mortgage, solar, and more.
+
 ---
 
 *The Aged Lead Playbook by [HowToWorkLeads.com](https://www.howtoworkleads.com?utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-04-footer)*

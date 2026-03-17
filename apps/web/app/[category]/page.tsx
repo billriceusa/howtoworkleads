@@ -285,8 +285,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </section>
         )}
 
-        {/* Empty State */}
-        {(!category.resources || category.resources.length === 0) &&
+        {/* Empty State - only show when there are no content blocks, resources, or articles */}
+        {(!category.content || category.content.length === 0) &&
+          (!category.resources || category.resources.length === 0) &&
           (!category.articles || category.articles.length === 0) && (
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
               <h3 className="text-xl font-semibold text-gray-900">Content Coming Soon</h3>

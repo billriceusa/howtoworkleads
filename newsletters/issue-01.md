@@ -37,6 +37,8 @@ The agents who crush it with aged leads aren't better closers. They have a bette
 
 **The #1 mistake?** Treating aged leads like cold calls. These people raised their hand. Your job isn't to convince them they have a need — it's to show up at the right time with the right offer.
 
+**Ready to test the math yourself?** [Browse aged leads by vertical, geography, and age at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-01-cta) — start with a small batch and run the numbers.
+
 ---
 
 ## THE DATA

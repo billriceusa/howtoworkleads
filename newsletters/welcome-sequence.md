@@ -144,6 +144,8 @@ These aren't unicorns. They're agents who learned the system and committed to wo
 
 **[Forward-friendly signup link: howtoworkleads.com/#newsletter](https://www.howtoworkleads.com/#newsletter?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-5-forward)**
 
+**Ready to put what you've learned into practice?** [Browse aged leads by vertical, geography, and age at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-5-cta)
+
 Thanks for being here. See you Tuesday.
 
 — Bill
