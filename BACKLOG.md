@@ -1,7 +1,21 @@
 # HowToWorkLeads.com — Backlog
 
-**Last updated:** March 14, 2026
-**Site status:** 80+ pages live (36 landing + 38 blog + 6 category + download pages)
+**Last updated:** March 19, 2026
+**Site status:** 94+ pages live (36 landing + 52 blog + 9 category + download pages)
+
+---
+
+## Completed (March 19 Session)
+
+- [x] **14 new articles published** across 4 new categories (staggered Mar 31 – Apr 24):
+  - **Legal Leads (new category):** How to Work MVA Leads, Mass Tort Leads, SSDI Leads
+  - **Insurance Leads (new category):** How to Work ACA Leads
+  - **Home Services Leads (new category):** Home Services (pillar), Roofing, HVAC, Pest Control, Plumbing, Window Replacement
+  - **Buying Leads:** How to Work Debt Leads
+  - **Lead Management / AI Sales Tech:** Building Your AI Sales Stack, The Right Way to Use AI in Lead Follow-Up, AI Lead Scoring and Prioritization
+- [x] **3 new Sanity categories created:** Legal Leads, Home Services Leads, Insurance Leads
+- [x] **Publish script updated** — Added category slug mappings for new categories, tsx added as local devDependency
+- [x] **Content QC** — Spot-checked MVA, Roofing, and AI articles on live site — no frontmatter leaks, clean rendering
 
 ---
 
@@ -39,8 +53,10 @@
 
 ### Content Production
 - [ ] Scripts expansion: Voicemail Scripts by Vertical, SMS/Text Templates by Vertical
-- [ ] More verticals: How to Work Debt Leads, How to Work Real Estate Leads
+- [x] ~~More verticals: How to Work Debt Leads, How to Work Real Estate Leads~~ — Debt done; Real Estate done previously (briefs 60-62)
 - [ ] Content upgrade CTAs on high-traffic pages (match lead magnet to page vertical)
+- [ ] More home services verticals: Electrical, Landscaping, Painting, Garage Door
+- [ ] More legal verticals: Workers' Comp Leads, Bankruptcy Leads, Family Law Leads
 
 ### Newsletter Operations
 - [ ] Wire welcome sequence into Resend automation
@@ -64,7 +80,7 @@
 - [x] Newsletter rebuilt as on-site email capture (Resend)
 - [x] Newsletter branded "The Aged Lead Playbook"
 - [x] llms.txt + llms-full.txt (updated multiple times)
-- [x] 52 content briefs written with CONTENT.md files
+- [x] 81 content briefs written with CONTENT.md files (68-81 added Mar 19)
 - [x] Publishing script (publish-content.ts) + backfill script + fix-internal-links script
 - [x] Internal linking audit report + remediation
 - [x] 5 lead magnet content documents + PDFs

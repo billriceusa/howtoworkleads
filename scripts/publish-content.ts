@@ -42,6 +42,9 @@ const CATEGORY_SLUG_MAP: Record<string, string> = {
   'sales process': 'sales-process',
   'crm systems': 'crm-systems',
   'insurance leads': 'insurance-leads',
+  'legal leads': 'legal-leads',
+  'home services leads': 'home-services-leads',
+  'home services': 'home-services-leads',
 }
 
 // --- Frontmatter / Brief Parsing ---
