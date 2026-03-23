@@ -5,8 +5,14 @@
  * brand treatment (grayscale + yellow duotone tint + white dot grid + yellow accent),
  * and uploads the result to Sanity as a featured image / OG image.
  */
-import sharp from 'sharp'
+import type Sharp from 'sharp'
 import { createClient } from 'next-sanity'
+
+async function getSharp(): Promise<typeof Sharp> {
+  const mod = await import('sharp')
+  return mod.default
+}
+
 
 const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY!
 const IMAGE_WIDTH = 1200
@@ -200,6 +206,7 @@ export async function generateBrandedImage(searchQuery: string): Promise<{
   const rawBuffer = await downloadImage(downloadUrl)
 
   // Process: resize -> grayscale -> yellow tint -> composites
+  const sharp = await getSharp()
   const base = sharp(rawBuffer)
     .resize(IMAGE_WIDTH, IMAGE_HEIGHT, { fit: 'cover', position: 'centre' })
     .grayscale()

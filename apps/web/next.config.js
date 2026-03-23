@@ -8,6 +8,13 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['sharp'],
+  },
+  // Ensure Vercel can resolve sharp native bindings
+  outputFileTracingIncludes: {
+    '/api/generate-featured-image': ['./node_modules/sharp/**/*'],
+  },
 }
 
 module.exports = nextConfig
