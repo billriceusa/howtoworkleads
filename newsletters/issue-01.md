@@ -2,7 +2,7 @@
 
 **Subject:** Aged leads cost $0.50. Fresh leads cost $15. Here's what nobody tells you about the cheap ones.
 **From:** Bill Rice <bill@howtoworkleads.com>
-**Send Date:** Tuesday, April [TBD], 2026 at 8:00 AM ET
+**Send Date:** Tuesday, April 7, 2026 at 8:00 AM ET
 
 ---
 
