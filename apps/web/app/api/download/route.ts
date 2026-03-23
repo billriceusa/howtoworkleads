@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { getWelcomeEmail, FROM, REPLY_TO } from '@/lib/email/welcome-sequence'
 
 const NEWSLETTER_AUDIENCE_ID = '8a35228e-149f-4b15-8e24-26a24e3d6e98'
 
@@ -68,6 +69,16 @@ export async function POST(request: NextRequest) {
       email,
       unsubscribed: false,
       audienceId: NEWSLETTER_AUDIENCE_ID,
+    })
+
+    // Send welcome Email 1 (Day 0) immediately
+    const welcome = getWelcomeEmail(0)
+    await resend.emails.send({
+      from: FROM,
+      replyTo: REPLY_TO,
+      to: [email],
+      subject: welcome.subject,
+      html: welcome.html,
     })
 
     return NextResponse.json({
