@@ -1,7 +1,21 @@
 # HowToWorkLeads.com — Backlog
 
-**Last updated:** March 19, 2026
+**Last updated:** March 23, 2026
 **Site status:** 94+ pages live (36 landing + 52 blog + 9 category + download pages)
+
+---
+
+## Completed (March 23 Session)
+
+- [x] **Newsletter test send** — Issue 1 sent to bill@billricestrategy.com, confirmed delivery
+- [x] **Welcome sequence automation** — 5-email drip wired: Email 1 sends instantly on signup/download, Emails 2-5 via daily Vercel cron (`/api/cron/welcome-sequence`) checking contact `created_at` in Resend audience
+- [x] **April 7 launch date locked** — Issue 1 send date set to Tuesday, April 7, 2026 at 8:00 AM ET
+- [x] **Issues 5-8 drafted** — Month 2 insurance deep-dive series:
+  - Issue 5: Final expense scripts + data ($0.35/lead, 1-in-8 booking script)
+  - Issue 6: Medicare AEP pre-season strategy (buy aged leads in May, warm up for October)
+  - Issue 7: SMS/text templates (98% open rate channel, 5 templates by cadence day)
+  - Issue 8: Case study — 3 agents, same leads, process drives 12x revenue difference
+- [x] **GSC + Bing sitemaps submitted** — sitemap.xml submitted to Google Search Console and Bing Webmaster Tools
 
 ---
 
@@ -39,13 +53,14 @@
 
 ## Still Needs Bill's Hands
 
-1. **Resend sender verification** — Verify `bill@howtoworkleads.com` domain in Resend (DONE per Bill)
-2. **Newsletter test send** — Run `node scripts/send-newsletter.mjs newsletters/issue-01.md --test`
-3. **Pick newsletter launch date** — First Tuesday in April 2026
-4. **GSC sitemap** — Submit sitemap.xml in Search Console (site already added per Bill)
-5. **Bing Webmaster Tools** — Sign up, add site, submit sitemap
+1. ~~**Resend sender verification**~~ — DONE
+2. ~~**Newsletter test send**~~ — DONE (March 23)
+3. ~~**Pick newsletter launch date**~~ — **April 7, 2026** locked
+4. ~~**GSC sitemap**~~ — Submitted (March 23)
+5. ~~**Bing Webmaster Tools**~~ — Submitted (March 23)
 6. **ALS cross-linking** — Share link table with Troy at Monday meeting (table provided)
-7. **Welcome sequence** — Wire 5-email series into Resend automation
+7. ~~**Welcome sequence**~~ — DONE — automated via cron + instant Day 0 send (March 23)
+8. **Launch Issue 1 on April 7** — Run `node scripts/send-newsletter.mjs newsletters/issue-01.md --send`
 
 ---
 
@@ -59,8 +74,8 @@
 - [ ] More legal verticals: Workers' Comp Leads, Bankruptcy Leads, Family Law Leads
 
 ### Newsletter Operations
-- [ ] Wire welcome sequence into Resend automation
-- [ ] Write Issues 5-8 (Month 2 calendar: insurance deep dive)
+- [x] ~~Wire welcome sequence into Resend automation~~ — Cron-driven drip (Day 0 instant, Day 2/4/7/10 via daily cron)
+- [x] ~~Write Issues 5-8 (Month 2 calendar: insurance deep dive)~~ — Final expense, Medicare AEP, SMS templates, case study
 - [ ] A/B test subject lines once subscriber base reaches 250+
 
 ### Growth & Optimization
