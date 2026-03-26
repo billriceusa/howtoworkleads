@@ -1,215 +1,225 @@
-# Where to Buy Aged Leads: Pricing, Verticals, and Vendor Comparison (2026)
+# Where to Buy Aged Leads: Vendor Comparison, Pricing, and Buyer's Guide (2026)
 
-If you work in insurance, mortgage lending, home improvement, or any commission-driven sales role, you already know that a steady pipeline is everything. And if you've priced fresh, exclusive leads lately, you also know they can eat through a marketing budget fast — sometimes $20 to $50 per lead before you even pick up the phone.
+If you're shopping for aged leads, you've probably noticed that most vendors make you call for pricing, sit through a sales pitch, and sign a contract before you can buy a single lead. That's the old model — and it's why AgedLeadStore's self-service approach disrupted the market.
 
-Aged leads offer a fundamentally different value equation. These are consumer inquiries that were generated 30 to 120+ days ago, weren't converted by the original buyer, and are now available at a fraction of the original cost. The consumer's need doesn't disappear after 30 days. People still need life insurance. Homeowners still want new windows. Borrowers still need mortgages. What changes is the price you pay to reach them.
+But AgedLeadStore isn't the only option. This guide compares the major aged lead vendors side by side — real names, real pricing where available, and honest assessments of who each vendor is best for. We also break down pricing by vertical so you know what to expect before you pick up the phone or open your wallet.
 
-This guide breaks down every major aged lead vertical, what you should expect to pay, what's included in the data, and how to evaluate vendors so you're buying smart — not just buying cheap.
+**Disclosure:** AgedLeadStore is our affiliate partner — we earn a referral commission when you purchase through our links. We recommend them because they consistently deliver the best experience for individual agents and small teams. The other vendors listed here are included for comparison purposes and are not affiliates.
 
-## Why Aged Leads Are the Best-Kept Secret in Sales
+## Aged Lead Vendor Comparison
 
-The math behind aged leads is straightforward. A fresh life insurance lead might cost $15 to $25. An aged life insurance lead — the same consumer, the same inquiry — costs $0.50 to $2.00 once it's 30 to 90 days old. Even if your contact rate drops and your close rate is lower, the cost-per-acquisition almost always favors aged leads at scale.
+### AgedLeadStore (agedleadstore.com)
 
-Here's what makes them work:
+**The self-service marketplace.** AgedLeadStore is the largest on-demand aged lead platform in the market, serving 40,000+ customers across 44 states over 21+ years. Founded by Troy Wilson and operated by Next Wave Marketing Strategies.
 
-- **Volume.** At $0.50 to $2.00 per lead, you can buy 10 to 50 times the volume of fresh leads for the same budget.
-- **Pipeline depth.** Instead of chasing a handful of expensive leads each week, you build a deep pipeline you can work systematically over weeks and months.
-- **Training ground.** New agents can practice their pitch on lower-cost leads before graduating to more expensive real-time leads.
-- **Compounding returns.** Many aged lead buyers report that their best deals come on the fifth, sixth, or seventh contact attempt — conversations that would never happen with a one-and-done fresh lead strategy.
+**What makes them different:** You browse the inventory, apply filters, see pricing, and download leads instantly — no sales calls, no contracts, no minimums. This is rare in the lead industry, where most vendors require a phone conversation before you can buy anything.
 
-For a full breakdown of fresh vs. aged economics, see our guide on [aged leads vs. fresh leads](/blog/aged-vs-fresh-leads).
+**Pricing (published on site):**
 
-## Aged Lead Verticals: Pricing, Data, and Who They're Best For
+| Vertical | 15-85 Days | 86-365 Days |
+|----------|-----------|-------------|
+| Life Insurance | $0.62 – $1.88 | $0.25 – $0.62 |
+| Health Insurance | $0.50 – $0.94 | $0.25 – $0.50 |
+| Final Expense | $0.62 – $1.88 | $0.25 – $0.62 |
+| IUL | $0.80 – $2.00 | $0.40 – $0.80 |
+| Auto Insurance | $0.25 – $0.50 | $0.15 – $0.25 |
+| Mortgage | $0.50 – $1.50 | $0.25 – $0.50 |
+| Home Improvement | $0.60 – $1.50 | $0.30 – $0.60 |
+| Home Insurance | $0.25 – $0.50 | $0.15 – $0.25 |
 
-Not all aged leads are created equal. Pricing, data fields, and contact rates vary significantly by vertical. Below is a comprehensive breakdown of every major lead type available through aged lead vendors in 2026.
+**Key features:**
+- Self-service platform with instant CSV download
+- No contracts, no minimums
+- DNC-validated phone numbers (landline vs. cell identification)
+- Filter by state, zip code, lead age, phone type, consumer age, and more
+- Up to 20% replacement guarantee on wrong numbers and disconnects
+- Volume discounts — price per lead drops as order size increases
+- Extensive sales training resources, scripts, and webinars
 
-### Life Insurance Leads
+**Best for:** Solo agents, small teams, and anyone who wants to buy leads on their own terms without a sales pitch. The transparent pricing and self-service model make it the easiest vendor to test.
 
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $0.50 – $2.00 per lead |
-| **Data included** | Full name, phone, email, mailing address, date of birth, coverage amount requested, tobacco status, health rating |
-| **Best for** | Life insurance agents, final expense specialists, IUL advisors |
-| **Average age available** | 30 – 120 days |
-
-Life insurance leads are the highest-volume vertical in the aged lead market. These consumers filled out a form requesting a life insurance quote, making them pre-qualified by intent. The data is rich enough to pre-screen before you call — you'll know their age, health status, and how much coverage they were looking for.
-
-[Browse life insurance aged leads at AgedLeadStore →](https://agedleadstore.com/life-insurance-leads/)
-
-For scripts and follow-up strategies, see our guide on [how to work life insurance leads](/buying-leads/work-life-insurance-leads).
-
----
-
-### Health Insurance Leads
-
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $0.50 – $1.50 per lead |
-| **Data included** | Full name, phone, email, address, household size, current coverage status, income range |
-| **Best for** | Health insurance agents, ACA navigators, benefits brokers |
-| **Average age available** | 30 – 90 days |
-
-Health insurance leads include consumers who inquired about individual, family, or marketplace coverage. These leads are particularly valuable outside of open enrollment — many consumers don't realize they may qualify for a Special Enrollment Period due to life changes. Timing your outreach around these qualifying events can dramatically increase conversion.
-
-[Browse health insurance aged leads at AgedLeadStore →](https://agedleadstore.com/health-insurance-leads/)
-
-Read our full breakdown on [how to work health insurance leads](/buying-leads/work-health-insurance-leads).
+[Browse leads at AgedLeadStore →](https://agedleadstore.com/all-lead-types/)
 
 ---
 
-### ACA / Marketplace Leads
+### The Leads Warehouse (theleadswarehouse.com)
 
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $0.50 – $1.50 per lead |
-| **Data included** | Full name, phone, email, address, household size, income estimate, current coverage status |
-| **Best for** | Licensed ACA agents, marketplace navigators, health insurance brokers |
-| **Average age available** | 30 – 90 days |
+**The high-volume, multi-vertical supplier.** Operating for 19+ years, The Leads Warehouse offers the broadest vertical coverage in the aged lead market — 15+ categories ranging from insurance and mortgage to consumer debt, tax debt, auto warranty, and addiction/rehab leads.
 
-ACA leads are a subset of health insurance leads, but they're worth calling out separately because the sales process is different. These consumers were specifically looking for Affordable Care Act marketplace plans. Many are subsidy-eligible, and the agent's job is often education and enrollment assistance rather than a hard sell. Aged ACA leads work particularly well because the consumer's coverage gap hasn't resolved itself — they still need help.
+**Pricing:** Not publicly listed — call for quote (800-884-8371). Their sales model is consultative, meaning you speak with a rep who builds a custom package based on your needs.
 
-[Browse ACA aged leads at AgedLeadStore →](https://agedleadstore.com/aca-leads/)
+**Verticals offered:**
+- Insurance (Medicare, ACA, final expense, auto)
+- Financial (consumer debt, tax debt, student loan, credit repair, MCA, precious metals)
+- Mortgage
+- Solar
+- Home services (home warranty, home improvement)
+- Legal (motor vehicle accident, social security disability)
+- Data lists (consumer data, business data, cell phone data)
 
-See our guide on [how to work ACA leads](/buying-leads/work-aca-leads).
+**Key features:**
+- Aged and real-time leads available
+- Exclusive first-position leads from owned marketing properties
+- 200,000+ solar leads per month in inventory
+- Campaign tactics, scripts, and tech tips provided
+- AI agent solutions for call centers
+- Co-branding options for exclusive campaigns
 
----
-
-### Indexed Universal Life (IUL) Leads
-
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $0.75 – $2.50 per lead |
-| **Data included** | Full name, phone, email, address, age, income range, investment interest, coverage amount requested |
-| **Best for** | IUL specialists, financial advisors, life insurance agents selling accumulation products |
-| **Average age available** | 30 – 120 days |
-
-IUL leads are among the most valuable in the insurance space because the product carries higher premiums and commissions. These consumers were looking for cash-value life insurance or tax-advantaged retirement vehicles — they're typically higher-income and more financially sophisticated. The longer sales cycle actually works in your favor with aged leads, since these buyers rarely make impulse decisions anyway.
-
-[Browse IUL aged leads at AgedLeadStore →](https://agedleadstore.com/indexed-universal-life-insurance-leads/)
-
-Learn how to approach these prospects in our guide on [how to work IUL leads](/buying-leads/work-iul-leads).
+**Best for:** Call centers and multi-line agencies that need high volume across diverse verticals. The consultative model works well for operations buying thousands of leads per month who want a dedicated account rep.
 
 ---
 
-### Auto Insurance Leads
+### iLeads (ileads.com)
 
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $0.35 – $1.00 per lead |
-| **Data included** | Full name, phone, email, address, vehicle information, current carrier, driving history indicators |
-| **Best for** | P&C insurance agents, independent agencies, captive agents looking to cross-sell |
-| **Average age available** | 30 – 90 days |
+**The enterprise mortgage specialist.** One of the longest-tenured lead providers in the industry (operating since 1996), iLeads specializes in "vintage" mortgage leads — their term for aged leads. Their client roster includes Freedom Mortgage, Mr. Cooper, loanDepot, Caliber Home Loans, and NewRez.
 
-Auto insurance leads are the most affordable vertical and one of the easiest to convert because nearly everyone needs car insurance. These consumers were shopping for better rates, which means they're already motivated to switch. The low cost per lead makes auto a great vertical for agents who want to get a customer on the books and then cross-sell home, umbrella, and life policies over time.
+**Pricing:** Not publicly listed — quote-based model. Industry sources place vintage mortgage leads in the $1–$10 range depending on age and filters, but pricing is negotiated per client.
 
-[Browse auto insurance aged leads at AgedLeadStore →](https://agedleadstore.com/auto-insurance-leads/)
+**Verticals offered:**
+- Mortgage (FHA, VA, conventional, jumbo, ARM, refinance, purchase)
+- Insurance (vintage insurance leads)
+- Homeowner lead lists with current lien information
 
-Read our complete guide on [how to work auto insurance leads](/buying-leads/work-auto-insurance-leads).
+**Key features:**
+- Customizable homeowner lead lists with lien data
+- Filter by loan type, geography, and custom criteria
+- Enterprise-grade support and account management
+- The longest operating history in the space (28+ years)
 
----
-
-### Mortgage Leads
-
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $1.00 – $5.00 per lead |
-| **Data included** | Full name, phone, email, address, property type, loan type (purchase/refinance), estimated credit score, loan amount, property value |
-| **Best for** | Mortgage loan officers, brokers, correspondent lenders |
-| **Average age available** | 30 – 120 days |
-
-Mortgage leads carry the highest price point in the aged lead market, but the commission on a single closed loan — often $3,000 to $10,000+ — makes the ROI math extremely favorable. A loan officer who closes just one deal from a batch of 200 aged mortgage leads at $3 each ($600 investment) is looking at a 5x to 15x return. These leads include both purchase and refinance inquiries, and many vendors let you filter by loan type.
-
-[Browse mortgage aged leads at AgedLeadStore →](https://agedleadstore.com/mortgage-leads-purchase-refinance/)
-
-For a deep dive on converting these leads, see our guide on [how to work mortgage leads](/buying-leads/work-mortgage-leads).
+**Best for:** Large mortgage lenders and call centers processing thousands of leads per month. Not designed for individual loan officers — this is an enterprise product with enterprise pricing and support.
 
 ---
 
-### Home Improvement Leads
+### RGR Marketing (rgrmarketing.com)
 
-| Detail | Info |
-|--------|------|
-| **Typical price range** | $0.50 – $2.00 per lead |
-| **Data included** | Full name, phone, email, address, project type (windows, roofing, siding, HVAC, solar), homeowner status, project timeline |
-| **Best for** | Home improvement contractors, window and door companies, roofing companies, HVAC installers, solar companies |
-| **Average age available** | 30 – 120 days |
+**The managed-service mortgage lead provider.** Operating for 20+ years as ReallyGreatRate, Inc., RGR is primarily a real-time and exclusive lead provider — not an aged lead marketplace. They're included here because many lead buyers compare real-time and aged options as part of their sourcing strategy.
 
-Home improvement leads cover a wide range of project types — from window replacement and roofing to solar installation and HVAC. The key advantage of aged home improvement leads is that home projects have long decision cycles. A homeowner who requested a roofing quote 60 days ago probably hasn't gotten it done yet. They've been procrastinating, collecting quotes, or waiting for the right season. Your call might be exactly the push they need.
+**Pricing:**
+- Shared mortgage leads starting at $5
+- Exclusive leads in competitive markets can exceed $100
+- Dynamic pricing based on geography, loan type, and exclusivity
 
-[Browse home improvement aged leads at AgedLeadStore →](https://agedleadstore.com/buy-home-improvement-leads-lp/)
+**Verticals offered:**
+- Mortgage (purchase, refinance, FHA, VA, jumbo, ARM, cash-out, home equity)
+- Solar
+- Home improvement (windows, roofing, siding, bathroom)
 
-Explore vertical-specific guides: [how to work home improvement leads](/buying-leads/work-home-improvement-leads), [roofing leads](/buying-leads/work-roofing-leads), [HVAC leads](/buying-leads/work-hvac-leads), and [window replacement leads](/buying-leads/work-window-replacement-leads).
+**Key features:**
+- In-house media buying team
+- Full TCPA compliance with Jornaya LeadiD certification
+- Real-time delivery via API to Velocify, Encompass, Salesforce
+- Credit band filtering (740+, 680-739, 620-679)
+- Strategic partner approach — they help train your sales team
+- Some clients since 2004
+
+**Best for:** Mortgage lenders and solar companies that want real-time exclusive leads with managed service support. Not an aged lead vendor — but useful for comparison when evaluating the cost difference between real-time ($5-$100+) and aged ($0.50-$5.00) mortgage leads.
 
 ---
 
-### All Lead Types
+### QuoteWizard by LendingTree (agents.quotewizard.com)
 
-Not sure which vertical to start with, or want to explore the full inventory? AgedLeadStore offers a searchable database across every category — insurance, mortgage, home improvement, and more. You can filter by state, lead age, vertical, and date range to find exactly the leads that match your market.
+**The brand-name insurance lead source.** A LendingTree company, QuoteWizard provides real-time insurance leads and live transfer calls. They're not an aged lead vendor, but they're one of the largest insurance lead providers and are included for cost comparison context.
 
-[Browse all aged lead types at AgedLeadStore →](https://agedleadstore.com/all-lead-types/)
+**Pricing:**
+- Real-time shared leads: $7 – $10 per lead
+- Exclusive leads: $25+
+- Live transfers: premium pricing (not publicly listed)
 
-## What to Look for in an Aged Lead Vendor
+**Verticals offered:**
+- Auto insurance
+- Home insurance
+- Health insurance
+- Renters insurance
+- Life insurance
 
-Not every vendor selling aged leads is worth your money. Before you hand over your credit card, run through this checklist:
+**Key features:**
+- Backed by LendingTree (major brand credibility)
+- Agent Elite Program with training and support
+- Real-time delivery
 
-- **DNC scrubbing included.** Every lead should be scrubbed against the National Do Not Call Registry and applicable state registries before delivery. If the vendor charges extra for this or doesn't mention it, walk away. See our [DNC compliance guide](/blog/aged-leads-dnc-compliance) for why this is non-negotiable.
+**Best for:** Insurance agents who want the highest-intent leads and are willing to pay premium pricing. The per-lead cost is 10-40x higher than aged leads, which illustrates why many agents blend real-time and aged strategies.
+
+---
+
+## Head-to-Head Comparison Table
+
+| Feature | AgedLeadStore | The Leads Warehouse | iLeads | RGR Marketing | QuoteWizard |
+|---------|--------------|-------------------|--------|--------------|-------------|
+| **Sells aged leads** | Yes (primary) | Yes (plus real-time) | Yes ("vintage") | No (real-time) | No (real-time) |
+| **Pricing visible** | Yes (on site) | No (call for quote) | No (call for quote) | No (call for quote) | Partially |
+| **Lowest price/lead** | $0.15 | Not published | Not published | $5 (shared) | $7 (shared) |
+| **Verticals** | 8+ | 15+ (broadest) | 2-3 | 3 | 5 |
+| **Self-service** | Yes (fully) | No | No | No | No |
+| **Contract required** | No | Not stated | Not stated | Not stated | Not stated |
+| **Minimum order** | None | Not published | Not published | ~100 leads | Not stated |
+| **Instant download** | Yes (CSV) | No (next-day) | No | No (real-time API) | No |
+| **DNC validation** | Yes (included) | Yes (multi-level) | Not specified | Yes (Jornaya) | Not specified |
+| **Best for** | Solo agents, small teams | Call centers, multi-vertical | Enterprise mortgage | Enterprise mortgage/solar | Insurance agents |
+
+## What to Look for in Any Aged Lead Vendor
+
+Before you hand over your credit card, run through this checklist:
+
+- **DNC scrubbing included.** Every lead should be scrubbed against the National DNC Registry and applicable state registries before delivery. The legal requirement is to scrub at least every 31 days. If the vendor charges extra for this or doesn't mention it, walk away. See our [DNC compliance guide](/blog/aged-leads-dnc-compliance) for details.
 - **Transparent pricing.** You should be able to see what leads cost before you create an account. Hidden pricing usually means inflated pricing.
-- **No long-term contracts.** The best vendors let you buy when you want, how much you want, without locking you into monthly commitments or annual agreements.
-- **Filtering and targeting.** Can you filter by state, lead age, date range, and vertical? The more control you have over what you're buying, the better your results will be.
-- **Clear return policy.** What happens when you get disconnected numbers or bad data? Reputable vendors have a published return policy and honor it without a fight.
-- **Consistent inventory.** Some vendors have patchy inventory — available in some states but not others, or flush one month and dry the next. Ask about availability before committing to a vendor for your pipeline.
-- **Data freshness indicators.** The best vendors show you exactly when the lead was generated, not just a vague "aged" label. A 35-day-old lead and a 350-day-old lead are very different products.
-- **Delivery format.** Can you download leads as CSV files for easy CRM import? Do they offer direct integrations with popular CRMs? Smooth data delivery saves time and reduces errors.
-- **TCPA and FCC compliance.** With the [FCC's 1:1 consent rule](/blog/fcc-one-to-one-consent-rule) now in effect, your vendor should be able to explain the consent chain on the leads they sell. This protects you legally.
+- **No long-term contracts.** The best vendors let you buy when you want, how much you want, without locking you into commitments.
+- **Filtering and targeting.** Can you filter by state, lead age, date range, and vertical? The more control you have, the better your results.
+- **Clear return policy.** What happens when you get disconnected numbers or bad data? Reputable vendors have a published return policy.
+- **Data freshness indicators.** The best vendors show exactly when the lead was generated — not just a vague "aged" label.
+- **Delivery format.** CSV download for easy CRM import is the standard. Direct CRM integrations are a bonus.
+- **Consent documentation.** Your vendor should be able to explain how leads were generated and what consent language the consumer agreed to. This matters for [TCPA compliance](/blog/tcpa-compliance-lead-buyers) — regardless of the FCC's 1:1 consent rule being vacated, the underlying consent requirements remain in full force.
+- **Consistent inventory.** Some vendors have patchy inventory. Ask about availability in your target states before committing.
 
-For a deeper evaluation framework, read our full guide on [how to evaluate a lead vendor](/blog/evaluate-lead-vendor).
+For a deeper evaluation framework, read our full guide on [how to evaluate a lead vendor](/blog/how-to-evaluate-lead-vendor).
 
-## Why We Recommend AgedLeadStore
+## Aged Leads by Vertical — What to Buy and Where to Start
 
-**Disclosure:** AgedLeadStore is our affiliate partner. We earn a referral commission when you purchase through our links. We recommend them because they consistently deliver the best experience for aged lead buyers — not the other way around.
+Not sure which vertical to start with? Here's a quick guide based on your profession:
 
-Here's what sets AgedLeadStore apart from other vendors we've evaluated:
+**Insurance agents:**
+- [Life insurance leads](https://agedleadstore.com/life-insurance-leads/) — highest volume, rich data (DOB, coverage amount, health rating)
+- [Health insurance leads](https://agedleadstore.com/health-insurance-leads/) — strong outside of open enrollment when consumers have qualifying events
+- [ACA leads](https://agedleadstore.com/aca-leads/) — subsidy-eligible consumers who need enrollment help
+- [IUL leads](https://agedleadstore.com/indexed-universal-life-insurance-leads/) — higher-value prospects looking for cash-value products
+- [Auto insurance leads](https://agedleadstore.com/auto-insurance-leads/) — lowest cost, great for cross-sell and book-building
 
-**Searchable database model.** Unlike vendors who send you a blind batch of leads, AgedLeadStore lets you browse their inventory, apply filters, and preview what you're buying before you purchase. You choose the states, the lead age, the vertical, and the date range. This level of control is rare in the aged lead market.
+**Mortgage loan officers:**
+- [Mortgage leads](https://agedleadstore.com/mortgage-leads-purchase-refinance/) — purchase and refinance, filterable by loan type
 
-**DNC scrubbing on every lead.** All leads are scrubbed against the National DNC Registry before delivery. This isn't an upsell — it's standard on every order.
+**Home improvement contractors:**
+- [Home improvement leads](https://agedleadstore.com/buy-home-improvement-leads-lp/) — windows, roofing, siding, HVAC, solar
 
-**No contracts, no minimums.** Buy 100 leads or 10,000. Buy this week and skip next month. There's no subscription to cancel, no annual commitment to negotiate, and no minimum order tripping you up.
+For scripts and systems to convert these leads, browse our vertical-specific guides:
+- [How to work life insurance leads](/blog/how-to-work-life-insurance-leads)
+- [How to work health insurance leads](/blog/how-to-work-health-insurance-leads)
+- [How to work mortgage leads](/blog/how-to-work-aged-mortgage-leads)
+- [How to work home improvement leads](/blog/how-to-work-home-improvement-leads)
+- [How to work auto insurance leads](/blog/how-to-work-auto-insurance-leads)
 
-**Transparent sourcing.** AgedLeadStore sources leads from known, reputable publishers. They can tell you where leads came from and how they were generated — something many aggregators can't or won't do.
-
-**Broad vertical coverage.** From life insurance and Medicare to mortgage and home improvement, they cover more verticals than any other aged lead vendor we've found. If you sell across multiple product lines, one vendor can supply your entire operation.
-
-**Volume discounts.** Pricing drops as you scale — making AgedLeadStore even more cost-effective for teams and agencies buying in bulk.
-
-[Browse all lead types at AgedLeadStore →](https://agedleadstore.com/all-lead-types/)
-
-## Frequently Asked Questions
+## FAQ
 
 ### How old are aged leads, and does older mean worse?
 
-Aged leads are typically 30 to 120+ days old, measured from the date the consumer originally submitted their inquiry. Older doesn't necessarily mean worse — it means cheaper. Many agents report strong conversion rates on 60- to 90-day-old leads because the consumer's underlying need hasn't changed. The key is having a solid [follow-up cadence](/blog/aged-lead-follow-up-cadence) and realistic expectations about contact rates.
+Aged leads are typically 30 to 120+ days old. Older doesn't necessarily mean worse — it means cheaper. Many agents report strong conversion on 60- to 90-day-old leads because the consumer's need hasn't changed. The key is a solid [follow-up cadence](/blog/aged-lead-follow-up-cadence) and realistic contact rate expectations.
 
 ### Can I call aged leads legally?
 
-Yes, but with conditions. Aged leads must be scrubbed against the National DNC Registry before you call them. If a lead's number is on the DNC list and you call anyway, you're exposed to fines of up to $51,744 per violation. Always buy from vendors who include DNC scrubbing, and make sure you understand [TCPA compliance requirements](/blog/tcpa-compliance-aged-leads) for your outreach method (phone, text, email).
+Yes, with conditions. Leads must be DNC scrubbed before calling — the legal requirement is every 31 days. If a number is on the DNC list and you call it, fines can reach $43,280 per violation. Always buy from vendors who include DNC validation, and understand [TCPA compliance requirements](/blog/tcpa-compliance-lead-buyers) for your outreach method.
+
+### Why is AgedLeadStore the only vendor with published pricing?
+
+Most lead vendors use a consultative sales model where pricing is negotiated per client. AgedLeadStore built a self-service marketplace model instead — think Amazon for leads. This transparency is a major differentiator and makes it the easiest vendor to test without commitment.
 
 ### How many aged leads should I buy for my first order?
 
-Start with 200 to 500 leads in a single vertical and state. This gives you enough volume to test your scripts, measure your contact rate, and calculate your cost-per-acquisition before scaling up. Don't buy 5,000 leads on day one — build your system first, prove the math, then increase your order size. Our [lead budget calculator guide](/blog/aged-lead-budget-calculator) can help you plan.
+Start with 200 to 500 leads in a single vertical and state. This gives you enough volume to test scripts, measure contact rates, and calculate cost-per-acquisition before scaling. Don't buy 5,000 leads on day one. Our [lead budget guide](/blog/insurance-agent-lead-budget) can help you plan.
 
-### What's the typical contact rate on aged leads?
+### Should I use aged leads or real-time leads?
 
-Contact rates vary by vertical, lead age, and how many times you attempt each lead. On a first-dial attempt, expect a 10% to 20% contact rate. Over a structured 7- to 10-touch campaign (calls, texts, emails, voicemails), that number can climb to 40% to 60%. The agents who win with aged leads are the ones who commit to a systematic multi-touch approach — not the ones who call once, get voicemail, and move on.
+Both serve different purposes. Real-time leads (from vendors like QuoteWizard or RGR Marketing) have higher intent and contact rates but cost 10-40x more per lead. Aged leads cost pennies on the dollar and deliver strong ROI at volume. Many successful agents use a blended strategy — real-time for immediate pipeline, aged for volume and nurturing. See our full analysis in [the real cost of aged vs. fresh leads](/blog/real-cost-aged-vs-fresh-leads-2026).
 
-### Are aged leads better than fresh leads?
+## Start Building Your Pipeline
 
-Neither is universally "better" — they serve different purposes. Fresh leads have higher intent and contact rates but cost 10x to 30x more. Aged leads have lower per-lead costs and require more persistence but can deliver equal or better ROI at scale. Many successful agents use a blended strategy: fresh leads for immediate pipeline and aged leads for volume and long-term nurturing. Read our full comparison in [the real cost of aged vs. fresh leads](/blog/real-cost-aged-vs-fresh-leads-2026).
+Pick a vertical. Start with a manageable batch. Work the leads with a structured [follow-up cadence](/blog/aged-lead-follow-up-cadence) and a proven [CRM system](/blog/best-crm-aged-leads). Track your numbers. Then scale what works.
 
-## Start Building Your Pipeline Today
-
-The difference between agents who struggle with lead costs and agents who build profitable pipelines isn't luck — it's strategy. Aged leads give you the volume to build a real system, the cost structure to maintain healthy margins, and the data to refine your approach over time.
-
-Pick a vertical. Start with a manageable batch. Work the leads with a structured [follow-up cadence](/blog/aged-lead-follow-up-cadence) and a proven [CRM system](/crm-systems/best-crm-aged-leads). Track your numbers. Then scale what works.
-
-[Browse all aged lead types at AgedLeadStore →](https://agedleadstore.com/all-lead-types/)
+[Browse all lead types at AgedLeadStore →](https://agedleadstore.com/all-lead-types/)
