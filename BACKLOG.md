@@ -1,7 +1,31 @@
 # HowToWorkLeads.com — Backlog
 
-**Last updated:** March 23, 2026
-**Site status:** 94+ pages live (36 landing + 52 blog + 9 category + download pages)
+**Last updated:** March 26, 2026
+**Site status:** 106+ pages live (36 landing + 64 blog + 9 category + download pages + 2 interactive tools)
+
+---
+
+## Completed (March 26 Session)
+
+- [x] **ALS affiliate revenue acceleration** — 6 items completed:
+  - Vertical-specific deep links (7 URLs) integrated into ExitIntentPopup, StickyMobileCTA, ALSAutoLinker, portable-text renderer
+  - ALS CTAs added to all 8 newsletter issues and 5 welcome sequence emails
+  - Comparison/pricing page published with 5 named vendors, real pricing tables, head-to-head comparison
+  - Deep link mapping: 26 keyword→URL mappings in lib/analytics.ts
+- [x] **Master content calendar** — Consolidated 81 content briefs + 36 editorial calendar entries into single `master-content-calendar.ts` (117 items). Cron updated to use it.
+- [x] **Newsletter automation** — Cron now auto-uses pre-written issues (01-08) when available, falls back to AI generation. Issue 1 will auto-send April 7 — no manual step.
+- [x] **Compliance guardrails** — 8-rule compliance section added to AI content system prompt and newsletter AI prompt. Prevents FCC 1:1 consent errors, enforces 31-day DNC scrub facts, requires legal disclaimer.
+- [x] **Interactive tools built:**
+  - ROI Calculator (`/tools/aged-lead-roi-calculator`) — real-time aged vs fresh comparison, vertical-specific defaults, ALS deep links
+  - Compliance Checklist (`/tools/compliance-checklist`) — 40-item interactive checklist, 7 sections, progress tracking, print-to-PDF
+- [x] **6 new articles written and published** (Week 3-4 accelerated):
+  - Cost Per Lead Analysis (Mar 31)
+  - Text Messaging Compliance Guide (Apr 2)
+  - Objection Handling Scripts — 25 responses (Apr 4)
+  - 10 CRM Automation Workflows (Apr 7)
+  - Mortgage Lead Conversion Playbook (Apr 9)
+  - Multi-Channel Lead Outreach (Apr 11)
+- [x] **Security fix** — Removed .env.vercel and .env.vercel-prod (contained API keys) from git, added to .gitignore
 
 ---
 
@@ -76,7 +100,7 @@
 5. ~~**Bing Webmaster Tools**~~ — Submitted (March 23)
 6. **ALS cross-linking** — Share link table with Troy at Monday meeting (table provided)
 7. ~~**Welcome sequence**~~ — DONE — automated via cron + instant Day 0 send (March 23)
-8. **Launch Issue 1 on April 7** — Run `node scripts/send-newsletter.mjs newsletters/issue-01.md --send`
+8. ~~**Launch Issue 1 on April 7**~~ — AUTOMATED — cron will auto-send via Resend broadcast (March 26)
 
 ---
 
