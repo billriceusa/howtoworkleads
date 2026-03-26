@@ -7,7 +7,12 @@ import {
   type RecentPost,
   type NewsletterContent,
 } from "@/lib/cron/newsletter-ai";
-import { buildNewsletterHtml } from "@/lib/cron/newsletter-email";
+import { buildNewsletterHtml, buildPrewrittenNewsletterHtml } from "@/lib/cron/newsletter-email";
+import {
+  getPrewrittenIssueForDate,
+  loadPrewrittenNewsletter,
+  markdownToHtml,
+} from "@/lib/cron/newsletter-prewritten";
 import { commitFilesToGitHub } from "@/lib/cron/git-commit";
 
 export const maxDuration = 300;
@@ -199,33 +204,78 @@ export async function GET(request: Request) {
     );
   }
 
-  let content: NewsletterContent;
-  try {
-    console.log("[Newsletter] Generating newsletter content with AI...");
-    content = await generateNewsletterContent(
-      plan ?? null,
-      recentPosts,
-      siteUrl,
-      weekDates.weekLabel
-    );
-    console.log(`[Newsletter] Generated: "${content.subject}"`);
-  } catch (err) {
-    const msg = `Newsletter content generation failed: ${err instanceof Error ? err.message : err}`;
-    console.error(msg);
-    return NextResponse.json(
-      { success: false, error: msg, duration: Date.now() - startTime },
-      { status: 500 }
-    );
+  let content!: NewsletterContent;
+  let newsletterHtml!: string;
+  let usedPrewritten = false;
+  let prewrittenFilename: string | undefined;
+
+  // Check for a pre-written newsletter issue for this send date
+  const prewrittenInfo = getPrewrittenIssueForDate(weekDates.tuesday);
+
+  if (prewrittenInfo) {
+    try {
+      const loaded = await loadPrewrittenNewsletter(
+        prewrittenInfo.filename,
+        siteUrl,
+        weekDates.weekLabel
+      );
+
+      if (loaded) {
+        console.log(
+          `[Newsletter] Using pre-written ${prewrittenInfo.filename}`
+        );
+        content = loaded.content;
+        usedPrewritten = true;
+        prewrittenFilename = prewrittenInfo.filename;
+
+        // Convert raw markdown to HTML for the email body
+        const bodyHtml = markdownToHtml(loaded.rawMarkdown);
+        newsletterHtml = buildPrewrittenNewsletterHtml(
+          content.subject,
+          bodyHtml,
+          siteUrl,
+          weekDates.weekLabel
+        );
+        console.log(
+          `[Newsletter] Built HTML from pre-written content (${(newsletterHtml.length / 1024).toFixed(1)} KB)`
+        );
+      } else {
+        console.log(
+          `[Newsletter] Pre-written ${prewrittenInfo.filename} not found on disk — falling back to AI`
+        );
+      }
+    } catch (err) {
+      console.warn(
+        `[Newsletter] Error loading pre-written ${prewrittenInfo.filename}: ${err instanceof Error ? err.message : err} — falling back to AI`
+      );
+    }
   }
 
-  const newsletterHtml = buildNewsletterHtml(
-    content,
-    siteUrl,
-    weekDates.weekLabel
-  );
-  console.log(
-    `[Newsletter] Built HTML email (${(newsletterHtml.length / 1024).toFixed(1)} KB)`
-  );
+  // Fall back to AI generation if no pre-written content was loaded
+  if (!usedPrewritten) {
+    try {
+      console.log("[Newsletter] Generating newsletter content with AI...");
+      content = await generateNewsletterContent(
+        plan ?? null,
+        recentPosts,
+        siteUrl,
+        weekDates.weekLabel
+      );
+      console.log(`[Newsletter] Generated: "${content.subject}"`);
+    } catch (err) {
+      const msg = `Newsletter content generation failed: ${err instanceof Error ? err.message : err}`;
+      console.error(msg);
+      return NextResponse.json(
+        { success: false, error: msg, duration: Date.now() - startTime },
+        { status: 500 }
+      );
+    }
+
+    newsletterHtml = buildNewsletterHtml(content, siteUrl, weekDates.weekLabel);
+    console.log(
+      `[Newsletter] Built HTML email (${(newsletterHtml.length / 1024).toFixed(1)} KB)`
+    );
+  }
 
   const resendApiKey = process.env.RESEND_API_KEY;
   const fromEmail =
@@ -302,6 +352,7 @@ export async function GET(request: Request) {
     sendDate: weekDates.tuesday,
     theme: plan?.theme || "AI-generated",
     focusVertical: plan?.focusVertical || "AI-selected",
+    source: usedPrewritten ? `pre-written (${prewrittenFilename})` : "AI-generated",
     subject: content.subject,
     previewText: content.previewText,
     broadcastId: broadcastId || null,
@@ -323,7 +374,7 @@ export async function GET(request: Request) {
           content: newsletterHtml,
         },
       ],
-      `chore(newsletter): weekly newsletter — ${weekDates.weekLabel}\n\nSubject: ${content.subject}\nTheme: ${plan?.theme || "AI-generated"}\nScheduled for: ${weekDates.tuesday}`
+      `chore(newsletter): weekly newsletter — ${weekDates.weekLabel}\n\nSubject: ${content.subject}\nSource: ${usedPrewritten ? `pre-written (${prewrittenFilename})` : "AI-generated"}\nTheme: ${plan?.theme || "AI-generated"}\nScheduled for: ${weekDates.tuesday}`
     );
     console.log("[Newsletter] Committed newsletter archive to GitHub");
   } catch (err) {
@@ -358,6 +409,7 @@ export async function GET(request: Request) {
     success: errors.length === 0,
     duration,
     weekOf: weekDates.weekLabel,
+    source: usedPrewritten ? `pre-written (${prewrittenFilename})` : "AI-generated",
     subject: content.subject,
     broadcastId,
     previewSentTo: REVIEW_EMAIL,

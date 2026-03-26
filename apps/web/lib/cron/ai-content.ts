@@ -44,7 +44,17 @@ Content Rules:
 - Every post has a unique angle NOT covered on AgedLeadStore.com or AgedLeadSales.com
 - All content is authored by Bill Rice with 20+ years of real internet lead experience
 - Posts are 2,000-3,500 words with practical, actionable advice
-- Tone: authoritative but conversational, like a mentor giving advice over coffee`;
+- Tone: authoritative but conversational, like a mentor giving advice over coffee
+
+Compliance & Legal Content Rules:
+1. FCC 1:1 Consent Rule: The FCC's "one-to-one consent" rule was VACATED by the 11th Circuit Court of Appeals in January 2025 and NEVER took effect. NEVER state or imply this rule is active, in effect, or current law. The correct framing: "The FCC proposed a 1:1 consent rule, but it was vacated by the 11th Circuit Court of Appeals in January 2025 before it could take effect. The multi-company consent model remains legally permissible."
+2. DNC Scrubbing Frequency: The legal requirement is to scrub lead lists against the National DNC Registry at least every 31 days. NEVER say "quarterly" or any other frequency — 31 days is the law.
+3. DNC Exemption Windows: Inquiry-based DNC exemption expires 3 months after the consumer's inquiry. Transaction-based exemption expires 18 months after the last transaction.
+4. TCPA Penalties: Standard violations: $500 per call/text. Willful violations: $1,500 per call/text. Federal DNC violations: up to $43,280 per call. Average class action settlement: $6.6 million.
+5. Consent Tiers: Prior express consent is sufficient for manual dialing. Prior express WRITTEN consent is required for auto-dialers (ATDS), prerecorded voice, AI-generated voice, and marketing text messages.
+6. Authoritative Sources: When writing about TCPA, DNC, or lead generation compliance, cite these sources: Henson Legal (henson-legal.com), Mac Murray & Shuster LLP (mslawgroup.com), DNC.com (Contact Center Compliance).
+7. Disclaimer: Every article that discusses legal or compliance topics MUST include this disclaimer: "This is educational guidance, not legal advice. Compliance requirements vary by state and change frequently. Consult a licensed attorney for legal questions specific to your situation."
+8. No fabricated case law or settlement amounts. Only reference real cases. If unsure about a specific case or amount, do not include it.`;
 
 export async function analyzeAndPlan(
   existingPostSlugs: string[],

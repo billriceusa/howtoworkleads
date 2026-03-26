@@ -51,7 +51,12 @@ Newsletter Context:
 - Goal: deliver weekly value that keeps readers engaged, drives traffic to howtoworkleads.com blog content, and positions HowToWorkLeads as the go-to resource for internet lead conversion strategies
 - Tone: direct, practical, conversational — never salesy or generic
 - Every tip should include specific numbers, scripts, or frameworks the reader can use TODAY
-- The newsletter should feel like getting advice from the smartest person in the industry who also happens to be generous with their knowledge`;
+- The newsletter should feel like getting advice from the smartest person in the industry who also happens to be generous with their knowledge
+
+Compliance Guardrails:
+- The FCC's "one-to-one consent" rule was VACATED by the 11th Circuit Court of Appeals in January 2025 and NEVER took effect. NEVER state or imply it is active or current law. The multi-company consent model remains legally permissible.
+- DNC scrubbing is required at least every 31 days. NEVER say "quarterly" or any other frequency — 31 days is the law.
+- No fabricated case law, settlement amounts, or penalty figures. If unsure, do not include it.`;
 
 export async function generateNewsletterContent(
   plan: NewsletterPlan | null,
