@@ -32,7 +32,7 @@
 
 ### H2: The Compliance Landscape for Lead Buyers
 - TCPA (Telephone Consumer Protection Act): what it covers
-- FCC 1:1 consent rule: how it changed lead buying in 2025
+- FCC 1:1 consent rule: vacated by 11th Circuit in Jan 2025 — never took effect
 - National DNC Registry: requirements for calling
 - State-specific DNC lists: additional layer of compliance
 - CAN-SPAM: email compliance basics
@@ -41,7 +41,7 @@
 - Short answer: Yes, with proper DNC scrubbing
 - The distinction: prior express consent vs. cold calling
 - How aged leads fit: they gave consent on a web form, but consent may have expired
-- What the FCC 1:1 consent rule means for aged leads specifically
+- What the vacated FCC 1:1 consent rule means for aged leads going forward
 
 ### H2: DNC Scrubbing — What It Is and Why It's Non-Negotiable
 - What DNC scrubbing does: checks your lead list against federal and state DNC registries
@@ -86,8 +86,9 @@
 1. **Do I need to DNC scrub aged leads?** [Yes, always — no exceptions]
 2. **Can I text aged leads?** [Only if original consent included SMS permission]
 3. **What happens if I call someone on the DNC list?** [Fines of $500-$1,500 per violation]
-4. **Does the FCC 1:1 consent rule kill aged leads?** [No — it changes how leads are generated, not how you work them]
-5. **How often should I re-scrub my lead lists?** [Before every new campaign, minimum quarterly]
+4. **Is the FCC 1:1 consent rule still in effect?** [No — vacated by 11th Circuit in Jan 2025, never took effect]
+5. **How often should I re-scrub my lead lists?** [Every 31 days minimum — legal requirement for Safe Harbor]
+6. **What is Safe Harbor and how do I qualify?** [Written policies, training, internal DNC list, 31-day scrub proof]
 
 ---
 
@@ -110,4 +111,4 @@
 - **Compliance content builds massive trust.** Vendors avoid this topic; you addressing it directly positions you as the honest broker.
 - **Don't be a lawyer.** Include disclaimer: "This is educational guidance, not legal advice. Consult an attorney for compliance questions."
 - **Make the checklist the star.** People will bookmark/print this. Consider offering it as a downloadable PDF lead magnet.
-- **FCC 1:1 consent rule** is the hot topic in 2025-2026 — address it directly and explain what it does/doesn't change for aged lead buyers.
+- **FCC 1:1 consent rule** was vacated by the 11th Circuit in Jan 2025 — address it directly, explain it never took effect, but emphasize underlying TCPA risks remain.

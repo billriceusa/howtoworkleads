@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { EDITORIAL_CALENDAR } from "@/data/editorial-calendar";
+import { MASTER_CONTENT_CALENDAR } from "@/data/master-content-calendar";
 import { analyzeAndPlan, writeArticle } from "@/lib/cron/ai-content";
 import {
   getExistingPostSlugs,
@@ -75,7 +75,7 @@ export async function GET(request: Request) {
     console.log("[Planning] Analyzing SEO strategy and creating content plan...");
     plan = await analyzeAndPlan(
       existingPostSlugs,
-      EDITORIAL_CALENDAR,
+      MASTER_CONTENT_CALENDAR,
       weekDates
     );
     console.log(

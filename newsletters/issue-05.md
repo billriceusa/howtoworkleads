@@ -93,7 +93,15 @@ The complete playbook for final expense — lead source comparison, objection ha
 
 Download the [Insurance Lead Scripts Bundle](https://www.howtoworkleads.com/downloads/insurance-lead-scripts-bundle?utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-05-cta) — it includes the final expense script above plus 14 more scripts for Medicare, life, auto, and P&C. Print it, pin it next to your monitor, and stop improvising on calls.
 
-Need final expense leads to run these scripts on? [Browse aged insurance leads at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-05-als) — filter by lead type, age, and state.
+---
+
+## THIS SCRIPT WORKS BEST WITH THE RIGHT LEADS BEHIND IT
+
+The final expense script above books 1 appointment per 8 conversations — but only when you're working leads from people who actually requested final expense information. Generic insurance leads won't trigger the same emotional response.
+
+AgedLeadStore carries aged life insurance leads — including final expense — at $0.25-$0.50 each. Filter by state and lead age, grab a batch of 100, and run the script from this issue. At $35-$50 for the batch, you're risking less than a dinner out.
+
+**[Browse aged life insurance leads at AgedLeadStore.com](https://agedleadstore.com/life-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-5-als)**
 
 ---
 

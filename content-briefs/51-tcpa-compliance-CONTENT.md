@@ -61,9 +61,7 @@ The rule was scheduled to take effect on January 27, 2025.
 
 ### What Happened Instead
 
-The Insurance Marketing Coalition challenged the rule in the Eleventh Circuit Court of Appeals. On January 24, 2025 — three days before the effective date — the FCC issued a formal 12-month delay. The court subsequently ruled that the FCC had exceeded its authority by redefining "prior express written consent" under the TCPA. The one-to-one consent rule was vacated.
-
-In August 2025, the FCC formally reinstated the prior standard for written consent.
+The Insurance Marketing Coalition challenged the rule in the Eleventh Circuit Court of Appeals. On January 24, 2025 — three days before the effective date — the FCC issued a formal 12-month stay. That same month, the Eleventh Circuit vacated the rule entirely, finding the FCC had ["impermissibly exceeded its statutory authority"](https://www.henson-legal.com/newsroom/the-fccs-one-to-one-consent-rule-is-gone-are-insurance-agents-safe) by redefining "prior express consent" beyond what Congress intended. The court held that under common law principles, a consumer can grant consent to multiple entities at once, as long as the consent is clear and unmistakable. The one-to-one consent rule never took effect.
 
 ### What This Means for Lead Buyers in 2026
 

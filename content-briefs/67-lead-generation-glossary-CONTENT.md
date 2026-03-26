@@ -86,7 +86,7 @@ A cold call is an outbound phone call to someone who hasn't recently expressed i
 
 ### Comparison Shopping Consent
 
-Comparison shopping consent is a type of opt-in where a consumer agrees to be contacted by multiple companies when they submit a lead form. This is standard in lead generation — when someone fills out a "compare quotes" form, they're consenting to hear from several vendors. The FCC's one-to-one consent rule (effective January 2025) changed this landscape significantly, requiring consumers to select specific companies rather than giving blanket consent to any partner in a network.
+Comparison shopping consent is a type of opt-in where a consumer agrees to be contacted by multiple companies when they submit a lead form. This is standard in lead generation — when someone fills out a "compare quotes" form, they're consenting to hear from several vendors. The FCC proposed a one-to-one consent rule that would have required consumers to select specific companies rather than giving blanket consent to any partner in a network, but the rule was vacated by the 11th Circuit Court of Appeals in January 2025 and never took effect. The multi-company consent model remains legally permissible, though best practice is to ensure the consent language clearly identifies the companies that may follow up.
 
 ### Contact Rate
 
@@ -280,7 +280,7 @@ A nurture sequence is a long-term automated series of communications designed to
 
 ### Opt-In
 
-An opt-in is a consumer's explicit agreement to receive communications from a business. In lead generation, the opt-in happens when someone fills out a form, checks a consent box, or takes an affirmative action indicating they want to be contacted. The specificity of the opt-in matters enormously — a generic "I agree to be contacted by partners" is weaker (legally and practically) than "I want Company X to call me about life insurance." The FCC's one-to-one consent rule now requires the latter for many lead types.
+An opt-in is a consumer's explicit agreement to receive communications from a business. In lead generation, the opt-in happens when someone fills out a form, checks a consent box, or takes an affirmative action indicating they want to be contacted. The specificity of the opt-in matters enormously — a generic "I agree to be contacted by partners" is weaker (legally and practically) than "I want Company X to call me about life insurance." While the FCC's proposed one-to-one consent rule (which would have required the latter) was vacated by the courts in 2025, specific consent remains a best practice that leads to better contact rates and lower litigation risk.
 
 ### Opt-Out
 
@@ -306,7 +306,7 @@ A predictive dialer uses algorithms to dial multiple numbers simultaneously, pre
 
 ### Prior Express Written Consent (PEWC)
 
-[Prior express written consent](/blog/lead-buyer-regulatory-cheat-sheet) is the highest level of consent under the TCPA. It requires a written agreement (including electronic signatures) from the consumer that specifically authorizes a particular company to contact them using automated technology or prerecorded messages. PEWC is required for all telemarketing calls to cell phones made with an autodialer or prerecorded voice. If you're buying leads and calling with a dialer, PEWC is the consent standard you need to meet. The FCC's 2025 one-to-one consent rule made this even more specific.
+[Prior express written consent](/blog/lead-buyer-regulatory-cheat-sheet) is the highest level of consent under the TCPA. It requires a written agreement (including electronic signatures) from the consumer that specifically authorizes a particular company to contact them using automated technology or prerecorded messages. PEWC is required for all telemarketing calls to cell phones made with an autodialer or prerecorded voice. If you're buying leads and calling with a dialer, PEWC is the consent standard you need to meet. The FCC proposed a one-to-one consent rule that would have made this even more specific, but the rule was vacated by the 11th Circuit Court of Appeals in January 2025 before it could take effect.
 
 ### Prospect
 

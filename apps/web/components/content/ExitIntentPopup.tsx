@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Button } from '@/components/ui'
+import { getALSDeepLink, getSlugFromPathname } from '@/lib/analytics'
 
 const STORAGE_KEY = 'htwl_exit_popup_dismissed'
 const DISMISS_DAYS = 7
@@ -122,7 +123,7 @@ export function ExitIntentPopup() {
               Download Free Guide
             </Button>
             <Button
-              href="https://agedleadstore.com/all-lead-types/"
+              href={typeof window !== 'undefined' ? getALSDeepLink(getSlugFromPathname(window.location.pathname)) : 'https://agedleadstore.com/all-lead-types/'}
               variant="outline"
               size="lg"
               className="w-full"

@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import type { ContentBrief } from "@/data/editorial-calendar";
+import type { MasterContentEntry } from "@/data/master-content-calendar";
 import type {
   ContentPlan,
   WeeklyBrief,
@@ -48,7 +48,7 @@ Content Rules:
 
 export async function analyzeAndPlan(
   existingPostSlugs: string[],
-  editorialCalendar: ContentBrief[],
+  editorialCalendar: MasterContentEntry[],
   weekDates: { monday: string; wednesday: string; friday: string }
 ): Promise<ContentPlan> {
   const unpublishedBriefs = editorialCalendar.filter(

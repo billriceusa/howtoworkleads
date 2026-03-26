@@ -90,6 +90,16 @@ Complete Medicare lead strategy — IEP vs. AEP vs. SEP timing, CMS compliance r
 
 ---
 
+### THE OFF-SEASON ADVANTAGE STARTS WITH INVENTORY
+
+The whole point of this issue is that off-season Medicare leads are 15-30x cheaper than AEP leads. But the window narrows as October gets closer and more agents catch on.
+
+AgedLeadStore carries aged health insurance and Medicare leads right now — filterable by state, lead age, and type. Grab a batch of 200-500 at $0.40-$0.75 each, run Phase 1 of the pre-season play above, and show up to AEP with a warm pipeline while everyone else is cold-calling $30 leads.
+
+**[Browse aged health insurance leads at AgedLeadStore.com](https://agedleadstore.com/health-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-6-als)**
+
+---
+
 ### YOUR MOVE
 
 Start your Medicare pipeline today. [Read the full Medicare lead guide](https://www.howtoworkleads.com/buying-leads/insurance-leads/medicare-leads?utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-06-cta) and build your off-season strategy before the rest of the market wakes up in October.

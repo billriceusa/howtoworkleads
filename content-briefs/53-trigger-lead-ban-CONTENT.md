@@ -197,7 +197,7 @@ Not everyone loses here. The ban creates winners and losers across the mortgage 
 
 The trigger lead ban doesn't exist in a vacuum. It's the second major regulatory hit to the mortgage lead market in less than two years.
 
-In January 2025, the FCC's one-to-one consent rule took effect, requiring that consumers explicitly consent to be contacted by a specific company — not just a general "I agree to be contacted by partners." That rule already thinned out the herd of low-quality lead providers who were selling loosely consented data to dozens of buyers.
+In January 2025, the FCC's proposed one-to-one consent rule was vacated by the 11th Circuit Court of Appeals before it could take effect. The rule would have required consumers to explicitly consent to be contacted by a specific company — not just a general "I agree to be contacted by partners." While the rule never went into effect, the regulatory scrutiny it created pushed many lead providers to tighten their consent practices voluntarily.
 
 Now, the trigger lead ban removes another layer of supply.
 

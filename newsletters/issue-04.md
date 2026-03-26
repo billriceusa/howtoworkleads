@@ -106,7 +106,15 @@ Step-by-step GHL configuration with screenshots for pipeline, automations, and t
 
 Open your CRM right now and count how many leads have no next follow-up date scheduled. That number is money sitting on the table. Set up the 7-stage pipeline, import your next batch with source tags, and watch the compound effect kick in.
 
-Need leads to fill your new pipeline? [Browse aged leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-04-cta) — insurance, mortgage, solar, and more.
+---
+
+## YOUR NEW PIPELINE NEEDS LEADS TO FILL IT
+
+You just built the system — 7 stages, 3 automations, source tags. Now it needs inventory. A CRM without leads is a car without gas.
+
+AgedLeadStore carries aged leads across insurance, mortgage, home improvement, and more. When you import them, tag them with the source, vertical, and lead age from Step 3 above. In 30 days, you'll have real conversion data by source — and that data will drive every lead-buying decision going forward.
+
+**[Browse aged leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-4-als)**
 
 ---
 

@@ -121,9 +121,9 @@ Our [CRM comparison guide](/blog/best-crm-aged-leads) covers the top options for
 
 ## Compliance & Legal
 
-Working aged leads legally requires DNC scrubbing, TCPA compliance, and an understanding of the FCC's 1:1 consent rule. Non-compliance can result in fines of $500-$1,500 per call.
+Working aged leads legally requires DNC scrubbing every 31 days, TCPA compliance, and proper consent verification. Non-compliance can result in fines of $500-$1,500 per call, and average TCPA class action settlements exceed $6.6 million.
 
-Our [DNC compliance guide](/blog/aged-leads-dnc-compliance) covers everything you need: DNC scrubbing process, TCPA checklist, SMS consent rules, CAN-SPAM requirements, and what to demand from your vendor. Our [FCC consent rule guide](/blog/fcc-consent-rule-lead-buying) explains how the 1:1 rule affects lead buying and what it means for aged leads specifically.
+Our [DNC compliance guide](/blog/aged-leads-dnc-compliance) covers everything you need: DNC scrubbing process, TCPA checklist, SMS consent rules, Safe Harbor requirements, CAN-SPAM requirements, and what to demand from your vendor. Our [FCC consent rule guide](/blog/fcc-consent-rule-lead-buying) explains what happened to the FCC's 1:1 consent rule (vacated by the courts in 2025) and what compliance risks remain for lead buyers.
 
 ## Success Stories
 

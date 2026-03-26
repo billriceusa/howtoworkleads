@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { appendALSUtm } from '@/lib/analytics'
+import { appendALSUtm, getALSDeepLink, getSlugFromPathname } from '@/lib/analytics'
 
 export function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -19,7 +19,8 @@ export function StickyMobileCTA() {
 
   if (isDismissed || !isVisible) return null
 
-  const href = appendALSUtm('https://agedleadstore.com/all-lead-types/', 'sticky-mobile-cta')
+  const deepLink = typeof window !== 'undefined' ? getALSDeepLink(getSlugFromPathname(window.location.pathname)) : 'https://agedleadstore.com/all-lead-types/'
+  const href = appendALSUtm(deepLink, 'sticky-mobile-cta')
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden">

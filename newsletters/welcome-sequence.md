@@ -30,6 +30,8 @@ Bill Rice
 
 P.S. — Hit reply and tell me what vertical you work in (insurance, mortgage, solar, or something else). I read every response and it helps me send you the most relevant content.
 
+P.P.S. — When you're ready to put this into practice, browse DNC-scrubbed aged leads by vertical at [AgedLeadStore](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-1-als).
+
 ---
 
 *The Aged Lead Playbook by [HowToWorkLeads.com](https://www.howtoworkleads.com?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-1-footer)*
@@ -52,6 +54,8 @@ The problem isn't the leads. It's the math — and the system (or lack of one).
 **[Read: Aged Leads vs. Fresh Leads — The Complete Cost-Benefit Analysis](https://www.howtoworkleads.com/blog/aged-leads-vs-fresh-leads?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-2-blog)**
 
 Key takeaway: aged leads don't have lower ROI — they have a *different* ROI curve. You need more volume, a tighter cadence, and a CRM that doesn't let leads slip through. The agents who figure that out spend one-fifth as much per deal.
+
+Want to test the math yourself? Aged leads start at $0.35/lead at [AgedLeadStore](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-2-als) — pick your vertical ([life insurance](https://agedleadstore.com/life-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-2-als), [health insurance](https://agedleadstore.com/health-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-2-als), [mortgage](https://agedleadstore.com/mortgage-leads-purchase-refinance/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-2-als)) and run the numbers.
 
 Tomorrow I'll share a resource that'll help you put that system in place.
 
@@ -83,6 +87,8 @@ The cadence alone will double your contact rate. The scripts make sure you know 
 — Bill
 
 P.S. — If you work insurance leads specifically, the [Insurance Lead Scripts Bundle](https://www.howtoworkleads.com/downloads/insurance-lead-scripts-bundle?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-insurance) has 15+ scripts built for your vertical. Mortgage? [Here's yours](https://www.howtoworkleads.com/downloads/mortgage-lead-scripts-bundle?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-mortgage).
+
+P.P.S. — You've got the scripts and the cadence. Now you need the leads. [Browse by vertical at AgedLeadStore](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-als) — [life insurance](https://agedleadstore.com/life-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-als), [auto insurance](https://agedleadstore.com/auto-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-als), [mortgage](https://agedleadstore.com/mortgage-leads-purchase-refinance/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-als), [home improvement](https://agedleadstore.com/buy-home-improvement-leads-lp/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-3-als), and more.
 
 ---
 
@@ -116,6 +122,8 @@ Takes 2 minutes. No email required. Just plug in your numbers and see where you 
 - Other
 
 Just reply with your vertical — it helps me tailor the content I send you. I read every reply.
+
+P.S. — Plug in real numbers: [pick your vertical at AgedLeadStore](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-4-als) and run 100 leads through your new system. [Insurance](https://agedleadstore.com/life-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-4-als), [mortgage](https://agedleadstore.com/mortgage-leads-purchase-refinance/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-4-als), [home improvement](https://agedleadstore.com/buy-home-improvement-leads-lp/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-4-als) — all DNC-scrubbed, starting at $0.35/lead.
 
 — Bill
 

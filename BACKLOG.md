@@ -5,6 +5,22 @@
 
 ---
 
+## Completed (March 25 Session)
+
+- [x] **Site-wide legal & compliance audit** — Researched 3 authoritative legal sources (Henson Legal, Mac Murray & Shuster LLP, DNC.com) and corrected inaccurate compliance information across 12 published articles:
+  - **FCC 1:1 consent rule** incorrectly presented as active law in 10 articles — corrected to reflect 11th Circuit vacatur (Jan 2025, never took effect)
+  - **DNC scrub frequency** changed from "quarterly" to every 31 days (legal requirement)
+  - **DNC exemption windows** added: 3-month inquiry, 18-month transaction
+  - **New sections added** to DNC compliance article: Safe Harbor, vicarious liability, reassigned numbers, real case law ($14M American Income Life, $19M QuoteWizard, $145M MediaAlpha)
+  - **FCC consent rule article** completely rewritten (was treating vacated rule as active law)
+  - **TCPA compliance article** fixed false "August 2025 reinstatement" claim
+  - **Glossary** fixed 3 entries (Comparison Shopping, Opt-In, PEWC)
+  - All corrections sourced from Henson Legal, Mac Murray & Shuster LLP, and DNC.com
+  - All 12 documents pushed live to Sanity + ISR-refreshed
+- [x] **Content briefs updated** — Corresponding content brief files and outlines updated to match corrected legal facts
+
+---
+
 ## Completed (March 23 Session)
 
 - [x] **Newsletter test send** — Issue 1 sent to bill@billricestrategy.com, confirmed delivery

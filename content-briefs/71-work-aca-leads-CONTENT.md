@@ -258,7 +258,7 @@ The Centers for Medicare & Medicaid Services (CMS) regulates how agents market A
 - **Don't** disparage competing plans, agents, or carriers
 - **Don't** enroll someone without their explicit, documented consent
 
-**TCPA compliance matters too.** The [Telephone Consumer Protection Act](/blog/tcpa-compliance-lead-buyers) applies to all phone and text outreach. Make sure your leads have proper opt-in consent and that you're following one-to-one consent rules under the updated FCC regulations.
+**TCPA compliance matters too.** The [Telephone Consumer Protection Act](/blog/tcpa-compliance-lead-buyers) applies to all phone and text outreach. Make sure your leads have proper opt-in consent and that you're following TCPA consent requirements.
 
 ---
 

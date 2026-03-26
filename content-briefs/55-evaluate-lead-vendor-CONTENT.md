@@ -75,7 +75,7 @@ For most agents and sales teams, the best approach is a blended strategy: buy ex
 
 ## 3. Consent Documentation
 
-In 2026, consent isn't optional — it's the foundation of every legitimate lead transaction. The FCC's one-to-one consent rule means that the consumer must have explicitly agreed to be contacted by your specific company (or the lead seller must have collected consent in a way that's transferable under the applicable regulations).
+In 2026, consent isn't optional — it's the foundation of every legitimate lead transaction. The FCC's proposed one-to-one consent rule was vacated by the 11th Circuit Court of Appeals in January 2025 and never took effect. Still, verifying that the consumer explicitly agreed to be contacted by your specific company (or that the lead seller collected consent in a way that's transferable under applicable regulations) remains a best practice for quality and compliance.
 
 ### What to Verify
 

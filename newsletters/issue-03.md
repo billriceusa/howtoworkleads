@@ -93,7 +93,18 @@ The deep dive — covering every insurance vertical, lead source comparison, scr
 
 Buy a 50-100 lead test batch in your best vertical. Run the 7-day cadence. Track every stage of the funnel above. Then hit reply and share your numbers — I'll feature anonymized results in a future issue.
 
-Not sure where to buy? [AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-03-cta) lets you filter by vertical, geography, and lead age. Start with a small batch before scaling.
+---
+
+## READY TO RUN YOUR OWN 100-LEAD TEST?
+
+The numbers above came from a real batch of aged insurance leads — life, final expense, and Medicare — at $0.75/lead. You can run the same test. AgedLeadStore carries aged leads in every insurance vertical, filterable by state, lead age, and type.
+
+Pick your vertical and start small:
+- **[Life insurance leads](https://agedleadstore.com/life-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-3-als)**
+- **[Health insurance leads](https://agedleadstore.com/health-insurance-leads/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-3-als)**
+- **[Browse all insurance verticals](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-3-als)**
+
+Buy 50-100, run the 7-day cadence, track every stage of the funnel, and see where your numbers land.
 
 ---
 

@@ -95,6 +95,16 @@ Every script and template mentioned in this email plus 20+ more — organized by
 
 ---
 
+### TEXT-FIRST OUTREACH NEEDS LEADS TO TEXT
+
+You've got the templates. You've got the timing. Now you need a fresh batch of leads to run them on. The text-first approach works across every vertical — insurance, mortgage, home improvement, auto — because the psychology is the same: people read texts, and a low-pressure message gets responses.
+
+AgedLeadStore lets you filter by vertical, state, and lead age. Grab 50-100 leads in your best vertical and send Day 1 texts tomorrow morning.
+
+**[Browse aged leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-7-als)**
+
+---
+
 ### YOUR MOVE
 
 Download the [7-Day Follow-Up Cadence](https://www.howtoworkleads.com/downloads/7-day-follow-up-cadence?utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-07-cta) — it includes text templates for every day of the sequence, timed alongside phone and email touches. Print it, tape it to your desk, and start texting first.

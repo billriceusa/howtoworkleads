@@ -167,7 +167,7 @@ The [Telephone Consumer Protection Act](https://www.law.cornell.edu/uscode/text/
 
 - **AI voice calls** are treated as artificial/pre-recorded voice calls under the FCC's [February 2024 ruling](https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal). Same consent rules apply.
 - **AI text messages** sent through automated systems require prior express consent for informational messages and prior express written consent for marketing messages.
-- **The one-to-one consent rule** (effective January 2025) requires that consent be given to a specific seller, not shared across multiple companies. This is particularly relevant if you're buying leads. See the [FCC 1:1 consent rule breakdown](/blog/fcc-1-to-1-consent-rule-lead-buying) for details.
+- **The one-to-one consent rule** was proposed by the FCC but vacated by the 11th Circuit Court of Appeals in January 2025 and never took effect. That said, obtaining consent specific to a single seller remains a best practice — and many carriers require it for SMS campaigns. If you're buying leads, verify the consent quality and specificity. See the [FCC 1:1 consent rule breakdown](/blog/fcc-1-to-1-consent-rule-lead-buying) for details.
 
 ### State AI Disclosure Laws
 

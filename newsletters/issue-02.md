@@ -88,7 +88,15 @@ The full version of this cadence with insurance-specific and mortgage-specific s
 
 Pick 10 aged leads from your database that you've only contacted once. Run this cadence on them starting tomorrow. Track your contact rate and report back — hit reply and let me know how it goes.
 
-Need fresh aged leads to run the cadence on? [Browse leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-02-cta) — filter by geography, lead age, and type.
+---
+
+## THIS WEEK'S PLAY WORKS BEST WITH FRESH INVENTORY
+
+The 7-day cadence above works on any aged leads — but it works best when you're starting with a fresh batch you haven't touched yet. That way every lead gets the full sequence from Day 1 without gaps.
+
+AgedLeadStore carries aged leads across every major vertical — life insurance, mortgage, Medicare, auto, and more. Filter by state, lead age, and type, then drop them straight into your cadence.
+
+**[Pick your vertical and grab a test batch at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-2-als)**
 
 ---
 

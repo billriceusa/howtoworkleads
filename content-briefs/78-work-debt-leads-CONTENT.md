@@ -243,7 +243,7 @@ For the latest guidance, review the [FTC's debt relief resources](https://www.ft
 The [Telephone Consumer Protection Act](/blog/tcpa-compliance-lead-buyers) governs how you contact consumers by phone and text:
 
 - Obtain proper written consent before calling or texting
-- Under the FCC's updated one-to-one consent rule, consent must be specific to your company — not shared across multiple sellers
+- The FCC's proposed one-to-one consent rule was vacated by the courts in January 2025 and never took effect, but verifying that consent is specific to your company remains a best practice for quality and compliance
 - Honor all do-not-call requests immediately
 - Maintain an internal DNC list and [scrub against the national registry](/blog/dnc-compliance-lead-buyers)
 - Identify yourself and your company at the beginning of every call

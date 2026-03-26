@@ -1,16 +1,16 @@
 import React from 'react'
-import { appendALSUtm } from '@/lib/analytics'
+import { appendALSUtm, getALSDeepLink } from '@/lib/analytics'
 
 /** Pattern to match ALS brand mentions that should be auto-linked */
 const ALS_PATTERN = /(Aged\s*Lead\s*Store|AgedLeadStore)/gi
 
-const ALS_URL = 'https://agedleadstore.com/all-lead-types/'
-
 /**
  * Takes a plain text string and returns React nodes with ALS mentions
  * converted to affiliate links. If no match, returns the original string.
+ * @param slug - Page slug used to resolve a vertical-specific ALS deep link
  */
-export function autoLinkALS(text: string, utmCampaign: string = 'in-content'): React.ReactNode {
+export function autoLinkALS(text: string, utmCampaign: string = 'in-content', slug: string = ''): React.ReactNode {
+  const alsUrl = getALSDeepLink(slug)
   const parts = text.split(ALS_PATTERN)
   if (parts.length === 1) return text
 
@@ -21,7 +21,7 @@ export function autoLinkALS(text: string, utmCampaign: string = 'in-content'): R
       return (
         <a
           key={i}
-          href={appendALSUtm(ALS_URL, utmCampaign)}
+          href={appendALSUtm(alsUrl, utmCampaign)}
           target="_blank"
           rel="noopener noreferrer"
         >

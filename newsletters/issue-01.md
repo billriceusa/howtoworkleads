@@ -37,8 +37,6 @@ The agents who crush it with aged leads aren't better closers. They have a bette
 
 **The #1 mistake?** Treating aged leads like cold calls. These people raised their hand. Your job isn't to convince them they have a need — it's to show up at the right time with the right offer.
 
-**Ready to test the math yourself?** [Browse aged leads by vertical, geography, and age at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-01-cta) — start with a small batch and run the numbers.
-
 ---
 
 ## THE DATA
@@ -76,6 +74,14 @@ We broke down every angle — cost per lead, contact rates, close rates, ROI by 
 ## YOUR FIRST MOVE
 
 If you've never worked aged leads, start here: download our **[Aged Lead Quick-Start Kit](https://www.howtoworkleads.com/downloads/aged-lead-quick-start-kit?utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook&utm_content=issue-01-cta)** — it's a one-page guide with scripts, a vendor checklist, and your first-week action plan. Free.
+
+---
+
+## READY TO PUT THIS INTO PRACTICE?
+
+The math above only works if you have leads to run it on. AgedLeadStore lets you pick your vertical — life insurance, mortgage, auto, health, home improvement — and filter by geography, lead age, and price point. Start with a small test batch of 50-100 leads, run the numbers from this issue, and see the ROI for yourself.
+
+**[Browse aged leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-1-als)**
 
 ---
 

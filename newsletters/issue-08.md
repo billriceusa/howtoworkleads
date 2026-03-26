@@ -128,6 +128,16 @@ More data from real campaigns across insurance, mortgage, and solar verticals. E
 
 ---
 
+### BE AGENT C, NOT AGENT A
+
+The difference between $16,800 and $192,000 per year wasn't the leads — it was the system. You've now seen the cadence (Issue #2), the CRM setup (Issue #4), the scripts (Issue #5), and the data (this issue). The only thing left is to run it.
+
+AgedLeadStore is where all three agents in this case study sourced their leads. Same leads, same price. Pick your vertical, grab a batch of 200, and decide which agent you want to be.
+
+**[Browse aged leads by vertical at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=newsletter&utm_content=issue-8-als)**
+
+---
+
 ### YOUR MOVE
 
 **Forward this email to someone on your team** (or an agent friend who buys leads). This issue works as a standalone case for why process matters more than lead quality — and it might be the thing that gets them to change their approach.

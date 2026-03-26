@@ -315,9 +315,9 @@ Every lead list must be scrubbed against the National Do Not Call Registry befor
 - Include opt-out in first text or automated sequences: "Reply STOP to unsubscribe"
 - Honor opt-outs immediately — within the same business day
 
-### The FCC 1:1 Consent Rule
+### Consent Quality for Comparison Leads
 
-The FCC's one-to-one consent rule requires that leads generated through comparison sites must have explicit consent tied to a specific seller (you or your agency). For aged leads, this means verifying that the lead provider's consent language meets the 1:1 standard. Ask your vendor for their consent language and a sample lead form. Leads generated before the rule change may be grandfathered, but new leads must comply.
+The FCC proposed a one-to-one consent rule that would have required leads from comparison sites to have explicit consent tied to a specific seller, but the rule was vacated by the 11th Circuit Court of Appeals in January 2025 and never took effect. That said, verifying consent quality remains critical. Ask your vendor for their consent language and a sample lead form. The stronger and more specific the consent, the lower your compliance risk — and the higher your contact and conversion rates.
 
 ### State-Specific Rules
 

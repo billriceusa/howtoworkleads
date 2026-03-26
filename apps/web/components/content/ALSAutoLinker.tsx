@@ -1,17 +1,16 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import { appendALSUtm } from '@/lib/analytics'
+import { appendALSUtm, getALSDeepLink, getSlugFromPathname } from '@/lib/analytics'
 
 const ALS_PATTERN = /\b(Aged\s*Lead\s*Store|AgedLeadStore)\b/gi
-const ALS_URL = 'https://agedleadstore.com/all-lead-types/'
 
 /**
  * Wraps article content and auto-links plain text mentions of
  * "Aged Lead Store" / "AgedLeadStore" that aren't already inside <a> tags.
  * Runs once on mount via DOM manipulation to avoid hydration mismatches.
  */
-export function ALSAutoLinker({ children, utmCampaign = 'in-content' }: { children: React.ReactNode; utmCampaign?: string }) {
+export function ALSAutoLinker({ children, utmCampaign = 'in-content' }: { children: React.ReactNode; utmCampaign?: string; }) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -50,7 +49,8 @@ export function ALSAutoLinker({ children, utmCampaign = 'in-content' }: { childr
     // Only auto-link the first 3 mentions to avoid over-linking
     let linkCount = 0
     const maxLinks = 3
-    const href = appendALSUtm(ALS_URL, utmCampaign)
+    const alsUrl = typeof window !== 'undefined' ? getALSDeepLink(getSlugFromPathname(window.location.pathname)) : 'https://agedleadstore.com/all-lead-types/'
+    const href = appendALSUtm(alsUrl, utmCampaign)
 
     for (const textNode of textNodes) {
       if (linkCount >= maxLinks) break

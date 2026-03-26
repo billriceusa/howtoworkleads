@@ -246,7 +246,7 @@ If you get sued — and in this industry, it is a matter of when, not if — you
 
 **Can I still buy leads that were sold to multiple companies?**
 
-Yes. The FCC's 1-to-1 consent rule was vacated in January 2025 and formally repealed in July 2025. As long as the consumer consented to be contacted by the companies listed on the opt-in form, comparison shopping leads remain legal. Verify that your vendor's consent language names the companies or categories of companies that may follow up.
+Yes. The FCC's 1-to-1 consent rule was vacated in January 2025 and vacated by the 11th Circuit Court of Appeals in January 2025. As long as the consumer consented to be contacted by the companies listed on the opt-in form, comparison shopping leads remain legal. Verify that your vendor's consent language names the companies or categories of companies that may follow up.
 
 **How often do I need to scrub my lead lists against the DNC registry?**
 
