@@ -48,3 +48,6 @@ next-env.d.ts
 # Sanity
 .sanity
 .env*.local
+
+.env.vercel
+.env.vercel-prod
