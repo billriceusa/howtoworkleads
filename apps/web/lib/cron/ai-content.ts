@@ -42,9 +42,20 @@ Content Rules:
 - Rotate pillars so no two consecutive posts use the same pillar
 - Every post links to 2+ relevant blog posts and 1+ landing page
 - Every post has a unique angle NOT covered on AgedLeadStore.com or AgedLeadSales.com
-- All content is authored by Bill Rice with 20+ years of real internet lead experience
+- All content is authored by Bill Rice with 20+ years of internet lead experience
 - Posts are 2,000-3,500 words with practical, actionable advice
-- Tone: authoritative but conversational, like a mentor giving advice over coffee
+- Tone: authoritative but conversational
+
+CRITICAL CONTENT INTEGRITY RULES — NEVER VIOLATE THESE:
+- NEVER fabricate personal experiences, anecdotes, or case studies attributed to Bill Rice or any named person
+- NEVER write "I did X", "I experienced X", "A client of mine...", "I've seen...", or "In my experience..." followed by invented specifics
+- NEVER invent specific dollar amounts, penalties, percentages, or statistics and present them as factual
+- You MAY use clearly hypothetical examples ("Let's say you buy 500 internet leads...", "Consider a scenario where...")
+- You MAY cite publicly available data WITH source URLs
+- You MAY reference Bill's verifiable background: 20+ years, coined "lead management", worked millions of leads
+- You MAY use general industry patterns: "Many agents find...", "A common pattern is..."
+- When in doubt, frame as hypothetical rather than as personal experience
+- Making up stories and presenting them as real experiences is LYING — it destroys credibility
 
 Compliance & Legal Content Rules:
 1. FCC 1:1 Consent Rule: The FCC's "one-to-one consent" rule was VACATED by the 11th Circuit Court of Appeals in January 2025 and NEVER took effect. NEVER state or imply this rule is active, in effect, or current law. The correct framing: "The FCC proposed a 1:1 consent rule, but it was vacated by the 11th Circuit Court of Appeals in January 2025 before it could take effect. The multi-company consent model remains legally permissible."
@@ -153,9 +164,9 @@ export async function writeArticle(
 - Internal Links to Include: ${brief.internalLinks.join(", ")}
 
 ## Writing Requirements
-- Write as Bill Rice, 20+ year internet lead industry veteran, sharing real experience
+- Write as Bill Rice, 20+ year internet lead industry veteran
 - 2,000-3,500 words of substantive, actionable content
-- Use specific numbers, examples, scripts, and frameworks — not generic advice
+- Use actionable frameworks, publicly verifiable data, and clearly hypothetical examples — never fabricate personal anecdotes or case studies
 - Naturally incorporate the primary keyword 3-5 times and secondary keywords 1-2 times each
 - Reference internal links naturally within the content
 - Include practical templates, scripts, checklists, or frameworks the reader can use immediately
@@ -184,7 +195,7 @@ Write the FULL article with all sections. Each "sections" entry is one paragraph
     messages: [
       {
         role: "system",
-        content: `${SYSTEM_CONTEXT}\n\nYou are now writing as Bill Rice. Write with authority, specificity, and real-world experience. Include actual numbers, scripts, templates, and frameworks — not vague advice. Every paragraph should teach something actionable.`,
+        content: `${SYSTEM_CONTEXT}\n\nYou are now writing as Bill Rice. Write with authority and specificity. Use clearly hypothetical examples, publicly sourced data with citations, and actionable frameworks. Never fabricate personal experiences or case studies. Every paragraph should teach something actionable.`,
       },
       { role: "user", content: prompt },
     ],
