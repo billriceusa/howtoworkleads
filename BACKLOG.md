@@ -1,10 +1,11 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** April 8, 2026
-**Site status:** 106+ pages live (36 landing + 64 blog + 9 category + download pages + 2 interactive tools)
+**Last updated:** April 8, 2026 (end of session)
+**Site status:** 119+ pages live (36 landing + 77 blog + 9 category + download pages + 2 interactive tools)
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
-**Newsletter:** 8 issues written, auto-send started April 7, welcome sequence live
-**Content automation:** Weekly cron publishes from master-content-calendar.ts
+**Newsletter:** 8 issues written, Issue 1 broadcast sent April 8, Issue 2 scheduled April 14
+**Content automation:** Weekly cron publishes from master-content-calendar.ts (fixed April 8 -- was broken)
+**AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
 
 ---
 
@@ -18,74 +19,35 @@
 
 ---
 
-## P0 -- Revenue & Conversion (Do First)
+## P0 -- Revenue & Conversion -- COMPLETED April 8
 
-### 1. Content upgrade CTAs on high-traffic pages
-- **What:** Match lead magnet downloads to page vertical (e.g., insurance script bundle CTA on insurance pages, mortgage scripts on mortgage pages)
-- **Why:** 6 lead magnets exist but aren't contextually promoted. Vertical-matched CTAs convert 2-3x better than generic ones. More email captures = more newsletter subscribers = more ALS clicks.
-- **Dependency:** Need to identify top 20 pages by traffic (check GA4 manually or via daily-performance cron email reports)
-- **Effort:** Medium (component + per-page CTA mapping)
-
-### 2. ALS cross-linking coordination with Troy
-- **What:** Share the deep link mapping table (26 keyword-to-URL mappings already built) with Troy at Monday meeting. Get reciprocal links from ALS back to HTWL.
-- **Why:** Backlinks from agedleadstore.com (high DA, topically relevant) are the single highest-leverage SEO signal available. Already prepared, just needs handoff.
-- **Dependency:** Troy meeting (Mondays)
-- **Effort:** Low (table already exists in lib/analytics.ts)
-- **Owner:** Bill (manual handoff)
-
-### 3. Newsletter subscriber growth tactics
-- **What:** Add inline email capture CTAs within blog post body content (not just footer/popup). Test placement after the first H2 and before the conclusion.
-- **Why:** Newsletter is now live and automated. Every subscriber gets 8 issues + welcome sequence, each with ALS affiliate links. Subscriber growth directly drives affiliate revenue.
-- **Dependency:** None (Resend + capture form already exist)
-- **Effort:** Low-Medium (new component + portable text integration)
+- [x] **Content upgrade CTAs** -- ContentUpgradeCTA component maps page slug to best lead magnet (insurance scripts on insurance pages, etc.). Integrated into blog + landing page templates.
+- [x] **Newsletter subscriber growth** -- InlineNewsletterCTA component added mid-article (after 2nd H2 in blog, after 1st content block in landing pages).
+- [x] **Cron build fix** -- All 5 cron jobs were silently broken (openai/google-auth webpack resolution). Fixed via serverComponentsExternalPackages.
+- [x] **OpenAI to Anthropic migration** -- All 4 AI cron files converted to @anthropic-ai/sdk (claude-sonnet-4). openai package removed.
+- [x] **Newsletter Issue 1 sent** -- Broadcast ID 2a47893d, sent April 8 (was delayed due to broken cron).
+- [x] **UTM safety net** -- Auto-append UTM params to howtoworkleads.com links in both newsletter HTML converters.
+- [ ] **ALS cross-linking** -- Share link table with Troy at Monday meeting (table built, needs handoff). **Owner: Bill**
 
 ---
 
-## P1 -- Traffic Growth (Do Next)
+## P1 -- Traffic Growth -- COMPLETED April 8
 
-### 4. Voicemail & SMS script templates by vertical
-- **What:** Create script template articles for each major vertical (insurance, mortgage, home services, legal). "Voicemail Scripts for [Vertical] Leads" + "SMS Templates for [Vertical] Leads."
-- **Why:** Script/template queries have high search intent and low competition. These pages are natural internal link targets from existing "how to work" vertical pages. Issue 7 newsletter already covers SMS -- this creates the evergreen landing page.
-- **Dependency:** None
-- **Effort:** Medium (8-12 new articles, can batch via content automation)
-- **Suggested articles:**
-  - [ ] Voicemail Scripts for Insurance Leads
-  - [ ] Voicemail Scripts for Mortgage Leads
-  - [ ] Voicemail Scripts for Home Services Leads
-  - [ ] SMS Templates for Insurance Leads
-  - [ ] SMS Templates for Mortgage Leads
-  - [ ] SMS Templates for Home Services Leads
-
-### 5. Home services vertical expansion
-- **What:** Add 4 new "How to Work [X] Leads" articles: Electrical, Landscaping, Painting, Garage Door
-- **Why:** Home services vertical is partially built (6 articles live). Completing it creates a comprehensive hub that ranks for "[service] lead" queries. These verticals have less competition than insurance/mortgage.
-- **Dependency:** None
-- **Effort:** Medium (4 articles, follow existing home services template)
-- **Articles:**
-  - [ ] How to Work Electrical Leads
-  - [ ] How to Work Landscaping Leads
-  - [ ] How to Work Painting Leads
-  - [ ] How to Work Garage Door Leads
-
-### 6. Legal vertical expansion
-- **What:** Add 3 new legal vertical articles: Workers' Comp Leads, Bankruptcy Leads, Family Law Leads
-- **Why:** Legal leads category has only 3 articles (MVA, Mass Tort, SSDI). Adding these completes coverage of high-value legal verticals. Legal lead buyers have high AOV.
-- **Dependency:** None
-- **Effort:** Medium (3 articles)
-- **Articles:**
-  - [ ] How to Work Workers' Comp Leads
-  - [ ] How to Work Bankruptcy Leads
-  - [ ] How to Work Family Law Leads
-
-### 7. UTM parameter tracking for newsletter traffic
-- **What:** Add UTM parameters to all links in newsletter issues and welcome sequence emails. Configure GA4 to report on newsletter as a traffic source.
-- **Why:** Can't measure newsletter ROI without attribution. Need to know which issues drive site visits and ALS clicks.
-- **Dependency:** Newsletter must be sending (done -- started April 7)
-- **Effort:** Low (update link URLs in issue templates + newsletter send script)
+- [x] **6 voicemail/SMS script articles** (published Apr 14-25):
+  - Voicemail Scripts: Insurance (19 scripts), Mortgage (16), Home Services (14)
+  - SMS Templates: Insurance (20+), Mortgage (17), Home Services (21)
+- [x] **4 home services articles** (published Apr 28 - May 7):
+  - Electrical, Landscaping, Painting, Garage Door
+- [x] **3 legal vertical articles** (published May 9-14):
+  - Workers' Comp, Bankruptcy, Family Law
+- [x] **llms.txt updated** with all 13 new article links
+- [x] **5 pages submitted for GSC indexing** (April 8)
 
 ---
 
-## P2 -- Coverage & Optimization (When P0/P1 Clear)
+## Next Priorities (P2 and beyond)
+
+---
 
 ### 8. Core Web Vitals audit
 - **What:** Run Lighthouse + CrUX audit. Fix any LCP, INP, or CLS regressions.
@@ -131,24 +93,27 @@ P1 #7 (UTM tracking)     -----> enables measuring P0 #3 effectiveness
 
 ---
 
-## Session Plan (Recommended Order)
+## Completed History
 
-**This session:**
-1. P0 #1 -- Build content upgrade CTA component + map lead magnets to verticals
-2. P0 #3 -- Add inline newsletter CTAs in blog post body
-3. P1 #7 -- Add UTM parameters to newsletter links
+### April 8, 2026
 
-**Next session:**
-4. P1 #4 -- Batch write voicemail/SMS script articles (6-12 articles)
-5. P1 #5 -- Home services expansion (4 articles)
-
-**Following session:**
-6. P1 #6 -- Legal vertical expansion (3 articles)
-7. P2 #8 -- Core Web Vitals audit
+- [x] **P0 complete** -- ContentUpgradeCTA + InlineNewsletterCTA components built and integrated into all blog + landing page templates
+- [x] **Cron infrastructure fixed** -- All 5 cron jobs were silently broken due to openai/google-auth webpack resolution failures. Fixed via serverComponentsExternalPackages in next.config.js.
+- [x] **OpenAI replaced with Anthropic** -- All 4 AI cron files (newsletter-ai, performance-ai, ai-content, seo-audit) migrated from openai/gpt-4o to @anthropic-ai/sdk/claude-sonnet-4. openai package removed from dependencies.
+- [x] **Newsletter Issue 1 broadcast** -- Sent manually after discovering cron had never fired. Broadcast ID: 2a47893d.
+- [x] **UTM safety net** -- Auto-append UTM params to howtoworkleads.com links in both markdownToHtml functions (cron + manual send script)
+- [x] **13 new articles written and published** (staggered Apr 14 - May 14):
+  - Voicemail Scripts: Insurance (19 scripts), Mortgage (16), Home Services (14)
+  - SMS Templates: Insurance (20+), Mortgage (17), Home Services (21)
+  - Home Services: Electrical, Landscaping, Painting, Garage Door
+  - Legal: Workers' Comp, Bankruptcy, Family Law
+- [x] **llms.txt updated** with all 13 new article links (home services, legal, scripts/templates sections)
+- [x] **Backlog rewritten** with P0/P1/P2 prioritization and dependency map
+- [x] **Repo re-cloned** -- local git had corrupted objects, fresh clone from GitHub
+- [x] **5 pages submitted for GSC indexing** -- voicemail-scripts-insurance, sms-templates-insurance, electrical, workers-comp, voicemail-scripts-mortgage
+- [x] **Site health audit** -- 145 URLs in sitemap, all pages 200, structured data complete, AI bot access confirmed
 
 ---
-
-## Completed History
 
 ### March 26, 2026
 
