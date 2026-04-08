@@ -85,6 +85,25 @@ Our blog features how-to guides and tactical advice:
 - [How to Work Annuity Leads](${baseUrl}/blog/how-to-work-annuity-leads)
 - [How to Work Health Insurance Leads](${baseUrl}/blog/how-to-work-health-insurance-leads)
 
+### Home Services Lead Guides
+- [How to Work Electrical Leads](${baseUrl}/blog/how-to-work-electrical-leads)
+- [How to Work Landscaping Leads](${baseUrl}/blog/how-to-work-landscaping-leads)
+- [How to Work Painting Leads](${baseUrl}/blog/how-to-work-painting-leads)
+- [How to Work Garage Door Leads](${baseUrl}/blog/how-to-work-garage-door-leads)
+
+### Legal Lead Guides
+- [How to Work Workers' Comp Leads](${baseUrl}/blog/how-to-work-workers-comp-leads)
+- [How to Work Bankruptcy Leads](${baseUrl}/blog/how-to-work-bankruptcy-leads)
+- [How to Work Family Law Leads](${baseUrl}/blog/how-to-work-family-law-leads)
+
+### Scripts & Templates
+- [Voicemail Scripts for Insurance Leads](${baseUrl}/blog/voicemail-scripts-insurance-leads)
+- [Voicemail Scripts for Mortgage Leads](${baseUrl}/blog/voicemail-scripts-mortgage-leads)
+- [Voicemail Scripts for Home Services Leads](${baseUrl}/blog/voicemail-scripts-home-services-leads)
+- [SMS Templates for Insurance Leads](${baseUrl}/blog/sms-templates-insurance-leads)
+- [SMS Templates for Mortgage Leads](${baseUrl}/blog/sms-templates-mortgage-leads)
+- [SMS Templates for Home Services Leads](${baseUrl}/blog/sms-templates-home-services-leads)
+
 ### Compliance Guides
 - [TCPA Compliance for Lead Buyers](${baseUrl}/blog/tcpa-compliance-lead-buyers)
 - [State-by-State Lead Compliance Guide](${baseUrl}/blog/state-by-state-lead-compliance-guide)
