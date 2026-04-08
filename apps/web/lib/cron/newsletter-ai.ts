@@ -58,7 +58,7 @@ CRITICAL CONTENT INTEGRITY RULES — NEVER VIOLATE THESE:
 - NEVER invent specific dollar amounts, penalties, percentages, or statistics and present them as factual
 - You MAY use clearly hypothetical examples ("Let's say you buy 500 leads...", "Consider a scenario where...")
 - You MAY cite publicly available data WITH source URLs
-- You MAY reference Bill's verifiable background: 20+ years, coined "lead management", worked millions of leads
+- You MAY reference Bill's verifiable background: 30+ years, coined "lead management", worked millions of leads
 - You MAY use general industry patterns: "Many agents find...", "A common pattern is..."
 - When in doubt, frame as hypothetical rather than as personal experience
 - Making up stories and presenting them as real experiences is LYING — it destroys credibility

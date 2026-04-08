@@ -123,6 +123,18 @@ export async function Footer() {
           <p className="text-sm text-white/70 text-center">
             &copy; {new Date().getFullYear()} HowToWorkLeads. All rights reserved.
           </p>
+          <p className="text-sm text-white/70 text-center mt-2">
+            A{' '}
+            <a
+              href="https://billrice.com/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white underline transition-colors"
+            >
+              Bill Rice
+            </a>{' '}
+            project.
+          </p>
         </div>
       </div>
     </footer>

@@ -106,7 +106,7 @@ async function buildSiteSnapshot(): Promise<SiteSnapshot> {
     hasOpenGraph: true,
     hasTwitterCards: true,
     authorSetup:
-      "Bill Rice — Person schema with sameAs links, 20+ years internet lead experience, knowsAbout topics",
+      "Bill Rice — Person schema with sameAs links, 30+ years internet lead experience, knowsAbout topics",
     contentPillars: [
       "Lead Management",
       "Sales Process",
