@@ -1,12 +1,12 @@
-import OpenAI from "openai";
+import Anthropic from "@anthropic-ai/sdk";
 import type { NewsletterPlan } from "@/data/newsletter-calendar";
 
-function getOpenAIClient(): OpenAI {
-  const apiKey = process.env.OPENAI_API_KEY;
+function getAnthropicClient(): Anthropic {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    throw new Error("OPENAI_API_KEY environment variable is not set");
+    throw new Error("ANTHROPIC_API_KEY environment variable is not set");
   }
-  return new OpenAI({ apiKey });
+  return new Anthropic({ apiKey });
 }
 
 export interface RecentPost {
@@ -74,7 +74,7 @@ export async function generateNewsletterContent(
   siteUrl: string,
   weekLabel: string
 ): Promise<NewsletterContent> {
-  const client = getOpenAIClient();
+  const client = getAnthropicClient();
 
   const postsContext = recentPosts
     .map(
@@ -147,17 +147,17 @@ Respond with valid JSON:
   "ctaUrl": "https://www.howtoworkleads.com/guides?utm_source=newsletter&utm_medium=email&utm_campaign=weekly&utm_content=${weekLabel}"
 }`;
 
-  const response = await client.chat.completions.create({
-    model: "gpt-4o",
+  const response = await client.messages.create({
+    model: "claude-sonnet-4-20250514",
+    max_tokens: 4096,
+    system: NEWSLETTER_SYSTEM,
     messages: [
-      { role: "system", content: NEWSLETTER_SYSTEM },
-      { role: "user", content: prompt },
+      { role: "user", content: prompt + "\n\nRespond ONLY with valid JSON, no other text." },
     ],
     temperature: 0.8,
-    response_format: { type: "json_object" },
   });
 
-  const content = response.choices[0]?.message?.content;
+  const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for newsletter generation");
 
   return JSON.parse(content) as NewsletterContent;

@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+import Anthropic from "@anthropic-ai/sdk";
 import type {
   GoogleUpdateSummary,
   AuditFinding,
@@ -6,12 +6,12 @@ import type {
   BacklogItem,
 } from "./types";
 
-function getOpenAIClient(): OpenAI {
-  const apiKey = process.env.OPENAI_API_KEY;
+function getAnthropicClient(): Anthropic {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    throw new Error("OPENAI_API_KEY environment variable is not set");
+    throw new Error("ANTHROPIC_API_KEY environment variable is not set");
   }
-  return new OpenAI({ apiKey });
+  return new Anthropic({ apiKey });
 }
 
 export interface SiteSnapshot {
@@ -55,15 +55,13 @@ Your job is to:
 3. Generate actionable, prioritized recommendations`;
 
 export async function researchGoogleUpdates(): Promise<GoogleUpdateSummary[]> {
-  const client = getOpenAIClient();
+  const client = getAnthropicClient();
 
-  const response = await client.chat.completions.create({
-    model: "gpt-4o",
+  const response = await client.messages.create({
+    model: "claude-sonnet-4-20250514",
+    max_tokens: 4096,
+    system: AUDIT_SYSTEM,
     messages: [
-      {
-        role: "system",
-        content: AUDIT_SYSTEM,
-      },
       {
         role: "user",
         content: `Research and summarize the most recent and relevant Google Search updates that could affect an SEO-driven educational content site like ours. Include:
@@ -92,14 +90,15 @@ Respond with valid JSON:
   ]
 }
 
-Include 4-8 updates, prioritized by relevance to our site.`,
+Include 4-8 updates, prioritized by relevance to our site.
+
+Respond ONLY with valid JSON, no other text.`,
       },
     ],
     temperature: 0.3,
-    response_format: { type: "json_object" },
   });
 
-  const content = response.choices[0]?.message?.content;
+  const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for Google updates research");
 
   const parsed = JSON.parse(content) as { updates: GoogleUpdateSummary[] };
@@ -117,7 +116,7 @@ export async function auditSite(
   contentStrategyUpdates: string[];
   summary: string;
 }> {
-  const client = getOpenAIClient();
+  const client = getAnthropicClient();
 
   const existingBacklogContext = existingBacklog
     ? `\n## Existing Backlog (${existingBacklog.items.filter((i) => i.status === "open").length} open items)
@@ -135,16 +134,7 @@ ${existingBacklog.items
     )
     .join("\n");
 
-  const response = await client.chat.completions.create({
-    model: "gpt-4o",
-    messages: [
-      {
-        role: "system",
-        content: AUDIT_SYSTEM,
-      },
-      {
-        role: "user",
-        content: `Perform a comprehensive SEO audit of our site based on the current snapshot and recent Google updates.
+  const userPrompt = `Perform a comprehensive SEO audit of our site based on the current snapshot and recent Google updates.
 
 ## Site Snapshot
 - Total blog posts: ${snapshot.totalPosts}
@@ -183,7 +173,7 @@ For each category, evaluate our current state and identify any issues:
 
 For existing backlog items that appear resolved based on the snapshot, note them for resolution.
 
-Respond with valid JSON:
+Respond ONLY with valid JSON:
 {
   "overallScore": 85,
   "findings": [
@@ -208,14 +198,19 @@ Respond with valid JSON:
   "summary": "3-5 paragraph executive summary of audit results, key risks, and top priorities"
 }
 
-Include 8-15 findings across different categories. Prioritize actionable items. The overallScore should be 0-100 reflecting overall SEO health.`,
-      },
+Include 8-15 findings across different categories. Prioritize actionable items. The overallScore should be 0-100 reflecting overall SEO health.`;
+
+  const response = await client.messages.create({
+    model: "claude-sonnet-4-20250514",
+    max_tokens: 4096,
+    system: AUDIT_SYSTEM,
+    messages: [
+      { role: "user", content: userPrompt },
     ],
     temperature: 0.4,
-    response_format: { type: "json_object" },
   });
 
-  const content = response.choices[0]?.message?.content;
+  const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for site audit");
 
   return JSON.parse(content) as {

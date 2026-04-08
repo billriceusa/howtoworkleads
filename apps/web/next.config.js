@@ -9,7 +9,7 @@ const nextConfig = {
     ],
   },
   experimental: {
-    serverComponentsExternalPackages: ['sharp', 'openai', 'google-auth-library'],
+    serverComponentsExternalPackages: ['sharp', '@anthropic-ai/sdk', 'google-auth-library'],
   },
   // Ensure Vercel can resolve sharp native bindings
   outputFileTracingIncludes: {

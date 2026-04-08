@@ -1,13 +1,13 @@
-import OpenAI from "openai";
+import Anthropic from "@anthropic-ai/sdk";
 import type { GA4Report } from "./ga4-data";
 import type { GSCReport } from "./gsc-data";
 
-function getOpenAIClient(): OpenAI {
-  const apiKey = process.env.OPENAI_API_KEY;
+function getAnthropicClient(): Anthropic {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    throw new Error("OPENAI_API_KEY environment variable is not set");
+    throw new Error("ANTHROPIC_API_KEY environment variable is not set");
   }
-  return new OpenAI({ apiKey });
+  return new Anthropic({ apiKey });
 }
 
 export interface PerformanceInsight {
@@ -54,7 +54,7 @@ export async function analyzePerformance(
   ga4: GA4Report,
   gsc: GSCReport
 ): Promise<PerformanceAnalysis> {
-  const client = getOpenAIClient();
+  const client = getAnthropicClient();
 
   let dataContext = "## Performance Data (7-Day Rolling Average vs 90-Day Average)\n\n";
 
@@ -109,12 +109,7 @@ ${gsc.ninetyDay.topQueries.slice(0, 10).map((q) => `- "${q.query}": ${q.clicks} 
     dataContext += `### Google Search Console\nNot available: ${gsc.error || "Not configured"}\n\n`;
   }
 
-  const response = await client.chat.completions.create({
-    model: "gpt-4o",
-    messages: [
-      {
-        role: "system",
-        content: `You are a senior digital marketing analyst reviewing the daily performance of HowToWorkLeads (howtoworkleads.com), an SEO-driven educational content site targeting sales professionals who buy and work internet leads — including insurance agents, mortgage brokers, solar reps, and home improvement salespeople.
+  const systemPrompt = `You are a senior digital marketing analyst reviewing the daily performance of HowToWorkLeads (howtoworkleads.com), an SEO-driven educational content site targeting sales professionals who buy and work internet leads — including insurance agents, mortgage brokers, solar reps, and home improvement salespeople.
 
 Analyze the 7-day rolling average vs 90-day average performance data and provide actionable insights. Focus on:
 - Traffic trends and anomalies
@@ -122,15 +117,20 @@ Analyze the 7-day rolling average vs 90-day average performance data and provide
 - Search visibility and ranking changes
 - User engagement quality
 - Conversion-oriented recommendations
-- Specific, data-backed suggestions (not generic advice)`,
-      },
+- Specific, data-backed suggestions (not generic advice)`;
+
+  const response = await client.messages.create({
+    model: "claude-sonnet-4-20250514",
+    max_tokens: 4096,
+    system: systemPrompt,
+    messages: [
       {
         role: "user",
         content: `Analyze today's performance data and provide a comprehensive assessment with recommendations.
 
 ${dataContext}
 
-Respond with valid JSON:
+Respond ONLY with valid JSON:
 {
   "overallAssessment": "2-3 paragraph executive summary of current performance, trends, and key takeaways",
   "insights": [
@@ -162,10 +162,9 @@ Include 5-8 insights and 4-6 recommendations. Be specific with numbers.`,
       },
     ],
     temperature: 0.4,
-    response_format: { type: "json_object" },
   });
 
-  const content = response.choices[0]?.message?.content;
+  const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for performance analysis");
 
   return JSON.parse(content) as PerformanceAnalysis;
