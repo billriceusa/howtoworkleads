@@ -383,10 +383,17 @@ export function markdownToHtml(markdown: string): string {
   // Convert italic
   html = html.replace(/\*([^*]+)\*/g, "<em>$1</em>");
 
-  // Convert links
+  // Convert links (auto-append UTM params to howtoworkleads.com links missing them)
   html = html.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<a href="$2" style="color: #1e40af; text-decoration: underline;">$1</a>'
+    (_match: string, text: string, url: string) => {
+      let href = url
+      if (href.includes('howtoworkleads.com') && !href.includes('utm_source')) {
+        const sep = href.includes('?') ? '&' : '?'
+        href = `${href}${sep}utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook`
+      }
+      return `<a href="${href}" style="color: #1e40af; text-decoration: underline;">${text}</a>`
+    }
   );
 
   // Convert markdown tables to HTML tables

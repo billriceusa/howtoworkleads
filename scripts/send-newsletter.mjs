@@ -82,8 +82,15 @@ function markdownToHtml(md) {
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     // Italic
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    // Links
-    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" style="color:#1A1A1A;text-decoration:underline;">$1</a>')
+    // Links (auto-append UTM params to howtoworkleads.com links missing them)
+    .replace(/\[(.+?)\]\((.+?)\)/g, (_match, text, url) => {
+      let href = url
+      if (href.includes('howtoworkleads.com') && !href.includes('utm_source')) {
+        const sep = href.includes('?') ? '&' : '?'
+        href = `${href}${sep}utm_source=newsletter&utm_medium=email&utm_campaign=aged-lead-playbook`
+      }
+      return `<a href="${href}" style="color:#1A1A1A;text-decoration:underline;">${text}</a>`
+    })
     // Horizontal rules
     .replace(/^---$/gm, '<hr style="border:none;border-top:1px solid #E5E5E5;margin:24px 0;">')
     // Bullet lists

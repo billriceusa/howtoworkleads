@@ -3,7 +3,7 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import { sanityFetch, isSanityConfigured } from '@/lib/sanity/client'
 import { landingPageQuery, landingPagePathsQuery } from '@/lib/sanity/queries'
-import { Hero, TableOfContents, CTASection, ArticleCard, NewsletterForm, ALSAutoLinker } from '@/components/content'
+import { Hero, TableOfContents, CTASection, ArticleCard, NewsletterForm, ALSAutoLinker, ContentUpgradeCTA, InlineNewsletterCTA } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd, FAQJsonLd } from '@/components/seo'
 import { PortableText } from '@portabletext/react'
@@ -243,98 +243,114 @@ export default async function LandingPage({ params }: LandingPageProps) {
           <article className="lg:col-span-8">
             <ALSAutoLinker utmCampaign={`article-${params.slug}-in-content`}>
             <div className="prose-custom">
-              {page.content?.map((block: any, index: number) => {
-                switch (block._type) {
-                  case 'contentBlock':
-                    return (
-                      <div key={index}>
-                        <PortableText
-                          value={filterFrontmatterBlocks(block.content)}
-                          components={portableTextComponents}
-                        />
-                      </div>
-                    )
+              {(() => {
+                let contentBlockCount = 0
+                return page.content?.map((block: any, index: number) => {
+                  switch (block._type) {
+                    case 'contentBlock': {
+                      contentBlockCount++
+                      const showInlineCTA = contentBlockCount === 1
+                      return (
+                        <div key={index}>
+                          <PortableText
+                            value={filterFrontmatterBlocks(block.content)}
+                            components={portableTextComponents}
+                          />
+                          {showInlineCTA && (
+                            <div className="my-8">
+                              <InlineNewsletterCTA />
+                            </div>
+                          )}
+                        </div>
+                      )
+                    }
 
-                  case 'ctaSection':
-                    return (
-                      <div key={index} className="not-prose my-12">
-                        <CTASection
-                          headline={block.headline}
-                          description={block.description}
-                          ctaText="Buy Aged Leads"
-                          ctaLink="https://agedleadstore.com/all-lead-types/"
-                                            downloadText="Free Guide: How to Work Consumer Data"
-                          downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
-                          utmCampaign={`article-${params.slug}-inline`}
-                          variant={block.variant || 'primary'}
-                        />
-                      </div>
-                    )
+                    case 'ctaSection':
+                      return (
+                        <div key={index} className="not-prose my-12">
+                          <CTASection
+                            headline={block.headline}
+                            description={block.description}
+                            ctaText="Buy Aged Leads"
+                            ctaLink="https://agedleadstore.com/all-lead-types/"
+                            downloadText="Free Guide: How to Work Consumer Data"
+                            downloadLink="https://drive.google.com/file/d/1mWhf4A7Ne_oCPoXaXnyBs_pWWDhe9zB1/view?usp=sharing"
+                            utmCampaign={`article-${params.slug}-inline`}
+                            variant={block.variant || 'primary'}
+                          />
+                        </div>
+                      )
 
-                  case 'faqSection':
-                    return (
-                      <div key={index} className="not-prose my-12">
-                        <h2 className="mb-6 text-2xl font-bold text-gray-900">
-                          {block.title || 'Frequently Asked Questions'}
-                        </h2>
-                        <Accordion
-                          items={block.faqs.map((faq: any, faqIndex: number) => ({
-                            id: `faq-${faqIndex}`,
-                            question: faq.question,
-                            answer: faq.answer,
-                          }))}
-                        />
-                      </div>
-                    )
+                    case 'faqSection':
+                      return (
+                        <div key={index} className="not-prose my-12">
+                          <h2 className="mb-6 text-2xl font-bold text-gray-900">
+                            {block.title || 'Frequently Asked Questions'}
+                          </h2>
+                          <Accordion
+                            items={block.faqs.map((faq: any, faqIndex: number) => ({
+                              id: `faq-${faqIndex}`,
+                              question: faq.question,
+                              answer: faq.answer,
+                            }))}
+                          />
+                        </div>
+                      )
 
-                  case 'comparisonTable':
-                    return (
-                      <div key={index} className="not-prose my-8 overflow-x-auto">
-                        {block.title && (
-                          <h4 className="mb-3 text-lg font-semibold text-gray-900">{block.title}</h4>
-                        )}
-                        <table className="w-full border-collapse text-sm">
-                          <thead>
-                            <tr className="bg-gray-900 text-white">
-                              {block.columns?.map((col: string, i: number) => (
-                                <th key={i} className="px-4 py-3 text-left font-semibold">
-                                  {col}
-                                </th>
-                              ))}
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {block.rows?.map((row: any, i: number) => (
-                              <tr
-                                key={row._key || i}
-                                className={`border-b border-gray-200 ${
-                                  row.isHighlighted
-                                    ? 'bg-yellow-50 font-semibold'
-                                    : i % 2 === 0
-                                      ? 'bg-white'
-                                      : 'bg-gray-50'
-                                }`}
-                              >
-                                {row.cells?.map((cell: string, j: number) => (
-                                  <td key={j} className={`px-4 py-3 ${j === 0 ? 'font-medium' : ''}`}>
-                                    {cell}
-                                  </td>
+                    case 'comparisonTable':
+                      return (
+                        <div key={index} className="not-prose my-8 overflow-x-auto">
+                          {block.title && (
+                            <h4 className="mb-3 text-lg font-semibold text-gray-900">{block.title}</h4>
+                          )}
+                          <table className="w-full border-collapse text-sm">
+                            <thead>
+                              <tr className="bg-gray-900 text-white">
+                                {block.columns?.map((col: string, i: number) => (
+                                  <th key={i} className="px-4 py-3 text-left font-semibold">
+                                    {col}
+                                  </th>
                                 ))}
                               </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    )
+                            </thead>
+                            <tbody>
+                              {block.rows?.map((row: any, i: number) => (
+                                <tr
+                                  key={row._key || i}
+                                  className={`border-b border-gray-200 ${
+                                    row.isHighlighted
+                                      ? 'bg-yellow-50 font-semibold'
+                                      : i % 2 === 0
+                                        ? 'bg-white'
+                                        : 'bg-gray-50'
+                                  }`}
+                                >
+                                  {row.cells?.map((cell: string, j: number) => (
+                                    <td key={j} className={`px-4 py-3 ${j === 0 ? 'font-medium' : ''}`}>
+                                      {cell}
+                                    </td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )
 
-                  default:
-                    return null
-                }
-              })}
+                    default:
+                      return null
+                  }
+                })
+              })()}
+            </div>
+
+            {/* Vertical-matched lead magnet download */}
+            <div className="mt-12">
+              <ContentUpgradeCTA pageSlug={`${params.category}/${params.slug}`} />
             </div>
 
             {/* Newsletter */}
-            <div className="mt-12">
+            <div className="mt-8">
               <NewsletterForm />
             </div>
             </ALSAutoLinker>

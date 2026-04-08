@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { sanityFetch } from '@/lib/sanity/client'
 import { blogPostQuery } from '@/lib/sanity/queries'
 import { urlForImage } from '@/lib/sanity/image'
-import { Hero, CTASection, NewsletterForm, ALSAutoLinker } from '@/components/content'
+import { Hero, CTASection, NewsletterForm, ALSAutoLinker, ContentUpgradeCTA, InlineNewsletterCTA } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd } from '@/components/seo'
 import { Badge, Markdown } from '@/components/ui'
@@ -334,20 +334,64 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               )}
             </div>
 
-            {/* Content */}
+            {/* Content with inline CTAs */}
             <ALSAutoLinker utmCampaign={`blog-${params.slug}-in-content`}>
-            <div className="prose-custom">
-              {post.content && (
-                <PortableText
-                  value={filterFrontmatterBlocks(post.content)}
-                  components={portableTextComponents}
-                />
-              )}
-            </div>
+            {(() => {
+              const filteredContent = filterFrontmatterBlocks(post.content || [])
+              // Find the index of the second h2 block to insert inline CTA after it
+              let h2Count = 0
+              let splitIndex = -1
+              for (let i = 0; i < filteredContent.length; i++) {
+                if (filteredContent[i]._type === 'block' && filteredContent[i].style === 'h2') {
+                  h2Count++
+                  if (h2Count === 2) {
+                    // Insert after the paragraph(s) following this h2
+                    splitIndex = i + 1
+                    while (
+                      splitIndex < filteredContent.length &&
+                      filteredContent[splitIndex]._type === 'block' &&
+                      filteredContent[splitIndex].style === 'normal'
+                    ) {
+                      splitIndex++
+                    }
+                    break
+                  }
+                }
+              }
+
+              if (splitIndex > 0 && splitIndex < filteredContent.length) {
+                const firstHalf = filteredContent.slice(0, splitIndex)
+                const secondHalf = filteredContent.slice(splitIndex)
+                return (
+                  <>
+                    <div className="prose-custom">
+                      <PortableText value={firstHalf} components={portableTextComponents} />
+                    </div>
+                    <div className="my-8">
+                      <InlineNewsletterCTA />
+                    </div>
+                    <div className="prose-custom">
+                      <PortableText value={secondHalf} components={portableTextComponents} />
+                    </div>
+                  </>
+                )
+              }
+
+              return (
+                <div className="prose-custom">
+                  <PortableText value={filteredContent} components={portableTextComponents} />
+                </div>
+              )
+            })()}
             </ALSAutoLinker>
 
-            {/* Newsletter */}
+            {/* Vertical-matched lead magnet download */}
             <div className="mt-12">
+              <ContentUpgradeCTA pageSlug={params.slug} />
+            </div>
+
+            {/* Newsletter */}
+            <div className="mt-8">
               <NewsletterForm />
             </div>
           </article>
