@@ -30,13 +30,46 @@ function ref(id: string) {
   return { _type: "reference", _ref: id, _key: randomKey() };
 }
 
-const PILLAR_CATEGORY_MAP: Record<string, string> = {
-  "Lead Management": "cat-lead-management",
-  "Sales Process": "cat-sales-process",
-  "CRM Systems": "cat-crm-systems",
-  "Buying Leads": "cat-buying-leads",
-  "Industry Strategies": "cat-industry",
+const PILLAR_CATEGORY_SLUG: Record<string, string> = {
+  "Lead Management": "lead-management",
+  "Sales Process": "sales-process",
+  "CRM Systems": "crm-systems",
+  "Buying Leads": "buying-leads",
+  "Industry Strategies": "lead-management",
 };
+
+const AUTHOR_SLUG = "bill-rice";
+const FALLBACK_CATEGORY_SLUG = "lead-management";
+
+async function resolveCategoryId(
+  client: ReturnType<typeof getSanityWriteClient>,
+  pillar: string
+): Promise<string> {
+  const slug = PILLAR_CATEGORY_SLUG[pillar] || FALLBACK_CATEGORY_SLUG;
+  const id = await client.fetch<string | null>(
+    `*[_type == "categoryPage" && slug.current == $slug][0]._id`,
+    { slug }
+  );
+  if (!id) {
+    throw new Error(
+      `No categoryPage found for slug "${slug}" (pillar "${pillar}")`
+    );
+  }
+  return id;
+}
+
+async function resolveAuthorId(
+  client: ReturnType<typeof getSanityWriteClient>
+): Promise<string> {
+  const id = await client.fetch<string | null>(
+    `*[_type == "author" && slug.current == $slug][0]._id`,
+    { slug: AUTHOR_SLUG }
+  );
+  if (!id) {
+    throw new Error(`No author found for slug "${AUTHOR_SLUG}"`);
+  }
+  return id;
+}
 
 export async function getExistingPostSlugs(): Promise<string[]> {
   const client = getSanityWriteClient();
@@ -61,8 +94,10 @@ export async function publishArticle(
     return { id: postId, slug: article.brief.slug };
   }
 
-  const categoryId =
-    PILLAR_CATEGORY_MAP[article.brief.pillar] || "cat-lead-management";
+  const [categoryId, authorId] = await Promise.all([
+    resolveCategoryId(client, article.brief.pillar),
+    resolveAuthorId(client),
+  ]);
 
   const publishedAt = new Date(
     article.brief.publishDate + "T09:00:00Z"
@@ -78,7 +113,7 @@ export async function publishArticle(
     updatedAt: publishedAt,
     contentType: article.contentType,
     isFeatured: false,
-    author: ref("author-bill-rice"),
+    author: ref(authorId),
     categories: [ref(categoryId)],
     seo: {
       metaTitle: article.seoTitle,
