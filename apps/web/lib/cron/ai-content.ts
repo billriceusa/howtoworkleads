@@ -6,6 +6,7 @@ import type {
   GeneratedArticle,
   ArticleSection,
 } from "./types";
+import { parseJsonResponse } from "./parse-json";
 
 function getAnthropicClient(): Anthropic {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -145,7 +146,7 @@ Respond with valid JSON matching this structure exactly:
   const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for content planning");
 
-  return JSON.parse(content) as ContentPlan;
+  return parseJsonResponse<ContentPlan>(content);
 }
 
 export async function writeArticle(
@@ -203,13 +204,13 @@ Write the FULL article with all sections. Each "sections" entry is one paragraph
   const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error(`No response from AI for article: ${brief.title}`);
 
-  const parsed = JSON.parse(content) as {
+  const parsed = parseJsonResponse<{
     excerpt: string;
     seoTitle: string;
     seoDescription: string;
     contentType: "pillar" | "cluster";
     sections: ArticleSection[];
-  };
+  }>(content);
 
   return {
     brief,

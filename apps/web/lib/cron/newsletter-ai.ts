@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { NewsletterPlan } from "@/data/newsletter-calendar";
+import { parseJsonResponse } from "./parse-json";
 
 function getAnthropicClient(): Anthropic {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -160,5 +161,5 @@ Respond with valid JSON:
   const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for newsletter generation");
 
-  return JSON.parse(content) as NewsletterContent;
+  return parseJsonResponse<NewsletterContent>(content);
 }

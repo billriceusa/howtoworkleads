@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { GA4Report } from "./ga4-data";
 import type { GSCReport } from "./gsc-data";
+import { parseJsonResponse } from "./parse-json";
 
 function getAnthropicClient(): Anthropic {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -167,5 +168,5 @@ Include 5-8 insights and 4-6 recommendations. Be specific with numbers.`,
   const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for performance analysis");
 
-  return JSON.parse(content) as PerformanceAnalysis;
+  return parseJsonResponse<PerformanceAnalysis>(content);
 }

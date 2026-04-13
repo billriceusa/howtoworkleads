@@ -5,6 +5,7 @@ import type {
   SEOBacklog,
   BacklogItem,
 } from "./types";
+import { parseJsonResponse } from "./parse-json";
 
 function getAnthropicClient(): Anthropic {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -101,7 +102,7 @@ Respond ONLY with valid JSON, no other text.`,
   const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for Google updates research");
 
-  const parsed = JSON.parse(content) as { updates: GoogleUpdateSummary[] };
+  const parsed = parseJsonResponse<{ updates: GoogleUpdateSummary[] }>(content);
   return parsed.updates;
 }
 
@@ -213,13 +214,13 @@ Include 8-15 findings across different categories. Prioritize actionable items. 
   const content = response.content[0]?.type === "text" ? response.content[0].text : null;
   if (!content) throw new Error("No response from AI for site audit");
 
-  return JSON.parse(content) as {
+  return parseJsonResponse<{
     findings: AuditFinding[];
     overallScore: number;
     strategyRecommendations: string[];
     contentStrategyUpdates: string[];
     summary: string;
-  };
+  }>(content);
 }
 
 export function mergeBacklog(
