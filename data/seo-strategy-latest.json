@@ -1,0 +1,51 @@
+{
+  "lastRun": "2026-04-13T22:53:59.720Z",
+  "weekOf": "2026-04-20",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong coverage across all five pillars with 87 published posts, demonstrating comprehensive authority in the internet lead space. We have particularly strong coverage in Industry Strategies (insurance, mortgage, solar verticals) and Lead Management (follow-up, scripts, systems). However, we have gaps in advanced CRM automation topics, lead vendor negotiation strategies, and emerging AI tools for lead management. Our compliance content is robust but could benefit from more state-specific guidance beyond the federal overview we've covered.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and basic lead definitions, while AgedLeadSales.com stays narrow on aged lead tactics. We have a significant opportunity to dominate the 'lead vendor evaluation' and 'lead ROI calculation' keywords that neither competitor addresses comprehensively. There's also a gap in practical CRM setup content - most competitors provide generic CRM advice, but we can offer lead-specific CRM configurations. The emerging trend of AI-powered lead scoring and automated follow-up sequences represents untapped keyword territory that aligns perfectly with our expertise.",
+    "newOpportunities": [
+      "lead vendor contract negotiation",
+      "multi-vendor lead portfolio management",
+      "lead attribution modeling",
+      "compliance automation workflows",
+      "lead quality scoring algorithms"
+    ],
+    "trendingTopics": [
+      "AI lead qualification",
+      "compliance automation",
+      "multi-channel attribution",
+      "lead vendor consolidation",
+      "real-time lead scoring"
+    ],
+    "recommendedUpdates": [
+      "refresh aged lead pricing guide with 2026 data",
+      "update CRM comparison with new integrations",
+      "expand compliance guide with recent court decisions"
+    ]
+  },
+  "articlesPublished": [
+    {
+      "title": "Lead Scoring Models: Prioritize Internet Leads for Maximum ROI",
+      "slug": "lead-scoring-models-prioritize-internet-leads-maximum-roi",
+      "publishDate": "2026-04-20",
+      "primaryKeyword": "lead scoring models",
+      "pillar": "CRM Systems"
+    },
+    {
+      "title": "Appointment Setting Scripts: Internet Lead to Booked Meeting in One Call",
+      "slug": "appointment-setting-scripts-internet-lead-booked-meeting-one-call",
+      "publishDate": "2026-04-22",
+      "primaryKeyword": "appointment setting scripts",
+      "pillar": "Sales Process"
+    },
+    {
+      "title": "Aged Leads Buying Guide: Profit From Leads Other Reps Gave Up On",
+      "slug": "aged-leads-buying-guide-profit-leads-other-reps-gave-up",
+      "publishDate": "2026-04-24",
+      "primaryKeyword": "aged leads buying guide",
+      "pillar": "Buying Leads"
+    }
+  ],
+  "briefsForNextWeek": "Selected three high-impact briefs from existing calendar that address current market needs. Lead scoring models addresses the growing demand for CRM automation. Appointment setting scripts fills a gap in our sales process content with practical, actionable scripts. Aged leads buying guide leverages our core expertise while providing comprehensive vendor evaluation framework that competitors lack. All three rotate pillars properly and target different audience segments within our ICP."
+}
