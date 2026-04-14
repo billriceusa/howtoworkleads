@@ -22,6 +22,21 @@ const nextConfig = {
         destination: '/lead-management/lead-management-vs-crm',
         permanent: true,
       },
+      {
+        source: '/crm-systems/what-is-a-crm-system',
+        destination: '/crm-systems',
+        permanent: true,
+      },
+      {
+        source: '/crm-systems/b2c-vs-b2b-crm',
+        destination: '/blog/best-crm-aged-leads',
+        permanent: true,
+      },
+      {
+        source: '/crm-systems/operational-analytical-and-collaborative-crm',
+        destination: '/crm-systems',
+        permanent: true,
+      },
     ];
   },
 }
