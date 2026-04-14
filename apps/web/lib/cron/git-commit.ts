@@ -110,7 +110,8 @@ export async function commitFilesToGitHub(
     }
   );
   if (!updateRefRes.ok) {
-    throw new Error(`Failed to update ref: ${updateRefRes.status}`);
+    const body = await updateRefRes.text();
+    throw new Error(`Failed to update ref: ${updateRefRes.status} ${body}`);
   }
 
   console.log(`Committed ${files.length} files: ${newCommitData.sha}`);
