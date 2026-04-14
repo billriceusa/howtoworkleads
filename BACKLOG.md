@@ -1,11 +1,12 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** April 8, 2026 (end of session)
+**Last updated:** April 14, 2026 (end of SEO sprint session)
 **Site status:** 119+ pages live (36 landing + 77 blog + 9 category + download pages + 2 interactive tools)
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
-**Newsletter:** 8 issues written, Issue 1 broadcast sent April 8, Issue 2 scheduled April 14
-**Content automation:** Weekly cron publishes from master-content-calendar.ts (fixed April 8 -- was broken)
+**Newsletter:** 8 issues written. **Only 3 subscribers in Resend audience** — Issue 1 (broadcast 2a47893d) is still in DRAFT, never actually sent despite earlier claims. Weekly cron IS sending Sunday 8 AM UTC to those 3 addresses. Treat newsletter as non-channel until subscriber acquisition happens.
+**Content automation:** Weekly cron publishes 3/week Mon/Wed/Fri (confirmed healthy April 14). Avoid manual bursts — the April 8 backfill of 13 articles may have triggered quality dampening.
 **AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
+**Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. Script pattern in `scripts/hub-link-sprint.mjs` / `iul-pillar-expansion.mjs`.
 
 ---
 
@@ -22,10 +23,20 @@
 ## P0 -- SEO Sprint -- COMPLETED April 14
 
 - [x] **10 SEO title/meta rewrites** -- Top-impression pages with 0% CTR (buy-iul-leads, close-crm-aged-leads-review, hubspot-crm-leads-review, aged-lead-pricing-guide, buy-home-improvement-leads, voicemail-scripts-insurance-leads, sms-templates-insurance-leads, how-to-work-aged-leads, buy-aged-leads, buy-non-qm-mortgage-leads). Patched directly in Sanity.
-- [x] **301 redirect** -- `/crm-systems/crm-vs-lead-management` -> `/lead-management/lead-management-vs-crm` to resolve top cannibalization driver (~463 impr across shared queries).
+- [x] **4 URL redirects** -- Cannibalization + deprecation cleanup in `apps/web/next.config.js`:
+  - `/crm-systems/crm-vs-lead-management` → `/lead-management/lead-management-vs-crm` (cannibalization, ~463 impr)
+  - `/crm-systems/what-is-a-crm-system` → `/crm-systems` (2,100 impr / 0 clicks, pos 71.9)
+  - `/crm-systems/b2c-vs-b2b-crm` → `/blog/best-crm-aged-leads` (1,904 impr / 0 clicks, pos 44.4)
+  - `/crm-systems/operational-analytical-and-collaborative-crm` → `/crm-systems` (1,318 impr / 0 clicks, pos 34.1)
 - [x] **Hub-and-spoke internal linking** -- 27 pages patched with 51 new links to 3 hubs (aged-lead-pricing-guide, buy-iul-leads, buy-life-insurance-leads). Script: `scripts/hub-link-sprint.mjs`.
+- [x] **IUL pillar expansion** -- `/buying-leads/buy-iul-leads` extended with pricing tiers, filter spec, 7-point vendor checklist, FAQ section (6 Q&As triggering FAQPage JSON-LD). Script: `scripts/iul-pillar-expansion.mjs`.
+- [x] **Life insurance pillar expansion** -- Same pattern applied to `/buying-leads/buy-life-insurance-leads` (3,674 impr / pos 28.8 — biggest latent ranking opportunity). Script: `scripts/life-pillar-expansion.mjs`.
+- [x] **CRM content merge** -- Pre-Sale/Post-Sale boundary + Revenue Model lens sections merged from redirected loser into winner `/lead-management/lead-management-vs-crm`. Script: `scripts/lead-mgmt-vs-crm-merge.mjs`.
+- [x] **Semantic HTML heading fix** -- 19 docs / 147 headings converted from `## Heading` in normal blocks to proper `style: "h2"` / `h3` / `h4` blocks. Improves TOC, schema, accessibility. Script: `scripts/fix-heading-semantic-html.mjs`.
 
 **⚠ FOLLOW-UP DUE APRIL 24, 2026** — 10-day impact review against baseline at `data/seo-baseline-2026-04-14.json`. Tell Claude: "Pull the HTWL SEO sprint review against the baseline."
+
+**Commits:** `127d84e` `da959a7` `0c77de0` `f6c5b5c` `b1f9025` `0ce9089` `85c846f`
 
 ---
 
@@ -55,28 +66,18 @@
 
 ---
 
-## Next Priorities — P1 Sprint (queued April 14)
+## Next Priorities — Queued for Post-Sprint (April 24+)
 
-### B. Expand `buy-life-insurance-leads` into a pillar — NEXT
-- **What:** Apply IUL pillar pattern to /buying-leads/buy-life-insurance-leads. Add pricing tiers, filter specs, vendor checklist, FAQ with FAQPage schema.
-- **Why:** 3,674 impressions at pos 28.8 — biggest untapped ranking opportunity on the site. Same playbook as IUL (shipped April 14), proven to work.
-- **Effort:** ~1 hour (adapt scripts/iul-pillar-expansion.mjs)
+### A. Newsletter subscriber acquisition (strategic decision needed)
+- **What:** Only 3 contacts in Resend audience. Issue 1 still in draft (never sent). Decide: invest in acquisition (LinkedIn push, ALS partnership, lead-magnet-to-newsletter flow) or accept newsletter is not a channel.
+- **Why:** Multiple hours of cron infrastructure + 8 written issues are producing zero traffic. Cost/benefit is currently upside-down.
+- **Effort:** Low-Medium for a decision. High for execution if invest.
 
-### C + F. CRM page triage + content merge
-- **What:**
-  - Rank-or-deprecate the 3 CRM pages hoarding impressions with 0 CTR: `/crm-systems/what-is-a-crm-system` (2,100 impr, pos 71.9), `/crm-systems/b2c-vs-b2b-crm` (1,904 impr, pos 44.4), `/crm-systems/operational-analytical-and-collaborative-crm` (1,318 impr, pos 34.1).
-  - Merge best content from now-redirected `/crm-systems/crm-vs-lead-management` into the winner `/lead-management/lead-management-vs-crm`.
-- **Why:** Combined 5,300+ impressions/month producing zero clicks. Either rewrite for commercial intent, consolidate, or deprecate + redirect.
-- **Effort:** Medium (content + editorial decisions)
-
-### D. Fix `##` markdown-in-normal-blocks site-wide
-- **What:** Batch-convert existing content where headings are stored as plain text `## Heading` in normal blocks to proper `style: "h2"` / `style: "h3"` blocks.
-- **Why:** Template renders them visually via markdown processor, but produces `<div>` not `<h2>` — lost semantic value for schema, TOC, accessibility. Affects ranking signals.
-- **Effort:** ~2 hours (batch script + spot-check)
-
-### E. GSC indexing gap (deferred)
-- **What:** 104/148 sitemap URLs receive zero search impressions. Submit for indexing via GSC API, or identify thin-content pages to noindex/consolidate.
-- **Dependency:** Wait for post-sprint data (April 24) — some of today's changes may surface buried pages.
+### E. GSC indexing gap
+- **What:** 104/148 sitemap URLs receive zero search impressions (30% coverage). Submit for indexing via GSC API, or identify thin-content pages to noindex/consolidate.
+- **Why:** Uncrawled pages produce no rankings regardless of content quality.
+- **Dependency:** Revisit after April 24 review — some of today's changes may surface buried pages via improved link equity.
+- **Effort:** Medium
 
 ---
 
