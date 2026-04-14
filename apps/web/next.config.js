@@ -15,6 +15,15 @@ const nextConfig = {
   outputFileTracingIncludes: {
     '/api/generate-featured-image': ['./node_modules/sharp/**/*'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/crm-systems/crm-vs-lead-management',
+        destination: '/lead-management/lead-management-vs-crm',
+        permanent: true,
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
