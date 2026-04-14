@@ -6,6 +6,7 @@ import {
   FROM,
   REPLY_TO,
 } from '@/lib/email/welcome-sequence'
+import { recordCronRun } from '@/lib/cron/heartbeat'
 
 const AUDIENCE_ID = '8a35228e-149f-4b15-8e24-26a24e3d6e98'
 
@@ -41,7 +42,37 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  const resend = getResendClient()
+  const startTime = Date.now()
+  const ALERT_EMAIL = 'bill@billricestrategy.com'
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL || 'HowToWorkLeads <noreply@howtoworkleads.com>'
+
+  let resend: Resend
+  try {
+    resend = getResendClient()
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err)
+    await recordCronRun({
+      name: 'welcome-sequence',
+      status: 'failed',
+      detail: msg,
+      durationMs: Date.now() - startTime,
+    })
+    return NextResponse.json({ error: msg }, { status: 500 })
+  }
+
+  async function alertOnFailure(subject: string, detail: string) {
+    try {
+      await resend.emails.send({
+        from: fromEmail,
+        to: ALERT_EMAIL,
+        subject: `[WELCOME CRON ALERT] ${subject}`,
+        html: `<h2 style="color:#dc2626;">Welcome sequence cron failure</h2><pre style="white-space:pre-wrap;font-family:monospace;background:#f9fafb;padding:12px;border-radius:6px;">${detail.replace(/</g, '&lt;')}</pre>`,
+      })
+    } catch (err) {
+      console.error('[Welcome Cron] Failed to send alert email:', err)
+    }
+  }
 
   // Days we need to check (skip Day 0 — handled at signup)
   const cronDays: number[] = WELCOME_SCHEDULE.filter((s) => s.day > 0).map(
@@ -118,8 +149,22 @@ export async function GET(request: Request) {
     `Welcome sequence cron complete: ${totalSent} sent, ${totalErrors} errors`
   )
 
+  if (totalErrors > 0) {
+    await alertOnFailure(
+      `${totalErrors} send failure${totalErrors > 1 ? 's' : ''}`,
+      `Sent: ${totalSent}\n\nLog:\n${log.join('\n')}`
+    )
+  }
+
+  await recordCronRun({
+    name: 'welcome-sequence',
+    status: totalErrors > 0 ? 'partial' : 'ok',
+    detail: `sent=${totalSent} errors=${totalErrors}`,
+    durationMs: Date.now() - startTime,
+  })
+
   return NextResponse.json({
-    success: true,
+    success: totalErrors === 0,
     sent: totalSent,
     errors: totalErrors,
     log,

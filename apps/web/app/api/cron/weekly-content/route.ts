@@ -2,12 +2,21 @@ import { NextResponse } from "next/server";
 import { MASTER_CONTENT_CALENDAR } from "@/data/master-content-calendar";
 import { analyzeAndPlan, writeArticle } from "@/lib/cron/ai-content";
 import {
-  getExistingPostSlugs,
+  getExistingPosts,
   publishArticle,
 } from "@/lib/cron/sanity-publish";
 import { commitFilesToGitHub } from "@/lib/cron/git-commit";
+import { recordCronRun } from "@/lib/cron/heartbeat";
 import { sendWeeklyReport } from "@/lib/cron/notify";
-import type { WeeklyReport, GeneratedArticle } from "@/lib/cron/types";
+import type {
+  WeeklyReport,
+  GeneratedArticle,
+  PublishedArticle,
+  SkippedArticle,
+  FailedArticle,
+  SEOAnalysis,
+  WeeklyBrief,
+} from "@/lib/cron/types";
 
 export const maxDuration = 300;
 export const dynamic = "force-dynamic";
@@ -52,150 +61,191 @@ export async function GET(request: Request) {
   const startTime = Date.now();
   const errors: string[] = [];
   const weekDates = getWeekDates();
+  const articlesCreated: PublishedArticle[] = [];
+  const articlesSkipped: SkippedArticle[] = [];
+  const articlesFailed: FailedArticle[] = [];
+  let analysis: SEOAnalysis | null = null;
+  let briefs: WeeklyBrief[] = [];
+  let nextWeekPlan = "";
+  let fatalError: string | undefined;
 
   console.log(
     `[Weekly Content] Starting run for week of ${weekDates.weekLabel}`
   );
 
-  let existingPostSlugs: string[] = [];
-
   try {
-    existingPostSlugs = await getExistingPostSlugs();
-    console.log(
-      `[State] ${existingPostSlugs.length} posts`
-    );
-  } catch (err) {
-    const msg = `Failed to fetch current state from Sanity: ${err instanceof Error ? err.message : err}`;
-    console.error(msg);
-    errors.push(msg);
-  }
+    const existingPosts = await getExistingPosts();
+    console.log(`[State] ${existingPosts.length} posts`);
 
-  let plan;
-  try {
-    console.log("[Planning] Analyzing SEO strategy and creating content plan...");
-    plan = await analyzeAndPlan(
-      existingPostSlugs,
-      MASTER_CONTENT_CALENDAR,
-      weekDates
-    );
-    console.log(
-      `[Planning] Created plan with ${plan.briefs.length} briefs`
-    );
-  } catch (err) {
-    const msg = `Content planning failed: ${err instanceof Error ? err.message : err}`;
-    console.error(msg);
-    errors.push(msg);
-
-    return NextResponse.json(
-      {
-        success: false,
-        error: "Content planning failed",
-        errors,
-        duration: Date.now() - startTime,
-      },
-      { status: 500 }
-    );
-  }
-
-  const articles: GeneratedArticle[] = [];
-
-  console.log("[Writing] Generating articles in parallel...");
-  const writeResults = await Promise.allSettled(
-    plan.briefs.map((brief) => writeArticle(brief))
-  );
-
-  for (let i = 0; i < writeResults.length; i++) {
-    const result = writeResults[i];
-    if (result.status === "fulfilled") {
-      articles.push(result.value);
-      console.log(`[Writing] Completed: ${plan.briefs[i].title}`);
-    } else {
-      const msg = `Failed to write article "${plan.briefs[i].title}": ${result.reason}`;
-      console.error(msg);
-      errors.push(msg);
-    }
-  }
-
-  const publishedArticles: WeeklyReport["articlesPublished"] = [];
-
-  for (const article of articles) {
     try {
-      const result = await publishArticle(article);
-      publishedArticles.push({
-        title: article.brief.title,
-        slug: result.slug,
-        publishDate: article.brief.publishDate,
-        primaryKeyword: article.brief.primaryKeyword,
-        pillar: article.brief.pillar,
-      });
-      console.log(`[Publish] Published: ${article.brief.title}`);
+      console.log("[Planning] Analyzing SEO strategy and creating content plan...");
+      const plan = await analyzeAndPlan(
+        existingPosts,
+        MASTER_CONTENT_CALENDAR,
+        weekDates
+      );
+      analysis = plan.analysis;
+      const dayToDate: Record<string, string> = {
+        Mon: weekDates.monday,
+        Wed: weekDates.wednesday,
+        Fri: weekDates.friday,
+      };
+      briefs = plan.briefs.map((b) => ({
+        ...b,
+        publishDate: dayToDate[b.day] ?? b.publishDate,
+      }));
+      nextWeekPlan = plan.calendarNotes;
+      console.log(`[Planning] Created plan with ${briefs.length} briefs`);
     } catch (err) {
-      const msg = `Failed to publish "${article.brief.title}": ${err instanceof Error ? err.message : err}`;
-      console.error(msg);
-      errors.push(msg);
+      fatalError = `Content planning failed: ${err instanceof Error ? err.message : String(err)}`;
+      console.error(fatalError);
     }
+
+    if (briefs.length > 0) {
+      console.log("[Writing] Generating articles in parallel...");
+      const writeResults = await Promise.allSettled(
+        briefs.map((brief) => writeArticle(brief))
+      );
+
+      const articles: GeneratedArticle[] = [];
+      for (let i = 0; i < writeResults.length; i++) {
+        const result = writeResults[i];
+        if (result.status === "fulfilled") {
+          articles.push(result.value);
+          console.log(`[Writing] Completed: ${briefs[i].title}`);
+        } else {
+          articlesFailed.push({
+            title: briefs[i].title,
+            reason: `Write failed: ${result.reason}`,
+          });
+          console.error(`[Writing] Failed: ${briefs[i].title}`, result.reason);
+        }
+      }
+
+      for (const article of articles) {
+        try {
+          const outcome = await publishArticle(article, existingPosts);
+          if (outcome.status === "created") {
+            articlesCreated.push({
+              title: article.brief.title,
+              slug: outcome.slug,
+              publishDate: article.brief.publishDate,
+              primaryKeyword: article.brief.primaryKeyword,
+              pillar: article.brief.pillar,
+            });
+            existingPosts.push({
+              id: outcome.id,
+              slug: outcome.slug,
+              title: article.brief.title,
+            });
+            console.log(`[Publish] Created: ${article.brief.title}`);
+          } else {
+            articlesSkipped.push({
+              title: article.brief.title,
+              slug: outcome.slug,
+              reason: outcome.reason,
+            });
+            console.warn(
+              `[Publish] Skipped "${article.brief.title}": ${outcome.reason}`
+            );
+          }
+        } catch (err) {
+          articlesFailed.push({
+            title: article.brief.title,
+            reason: `Publish failed: ${err instanceof Error ? err.message : String(err)}`,
+          });
+          console.error(`[Publish] Failed: ${article.brief.title}`, err);
+        }
+      }
+    }
+  } catch (err) {
+    fatalError = `Run failed before planning: ${err instanceof Error ? err.message : String(err)}`;
+    console.error(fatalError);
   }
 
   const report: WeeklyReport = {
     runDate: new Date().toISOString(),
     weekStartDate: weekDates.weekLabel,
-    analysis: plan.analysis,
-    articlesPublished: publishedArticles,
-    newBriefs: plan.briefs,
-    nextWeekPlan: plan.calendarNotes,
+    analysis,
+    articlesCreated,
+    articlesSkipped,
+    articlesFailed,
+    newBriefs: briefs,
+    nextWeekPlan,
     errors,
+    fatalError,
   };
 
-  try {
-    const reportFilename = `data/weekly-reports/${weekDates.weekLabel}.json`;
-
-    const strategyUpdate = {
-      lastRun: report.runDate,
-      weekOf: weekDates.weekLabel,
-      analysis: plan.analysis,
-      articlesPublished: publishedArticles,
-      briefsForNextWeek: plan.calendarNotes,
-    };
-
-    await commitFilesToGitHub(
-      [
-        {
-          path: reportFilename,
-          content: JSON.stringify(report, null, 2),
-        },
-        {
-          path: "data/seo-strategy-latest.json",
-          content: JSON.stringify(strategyUpdate, null, 2),
-        },
-      ],
-      `chore(content): weekly content run — ${weekDates.weekLabel}\n\nPublished ${publishedArticles.length} articles:\n${publishedArticles.map((a) => `- ${a.title}`).join("\n")}`
-    );
-    console.log("[Git] Committed weekly report and strategy update");
-  } catch (err) {
-    const msg = `GitHub commit failed: ${err instanceof Error ? err.message : err}`;
-    console.error(msg);
-    errors.push(msg);
+  if (articlesCreated.length > 0) {
+    try {
+      const reportFilename = `data/weekly-reports/${weekDates.weekLabel}.json`;
+      const strategyUpdate = {
+        lastRun: report.runDate,
+        weekOf: weekDates.weekLabel,
+        analysis,
+        articlesCreated,
+        articlesSkipped,
+        articlesFailed,
+        briefsForNextWeek: nextWeekPlan,
+      };
+      await commitFilesToGitHub(
+        [
+          { path: reportFilename, content: JSON.stringify(report, null, 2) },
+          {
+            path: "data/seo-strategy-latest.json",
+            content: JSON.stringify(strategyUpdate, null, 2),
+          },
+        ],
+        `chore(content): weekly content run — ${weekDates.weekLabel}\n\nCreated ${articlesCreated.length} articles:\n${articlesCreated.map((a) => `- ${a.title}`).join("\n")}`
+      );
+      console.log("[Git] Committed weekly report and strategy update");
+    } catch (err) {
+      const msg = `GitHub commit failed: ${err instanceof Error ? err.message : String(err)}`;
+      console.error(msg);
+      errors.push(msg);
+      report.errors = errors;
+    }
   }
 
   try {
     await sendWeeklyReport(report, REPORT_EMAIL);
     console.log(`[Email] Report sent to ${REPORT_EMAIL}`);
   } catch (err) {
-    const msg = `Email send failed: ${err instanceof Error ? err.message : err}`;
-    console.error(msg);
-    errors.push(msg);
+    console.error(
+      "[Email] Report send failed:",
+      err instanceof Error ? err.message : err
+    );
   }
 
   const duration = Date.now() - startTime;
   console.log(
-    `[Weekly Content] Completed in ${(duration / 1000).toFixed(1)}s — ${publishedArticles.length} articles published, ${errors.length} errors`
+    `[Weekly Content] Completed in ${(duration / 1000).toFixed(1)}s — created=${articlesCreated.length} skipped=${articlesSkipped.length} failed=${articlesFailed.length}`
   );
 
+  await recordCronRun({
+    name: "weekly-content",
+    status: fatalError
+      ? "failed"
+      : articlesFailed.length > 0 || articlesCreated.length === 0
+        ? "partial"
+        : "ok",
+    detail: fatalError
+      ? fatalError
+      : `created=${articlesCreated.length} skipped=${articlesSkipped.length} failed=${articlesFailed.length}`,
+    durationMs: duration,
+  });
+
+  const success =
+    !fatalError && articlesFailed.length === 0 && articlesCreated.length > 0;
+
   return NextResponse.json({
-    success: errors.length === 0,
+    success,
     duration,
     weekOf: weekDates.weekLabel,
-    articlesPublished: publishedArticles.length,
+    articlesCreated: articlesCreated.length,
+    articlesSkipped: articlesSkipped.length,
+    articlesFailed: articlesFailed.length,
+    fatalError,
     errors,
   });
 }

@@ -5,7 +5,7 @@ import { sectionsToPortableText } from "./ai-content";
 function getSanityWriteClient() {
   const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
   const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
-  const token = process.env.SANITY_API_TOKEN;
+  const token = (process.env.SANITY_API_TOKEN || "").trim();
 
   if (!projectId || !token) {
     throw new Error(
@@ -71,27 +71,105 @@ async function resolveAuthorId(
   return id;
 }
 
-export async function getExistingPostSlugs(): Promise<string[]> {
+export type ExistingPost = { id: string; slug: string; title: string };
+
+export async function getExistingPosts(): Promise<ExistingPost[]> {
   const client = getSanityWriteClient();
-  const posts = await client.fetch<{ slug: string }[]>(
-    `*[_type == "blogPost"]{ "slug": slug.current }`
+  return client.fetch<ExistingPost[]>(
+    `*[_type == "blogPost"]{ "id": _id, "slug": slug.current, title }`
   );
+}
+
+export async function getExistingPostSlugs(): Promise<string[]> {
+  const posts = await getExistingPosts();
   return posts.map((p) => p.slug);
 }
 
+const TITLE_STOP_WORDS = new Set([
+  "the","a","an","and","or","but","for","of","to","in","on","at","by","with",
+  "is","are","be","how","what","your","you","this","that","from","as","it",
+  "2024","2025","2026","guide","complete","ultimate","beginner","beginners",
+  "lead","leads","work",
+]);
+
+function normalizeTitleTokens(title: string): Set<string> {
+  const normalized = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return new Set(
+    normalized
+      .split(" ")
+      .filter((w) => w.length > 2 && !TITLE_STOP_WORDS.has(w))
+  );
+}
+
+export function titleSimilarity(a: string, b: string): number {
+  const ta = normalizeTitleTokens(a);
+  const tb = normalizeTitleTokens(b);
+  if (ta.size === 0 || tb.size === 0) return 0;
+  let shared = 0;
+  ta.forEach((t) => {
+    if (tb.has(t)) shared++;
+  });
+  const union = new Set<string>();
+  ta.forEach((t) => union.add(t));
+  tb.forEach((t) => union.add(t));
+  return shared / union.size;
+}
+
+export function findSimilarPost(
+  title: string,
+  existing: ExistingPost[],
+  threshold = 0.7
+): ExistingPost | null {
+  for (const p of existing) {
+    if (titleSimilarity(title, p.title) >= threshold) return p;
+  }
+  return null;
+}
+
+export type PublishOutcome =
+  | { status: "created"; id: string; slug: string }
+  | { status: "skipped"; id: string; slug: string; reason: string };
+
 export async function publishArticle(
-  article: GeneratedArticle
-): Promise<{ id: string; slug: string }> {
+  article: GeneratedArticle,
+  existingPosts?: ExistingPost[]
+): Promise<PublishOutcome> {
   const client = getSanityWriteClient();
   const postId = `blogPost-${article.brief.slug}`;
+  const posts = existingPosts ?? (await getExistingPosts());
 
-  const existing = await client.fetch<{ _id: string } | null>(
-    `*[_type == "blogPost" && _id == $id][0]{ _id }`,
-    { id: postId }
-  );
-  if (existing) {
-    console.log(`Post already exists: ${postId}, skipping`);
-    return { id: postId, slug: article.brief.slug };
+  const idMatch = posts.find((p) => p.id === postId);
+  if (idMatch) {
+    return {
+      status: "skipped",
+      id: postId,
+      slug: article.brief.slug,
+      reason: `ID already exists: ${postId}`,
+    };
+  }
+
+  const slugMatch = posts.find((p) => p.slug === article.brief.slug);
+  if (slugMatch) {
+    return {
+      status: "skipped",
+      id: postId,
+      slug: article.brief.slug,
+      reason: `Slug already used by post "${slugMatch.title}" (${slugMatch.id})`,
+    };
+  }
+
+  const similar = findSimilarPost(article.brief.title, posts);
+  if (similar) {
+    return {
+      status: "skipped",
+      id: postId,
+      slug: article.brief.slug,
+      reason: `Title too similar to existing post "${similar.title}" (${similar.slug})`,
+    };
   }
 
   const [categoryId, authorId] = await Promise.all([
@@ -125,5 +203,5 @@ export async function publishArticle(
   await client.createOrReplace(doc);
   console.log(`Published: ${article.brief.title}`);
 
-  return { id: postId, slug: article.brief.slug };
+  return { status: "created", id: postId, slug: article.brief.slug };
 }

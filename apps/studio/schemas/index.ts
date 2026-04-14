@@ -3,6 +3,7 @@ import landingPage from './documents/landingPage'
 import categoryPage from './documents/categoryPage'
 import blogPost from './documents/blogPost'
 import author from './documents/author'
+import cronHeartbeat from './documents/cronHeartbeat'
 
 // Object types
 import seoMetadata from './objects/seoMetadata'
@@ -20,6 +21,7 @@ export const schemaTypes = [
   categoryPage,
   blogPost,
   author,
+  cronHeartbeat,
   // Objects
   seoMetadata,
   heroSection,
