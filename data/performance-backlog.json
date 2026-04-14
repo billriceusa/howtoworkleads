@@ -1,0 +1,60 @@
+{
+  "lastUpdated": "2026-04-14T17:14:20.352Z",
+  "items": [
+    {
+      "id": "4d43293968f6",
+      "title": "Optimize Title Tags and Meta Descriptions for Better CTR",
+      "description": "Rewrite title tags for top-ranking pages to include compelling value propositions and emotional triggers. Focus on aged lead pages ranking 8-11 with titles like 'Get High-Converting Aged IUL Leads - Same Day Delivery' instead of generic titles. A/B test meta descriptions with specific benefits and urgency.",
+      "expectedImpact": "Increase CTR from 0.15% to 0.25-0.35%, potentially doubling organic traffic",
+      "priority": "high",
+      "firstSeen": "2026-04-14",
+      "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "6957c8a8fca8",
+      "title": "Create Comprehensive IUL Lead Buying Guide",
+      "description": "Develop a pillar page targeting 'how to buy IUL leads' that consolidates all IUL-related content. Include comparison tables, pricing guides, vendor reviews, and conversion tips. Link all existing IUL pages to this comprehensive resource.",
+      "expectedImpact": "Capture more long-tail IUL queries and increase average session duration by 30-40%",
+      "priority": "high",
+      "firstSeen": "2026-04-14",
+      "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "153aeafe15d1",
+      "title": "Implement Internal Linking Strategy for Lead Lifecycle Content",
+      "description": "Create topic clusters around lead management, sales processes, and CRM systems. Add contextual internal links between related pages like lead lifecycle management (ranking position 3.7) and CRM comparison pages to distribute link equity and improve user flow.",
+      "expectedImpact": "Reduce bounce rate to 60% and increase pages per session by 25%",
+      "priority": "medium",
+      "firstSeen": "2026-04-14",
+      "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "5d3fba34b8d5",
+      "title": "Develop Aged Lead Pricing Calculator Tool",
+      "description": "Build an interactive calculator that helps users estimate ROI on aged leads based on close rates, lead age, and industry. Target the query 'aged lead pricing guide' where you already rank well (position 4.9).",
+      "expectedImpact": "Increase engagement rate to 45% and generate 20-30 new backlinks from industry sites",
+      "priority": "medium",
+      "firstSeen": "2026-04-14",
+      "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "d00b2bbbadc2",
+      "title": "Optimize for Voice Search and AI Queries",
+      "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
+      "expectedImpact": "Capture 15-20% more traffic from AI referrals and voice search queries",
+      "priority": "low",
+      "firstSeen": "2026-04-14",
+      "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    }
+  ]
+}
