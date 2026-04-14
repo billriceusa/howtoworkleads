@@ -15,6 +15,7 @@
     "@portabletext/react": "^3.1.0",
     "@sanity/client": "^6.21.0",
     "@sanity/image-url": "^1.0.2",
+    "@vercel/functions": "^3.4.3",
     "clsx": "^2.1.0",
     "google-auth-library": "^9.15.1",
     "next": "14.2.15",

@@ -2,11 +2,12 @@
 // account impersonation. No service account keys on disk anywhere.
 //
 // Flow:
-// 1. Vercel injects VERCEL_OIDC_TOKEN into the runtime.
-// 2. We exchange it at Google's STS endpoint for a federated access token.
-// 3. We use that federated token to impersonate the target service account
-//    and get a real GCP access token scoped to the APIs we need.
+// 1. Fetch Vercel's OIDC token via @vercel/functions/oidc.
+// 2. Exchange it at Google's STS endpoint for a federated access token.
+// 3. Impersonate the target service account to get a scoped GCP access token.
 // 4. Callers use that token for GA4 / GSC / etc.
+
+import { getVercelOidcToken } from "@vercel/functions/oidc";
 
 const SCOPES = [
   "https://www.googleapis.com/auth/analytics.readonly",
@@ -27,13 +28,13 @@ export async function getAccessToken(): Promise<string> {
     return cache.token;
   }
 
-  const oidcToken = process.env.VERCEL_OIDC_TOKEN;
   const audience = process.env.GOOGLE_WORKLOAD_IDENTITY_AUDIENCE;
   const impersonationUrl = process.env.GOOGLE_SERVICE_ACCOUNT_IMPERSONATION_URL;
 
+  const oidcToken = await getVercelOidcToken().catch(() => null);
   if (!oidcToken) {
     throw new Error(
-      "VERCEL_OIDC_TOKEN not set — enable OIDC federation on this Vercel project"
+      "Vercel OIDC token unavailable — enable OIDC federation on this project"
     );
   }
   if (!audience) {
