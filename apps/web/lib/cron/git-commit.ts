@@ -28,6 +28,7 @@ export async function commitFilesToGitHub(
 
   const refRes = await fetch(`${apiBase}/git/ref/heads/${branch}`, {
     headers,
+    cache: "no-store",
   });
   if (!refRes.ok) {
     throw new Error(
@@ -41,7 +42,7 @@ export async function commitFilesToGitHub(
 
   const commitRes = await fetch(
     `${apiBase}/git/commits/${latestCommitSha}`,
-    { headers }
+    { headers, cache: "no-store" }
   );
   if (!commitRes.ok) {
     throw new Error(`Failed to get commit: ${commitRes.status}`);
