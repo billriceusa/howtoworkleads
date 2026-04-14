@@ -37,7 +37,7 @@
 - [x] **OpenAI to Anthropic migration** -- All 4 AI cron files converted to @anthropic-ai/sdk (claude-sonnet-4). openai package removed.
 - [x] **Newsletter Issue 1 sent** -- Broadcast ID 2a47893d, sent April 8 (was delayed due to broken cron).
 - [x] **UTM safety net** -- Auto-append UTM params to howtoworkleads.com links in both newsletter HTML converters.
-- [ ] **ALS cross-linking** -- Share link table with Troy at Monday meeting (table built, needs handoff). **Owner: Bill**
+- [x] **ALS cross-linking** -- Handed off to Troy. Confirmed complete April 14.
 
 ---
 
@@ -52,6 +52,31 @@
   - Workers' Comp, Bankruptcy, Family Law
 - [x] **llms.txt updated** with all 13 new article links
 - [x] **5 pages submitted for GSC indexing** (April 8)
+
+---
+
+## Next Priorities — P1 Sprint (queued April 14)
+
+### B. Expand `buy-life-insurance-leads` into a pillar — NEXT
+- **What:** Apply IUL pillar pattern to /buying-leads/buy-life-insurance-leads. Add pricing tiers, filter specs, vendor checklist, FAQ with FAQPage schema.
+- **Why:** 3,674 impressions at pos 28.8 — biggest untapped ranking opportunity on the site. Same playbook as IUL (shipped April 14), proven to work.
+- **Effort:** ~1 hour (adapt scripts/iul-pillar-expansion.mjs)
+
+### C + F. CRM page triage + content merge
+- **What:**
+  - Rank-or-deprecate the 3 CRM pages hoarding impressions with 0 CTR: `/crm-systems/what-is-a-crm-system` (2,100 impr, pos 71.9), `/crm-systems/b2c-vs-b2b-crm` (1,904 impr, pos 44.4), `/crm-systems/operational-analytical-and-collaborative-crm` (1,318 impr, pos 34.1).
+  - Merge best content from now-redirected `/crm-systems/crm-vs-lead-management` into the winner `/lead-management/lead-management-vs-crm`.
+- **Why:** Combined 5,300+ impressions/month producing zero clicks. Either rewrite for commercial intent, consolidate, or deprecate + redirect.
+- **Effort:** Medium (content + editorial decisions)
+
+### D. Fix `##` markdown-in-normal-blocks site-wide
+- **What:** Batch-convert existing content where headings are stored as plain text `## Heading` in normal blocks to proper `style: "h2"` / `style: "h3"` blocks.
+- **Why:** Template renders them visually via markdown processor, but produces `<div>` not `<h2>` — lost semantic value for schema, TOC, accessibility. Affects ranking signals.
+- **Effort:** ~2 hours (batch script + spot-check)
+
+### E. GSC indexing gap (deferred)
+- **What:** 104/148 sitemap URLs receive zero search impressions. Submit for indexing via GSC API, or identify thin-content pages to noindex/consolidate.
+- **Dependency:** Wait for post-sprint data (April 24) — some of today's changes may surface buried pages.
 
 ---
 
