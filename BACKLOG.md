@@ -19,6 +19,16 @@
 
 ---
 
+## P0 -- SEO Sprint -- COMPLETED April 14
+
+- [x] **10 SEO title/meta rewrites** -- Top-impression pages with 0% CTR (buy-iul-leads, close-crm-aged-leads-review, hubspot-crm-leads-review, aged-lead-pricing-guide, buy-home-improvement-leads, voicemail-scripts-insurance-leads, sms-templates-insurance-leads, how-to-work-aged-leads, buy-aged-leads, buy-non-qm-mortgage-leads). Patched directly in Sanity.
+- [x] **301 redirect** -- `/crm-systems/crm-vs-lead-management` -> `/lead-management/lead-management-vs-crm` to resolve top cannibalization driver (~463 impr across shared queries).
+- [x] **Hub-and-spoke internal linking** -- 27 pages patched with 51 new links to 3 hubs (aged-lead-pricing-guide, buy-iul-leads, buy-life-insurance-leads). Script: `scripts/hub-link-sprint.mjs`.
+
+**⚠ FOLLOW-UP DUE APRIL 24, 2026** — 10-day impact review against baseline at `data/seo-baseline-2026-04-14.json`. Tell Claude: "Pull the HTWL SEO sprint review against the baseline."
+
+---
+
 ## P0 -- Revenue & Conversion -- COMPLETED April 8
 
 - [x] **Content upgrade CTAs** -- ContentUpgradeCTA component maps page slug to best lead magnet (insurance scripts on insurance pages, etc.). Integrated into blog + landing page templates.

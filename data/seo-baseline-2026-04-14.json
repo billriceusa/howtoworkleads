@@ -1,0 +1,59 @@
+{
+  "baselineDate": "2026-04-14",
+  "note": "Pre-sprint baseline for the SEO fixes shipped on 2026-04-14. Review on 2026-04-24 (10 days after Google recrawl window).",
+  "changes": [
+    "SEO title/meta rewrites on 10 top-impression pages (Sanity patch)",
+    "301 redirect /crm-systems/crm-vs-lead-management -> /lead-management/lead-management-vs-crm (next.config.js)",
+    "Hub-and-spoke internal links on 27 pages (+51 new internal links to 3 hubs)"
+  ],
+  "ga4_28d": {
+    "property": "515519100",
+    "byChannel": {
+      "Direct": { "sessions": 322, "keyEvents": 14, "prior28d": { "sessions": 160, "keyEvents": 12 } },
+      "OrganicSearch": { "sessions": 55, "keyEvents": 50, "prior28d": { "sessions": 40, "keyEvents": 26 } },
+      "Referral": { "sessions": 31, "keyEvents": 26, "prior28d": { "sessions": 30, "keyEvents": 16 } },
+      "Email": { "sessions": 3, "keyEvents": 0, "prior28d": { "sessions": 10, "keyEvents": 0 } }
+    },
+    "ga4_7d_vs_prior7d": {
+      "Direct": { "last7": 28, "prior7": 141 },
+      "OrganicSearch": { "last7": 10, "prior7": 14 },
+      "Referral": { "last7": 3, "prior7": 10 },
+      "keyEvents_total": { "last7": 6, "prior7": 20 }
+    }
+  },
+  "gsc_28d": {
+    "site": "sc-domain:howtoworkleads.com",
+    "totals_7d": { "clicks": 6, "impressions": 4037, "ctr": 0.0015, "avgPosition": 24.7 },
+    "totals_prior7d": { "clicks": 9, "impressions": 4340, "ctr": 0.0021, "avgPosition": 24.5 },
+    "topPages_28d": {
+      "/buying-leads/buy-life-insurance-leads": { "impr": 3674, "clicks": 9, "ctr": 0.0024, "pos": 28.8 },
+      "/crm-systems/what-is-a-crm-system": { "impr": 2100, "clicks": 0, "ctr": 0, "pos": 71.9 },
+      "/crm-systems/b2c-vs-b2b-crm": { "impr": 1904, "clicks": 0, "ctr": 0, "pos": 44.4 },
+      "/buying-leads/buy-iul-leads": { "impr": 1562, "clicks": 19, "ctr": 0.0122, "pos": 7.5 },
+      "/buying-leads/buy-home-improvement-leads": { "impr": 1417, "clicks": 3, "ctr": 0.0021, "pos": 10.6 },
+      "/crm-systems/operational-analytical-and-collaborative-crm": { "impr": 1318, "clicks": 0, "ctr": 0, "pos": 34.1 },
+      "/sales-process/b2c-vs-b2b-sales-process": { "impr": 640, "clicks": 1, "ctr": 0.0016, "pos": 12.6 },
+      "/buying-leads/health-insurance-leads": { "impr": 617, "clicks": 0, "ctr": 0, "pos": 19.9 },
+      "/blog/close-crm-aged-leads-review": { "impr": 602, "clicks": 0, "ctr": 0, "pos": 7.3 },
+      "/crm-systems/crm-vs-lead-management": { "impr": 529, "clicks": 0, "ctr": 0, "pos": 41.2 },
+      "/blog/hubspot-crm-leads-review": { "impr": 504, "clicks": 0, "ctr": 0, "pos": 7.1 },
+      "/blog/aged-lead-pricing-guide": { "impr": 455, "clicks": 1, "ctr": 0.0022, "pos": 4.5 },
+      "/buying-leads/buy-aged-leads": { "impr": 216, "clicks": 3, "ctr": 0.0139, "pos": 9.5 },
+      "/blog/voicemail-scripts-insurance-leads": { "impr": 98, "clicks": 0, "ctr": 0, "pos": 7.3 },
+      "/blog/sms-templates-insurance-leads": { "impr": 169, "clicks": 0, "ctr": 0, "pos": 7.3 }
+    },
+    "indexingCoverage": {
+      "sitemapUrls": 148,
+      "pagesWithImpressions_28d": 44,
+      "coverageRate": 0.297
+    }
+  },
+  "reviewChecklist_2026-04-24": [
+    "Re-run GA4 + GSC 7d comparison vs this baseline",
+    "Check CTR on the 10 rewritten pages — target >1% (vs 0-1.4% baseline)",
+    "Confirm /crm-systems/crm-vs-lead-management returns 308 redirect",
+    "Check position change on hubs: buy-iul-leads, aged-lead-pricing-guide, buy-life-insurance-leads",
+    "Check whether sitemap coverage improved (pages with impressions)",
+    "Decide: proceed with IUL pillar expansion or iterate CTR copy on pages that didn't respond"
+  ]
+}
