@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-14T17:14:20.352Z",
+  "lastUpdated": "2026-04-15T12:01:14.571Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -20,6 +20,28 @@
       "priority": "high",
       "firstSeen": "2026-04-14",
       "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "621a3192d302",
+      "title": "Optimize High-Ranking Pages for CTR",
+      "description": "Focus on pages ranking in positions 1-10 (lead lifecycle management at pos 1.0, aged IUL leads at pos 8.7) by rewriting title tags and meta descriptions to be more compelling and action-oriented. Test emotional triggers like 'Proven Scripts' or 'Instant Download' for voicemail script pages.",
+      "expectedImpact": "15-25% CTR improvement, 3-5 additional daily clicks",
+      "priority": "high",
+      "firstSeen": "2026-04-15",
+      "lastSeen": "2026-04-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "d160a1ec5e24",
+      "title": "Implement Bounce Rate Reduction Strategy",
+      "description": "Add internal linking widgets to high-bounce pages, create content upgrades for voicemail script pages, and implement exit-intent popups with lead magnets. Focus on the homepage which gets 26 views but likely high bounce rate.",
+      "expectedImpact": "10-15% bounce rate reduction, improved engagement rate",
+      "priority": "high",
+      "firstSeen": "2026-04-15",
+      "lastSeen": "2026-04-15",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -46,6 +68,28 @@
       "status": "open"
     },
     {
+      "id": "e5c583616072",
+      "title": "Expand IUL Lead Content Cluster",
+      "description": "Create comprehensive content around IUL leads since both 'aged iul leads' (pos 8.7) and 'buy iul leads' page are performing well. Develop comparison guides, pricing articles, and working strategies specifically for IUL leads.",
+      "expectedImpact": "20-30% increase in IUL-related organic traffic",
+      "priority": "medium",
+      "firstSeen": "2026-04-15",
+      "lastSeen": "2026-04-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "144008860235",
+      "title": "Investigate Direct Traffic Attribution",
+      "description": "Implement UTM tracking for all external links and referrals, check for potential tracking issues causing organic traffic to appear as direct, and analyze the source of the high direct traffic volume.",
+      "expectedImpact": "Better attribution understanding, potential 15-20% organic traffic recovery",
+      "priority": "medium",
+      "firstSeen": "2026-04-15",
+      "lastSeen": "2026-04-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -53,6 +97,17 @@
       "priority": "low",
       "firstSeen": "2026-04-14",
       "lastSeen": "2026-04-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "4b960d991848",
+      "title": "Create Mobile-Optimized Content Experience",
+      "description": "With only 1 mobile click vs 6 desktop clicks despite mobile traffic, optimize mobile page load speed and create mobile-friendly lead capture forms for the voicemail script and template pages.",
+      "expectedImpact": "25-40% improvement in mobile engagement and conversions",
+      "priority": "low",
+      "firstSeen": "2026-04-15",
+      "lastSeen": "2026-04-15",
       "timesRepeated": 1,
       "status": "open"
     }
