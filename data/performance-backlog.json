@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T12:01:14.571Z",
+  "lastUpdated": "2026-04-16T12:00:54.384Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "621a3192d302",
-      "title": "Optimize High-Ranking Pages for CTR",
-      "description": "Focus on pages ranking in positions 1-10 (lead lifecycle management at pos 1.0, aged IUL leads at pos 8.7) by rewriting title tags and meta descriptions to be more compelling and action-oriented. Test emotional triggers like 'Proven Scripts' or 'Instant Download' for voicemail script pages.",
-      "expectedImpact": "15-25% CTR improvement, 3-5 additional daily clicks",
+      "id": "74364ad3c9c8",
+      "title": "Emergency Engagement Audit and UX Optimization",
+      "description": "Immediately audit pages with highest bounce rates, focusing on load speed, mobile responsiveness, and content relevance. Implement heat mapping tools to identify user behavior patterns and optimize above-the-fold content for better engagement.",
+      "expectedImpact": "Reduce bounce rate by 15-20% and improve engagement rate to 25%+ within 30 days",
       "priority": "high",
-      "firstSeen": "2026-04-15",
-      "lastSeen": "2026-04-15",
+      "firstSeen": "2026-04-16",
+      "lastSeen": "2026-04-16",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "d160a1ec5e24",
-      "title": "Implement Bounce Rate Reduction Strategy",
-      "description": "Add internal linking widgets to high-bounce pages, create content upgrades for voicemail script pages, and implement exit-intent popups with lead magnets. Focus on the homepage which gets 26 views but likely high bounce rate.",
-      "expectedImpact": "10-15% bounce rate reduction, improved engagement rate",
+      "id": "36d97e6a28d2",
+      "title": "Optimize Meta Titles and Descriptions for CTR",
+      "description": "Rewrite meta titles and descriptions for top-ranking pages (positions 8-25) to include compelling value propositions and action-oriented language. Focus on pages ranking for 'aged iul leads', 'affordable life insurance leads', and 'aged life insurance leads'.",
+      "expectedImpact": "Increase CTR from 0.16% to 0.25%+ within 60 days, driving 50%+ more organic traffic",
       "priority": "high",
-      "firstSeen": "2026-04-15",
-      "lastSeen": "2026-04-15",
+      "firstSeen": "2026-04-16",
+      "lastSeen": "2026-04-16",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +68,35 @@
       "status": "open"
     },
     {
-      "id": "e5c583616072",
-      "title": "Expand IUL Lead Content Cluster",
-      "description": "Create comprehensive content around IUL leads since both 'aged iul leads' (pos 8.7) and 'buy iul leads' page are performing well. Develop comparison guides, pricing articles, and working strategies specifically for IUL leads.",
-      "expectedImpact": "20-30% increase in IUL-related organic traffic",
+      "id": "ea986fe2ab35",
+      "title": "Diversify Content Beyond Insurance Focus",
+      "description": "Create comprehensive content for mortgage, solar, and home improvement lead topics to reduce over-dependence on insurance content. Target queries like 'mortgage lead follow-up' and 'solar lead conversion strategies'.",
+      "expectedImpact": "Expand addressable search market by 40% and reduce content concentration risk",
       "priority": "medium",
-      "firstSeen": "2026-04-15",
-      "lastSeen": "2026-04-15",
+      "firstSeen": "2026-04-16",
+      "lastSeen": "2026-04-16",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "144008860235",
-      "title": "Investigate Direct Traffic Attribution",
-      "description": "Implement UTM tracking for all external links and referrals, check for potential tracking issues causing organic traffic to appear as direct, and analyze the source of the high direct traffic volume.",
-      "expectedImpact": "Better attribution understanding, potential 15-20% organic traffic recovery",
+      "id": "ad9418b8742d",
+      "title": "Implement Internal Linking Strategy",
+      "description": "Add strategic internal links from high-traffic homepage to related blog posts and buying guides. Create topic clusters linking insurance lead content to reduce single-page exits.",
+      "expectedImpact": "Increase pages per session by 30% and reduce bounce rate by 10-15%",
       "priority": "medium",
-      "firstSeen": "2026-04-15",
-      "lastSeen": "2026-04-15",
+      "firstSeen": "2026-04-16",
+      "lastSeen": "2026-04-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "2db3f6f176fe",
+      "title": "Develop Lead Magnet for Email Capture",
+      "description": "Create downloadable resources like 'Ultimate Insurance Lead Follow-up Checklist' or 'Aged Lead Conversion Calculator' to capture emails from high-intent visitors before they bounce.",
+      "expectedImpact": "Convert 5-10% of visitors to email subscribers, creating retargeting opportunities",
+      "priority": "medium",
+      "firstSeen": "2026-04-16",
+      "lastSeen": "2026-04-16",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -101,13 +112,13 @@
       "status": "open"
     },
     {
-      "id": "4b960d991848",
-      "title": "Create Mobile-Optimized Content Experience",
-      "description": "With only 1 mobile click vs 6 desktop clicks despite mobile traffic, optimize mobile page load speed and create mobile-friendly lead capture forms for the voicemail script and template pages.",
-      "expectedImpact": "25-40% improvement in mobile engagement and conversions",
+      "id": "af9fc7a465fc",
+      "title": "Expand Mobile-Specific Content Optimization",
+      "description": "Given mobile traffic represents 13% of search impressions but only 12.5% of clicks, optimize mobile user experience with shorter paragraphs, bullet points, and mobile-friendly CTAs.",
+      "expectedImpact": "Improve mobile CTR by 25% and capture additional mobile search traffic",
       "priority": "low",
-      "firstSeen": "2026-04-15",
-      "lastSeen": "2026-04-15",
+      "firstSeen": "2026-04-16",
+      "lastSeen": "2026-04-16",
       "timesRepeated": 1,
       "status": "open"
     }
