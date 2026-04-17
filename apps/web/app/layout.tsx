@@ -7,7 +7,7 @@ import { ExitIntentPopup, StickyMobileCTA } from '@/components/content'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
   ),
   title: {
     default: 'How To Work Leads | Master Internet Lead Conversion',
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   alternates: {
-    canonical: 'https://www.howtoworkleads.com',
+    canonical: 'https://howtoworkleads.com',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.howtoworkleads.com',
+    url: 'https://howtoworkleads.com',
     siteName: 'How To Work Leads',
     title: 'How To Work Leads | Master Internet Lead Conversion',
     description:

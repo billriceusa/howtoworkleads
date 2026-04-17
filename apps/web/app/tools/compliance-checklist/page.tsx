@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     'Interactive 40-point compliance checklist for buying and calling internet leads. Covers TCPA, DNC scrubbing, CAN-SPAM, SMS/10DLC, and safe harbor protection. Check every box before your next campaign.',
   alternates: {
-    canonical: 'https://www.howtoworkleads.com/tools/compliance-checklist',
+    canonical: 'https://howtoworkleads.com/tools/compliance-checklist',
   },
   openGraph: {
     title: 'Lead Buying Compliance Checklist | How To Work Leads',
     description:
       'Interactive 40-point compliance checklist for buying and calling internet leads. Covers TCPA, DNC scrubbing, CAN-SPAM, SMS/10DLC, and safe harbor protection.',
-    url: 'https://www.howtoworkleads.com/tools/compliance-checklist',
+    url: 'https://howtoworkleads.com/tools/compliance-checklist',
     siteName: 'How To Work Leads',
     type: 'website',
   },

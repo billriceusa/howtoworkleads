@@ -18,7 +18,7 @@ if (!TOKEN) {
 const CORS_ORIGINS = [
   { origin: 'http://localhost:3000', allowCredentials: true },
   { origin: 'https://howtoworkleads.com', allowCredentials: true },
-  { origin: 'https://www.howtoworkleads.com', allowCredentials: true },
+  { origin: 'https://howtoworkleads.com', allowCredentials: true },
 ]
 
 async function makeRequest(method, path, data = null) {

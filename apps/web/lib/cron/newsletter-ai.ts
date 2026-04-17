@@ -145,7 +145,7 @@ Respond with valid JSON:
   ],
   "closingNote": "Personal sign-off",
   "ctaText": "Button text",
-  "ctaUrl": "https://www.howtoworkleads.com/guides?utm_source=newsletter&utm_medium=email&utm_campaign=weekly&utm_content=${weekLabel}"
+  "ctaUrl": "https://howtoworkleads.com/guides?utm_source=newsletter&utm_medium=email&utm_campaign=weekly&utm_content=${weekLabel}"
 }`;
 
   const response = await client.messages.create({

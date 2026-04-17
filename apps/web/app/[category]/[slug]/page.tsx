@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
 
   const ogImage = page.ogImage?.asset ? urlForImage(page.ogImage).width(1200).height(630).url() : undefined
 
-  const pageUrl = `https://www.howtoworkleads.com/${params.category}/${params.slug}`
+  const pageUrl = `https://howtoworkleads.com/${params.category}/${params.slug}`
 
   return {
     title: page.seoTitle || page.title,

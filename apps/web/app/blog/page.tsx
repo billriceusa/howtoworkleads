@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   title: 'Blog',
   description: 'Expert insights, tips, and strategies for converting internet leads into sales. Stay up to date with the latest in lead management and sales optimization.',
   alternates: {
-    canonical: 'https://www.howtoworkleads.com/blog',
+    canonical: 'https://howtoworkleads.com/blog',
   },
   openGraph: {
     title: 'Blog | How To Work Leads',
     description: 'Expert insights, tips, and strategies for converting internet leads into sales.',
-    url: 'https://www.howtoworkleads.com/blog',
+    url: 'https://howtoworkleads.com/blog',
     siteName: 'How To Work Leads',
   },
 }

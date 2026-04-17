@@ -4,7 +4,7 @@
 
 **HowToWorkLeads.com** is an SEO-optimized content website designed to help sales professionals improve their conversion rates when working internet leads. The platform provides comprehensive guides, best practices, and resources for lead management, sales processes, CRM systems, and lead purchasing strategies.
 
-**Live URL:** https://www.howtoworkleads.com
+**Live URL:** https://howtoworkleads.com
 
 ## Tech Stack
 
@@ -92,7 +92,7 @@ npm run clean         # Remove build artifacts and node_modules
 NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
-NEXT_PUBLIC_SITE_URL=https://www.howtoworkleads.com
+NEXT_PUBLIC_SITE_URL=https://howtoworkleads.com
 RESEND_API_KEY=your-resend-api-key
 NEXT_PUBLIC_GA_MEASUREMENT_ID=your-ga4-id
 ```
@@ -301,4 +301,4 @@ The site implements several LLM-friendly features:
 2. **Links**: External links automatically open in new tabs with `rel="noopener noreferrer"`
 3. **ISR**: Pages revalidate every 60 seconds - changes may take up to a minute to appear
 4. **Sanity**: If Sanity is not configured, the app gracefully handles missing data
-5. **www subdomain**: Production URLs use `www.howtoworkleads.com` (configured in sitemap/robots)
+5. **Canonical domain**: Production URLs use `howtoworkleads.com` (non-www); `www` 308-redirects via Vercel

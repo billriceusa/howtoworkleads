@@ -22,7 +22,7 @@ export const dynamic = "force-dynamic";
 const REVIEW_EMAIL = "bill@billricestrategy.com";
 
 function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL || "https://www.howtoworkleads.com";
+  return process.env.NEXT_PUBLIC_SITE_URL || "https://howtoworkleads.com";
 }
 
 function getSanityClient() {

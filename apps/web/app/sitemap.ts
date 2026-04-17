@@ -5,7 +5,7 @@ import { sitemapQuery } from '@/lib/sanity/queries'
 // Enable ISR - regenerate sitemap every 60 seconds
 export const revalidate = 60
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
 
 interface SitemapData {
   landingPages: Array<{

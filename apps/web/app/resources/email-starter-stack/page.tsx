@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     'Step-by-step guide to emailing consumer leads with maximum deliverability and response. Set up in one afternoon for ~$40/month.',
   alternates: {
-    canonical: 'https://www.howtoworkleads.com/resources/email-starter-stack',
+    canonical: 'https://howtoworkleads.com/resources/email-starter-stack',
   },
   openGraph: {
     title: 'Consumer Data Email Starter Stack | How To Work Leads',
     description:
       'Step-by-step guide to emailing consumer leads with maximum deliverability and response. Set up in one afternoon for ~$40/month.',
-    url: 'https://www.howtoworkleads.com/resources/email-starter-stack',
+    url: 'https://howtoworkleads.com/resources/email-starter-stack',
     siteName: 'How To Work Leads',
     type: 'article',
   },

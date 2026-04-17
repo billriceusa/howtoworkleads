@@ -87,7 +87,7 @@ export async function generateMetadata({
     title: `Free Download: ${magnet.title}`,
     description: magnet.description,
     alternates: {
-      canonical: `https://www.howtoworkleads.com/downloads/${slug}`,
+      canonical: `https://howtoworkleads.com/downloads/${slug}`,
     },
     robots: { index: true, follow: true },
   }

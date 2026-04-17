@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   const ogImage = post.mainImage?.asset ? urlForImage(post.mainImage).width(1200).height(630).url() : undefined
 
-  const pageUrl = `https://www.howtoworkleads.com/blog/${params.slug}`
+  const pageUrl = `https://howtoworkleads.com/blog/${params.slug}`
 
   return {
     title: post.seoTitle || post.title,

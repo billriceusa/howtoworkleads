@@ -157,7 +157,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     }
   }
 
-  const pageUrl = `https://www.howtoworkleads.com/${params.category}`
+  const pageUrl = `https://howtoworkleads.com/${params.category}`
 
   return {
     title: category.seoTitle || category.title,

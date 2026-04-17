@@ -23,7 +23,7 @@ export function ArticleJsonLd({
   authorUrl,
   speakable = true,
 }: ArticleJsonLdProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -127,7 +127,7 @@ export function HowToJsonLd({ name, description, steps }: HowToJsonLdProps) {
 }
 
 export function OrganizationJsonLd() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -160,7 +160,7 @@ export function WebSiteJsonLd({
   name = 'HowToWorkLeads',
   description = 'Expert strategies and resources to help sales professionals convert internet leads into revenue.',
 }: WebSiteJsonLdProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -232,7 +232,7 @@ export function WebPageJsonLd({
   dateModified,
   breadcrumbs,
 }: WebPageJsonLdProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
 
   const jsonLd = {
     '@context': 'https://schema.org',

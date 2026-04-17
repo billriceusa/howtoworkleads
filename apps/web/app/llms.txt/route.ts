@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 // Enable ISR - regenerate every hour
 export const revalidate = 3600
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.howtoworkleads.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
 
 export async function GET() {
   const content = `# HowToWorkLeads.com

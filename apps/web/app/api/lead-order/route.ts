@@ -138,7 +138,7 @@ export async function POST(request: NextRequest) {
             <p style="font-size: 16px;">While you wait, check out our weekly newsletter for tips on converting more leads:</p>
 
             <div style="text-align: center; margin: 25px 0;">
-              <a href="https://www.howtoworkleads.com/#newsletter"
+              <a href="https://howtoworkleads.com/#newsletter"
                  style="display: inline-block; background: #FFD500; color: #000; padding: 14px 28px; text-decoration: none; font-weight: 600; font-size: 16px;">
                 Subscribe to The Aged Lead Playbook
               </a>

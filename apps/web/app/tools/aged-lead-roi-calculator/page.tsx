@@ -107,7 +107,7 @@ export default function ROICalculatorPage() {
     'tools-roi-calculator-cta'
   )
 
-  const pageUrl = 'https://www.howtoworkleads.com/tools/aged-lead-roi-calculator'
+  const pageUrl = 'https://howtoworkleads.com/tools/aged-lead-roi-calculator'
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -119,7 +119,7 @@ export default function ROICalculatorPage() {
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@type': 'Organization', name: 'HowToWorkLeads', url: 'https://www.howtoworkleads.com' },
+    author: { '@type': 'Organization', name: 'HowToWorkLeads', url: 'https://howtoworkleads.com' },
   }
 
   const faqJsonLd = {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Free downloadable resources for working aged leads. Scripts, follow-up cadences, vendor scorecards, and quick-start kits for insurance and mortgage professionals.',
   alternates: {
-    canonical: 'https://www.howtoworkleads.com/downloads',
+    canonical: 'https://howtoworkleads.com/downloads',
   },
 }
 

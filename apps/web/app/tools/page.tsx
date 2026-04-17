@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     'Free interactive tools for sales professionals working internet leads. Calculate your aged lead ROI and verify compliance before your next campaign.',
   alternates: {
-    canonical: 'https://www.howtoworkleads.com/tools',
+    canonical: 'https://howtoworkleads.com/tools',
   },
   openGraph: {
     title: 'Free Sales Tools | How To Work Leads',
     description:
       'Free interactive tools for sales professionals working internet leads. Calculate your aged lead ROI and verify compliance before your next campaign.',
-    url: 'https://www.howtoworkleads.com/tools',
+    url: 'https://howtoworkleads.com/tools',
     siteName: 'How To Work Leads',
     type: 'website',
   },

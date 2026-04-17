@@ -5,7 +5,7 @@
  * Emails 2-5 (Day 2, 4, 7, 10): Sent by /api/cron/welcome-sequence
  */
 
-const SITE_URL = 'https://www.howtoworkleads.com'
+const SITE_URL = 'https://howtoworkleads.com'
 const UTM_BASE = 'utm_source=newsletter&utm_medium=email&utm_campaign=welcome-sequence'
 
 export const FROM = 'Bill Rice <bill@howtoworkleads.com>'
