@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T12:01:16.990Z",
+  "lastUpdated": "2026-04-19T12:01:32.283Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,35 @@
       "status": "open"
     },
     {
-      "id": "c2cb00365d11",
-      "title": "Optimize High-Ranking Pages for Click-Through",
-      "description": "Rewrite title tags and meta descriptions for pages ranking positions 1-10 with zero clicks, particularly 'lead lifecycle management' (pos 1.0) and aged lead queries. Focus on compelling, benefit-driven copy that addresses searcher intent.",
-      "expectedImpact": "Could increase organic clicks by 200-300% based on current impression volume",
+      "id": "3b5f8f1d6e04",
+      "title": "Implement Immediate Bounce Rate Reduction Strategy",
+      "description": "Add compelling above-the-fold content hooks, internal linking suggestions, and related content widgets to key landing pages. Focus on the homepage and SMS templates page which are receiving high traffic but likely causing bounces.",
+      "expectedImpact": "Reduce bounce rate from 82% to 65-70% within 2 weeks",
       "priority": "high",
-      "firstSeen": "2026-04-18",
-      "lastSeen": "2026-04-18",
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "71bd4abebe21",
-      "title": "Implement Engagement Retention Strategy",
-      "description": "Add internal linking widgets, related content suggestions, and lead magnets to top-performing pages. Create content upgrades for mortgage voicemail scripts and insurance SMS templates to capture emails and extend session duration.",
-      "expectedImpact": "Target 40% bounce rate reduction and 50% increase in average session duration",
+      "id": "83c8777f824e",
+      "title": "Optimize High-Traffic Pages for Engagement",
+      "description": "Enhance the SMS templates and voicemail scripts pages with interactive elements, downloadable resources, and clear next-step CTAs. Add video content or audio examples to increase session duration.",
+      "expectedImpact": "Increase average session duration from 35.8s to 60+ seconds",
       "priority": "high",
-      "firstSeen": "2026-04-18",
-      "lastSeen": "2026-04-18",
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "7647ddbe5701",
+      "title": "Diversify Traffic Sources Beyond Direct",
+      "description": "Implement content distribution strategy across LinkedIn, industry forums, and email marketing to reduce over-dependence on direct traffic. Create shareable lead generation guides and tools.",
+      "expectedImpact": "Increase organic and referral traffic by 40% while maintaining quality",
+      "priority": "high",
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +79,24 @@
       "status": "open"
     },
     {
-      "id": "3cd0605746e6",
-      "title": "Expand Script-Based Content Series",
-      "description": "Create comprehensive script libraries for solar, home improvement, and other verticals based on the success of mortgage voicemail scripts. Develop follow-up sequences, objection handling scripts, and email templates for each vertical.",
-      "expectedImpact": "Potential to double organic traffic within 90 days based on current script performance",
+      "id": "8b415dbd6f7e",
+      "title": "Scale Successful Mortgage Content Strategy",
+      "description": "Create additional mortgage-focused content similar to the successful voicemail scripts page. Target related queries like 'mortgage lead follow-up templates' and 'mortgage broker scripts'.",
+      "expectedImpact": "Capture additional 20-30 monthly search clicks in mortgage vertical",
       "priority": "medium",
-      "firstSeen": "2026-04-18",
-      "lastSeen": "2026-04-18",
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "d6c17f42de41",
-      "title": "Optimize Homepage for Lead Generation",
-      "description": "The homepage receives 29 views but likely has poor conversion. Add clear value proposition, lead capture form, and navigation to high-performing content like scripts and lead buying guides.",
-      "expectedImpact": "Increase homepage engagement rate from current low levels to 25-30%",
+      "id": "2d6a6fc04a61",
+      "title": "Capitalize on Strong Insurance Lead Rankings",
+      "description": "Create comprehensive landing pages for 'aged life insurance leads' and 'aged IUL leads' queries where you rank well but aren't capturing clicks. Add comparison tables, pricing guides, and vendor recommendations.",
+      "expectedImpact": "Convert 15-20% of current impressions to clicks for insurance terms",
       "priority": "medium",
-      "firstSeen": "2026-04-18",
-      "lastSeen": "2026-04-18",
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -101,13 +112,13 @@
       "status": "open"
     },
     {
-      "id": "6e9dee0d3249",
-      "title": "Develop Mobile-Specific Content Strategy",
-      "description": "With only 3 mobile clicks vs 10 desktop, create mobile-optimized versions of script content with quick-access formats and voice note capabilities for sales professionals on the go.",
-      "expectedImpact": "Increase mobile traffic share from current 23% to 40%",
+      "id": "ae74f18c802f",
+      "title": "Optimize for Featured Snippets",
+      "description": "Target the 'lead lifecycle management' query where you rank #1 but get no clicks. Restructure content with clear definitions, bullet points, and FAQ sections to capture featured snippets.",
+      "expectedImpact": "Increase CTR for position 1 rankings from 0% to 15-25%",
       "priority": "low",
-      "firstSeen": "2026-04-18",
-      "lastSeen": "2026-04-18",
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19",
       "timesRepeated": 1,
       "status": "open"
     }
