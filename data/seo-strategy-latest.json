@@ -1,51 +1,54 @@
 {
-  "lastRun": "2026-04-13T22:53:59.720Z",
+  "lastRun": "2026-04-19T06:02:39.962Z",
   "weekOf": "2026-04-20",
   "analysis": {
-    "strategyReview": "Our content strategy shows strong coverage across all five pillars with 87 published posts, demonstrating comprehensive authority in the internet lead space. We have particularly strong coverage in Industry Strategies (insurance, mortgage, solar verticals) and Lead Management (follow-up, scripts, systems). However, we have gaps in advanced CRM automation topics, lead vendor negotiation strategies, and emerging AI tools for lead management. Our compliance content is robust but could benefit from more state-specific guidance beyond the federal overview we've covered.",
-    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and basic lead definitions, while AgedLeadSales.com stays narrow on aged lead tactics. We have a significant opportunity to dominate the 'lead vendor evaluation' and 'lead ROI calculation' keywords that neither competitor addresses comprehensively. There's also a gap in practical CRM setup content - most competitors provide generic CRM advice, but we can offer lead-specific CRM configurations. The emerging trend of AI-powered lead scoring and automated follow-up sequences represents untapped keyword territory that aligns perfectly with our expertise.",
+    "strategyReview": "Our content strategy shows strong coverage across all five pillars with particularly robust industry-specific guides and CRM system reviews. We've built comprehensive coverage in insurance verticals, home services, and legal lead types. However, we have gaps in advanced lead management techniques, sophisticated buying strategies, and emerging compliance issues. Our CRM coverage is vendor-focused but lacks workflow optimization depth. The sales process pillar needs more advanced closing techniques and objection handling beyond basic scripts.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product descriptions and basic lead types, while AgedLeadSales.com stays narrow on aged lead tactics. We have clear opportunities in lead vendor evaluation beyond basic comparisons, advanced pipeline management systems, and compliance automation. Current trending searches show high interest in AI integration, lead quality assessment, and ROI optimization. Competitors aren't addressing the operational side of scaling lead operations or the nuanced compliance requirements emerging in 2026.",
     "newOpportunities": [
-      "lead vendor contract negotiation",
-      "multi-vendor lead portfolio management",
-      "lead attribution modeling",
-      "compliance automation workflows",
-      "lead quality scoring algorithms"
+      "Lead vendor contract negotiation tactics",
+      "Advanced pipeline management for high-volume operations",
+      "Lead quality assessment automation",
+      "Compliance monitoring systems",
+      "Multi-channel attribution tracking"
     ],
     "trendingTopics": [
-      "AI lead qualification",
-      "compliance automation",
-      "multi-channel attribution",
-      "lead vendor consolidation",
-      "real-time lead scoring"
+      "AI-powered lead qualification",
+      "Lead vendor performance analytics",
+      "Automated compliance monitoring",
+      "Advanced CRM workflows",
+      "Lead recycling optimization"
     ],
     "recommendedUpdates": [
-      "refresh aged lead pricing guide with 2026 data",
-      "update CRM comparison with new integrations",
-      "expand compliance guide with recent court decisions"
+      "Expand CRM automation content beyond basic workflows",
+      "Develop more advanced buying strategies content",
+      "Create compliance automation guides",
+      "Build out lead quality assessment frameworks"
     ]
   },
-  "articlesPublished": [
+  "articlesCreated": [
     {
-      "title": "Lead Scoring Models: Prioritize Internet Leads for Maximum ROI",
-      "slug": "lead-scoring-models-prioritize-internet-leads-maximum-roi",
+      "title": "Lead Vendor Negotiation: Better Pricing, Terms, and Quality",
+      "slug": "lead-vendor-negotiation-guide",
       "publishDate": "2026-04-20",
-      "primaryKeyword": "lead scoring models",
-      "pillar": "CRM Systems"
+      "primaryKeyword": "lead vendor negotiation",
+      "pillar": "BUYING LEADS"
     },
     {
-      "title": "Appointment Setting Scripts: Internet Lead to Booked Meeting in One Call",
-      "slug": "appointment-setting-scripts-internet-lead-booked-meeting-one-call",
+      "title": "Pipeline Management Framework: Never Lose Track of a Lead",
+      "slug": "pipeline-management-framework",
       "publishDate": "2026-04-22",
-      "primaryKeyword": "appointment setting scripts",
-      "pillar": "Sales Process"
+      "primaryKeyword": "lead pipeline management",
+      "pillar": "LEAD MANAGEMENT"
     },
     {
-      "title": "Aged Leads Buying Guide: Profit From Leads Other Reps Gave Up On",
-      "slug": "aged-leads-buying-guide-profit-leads-other-reps-gave-up",
+      "title": "Closing Techniques for Internet Leads: 10 Methods That Work",
+      "slug": "closing-techniques-internet-leads",
       "publishDate": "2026-04-24",
-      "primaryKeyword": "aged leads buying guide",
-      "pillar": "Buying Leads"
+      "primaryKeyword": "closing techniques internet leads",
+      "pillar": "SALES PROCESS"
     }
   ],
-  "briefsForNextWeek": "Selected three high-impact briefs from existing calendar that address current market needs. Lead scoring models addresses the growing demand for CRM automation. Appointment setting scripts fills a gap in our sales process content with practical, actionable scripts. Aged leads buying guide leverages our core expertise while providing comprehensive vendor evaluation framework that competitors lack. All three rotate pillars properly and target different audience segments within our ICP."
+  "articlesSkipped": [],
+  "articlesFailed": [],
+  "briefsForNextWeek": "Selected three high-priority briefs from existing calendar that address current market needs. Lead vendor negotiation capitalizes on increased lead costs and vendor consolidation. Pipeline management addresses operational scaling needs. Closing techniques fills gap in advanced sales process content. All three rotate pillars and target different buyer journey stages."
 }
