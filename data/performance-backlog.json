@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T12:01:32.283Z",
+  "lastUpdated": "2026-04-20T12:01:25.981Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,35 +24,24 @@
       "status": "open"
     },
     {
-      "id": "3b5f8f1d6e04",
-      "title": "Implement Immediate Bounce Rate Reduction Strategy",
-      "description": "Add compelling above-the-fold content hooks, internal linking suggestions, and related content widgets to key landing pages. Focus on the homepage and SMS templates page which are receiving high traffic but likely causing bounces.",
-      "expectedImpact": "Reduce bounce rate from 82% to 65-70% within 2 weeks",
+      "id": "5f4d3342a0ef",
+      "title": "Implement Internal Linking Strategy from Homepage",
+      "description": "Add prominent content recommendations and category navigation to homepage since 62% of pageviews start there. Create 'Popular Guides' and 'Latest Scripts' sections linking to top-performing content like voicemail scripts and SMS templates.",
+      "expectedImpact": "Reduce bounce rate by 15-20% and increase pages per session",
       "priority": "high",
-      "firstSeen": "2026-04-19",
-      "lastSeen": "2026-04-19",
+      "firstSeen": "2026-04-20",
+      "lastSeen": "2026-04-20",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "83c8777f824e",
-      "title": "Optimize High-Traffic Pages for Engagement",
-      "description": "Enhance the SMS templates and voicemail scripts pages with interactive elements, downloadable resources, and clear next-step CTAs. Add video content or audio examples to increase session duration.",
-      "expectedImpact": "Increase average session duration from 35.8s to 60+ seconds",
+      "id": "2fd026111d7a",
+      "title": "Optimize High-Impression, Low-CTR Queries",
+      "description": "Target 'life insurance leads for sale' (53 impressions, 1 click, position 45.3) and 'analytical crm' (21 impressions, 0 clicks, position 46.2) with dedicated landing pages and improved title tags to capture more clicks.",
+      "expectedImpact": "Increase organic clicks by 25-30% within 30 days",
       "priority": "high",
-      "firstSeen": "2026-04-19",
-      "lastSeen": "2026-04-19",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "7647ddbe5701",
-      "title": "Diversify Traffic Sources Beyond Direct",
-      "description": "Implement content distribution strategy across LinkedIn, industry forums, and email marketing to reduce over-dependence on direct traffic. Create shareable lead generation guides and tools.",
-      "expectedImpact": "Increase organic and referral traffic by 40% while maintaining quality",
-      "priority": "high",
-      "firstSeen": "2026-04-19",
-      "lastSeen": "2026-04-19",
+      "firstSeen": "2026-04-20",
+      "lastSeen": "2026-04-20",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -79,24 +68,24 @@
       "status": "open"
     },
     {
-      "id": "8b415dbd6f7e",
-      "title": "Scale Successful Mortgage Content Strategy",
-      "description": "Create additional mortgage-focused content similar to the successful voicemail scripts page. Target related queries like 'mortgage lead follow-up templates' and 'mortgage broker scripts'.",
-      "expectedImpact": "Capture additional 20-30 monthly search clicks in mortgage vertical",
+      "id": "1e1efca030f4",
+      "title": "Create Content Series Around Top-Performing Scripts",
+      "description": "Expand successful voicemail and SMS template content into comprehensive series covering different industries (solar, home improvement, health insurance) to capture more long-tail traffic.",
+      "expectedImpact": "Double script-related organic traffic and improve topical authority",
       "priority": "medium",
-      "firstSeen": "2026-04-19",
-      "lastSeen": "2026-04-19",
+      "firstSeen": "2026-04-20",
+      "lastSeen": "2026-04-20",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "2d6a6fc04a61",
-      "title": "Capitalize on Strong Insurance Lead Rankings",
-      "description": "Create comprehensive landing pages for 'aged life insurance leads' and 'aged IUL leads' queries where you rank well but aren't capturing clicks. Add comparison tables, pricing guides, and vendor recommendations.",
-      "expectedImpact": "Convert 15-20% of current impressions to clicks for insurance terms",
+      "id": "f29051f774ad",
+      "title": "Investigate and Optimize Direct Traffic Source",
+      "description": "Analyze the source of 121 direct sessions - if from agedleadstore.com referrals or email campaigns, optimize those touchpoints with better calls-to-action and landing page alignment to improve engagement.",
+      "expectedImpact": "Improve session duration by 40-50% for direct traffic",
       "priority": "medium",
-      "firstSeen": "2026-04-19",
-      "lastSeen": "2026-04-19",
+      "firstSeen": "2026-04-20",
+      "lastSeen": "2026-04-20",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -112,13 +101,13 @@
       "status": "open"
     },
     {
-      "id": "ae74f18c802f",
-      "title": "Optimize for Featured Snippets",
-      "description": "Target the 'lead lifecycle management' query where you rank #1 but get no clicks. Restructure content with clear definitions, bullet points, and FAQ sections to capture featured snippets.",
-      "expectedImpact": "Increase CTR for position 1 rankings from 0% to 15-25%",
+      "id": "f7b316a69c57",
+      "title": "Develop Mobile-Specific Content Experience",
+      "description": "With only 4 mobile clicks vs 10 desktop, create mobile-optimized versions of script templates and quick-reference guides that sales professionals can use on-the-go.",
+      "expectedImpact": "Increase mobile engagement rate from current low levels to 25%+",
       "priority": "low",
-      "firstSeen": "2026-04-19",
-      "lastSeen": "2026-04-19",
+      "firstSeen": "2026-04-20",
+      "lastSeen": "2026-04-20",
       "timesRepeated": 1,
       "status": "open"
     }
