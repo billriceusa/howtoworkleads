@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { isGoodOrigin, isHoneypotFilled, isGibberishName } from '@/lib/anti-spam'
 
 // Initialize Resend lazily to avoid build errors when API key is not set
 function getResendClient() {
@@ -61,11 +62,24 @@ interface LeadOrderFormData {
   budget: string
   timeline: string
   howDidYouHear: string
+  website?: string
 }
 
 export async function POST(request: NextRequest) {
   try {
+    if (!isGoodOrigin(request)) {
+      return NextResponse.json({ success: true })
+    }
+
     const data: LeadOrderFormData = await request.json()
+
+    if (isHoneypotFilled(data as unknown as Record<string, unknown>)) {
+      return NextResponse.json({ success: true })
+    }
+
+    if (isGibberishName(data.firstName) || isGibberishName(data.lastName)) {
+      return NextResponse.json({ success: true })
+    }
 
     // Validate required fields
     if (!data.firstName || !data.lastName || !data.email || !data.phone) {

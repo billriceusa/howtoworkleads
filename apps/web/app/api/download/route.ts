@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { getWelcomeEmail, FROM, REPLY_TO } from '@/lib/email/welcome-sequence'
+import { isGoodOrigin, isHoneypotFilled, isGibberishName } from '@/lib/anti-spam'
 
 const NEWSLETTER_AUDIENCE_ID = '8a35228e-149f-4b15-8e24-26a24e3d6e98'
 
@@ -38,7 +39,21 @@ const LEAD_MAGNETS: Record<string, { title: string; file: string }> = {
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, slug } = await request.json()
+    if (!isGoodOrigin(request)) {
+      return NextResponse.json({ success: true })
+    }
+
+    const body = await request.json()
+
+    if (isHoneypotFilled(body)) {
+      return NextResponse.json({ success: true })
+    }
+
+    const { email, slug, firstName } = body
+
+    if (isGibberishName(firstName)) {
+      return NextResponse.json({ success: true })
+    }
 
     if (!email || !slug) {
       return NextResponse.json(

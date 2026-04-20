@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react'
 import { Button } from '@/components/ui'
+import { HoneypotInput } from '@/components/honeypot-input'
 
 interface DownloadFormProps {
   slug: string
@@ -10,6 +11,7 @@ interface DownloadFormProps {
 
 export function DownloadForm({ slug, title }: DownloadFormProps) {
   const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('')
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
   >('idle')
@@ -25,7 +27,7 @@ export function DownloadForm({ slug, title }: DownloadFormProps) {
       const res = await fetch('/api/download', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, slug }),
+        body: JSON.stringify({ email, slug, website }),
       })
       const data = await res.json()
 
@@ -86,6 +88,7 @@ export function DownloadForm({ slug, title }: DownloadFormProps) {
           required
           className="h-12 flex-1 min-w-0 px-4 text-sm border border-secondary-300 bg-white text-black placeholder:text-secondary-400 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
         />
+        <HoneypotInput value={website} onChange={setWebsite} />
         <Button
           type="submit"
           variant="primary"

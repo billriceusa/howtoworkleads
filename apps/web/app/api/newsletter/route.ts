@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { getWelcomeEmail, FROM, REPLY_TO } from '@/lib/email/welcome-sequence'
+import { isGoodOrigin, isHoneypotFilled, isGibberishName } from '@/lib/anti-spam'
 
 // Resend Audience/Segment ID for newsletter subscribers
 const NEWSLETTER_AUDIENCE_ID = '8a35228e-149f-4b15-8e24-26a24e3d6e98'
@@ -16,11 +17,25 @@ function getResendClient() {
 
 interface NewsletterSubscribeData {
   email: string
+  firstName?: string
+  website?: string
 }
 
 export async function POST(request: NextRequest) {
   try {
+    if (!isGoodOrigin(request)) {
+      return NextResponse.json({ success: true })
+    }
+
     const data: NewsletterSubscribeData = await request.json()
+
+    if (isHoneypotFilled(data as unknown as Record<string, unknown>)) {
+      return NextResponse.json({ success: true })
+    }
+
+    if (isGibberishName(data.firstName)) {
+      return NextResponse.json({ success: true })
+    }
 
     // Validate email
     if (!data.email) {

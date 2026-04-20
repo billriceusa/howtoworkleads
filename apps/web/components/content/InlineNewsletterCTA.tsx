@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react'
 import { Button } from '@/components/ui'
+import { HoneypotInput } from '@/components/honeypot-input'
 
 interface InlineNewsletterCTAProps {
   className?: string
@@ -9,6 +10,7 @@ interface InlineNewsletterCTAProps {
 
 export function InlineNewsletterCTA({ className }: InlineNewsletterCTAProps) {
   const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
 
@@ -21,7 +23,7 @@ export function InlineNewsletterCTA({ className }: InlineNewsletterCTAProps) {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, website }),
       })
       const data = await res.json()
 
@@ -63,6 +65,7 @@ export function InlineNewsletterCTA({ className }: InlineNewsletterCTAProps) {
               required
               className="h-10 w-full min-w-0 max-w-[220px] px-3 text-sm border-2 border-secondary-300 bg-white text-black placeholder:text-secondary-400 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
+            <HoneypotInput value={website} onChange={setWebsite} />
             <Button type="submit" variant="primary" size="sm" disabled={status === 'loading'}>
               {status === 'loading' ? '...' : 'Subscribe'}
             </Button>

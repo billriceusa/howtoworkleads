@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Button, Input, Textarea } from '@/components/ui'
+import { HoneypotInput } from '@/components/honeypot-input'
 import { cn } from '@/lib/utils'
 
 // Lead types available
@@ -98,6 +99,7 @@ const initialFormData: FormData = {
 export function LeadOrderForm() {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<FormData>(initialFormData)
+  const [website, setWebsite] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -159,7 +161,7 @@ export function LeadOrderForm() {
       const response = await fetch('/api/lead-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, website }),
       })
 
       const result = await response.json()
@@ -214,6 +216,7 @@ export function LeadOrderForm() {
 
   return (
     <div className="rounded-2xl bg-white p-6 sm:p-8 shadow-lg max-w-3xl mx-auto">
+      <HoneypotInput value={website} onChange={setWebsite} />
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex justify-between items-center mb-2">

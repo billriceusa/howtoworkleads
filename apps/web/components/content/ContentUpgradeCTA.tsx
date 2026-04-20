@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react'
 import { Button } from '@/components/ui'
+import { HoneypotInput } from '@/components/honeypot-input'
 
 /**
  * Maps page slug keywords to the best matching lead magnet download.
@@ -72,6 +73,7 @@ interface ContentUpgradeCTAProps {
 export function ContentUpgradeCTA({ pageSlug, className }: ContentUpgradeCTAProps) {
   const magnet = getLeadMagnetForSlug(pageSlug)
   const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
 
@@ -84,7 +86,7 @@ export function ContentUpgradeCTA({ pageSlug, className }: ContentUpgradeCTAProp
       const res = await fetch('/api/download', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, slug: magnet.slug }),
+        body: JSON.stringify({ email, slug: magnet.slug, website }),
       })
       const data = await res.json()
 
@@ -133,6 +135,7 @@ export function ContentUpgradeCTA({ pageSlug, className }: ContentUpgradeCTAProp
             required
             className="h-11 flex-1 min-w-0 px-4 text-sm border-2 border-secondary-300 bg-white text-black placeholder:text-secondary-400 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
           />
+          <HoneypotInput value={website} onChange={setWebsite} />
           <Button type="submit" variant="primary" size="md" disabled={status === 'loading'}>
             {status === 'loading' ? 'Sending...' : 'Get Free Download'}
           </Button>
