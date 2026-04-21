@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T12:01:25.981Z",
+  "lastUpdated": "2026-04-21T12:01:14.124Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "5f4d3342a0ef",
-      "title": "Implement Internal Linking Strategy from Homepage",
-      "description": "Add prominent content recommendations and category navigation to homepage since 62% of pageviews start there. Create 'Popular Guides' and 'Latest Scripts' sections linking to top-performing content like voicemail scripts and SMS templates.",
-      "expectedImpact": "Reduce bounce rate by 15-20% and increase pages per session",
+      "id": "7a933a1a495b",
+      "title": "Investigate Traffic Quality and Sources",
+      "description": "Analyze the 125 direct sessions for bot patterns, referral campaigns, or unusual user behavior. Set up enhanced tracking to identify if this is legitimate traffic from a specific source or campaign. Check for any recent backlinks, social mentions, or marketing activities that could explain the surge.",
+      "expectedImpact": "Identify root cause of traffic surge and optimize for quality engagement",
       "priority": "high",
-      "firstSeen": "2026-04-20",
-      "lastSeen": "2026-04-20",
+      "firstSeen": "2026-04-21",
+      "lastSeen": "2026-04-21",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "2fd026111d7a",
-      "title": "Optimize High-Impression, Low-CTR Queries",
-      "description": "Target 'life insurance leads for sale' (53 impressions, 1 click, position 45.3) and 'analytical crm' (21 impressions, 0 clicks, position 46.2) with dedicated landing pages and improved title tags to capture more clicks.",
-      "expectedImpact": "Increase organic clicks by 25-30% within 30 days",
+      "id": "f47b0475305c",
+      "title": "Optimize High-Bounce Pages for Engagement",
+      "description": "Focus on the homepage (46 views, likely high bounce) and customer journey page (16 views). Add internal linking, related content suggestions, and clear CTAs. Implement exit-intent popups with lead magnets relevant to insurance and mortgage professionals.",
+      "expectedImpact": "Reduce bounce rate by 10-15% and increase session duration",
       "priority": "high",
-      "firstSeen": "2026-04-20",
-      "lastSeen": "2026-04-20",
+      "firstSeen": "2026-04-21",
+      "lastSeen": "2026-04-21",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +68,35 @@
       "status": "open"
     },
     {
-      "id": "1e1efca030f4",
-      "title": "Create Content Series Around Top-Performing Scripts",
-      "description": "Expand successful voicemail and SMS template content into comprehensive series covering different industries (solar, home improvement, health insurance) to capture more long-tail traffic.",
-      "expectedImpact": "Double script-related organic traffic and improve topical authority",
+      "id": "2602fd0aee56",
+      "title": "Expand IUL Content Strategy",
+      "description": "Build on the success of IUL leads content by creating comprehensive guides on IUL sales processes, objection handling, and follow-up sequences. Target related keywords like 'IUL sales scripts' and 'indexed universal life lead conversion'.",
+      "expectedImpact": "Capture more IUL-related search traffic and improve domain authority",
       "priority": "medium",
-      "firstSeen": "2026-04-20",
-      "lastSeen": "2026-04-20",
+      "firstSeen": "2026-04-21",
+      "lastSeen": "2026-04-21",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "f29051f774ad",
-      "title": "Investigate and Optimize Direct Traffic Source",
-      "description": "Analyze the source of 121 direct sessions - if from agedleadstore.com referrals or email campaigns, optimize those touchpoints with better calls-to-action and landing page alignment to improve engagement.",
-      "expectedImpact": "Improve session duration by 40-50% for direct traffic",
+      "id": "e5837806021a",
+      "title": "Improve Mobile Search Performance",
+      "description": "With only 4 mobile clicks vs 9 desktop clicks despite significant mobile impressions, optimize mobile page speed and user experience. Focus on the mortgage voicemail scripts and SMS templates pages that are performing well.",
+      "expectedImpact": "Increase mobile CTR by 20-30% and capture more mobile search traffic",
       "priority": "medium",
-      "firstSeen": "2026-04-20",
-      "lastSeen": "2026-04-20",
+      "firstSeen": "2026-04-21",
+      "lastSeen": "2026-04-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3b8957478334",
+      "title": "Create Lead Magnets for Top-Performing Content",
+      "description": "Develop downloadable resources for the mortgage voicemail scripts and insurance SMS templates pages. Create PDF guides, checklists, or templates that require email signup to access premium content.",
+      "expectedImpact": "Convert 5-10% of page visitors into email subscribers",
+      "priority": "medium",
+      "firstSeen": "2026-04-21",
+      "lastSeen": "2026-04-21",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -101,13 +112,13 @@
       "status": "open"
     },
     {
-      "id": "f7b316a69c57",
-      "title": "Develop Mobile-Specific Content Experience",
-      "description": "With only 4 mobile clicks vs 10 desktop, create mobile-optimized versions of script templates and quick-reference guides that sales professionals can use on-the-go.",
-      "expectedImpact": "Increase mobile engagement rate from current low levels to 25%+",
+      "id": "60d1d88e74a9",
+      "title": "Optimize for 'Lead Lifecycle Management' Opportunity",
+      "description": "The site ranks #1 for 'lead lifecycle management' but gets no clicks. Improve the meta title and description to be more compelling and relevant to the target audience of sales professionals working internet leads.",
+      "expectedImpact": "Increase CTR for high-ranking but underperforming keywords",
       "priority": "low",
-      "firstSeen": "2026-04-20",
-      "lastSeen": "2026-04-20",
+      "firstSeen": "2026-04-21",
+      "lastSeen": "2026-04-21",
       "timesRepeated": 1,
       "status": "open"
     }
