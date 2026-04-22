@@ -1,30 +1,220 @@
 {
-  "lastUpdated": "2026-04-15T10:00:25.752Z",
+  "lastUpdated": "2026-04-22T10:01:50.606Z",
   "items": [
     {
       "id": "finding-001",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
       "status": "open",
       "priority": 2,
       "category": "content-quality",
       "severity": "high",
       "title": "87 Posts Missing SEO Meta Descriptions",
-      "description": "A significant portion of blog posts (87 out of 87 recent posts listed) are missing SEO meta descriptions, which are crucial for click-through rates and search snippet optimization. This directly impacts how Google presents our content in search results and affects user engagement signals.",
-      "recommendation": "Implement meta descriptions for all posts, prioritizing high-traffic and conversion-focused content first. Each description should be 150-160 characters, include primary keyword, and clearly communicate the value proposition. For lead conversion content, emphasize practical outcomes and ROI benefits.",
+      "description": "The majority of blog posts lack meta descriptions, which are critical for click-through rates from search results and provide Google with content summaries. This is especially problematic given the March 2024 Core Update's emphasis on content that clearly communicates its value to users.",
+      "recommendation": "Implement meta descriptions for all posts, prioritizing high-traffic and recent content first. Each description should be 150-160 characters, include primary keyword, and clearly communicate the practical value/outcome readers will achieve. Use action-oriented language that reflects Bill Rice's expertise.",
       "effort": "large",
       "affectedPages": [
         "/blog/how-to-buy-mortgage-leads",
         "/blog/how-to-work-aged-leads-the-complete-system-for-maximum-roi",
         "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Re-identified in audit 2026-04-22"
+    },
+    {
+      "id": "finding-002",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 2,
+      "category": "content-quality",
+      "severity": "high",
+      "title": "Missing Featured Images Impact Rich Results Eligibility",
+      "description": "Over 60 posts lack featured images, reducing eligibility for rich results and image search visibility. The Enhanced Author Authority Signals update (September 2024) places increased importance on comprehensive content presentation including visual elements.",
+      "recommendation": "Create custom featured images for all posts, prioritizing pillar content and recent posts. Images should include the HowToWorkLeads brand, relevant industry imagery, and clear text overlays summarizing the key benefit. Optimize for 1200x630px for social sharing and implement proper alt text with target keywords.",
+      "effort": "large",
+      "affectedPages": [
+        "/blog/how-to-work-family-law-leads",
+        "/blog/tcpa-compliance-lead-buyers",
+        "/blog/salesforce-leads-review"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-003",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 3,
+      "category": "e-e-a-t",
+      "severity": "medium",
+      "title": "Author Bio Enhancement Needed for Expertise Signals",
+      "description": "While Bill Rice has Person schema and credentials, the Enhanced Author Authority Signals update requires stronger cross-site verification and more detailed expertise demonstration within content to maximize authority recognition.",
+      "recommendation": "Enhance author bio sections with specific achievements, certifications, and quantifiable results. Add author bio boxes to high-value content with links to detailed about page. Include specific metrics like 'Generated $50M+ in lead revenue' or 'Trained 1000+ sales professionals'. Implement AuthorshipMarkup schema on key articles.",
+      "effort": "medium",
+      "affectedPages": [
+        "/about",
+        "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals",
+        "/blog/aged-leads"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-004",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 3,
+      "category": "content-authority",
+      "severity": "medium",
+      "title": "Content Depth Optimization for Educational Quality Signals",
+      "description": "The Educational Content Quality Signals update (October 2024) emphasizes step-by-step guidance and measurable outcomes. Some content may need enhancement to meet these elevated standards for instructional content.",
+      "recommendation": "Audit top 20 performing posts to add specific implementation steps, real conversion metrics, and case study examples. Include downloadable resources, checklists, or templates where appropriate. Add 'Expected Results' sections with realistic timeframes and conversion improvements readers can expect.",
+      "effort": "large",
+      "affectedPages": [
+        "/blog/how-to-work-aged-leads-the-complete-system-for-maximum-roi",
+        "/blog/mortgage-lead-conversion-playbook",
+        "/blog/multi-channel-outreach-strategy"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-006",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 3,
+      "category": "content-quality",
+      "severity": "medium",
+      "title": "Content Freshness Critical for Compliance Topics",
+      "description": "Regulatory and compliance content requires frequent updates to maintain accuracy and authority. The Helpful Content System's emphasis on genuinely helpful content means outdated compliance information could negatively impact overall site authority.",
+      "recommendation": "Establish quarterly review schedule for all compliance-related content (TCPA, FCC consent rules, state regulations). Add 'Last Updated' dates prominently and implement content audit workflow. Create editorial calendar for proactive updates when regulations change.",
+      "effort": "medium",
+      "affectedPages": [
+        "/blog/tcpa-compliance-lead-buyers",
+        "/blog/fcc-consent-rule-lead-buying",
+        "/blog/state-by-state-lead-compliance-guide"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-007",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 3,
+      "category": "internal-linking",
+      "severity": "medium",
+      "title": "Pillar-Cluster Architecture Enhancement Needed",
+      "description": "With 87 blog posts across multiple industries, stronger pillar-cluster internal linking can improve topical authority and help Google understand content relationships, especially important given the March 2024 Core Update's focus on expertise demonstration.",
+      "recommendation": "Create clear pillar pages for main topics (Working Aged Leads, Industry-Specific Strategies, Compliance, CRM Systems) and implement systematic internal linking from cluster content back to pillars. Add contextual internal links within content body, not just in sidebars or footers.",
+      "effort": "large",
+      "affectedPages": [
+        "/blog/aged-leads",
+        "/categories/lead-management",
+        "/categories/industry-strategies"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-008",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 3,
+      "category": "technical-seo",
+      "severity": "medium",
+      "title": "Core Web Vitals Monitoring for Updated INP Thresholds",
+      "description": "The May 2024 Core Web Vitals update introduced new INP thresholds (<200ms for good). Next.js sites with interactive forms and dynamic content need careful monitoring to ensure optimal user experience.",
+      "recommendation": "Implement Core Web Vitals monitoring with focus on INP metrics, especially on pages with lead capture forms. Optimize JavaScript bundle splitting and implement proper loading strategies for interactive elements. Monitor mobile performance particularly closely.",
+      "effort": "small",
+      "affectedPages": [
+        "/",
+        "/blog/*",
+        "/categories/*"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-010",
+      "createdAt": "2026-04-15T10:00:25.752Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 4,
+      "category": "structured-data",
+      "severity": "medium",
+      "title": "FAQ Schema Opportunities for How-To Content",
+      "description": "Educational how-to content can benefit significantly from FAQ schema markup to capture featured snippets and improve rich results visibility, especially given the enhanced structured data processing updates.",
+      "recommendation": "Implement FAQ schema on pillar content and how-to guides. Identify 3-5 common questions for each major topic (working aged leads, compliance, CRM selection) and structure as FAQ sections with proper schema markup. Focus on questions that align with voice search queries.",
+      "effort": "medium",
+      "affectedPages": [
+        "/blog/how-to-work-aged-leads-the-complete-system-for-maximum-roi",
+        "/blog/tcpa-compliance-lead-buyers",
+        "/blog/how-to-evaluate-lead-vendor"
+      ],
+      "sourceAudit": "2026-04-15",
+      "notes": "Re-identified in audit 2026-04-22"
+    },
+    {
+      "id": "finding-009",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 4,
+      "category": "content-quality",
+      "severity": "low",
+      "title": "Short Excerpts Limit Content Discovery",
+      "description": "Several posts have short excerpts which may limit their effectiveness in search results and social sharing, reducing click-through potential.",
+      "recommendation": "Expand excerpts to 150-200 characters that clearly communicate the specific value and outcome readers will gain. Include primary keyword naturally and create compelling preview that encourages clicks.",
+      "effort": "small",
+      "affectedPages": [
+        "/blog/multi-channel-outreach-strategy",
+        "/blog/objection-handling-scripts",
+        "/blog/text-messaging-compliance-guide"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-010",
+      "createdAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 4,
+      "category": "structured-data",
+      "severity": "low",
+      "title": "HowTo Schema Opportunities for Step-by-Step Guides",
+      "description": "Educational content with clear step-by-step processes can benefit from HowTo schema markup to improve rich results visibility and align with Educational Content Quality Signals emphasis on structured guidance.",
+      "recommendation": "Implement HowTo schema on step-by-step guides, particularly the '4-Step System' and other methodological content. Structure clear steps with estimated time, tools needed, and expected outcomes for each phase.",
+      "effort": "small",
+      "affectedPages": [
+        "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals",
+        "/blog/how-to-evaluate-lead-vendor"
+      ],
+      "sourceAudit": "2026-04-22"
+    },
+    {
+      "id": "finding-011",
+      "createdAt": "2026-04-15T10:00:25.752Z",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "open",
+      "priority": 4,
+      "category": "indexing",
+      "severity": "low",
+      "title": "Sitemap Optimization for Content Discovery",
+      "description": "With 138 sitemap entries across 87 blog posts and 37 landing pages, ensure optimal crawl budget allocation and proper priority signals for most important content.",
+      "recommendation": "Review sitemap priority settings to emphasize pillar content and recent posts. Implement lastmod dates for all entries and set appropriate changefreq values. Consider separate sitemaps for different content types (blog, landing pages, categories).",
+      "effort": "small",
+      "affectedPages": [
+        "/sitemap.xml"
+      ],
+      "sourceAudit": "2026-04-15",
+      "notes": "Re-identified in audit 2026-04-22"
     },
     {
       "id": "finding-002",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 2,
       "category": "content-quality",
       "severity": "high",
@@ -37,13 +227,14 @@
         "/blog/how-to-work-bankruptcy-leads",
         "/blog/sms-templates-home-services-leads"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-003",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 3,
       "category": "content-quality",
       "severity": "medium",
@@ -56,13 +247,14 @@
         "/blog/objection-handling-scripts",
         "/blog/text-messaging-compliance-guide"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-004",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 3,
       "category": "structured-data",
       "severity": "medium",
@@ -73,13 +265,14 @@
       "affectedPages": [
         "All blog posts with Article schema"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-005",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 3,
       "category": "e-e-a-t",
       "severity": "medium",
@@ -91,13 +284,14 @@
         "/about",
         "/author/bill-rice"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-006",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 3,
       "category": "content-authority",
       "severity": "medium",
@@ -109,13 +303,14 @@
         "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals",
         "/blog/aged-lead-conversion-rates"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-008",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 3,
       "category": "internal-linking",
       "severity": "medium",
@@ -126,13 +321,14 @@
       "affectedPages": [
         "All blog posts and category pages"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-009",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 3,
       "category": "content-quality",
       "severity": "medium",
@@ -145,13 +341,14 @@
         "/blog/state-by-state-lead-compliance-guide",
         "/blog/fcc-consent-rule-lead-buying"
       ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     },
     {
       "id": "finding-007",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
+      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "status": "completed",
       "priority": 4,
       "category": "technical-seo",
       "severity": "low",
@@ -162,42 +359,8 @@
       "affectedPages": [
         "Site-wide performance monitoring needed"
       ],
-      "sourceAudit": "2026-04-15"
-    },
-    {
-      "id": "finding-010",
-      "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
-      "priority": 4,
-      "category": "structured-data",
-      "severity": "low",
-      "title": "FAQ Schema Opportunities for How-To Content",
-      "description": "Many how-to posts could benefit from FAQ schema to capture featured snippets and improve visibility for question-based queries, especially relevant for educational content optimization.",
-      "recommendation": "Add FAQ schema to how-to posts that naturally address common questions. Focus on posts about working specific lead types where users commonly ask 'how long', 'how much', 'what's the best way' questions. Implement gradually starting with highest-traffic posts.",
-      "effort": "medium",
-      "affectedPages": [
-        "/blog/how-to-work-aged-leads-the-complete-system-for-maximum-roi",
-        "/blog/how-to-work-mortgage-leads"
-      ],
-      "sourceAudit": "2026-04-15"
-    },
-    {
-      "id": "finding-011",
-      "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-15T10:00:25.752Z",
-      "status": "open",
-      "priority": 4,
-      "category": "indexing",
-      "severity": "low",
-      "title": "Sitemap Optimization for Content Discovery",
-      "description": "With 138 sitemap entries and growing content, sitemap organization can be optimized to help Google understand content hierarchy and update frequency patterns.",
-      "recommendation": "Consider implementing separate sitemaps for different content types (blog posts, landing pages, category pages) with appropriate priority and changefreq values. Set higher priority for pillar content and more frequent changefreq for regularly updated compliance content.",
-      "effort": "small",
-      "affectedPages": [
-        "Sitemap structure optimization"
-      ],
-      "sourceAudit": "2026-04-15"
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-04-22 — appears resolved"
     }
   ]
 }
