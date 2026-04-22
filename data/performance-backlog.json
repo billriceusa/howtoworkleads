@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T12:01:14.124Z",
+  "lastUpdated": "2026-04-22T12:01:27.581Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "7a933a1a495b",
-      "title": "Investigate Traffic Quality and Sources",
-      "description": "Analyze the 125 direct sessions for bot patterns, referral campaigns, or unusual user behavior. Set up enhanced tracking to identify if this is legitimate traffic from a specific source or campaign. Check for any recent backlinks, social mentions, or marketing activities that could explain the surge.",
-      "expectedImpact": "Identify root cause of traffic surge and optimize for quality engagement",
+      "id": "d600ddd23fa0",
+      "title": "Investigate Direct Traffic Attribution and Quality",
+      "description": "Audit the 124 direct sessions to determine if they're genuine direct visits or misattributed traffic. Check for missing UTM parameters, referrer issues, or bot traffic. Implement enhanced tracking to better understand the source of this traffic surge.",
+      "expectedImpact": "Better traffic attribution and potential identification of new traffic sources worth optimizing",
       "priority": "high",
-      "firstSeen": "2026-04-21",
-      "lastSeen": "2026-04-21",
+      "firstSeen": "2026-04-22",
+      "lastSeen": "2026-04-22",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "f47b0475305c",
-      "title": "Optimize High-Bounce Pages for Engagement",
-      "description": "Focus on the homepage (46 views, likely high bounce) and customer journey page (16 views). Add internal linking, related content suggestions, and clear CTAs. Implement exit-intent popups with lead magnets relevant to insurance and mortgage professionals.",
-      "expectedImpact": "Reduce bounce rate by 10-15% and increase session duration",
+      "id": "7b990250b777",
+      "title": "Optimize Page Load Speed and Above-Fold Content",
+      "description": "With session duration at only 44.4 seconds, immediately audit page load times and optimize above-the-fold content to better match search intent. Focus on the homepage and top landing pages with clear value propositions within 3 seconds.",
+      "expectedImpact": "Increase session duration by 30-50% and reduce bounce rate to under 65%",
       "priority": "high",
-      "firstSeen": "2026-04-21",
-      "lastSeen": "2026-04-21",
+      "firstSeen": "2026-04-22",
+      "lastSeen": "2026-04-22",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,35 +68,35 @@
       "status": "open"
     },
     {
-      "id": "2602fd0aee56",
-      "title": "Expand IUL Content Strategy",
-      "description": "Build on the success of IUL leads content by creating comprehensive guides on IUL sales processes, objection handling, and follow-up sequences. Target related keywords like 'IUL sales scripts' and 'indexed universal life lead conversion'.",
-      "expectedImpact": "Capture more IUL-related search traffic and improve domain authority",
+      "id": "fd19cbb52e85",
+      "title": "Expand IUL and Life Insurance Lead Content",
+      "description": "Capitalize on strong performance of IUL content by creating additional pages targeting 'best iul leads,' 'iul lead generation,' and 'iul lead conversion tips.' The current page ranks at position 6.7 and shows commercial intent.",
+      "expectedImpact": "Capture additional 50-100 monthly clicks from high-intent IUL-related queries",
       "priority": "medium",
-      "firstSeen": "2026-04-21",
-      "lastSeen": "2026-04-21",
+      "firstSeen": "2026-04-22",
+      "lastSeen": "2026-04-22",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "e5837806021a",
-      "title": "Improve Mobile Search Performance",
-      "description": "With only 4 mobile clicks vs 9 desktop clicks despite significant mobile impressions, optimize mobile page speed and user experience. Focus on the mortgage voicemail scripts and SMS templates pages that are performing well.",
-      "expectedImpact": "Increase mobile CTR by 20-30% and capture more mobile search traffic",
+      "id": "6515ea740540",
+      "title": "Improve Title Tags and Meta Descriptions for CTR",
+      "description": "With CTR doubling to 0.36%, there's momentum to push higher. Optimize titles for pages ranking 15-30 positions to include power words, numbers, and clear value propositions. Focus on mortgage and insurance lead pages.",
+      "expectedImpact": "Increase overall CTR to 0.5%+ and gain additional 5-10 daily clicks",
       "priority": "medium",
-      "firstSeen": "2026-04-21",
-      "lastSeen": "2026-04-21",
+      "firstSeen": "2026-04-22",
+      "lastSeen": "2026-04-22",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "3b8957478334",
-      "title": "Create Lead Magnets for Top-Performing Content",
-      "description": "Develop downloadable resources for the mortgage voicemail scripts and insurance SMS templates pages. Create PDF guides, checklists, or templates that require email signup to access premium content.",
-      "expectedImpact": "Convert 5-10% of page visitors into email subscribers",
+      "id": "f4472e6b70c1",
+      "title": "Create Internal Linking Strategy from High-Traffic Pages",
+      "description": "The homepage receives 50 views but has a high bounce rate. Add strategic internal links to relevant lead buying guides and sales process content to distribute traffic and increase page depth.",
+      "expectedImpact": "Reduce homepage bounce rate by 15% and increase pages per session",
       "priority": "medium",
-      "firstSeen": "2026-04-21",
-      "lastSeen": "2026-04-21",
+      "firstSeen": "2026-04-22",
+      "lastSeen": "2026-04-22",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -112,13 +112,13 @@
       "status": "open"
     },
     {
-      "id": "60d1d88e74a9",
-      "title": "Optimize for 'Lead Lifecycle Management' Opportunity",
-      "description": "The site ranks #1 for 'lead lifecycle management' but gets no clicks. Improve the meta title and description to be more compelling and relevant to the target audience of sales professionals working internet leads.",
-      "expectedImpact": "Increase CTR for high-ranking but underperforming keywords",
+      "id": "6e9dee0d3249",
+      "title": "Develop Mobile-Specific Content Strategy",
+      "description": "Mobile accounts for only 6 clicks vs 12 desktop clicks despite mobile-first indexing. Optimize mobile experience and create mobile-specific content formats for lead generation topics.",
+      "expectedImpact": "Increase mobile search clicks by 50% within 60 days",
       "priority": "low",
-      "firstSeen": "2026-04-21",
-      "lastSeen": "2026-04-21",
+      "firstSeen": "2026-04-22",
+      "lastSeen": "2026-04-22",
       "timesRepeated": 1,
       "status": "open"
     }
