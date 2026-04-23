@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T12:01:27.581Z",
+  "lastUpdated": "2026-04-23T12:00:55.616Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "d600ddd23fa0",
-      "title": "Investigate Direct Traffic Attribution and Quality",
-      "description": "Audit the 124 direct sessions to determine if they're genuine direct visits or misattributed traffic. Check for missing UTM parameters, referrer issues, or bot traffic. Implement enhanced tracking to better understand the source of this traffic surge.",
-      "expectedImpact": "Better traffic attribution and potential identification of new traffic sources worth optimizing",
+      "id": "7b990250b777",
+      "title": "Optimize Page Load Speed and Above-Fold Content",
+      "description": "With session duration dropping to 59.6 seconds, immediately audit page load times and optimize above-the-fold content. Add clear value propositions, improve navigation, and ensure mobile optimization since 7 of 18 search clicks came from mobile devices.",
+      "expectedImpact": "15-25% increase in session duration and 10-15% improvement in engagement rate",
       "priority": "high",
-      "firstSeen": "2026-04-22",
-      "lastSeen": "2026-04-22",
+      "firstSeen": "2026-04-23",
+      "lastSeen": "2026-04-23",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "7b990250b777",
-      "title": "Optimize Page Load Speed and Above-Fold Content",
-      "description": "With session duration at only 44.4 seconds, immediately audit page load times and optimize above-the-fold content to better match search intent. Focus on the homepage and top landing pages with clear value propositions within 3 seconds.",
-      "expectedImpact": "Increase session duration by 30-50% and reduce bounce rate to under 65%",
+      "id": "622eb8169585",
+      "title": "Scale IUL Leads Content Strategy",
+      "description": "The /buy-iul-leads page is performing exceptionally well (position 7.1, 4 clicks). Create supporting content around 'aged iul leads' and 'best iul leads' queries, add comparison guides, and develop a content cluster around IUL lead buying.",
+      "expectedImpact": "20-30% increase in IUL-related organic traffic within 30 days",
       "priority": "high",
-      "firstSeen": "2026-04-22",
-      "lastSeen": "2026-04-22",
+      "firstSeen": "2026-04-23",
+      "lastSeen": "2026-04-23",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,35 +68,24 @@
       "status": "open"
     },
     {
-      "id": "fd19cbb52e85",
-      "title": "Expand IUL and Life Insurance Lead Content",
-      "description": "Capitalize on strong performance of IUL content by creating additional pages targeting 'best iul leads,' 'iul lead generation,' and 'iul lead conversion tips.' The current page ranks at position 6.7 and shows commercial intent.",
-      "expectedImpact": "Capture additional 50-100 monthly clicks from high-intent IUL-related queries",
+      "id": "0a2f70de6915",
+      "title": "Expand Mortgage and Workers Comp Content",
+      "description": "Build content clusters around mortgage lead scripts and workers comp lead strategies. Create comprehensive guides, templates, and case studies for these emerging traffic sources that are already showing click-through success.",
+      "expectedImpact": "10-15% increase in vertical-specific traffic and improved topical authority",
       "priority": "medium",
-      "firstSeen": "2026-04-22",
-      "lastSeen": "2026-04-22",
+      "firstSeen": "2026-04-23",
+      "lastSeen": "2026-04-23",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "6515ea740540",
-      "title": "Improve Title Tags and Meta Descriptions for CTR",
-      "description": "With CTR doubling to 0.36%, there's momentum to push higher. Optimize titles for pages ranking 15-30 positions to include power words, numbers, and clear value propositions. Focus on mortgage and insurance lead pages.",
-      "expectedImpact": "Increase overall CTR to 0.5%+ and gain additional 5-10 daily clicks",
+      "id": "ed44ef719394",
+      "title": "Implement Conversion Tracking for Direct Traffic",
+      "description": "With 109 direct sessions, implement UTM parameters and conversion tracking to understand which referral sources are driving this traffic surge. Set up goal tracking for contact form submissions and content downloads.",
+      "expectedImpact": "Better attribution and 20-25% improvement in conversion optimization",
       "priority": "medium",
-      "firstSeen": "2026-04-22",
-      "lastSeen": "2026-04-22",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "f4472e6b70c1",
-      "title": "Create Internal Linking Strategy from High-Traffic Pages",
-      "description": "The homepage receives 50 views but has a high bounce rate. Add strategic internal links to relevant lead buying guides and sales process content to distribute traffic and increase page depth.",
-      "expectedImpact": "Reduce homepage bounce rate by 15% and increase pages per session",
-      "priority": "medium",
-      "firstSeen": "2026-04-22",
-      "lastSeen": "2026-04-22",
+      "firstSeen": "2026-04-23",
+      "lastSeen": "2026-04-23",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -112,13 +101,13 @@
       "status": "open"
     },
     {
-      "id": "6e9dee0d3249",
-      "title": "Develop Mobile-Specific Content Strategy",
-      "description": "Mobile accounts for only 6 clicks vs 12 desktop clicks despite mobile-first indexing. Optimize mobile experience and create mobile-specific content formats for lead generation topics.",
-      "expectedImpact": "Increase mobile search clicks by 50% within 60 days",
+      "id": "931d2ec23552",
+      "title": "Optimize for 'Life Insurance Leads for Sale' Query",
+      "description": "This query shows 54 impressions at position 44.7. Create dedicated landing page content targeting this high-volume commercial query with better on-page optimization and internal linking.",
+      "expectedImpact": "5-10% increase in life insurance related traffic",
       "priority": "low",
-      "firstSeen": "2026-04-22",
-      "lastSeen": "2026-04-22",
+      "firstSeen": "2026-04-23",
+      "lastSeen": "2026-04-23",
       "timesRepeated": 1,
       "status": "open"
     }
