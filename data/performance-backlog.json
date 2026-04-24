@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T12:00:55.616Z",
+  "lastUpdated": "2026-04-24T12:01:27.440Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "7b990250b777",
-      "title": "Optimize Page Load Speed and Above-Fold Content",
-      "description": "With session duration dropping to 59.6 seconds, immediately audit page load times and optimize above-the-fold content. Add clear value propositions, improve navigation, and ensure mobile optimization since 7 of 18 search clicks came from mobile devices.",
-      "expectedImpact": "15-25% increase in session duration and 10-15% improvement in engagement rate",
+      "id": "813ddae12a39",
+      "title": "Implement Internal Linking Strategy to Increase Session Duration",
+      "description": "Add contextual internal links within top-performing pages (customer journey, IUL leads) to related content like CRM systems and sales processes. Create content hubs linking related topics and add 'Related Articles' sections to each page.",
+      "expectedImpact": "Increase session duration by 30-50% and page views per session",
       "priority": "high",
-      "firstSeen": "2026-04-23",
-      "lastSeen": "2026-04-23",
+      "firstSeen": "2026-04-24",
+      "lastSeen": "2026-04-24",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "622eb8169585",
-      "title": "Scale IUL Leads Content Strategy",
-      "description": "The /buy-iul-leads page is performing exceptionally well (position 7.1, 4 clicks). Create supporting content around 'aged iul leads' and 'best iul leads' queries, add comparison guides, and develop a content cluster around IUL lead buying.",
-      "expectedImpact": "20-30% increase in IUL-related organic traffic within 30 days",
+      "id": "bf687e769ba8",
+      "title": "Scale IUL and Life Insurance Content Production",
+      "description": "Create comprehensive content series around IUL leads including comparison guides, conversion strategies, and vendor reviews. Target long-tail keywords like 'best IUL lead companies' and 'IUL lead conversion rates'.",
+      "expectedImpact": "Capture 20-30 additional organic clicks monthly in high-intent insurance vertical",
       "priority": "high",
-      "firstSeen": "2026-04-23",
-      "lastSeen": "2026-04-23",
+      "firstSeen": "2026-04-24",
+      "lastSeen": "2026-04-24",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +68,35 @@
       "status": "open"
     },
     {
-      "id": "0a2f70de6915",
-      "title": "Expand Mortgage and Workers Comp Content",
-      "description": "Build content clusters around mortgage lead scripts and workers comp lead strategies. Create comprehensive guides, templates, and case studies for these emerging traffic sources that are already showing click-through success.",
-      "expectedImpact": "10-15% increase in vertical-specific traffic and improved topical authority",
+      "id": "b039d5fd70c4",
+      "title": "Optimize Title Tags and Meta Descriptions for Higher CTR",
+      "description": "Rewrite titles for pages ranking 15-30 positions to include power words like 'proven', 'exclusive', and year-specific terms. Focus on emotional triggers for sales professionals like 'close more deals' and 'increase commissions'.",
+      "expectedImpact": "Improve CTR by additional 25-40% and drive 10-15 more organic clicks weekly",
       "priority": "medium",
-      "firstSeen": "2026-04-23",
-      "lastSeen": "2026-04-23",
+      "firstSeen": "2026-04-24",
+      "lastSeen": "2026-04-24",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "ed44ef719394",
-      "title": "Implement Conversion Tracking for Direct Traffic",
-      "description": "With 109 direct sessions, implement UTM parameters and conversion tracking to understand which referral sources are driving this traffic surge. Set up goal tracking for contact form submissions and content downloads.",
-      "expectedImpact": "Better attribution and 20-25% improvement in conversion optimization",
+      "id": "357ebf484a56",
+      "title": "Develop Mortgage Lead Vertical Content Hub",
+      "description": "Expand successful mortgage voicemail scripts content into comprehensive mortgage lead working guide including email templates, objection handling, and follow-up sequences. Target 'mortgage lead scripts' and related queries.",
+      "expectedImpact": "Establish authority in mortgage vertical and capture 15-20 additional monthly clicks",
       "priority": "medium",
-      "firstSeen": "2026-04-23",
-      "lastSeen": "2026-04-23",
+      "firstSeen": "2026-04-24",
+      "lastSeen": "2026-04-24",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "7c3282ebcb5b",
+      "title": "Create Lead Nurturing Email Sequence for Direct Traffic",
+      "description": "Implement email capture on high-traffic pages with lead magnets like 'Complete Lead Working Toolkit' and create 5-part email series covering lead qualification, follow-up timing, and closing techniques.",
+      "expectedImpact": "Convert 15-20% of direct traffic into email subscribers for ongoing engagement",
+      "priority": "medium",
+      "firstSeen": "2026-04-24",
+      "lastSeen": "2026-04-24",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -101,13 +112,13 @@
       "status": "open"
     },
     {
-      "id": "931d2ec23552",
-      "title": "Optimize for 'Life Insurance Leads for Sale' Query",
-      "description": "This query shows 54 impressions at position 44.7. Create dedicated landing page content targeting this high-volume commercial query with better on-page optimization and internal linking.",
-      "expectedImpact": "5-10% increase in life insurance related traffic",
+      "id": "9f15ec4a553f",
+      "title": "Expand Content for Position 1-10 Ranking Opportunities",
+      "description": "Target queries where site ranks 2-10 with expanded content: 'lead lifecycle management' (pos 1.0), 'aged life leads same day delivery' (pos 2.0), and 'crm system' (pos 2.0). Add FAQ sections and comparison tables.",
+      "expectedImpact": "Capture featured snippets and increase clicks by 50-100% for these high-potential queries",
       "priority": "low",
-      "firstSeen": "2026-04-23",
-      "lastSeen": "2026-04-23",
+      "firstSeen": "2026-04-24",
+      "lastSeen": "2026-04-24",
       "timesRepeated": 1,
       "status": "open"
     }
