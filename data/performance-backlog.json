@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-25T12:00:58.113Z",
+  "lastUpdated": "2026-04-26T12:01:37.234Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "477ae603ebca",
-      "title": "Optimize High-Performing IUL Content",
-      "description": "Expand the buy-iul-leads page with more comprehensive content, internal linking to related pages, and clear CTAs. Add FAQ sections addressing 'aged iul leads' and 'iul leads' queries that are driving traffic. Create supporting blog posts about IUL lead strategies.",
-      "expectedImpact": "Could increase IUL-related organic traffic by 40-60% and improve conversion rates",
+      "id": "ba88fd040cee",
+      "title": "Expand IUL Content Hub Strategy",
+      "description": "Create comprehensive IUL lead buying guide, comparison tools, and vendor reviews. Add related content around IUL sales techniques, objection handling, and compliance. Target long-tail keywords like 'best iul lead companies 2024' and 'iul lead conversion tips'.",
+      "expectedImpact": "Could increase IUL-related organic traffic by 200-300% and establish authority in this high-performing niche",
       "priority": "high",
-      "firstSeen": "2026-04-25",
-      "lastSeen": "2026-04-25",
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "11b030151da1",
-      "title": "Capitalize on Direct Traffic Surge",
-      "description": "Implement exit-intent popups, email capture forms, and clear conversion paths on high-traffic pages. Add tracking to identify the source of direct traffic (partnerships, word-of-mouth, offline marketing) to replicate success.",
-      "expectedImpact": "Convert 15-25% more direct visitors into leads or email subscribers",
+      "id": "8bfb7929b087",
+      "title": "Optimize for AI Platform Discovery",
+      "description": "Restructure content with clear Q&A formats, add FAQ sections, and create definitive guides that AI platforms prefer to reference. Focus on conversational queries like 'how to work aged insurance leads effectively'.",
+      "expectedImpact": "Capture growing AI-driven search traffic, potentially adding 20-30% to referral traffic",
       "priority": "high",
-      "firstSeen": "2026-04-25",
-      "lastSeen": "2026-04-25",
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,35 +68,24 @@
       "status": "open"
     },
     {
-      "id": "4fb5cee24ef9",
-      "title": "Extend Session Duration with Internal Linking",
-      "description": "Add contextual internal links within content, create 'related articles' sections, and implement a content recommendation widget. Focus on linking from high-traffic pages like customer journey to conversion-focused lead buying pages.",
-      "expectedImpact": "Increase average session duration by 20-30% and reduce bounce rate further",
+      "id": "1d5690e94b12",
+      "title": "Recover Lost Search Impressions",
+      "description": "Audit content for keyword cannibalization, refresh underperforming pages with updated content, and expand topic coverage around declining terms like 'analytical crm' and 'life insurance leads'.",
+      "expectedImpact": "Restore 200-300 daily impressions and improve overall search visibility",
       "priority": "medium",
-      "firstSeen": "2026-04-25",
-      "lastSeen": "2026-04-25",
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "71bcbc91b3ef",
-      "title": "Strengthen Agedleadstore Partnership",
-      "description": "Reach out to agedleadstore.com to formalize partnership, create co-branded content, or establish affiliate relationships. Consider guest posting or content exchange to expand this traffic source.",
-      "expectedImpact": "Could double referral traffic from this source within 30 days",
+      "id": "4d08c288eff6",
+      "title": "Leverage Direct Traffic Momentum",
+      "description": "Add email capture forms to high-traffic pages, create lead magnets like 'Lead Conversion Calculator' or 'CRM Comparison Guide', and implement exit-intent popups to convert direct visitors.",
+      "expectedImpact": "Convert 15-20% of direct traffic into email subscribers for nurturing",
       "priority": "medium",
-      "firstSeen": "2026-04-25",
-      "lastSeen": "2026-04-25",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "eb25c8b55de0",
-      "title": "Target Position 11-20 Keywords",
-      "description": "Focus SEO efforts on queries where you rank 11-20 (like 'aged iul leads' at 11.1) to break into top 10. Optimize title tags, add schema markup, and build topic authority through supporting content.",
-      "expectedImpact": "Moving 3-5 keywords into top 10 could increase organic clicks by 50-80%",
-      "priority": "medium",
-      "firstSeen": "2026-04-25",
-      "lastSeen": "2026-04-25",
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -112,13 +101,13 @@
       "status": "open"
     },
     {
-      "id": "6e9dee0d3249",
-      "title": "Develop Mobile-Specific Content Strategy",
-      "description": "With only 4 mobile clicks vs 8 desktop, optimize mobile user experience and create mobile-friendly content formats. Consider mobile-specific landing pages for lead generation.",
-      "expectedImpact": "Improve mobile engagement and capture additional 20-30% mobile traffic",
+      "id": "24132f0a509a",
+      "title": "Enhance Mobile Experience",
+      "description": "Improve mobile page speed and user experience since mobile accounts for significant search traffic. Optimize contact forms and lead capture for mobile users.",
+      "expectedImpact": "Increase mobile conversion rate and improve mobile search rankings",
       "priority": "low",
-      "firstSeen": "2026-04-25",
-      "lastSeen": "2026-04-25",
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26",
       "timesRepeated": 1,
       "status": "open"
     }
