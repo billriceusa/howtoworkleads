@@ -1,0 +1,164 @@
+{
+  "runDate": "2026-04-26T06:02:17.133Z",
+  "weekStartDate": "2026-04-27",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong coverage across all five pillars with excellent vertical-specific content (90 published posts). We've built comprehensive guides for major industries like insurance, mortgage, solar, and home services, plus detailed CRM reviews and compliance guidance. However, we have gaps in advanced lead management tactics, lead vendor relationship management, and emerging AI/automation trends. The 26 unpublished briefs represent solid opportunities, particularly around lead scoring, pipeline management, and ROI tracking that our ICP desperately needs.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and lead types but lacks strategic guidance on working leads effectively. AgedLeadSales.com covers aged lead basics but misses broader lead management and multi-channel strategies. We have clear competitive advantages in our comprehensive vertical coverage and practical implementation guides. Key opportunity areas include lead data analysis, vendor performance optimization, and advanced automation workflows that neither competitor addresses adequately.",
+    "newOpportunities": [
+      "Lead data enrichment and verification strategies",
+      "Multi-vendor lead portfolio management",
+      "Advanced lead recycling and reactivation campaigns",
+      "Lead attribution modeling for multi-touch campaigns",
+      "Compliance automation and monitoring systems"
+    ],
+    "trendingTopics": [
+      "AI-powered lead qualification",
+      "Multi-channel attribution tracking",
+      "Automated compliance monitoring",
+      "Lead data privacy regulations",
+      "Performance-based vendor contracts"
+    ],
+    "recommendedUpdates": [
+      "Expand CRM automation content with specific workflow templates",
+      "Create more industry-specific compliance guides",
+      "Develop advanced analytics and reporting content",
+      "Add more vendor negotiation and management content"
+    ]
+  },
+  "articlesCreated": [
+    {
+      "title": "Pipeline Management Framework: Never Lose Track of a Lead",
+      "slug": "pipeline-management-framework-leads",
+      "publishDate": "2026-04-27",
+      "primaryKeyword": "pipeline management",
+      "pillar": "LEAD MANAGEMENT"
+    },
+    {
+      "title": "Closing Techniques for Internet Leads: 10 Methods That Work",
+      "slug": "closing-techniques-internet-leads",
+      "publishDate": "2026-04-29",
+      "primaryKeyword": "closing techniques",
+      "pillar": "SALES PROCESS"
+    },
+    {
+      "title": "Lead Source ROI Tracking: Know Which Sources Make You Money",
+      "slug": "lead-source-roi-tracking-system",
+      "publishDate": "2026-05-01",
+      "primaryKeyword": "lead source ROI",
+      "pillar": "BUYING LEADS"
+    }
+  ],
+  "articlesSkipped": [],
+  "articlesFailed": [],
+  "newBriefs": [
+    {
+      "day": "Mon",
+      "publishDate": "2026-04-27",
+      "slug": "pipeline-management-framework-leads",
+      "title": "Pipeline Management Framework: Never Lose Track of a Lead",
+      "pillar": "LEAD MANAGEMENT",
+      "primaryKeyword": "pipeline management",
+      "secondaryKeywords": [
+        "lead pipeline",
+        "sales pipeline management",
+        "lead tracking system"
+      ],
+      "targetCategories": [
+        "lead-management",
+        "crm-systems"
+      ],
+      "wordCount": "2,800-3,200",
+      "competitiveAngle": "Comprehensive framework specifically for internet leads with stage-specific actions, unlike generic sales pipeline advice",
+      "outline": [
+        "Why Internet Leads Need Different Pipeline Management",
+        "The 7-Stage Internet Lead Pipeline Framework",
+        "Stage-Specific Actions and Triggers",
+        "Pipeline Velocity Metrics That Matter",
+        "Common Pipeline Leakage Points and Fixes",
+        "CRM Setup for Pipeline Tracking",
+        "Daily Pipeline Management Routine"
+      ],
+      "internalLinks": [
+        "/blog/crm-automation-workflows",
+        "/blog/lead-scoring-models",
+        "/guides/crm-setup-guide"
+      ]
+    },
+    {
+      "day": "Wed",
+      "publishDate": "2026-04-29",
+      "slug": "closing-techniques-internet-leads",
+      "title": "Closing Techniques for Internet Leads: 10 Methods That Work",
+      "pillar": "SALES PROCESS",
+      "primaryKeyword": "closing techniques",
+      "secondaryKeywords": [
+        "sales closing methods",
+        "internet lead closing",
+        "lead conversion techniques"
+      ],
+      "targetCategories": [
+        "sales-process",
+        "lead-management"
+      ],
+      "wordCount": "3,000-3,500",
+      "competitiveAngle": "Internet lead-specific closing techniques addressing unique objections and buyer psychology of online inquirers",
+      "outline": [
+        "Why Internet Leads Require Different Closing Approaches",
+        "The Assumption Close for Warm Internet Leads",
+        "The Urgency Close for Time-Sensitive Offers",
+        "The Comparison Close for Competitive Markets",
+        "The Trial Close for Hesitant Prospects",
+        "The Summary Close for Complex Products",
+        "The Objection-Based Close",
+        "The Referral Close",
+        "The Follow-Up Close for Aged Leads",
+        "The Education Close for Complex Sales",
+        "The Partnership Close",
+        "Timing Your Close Attempts",
+        "Post-Close Follow-Through"
+      ],
+      "internalLinks": [
+        "/blog/objection-handling-scripts",
+        "/blog/appointment-setting-scripts",
+        "/guides/sales-process"
+      ]
+    },
+    {
+      "day": "Fri",
+      "publishDate": "2026-05-01",
+      "slug": "lead-source-roi-tracking-system",
+      "title": "Lead Source ROI Tracking: Know Which Sources Make You Money",
+      "pillar": "BUYING LEADS",
+      "primaryKeyword": "lead source ROI",
+      "secondaryKeywords": [
+        "lead ROI tracking",
+        "lead source analysis",
+        "lead vendor ROI"
+      ],
+      "targetCategories": [
+        "buying-leads",
+        "crm-systems"
+      ],
+      "wordCount": "2,500-3,000",
+      "competitiveAngle": "Complete ROI tracking system with specific metrics and formulas for internet lead buyers, not just generic marketing ROI",
+      "outline": [
+        "The True Cost of Lead Sources Beyond Purchase Price",
+        "Essential ROI Metrics for Lead Buyers",
+        "Setting Up ROI Tracking in Your CRM",
+        "Lead Source Attribution Models",
+        "Calculating Lifetime Value from Lead Sources",
+        "Comparing Vendor Performance Accurately",
+        "ROI Reporting Dashboards That Drive Decisions",
+        "When to Cut Underperforming Sources",
+        "Negotiating Better Terms Based on ROI Data"
+      ],
+      "internalLinks": [
+        "/blog/aged-lead-vendor-comparison",
+        "/blog/lead-quality-metrics",
+        "/guides/buying-leads"
+      ]
+    }
+  ],
+  "nextWeekPlan": "Selected three existing briefs from editorial calendar that address current gaps: pipeline management (foundational lead management), closing techniques (advanced sales process), and ROI tracking (data-driven lead buying). These topics complement recent CRM and industry-specific content while avoiding overlap with published posts. All three address high-search-volume keywords our ICP actively seeks.",
+  "errors": []
+}
