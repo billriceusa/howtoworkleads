@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-26T12:01:37.234Z",
+  "lastUpdated": "2026-04-27T12:01:10.518Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "ba88fd040cee",
-      "title": "Expand IUL Content Hub Strategy",
-      "description": "Create comprehensive IUL lead buying guide, comparison tools, and vendor reviews. Add related content around IUL sales techniques, objection handling, and compliance. Target long-tail keywords like 'best iul lead companies 2024' and 'iul lead conversion tips'.",
-      "expectedImpact": "Could increase IUL-related organic traffic by 200-300% and establish authority in this high-performing niche",
+      "id": "65c39ff5cc4b",
+      "title": "Optimize for Session Duration Without Sacrificing Engagement",
+      "description": "Add internal linking widgets, related content sections, and progressive disclosure techniques to key pages like /customer-journey and /buy-iul-leads. Implement scroll-triggered content reveals and strategic CTAs to extend session time while maintaining the improved engagement rate.",
+      "expectedImpact": "15-25% increase in session duration while maintaining current engagement levels",
       "priority": "high",
-      "firstSeen": "2026-04-26",
-      "lastSeen": "2026-04-26",
+      "firstSeen": "2026-04-27",
+      "lastSeen": "2026-04-27",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "8bfb7929b087",
-      "title": "Optimize for AI Platform Discovery",
-      "description": "Restructure content with clear Q&A formats, add FAQ sections, and create definitive guides that AI platforms prefer to reference. Focus on conversational queries like 'how to work aged insurance leads effectively'.",
-      "expectedImpact": "Capture growing AI-driven search traffic, potentially adding 20-30% to referral traffic",
+      "id": "96c200564582",
+      "title": "Scale Direct Traffic Success with Attribution Tracking",
+      "description": "Implement UTM parameters for all offline marketing, add branded search campaigns, and create dedicated landing pages for direct traffic sources. Set up Google Analytics 4 custom events to better understand the 89 direct sessions source.",
+      "expectedImpact": "Better attribution and 20-30% improvement in direct traffic conversion tracking",
       "priority": "high",
-      "firstSeen": "2026-04-26",
-      "lastSeen": "2026-04-26",
+      "firstSeen": "2026-04-27",
+      "lastSeen": "2026-04-27",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +68,24 @@
       "status": "open"
     },
     {
-      "id": "1d5690e94b12",
-      "title": "Recover Lost Search Impressions",
-      "description": "Audit content for keyword cannibalization, refresh underperforming pages with updated content, and expand topic coverage around declining terms like 'analytical crm' and 'life insurance leads'.",
-      "expectedImpact": "Restore 200-300 daily impressions and improve overall search visibility",
+      "id": "ba88fd040cee",
+      "title": "Expand IUL Content Hub Strategy",
+      "description": "Create comprehensive IUL lead working guides, comparison charts, and case studies around the successful 'aged iul leads' query (position 5.6). Build topic clusters linking to the main /buy-iul-leads page to capture more of the 20+ monthly impressions for aged life insurance terms.",
+      "expectedImpact": "25-40% increase in IUL-related organic traffic and improved topical authority",
       "priority": "medium",
-      "firstSeen": "2026-04-26",
-      "lastSeen": "2026-04-26",
+      "firstSeen": "2026-04-27",
+      "lastSeen": "2026-04-27",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "4d08c288eff6",
-      "title": "Leverage Direct Traffic Momentum",
-      "description": "Add email capture forms to high-traffic pages, create lead magnets like 'Lead Conversion Calculator' or 'CRM Comparison Guide', and implement exit-intent popups to convert direct visitors.",
-      "expectedImpact": "Convert 15-20% of direct traffic into email subscribers for nurturing",
+      "id": "cbb6b2833727",
+      "title": "Recover Lost Impression Volume",
+      "description": "Audit recent content changes and technical issues that may have caused the 27.6% impression drop. Expand keyword targeting for analytical CRM terms (currently ranking 2.0-84.5) and create dedicated pages for high-impression, low-click queries like 'affordable life insurance leads' (30.9 position).",
+      "expectedImpact": "Recovery of 150-200 daily impressions and improved keyword coverage",
       "priority": "medium",
-      "firstSeen": "2026-04-26",
-      "lastSeen": "2026-04-26",
+      "firstSeen": "2026-04-27",
+      "lastSeen": "2026-04-27",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -101,13 +101,13 @@
       "status": "open"
     },
     {
-      "id": "24132f0a509a",
-      "title": "Enhance Mobile Experience",
-      "description": "Improve mobile page speed and user experience since mobile accounts for significant search traffic. Optimize contact forms and lead capture for mobile users.",
-      "expectedImpact": "Increase mobile conversion rate and improve mobile search rankings",
+      "id": "3ba35e8f1fb3",
+      "title": "Optimize Contact Page Conversion Flow",
+      "description": "The contact page received 41 views from 40 users, indicating high intent. Add lead magnets, progressive forms, and clear value propositions to convert this high-intent traffic into qualified leads.",
+      "expectedImpact": "10-15% improvement in contact form completion rates",
       "priority": "low",
-      "firstSeen": "2026-04-26",
-      "lastSeen": "2026-04-26",
+      "firstSeen": "2026-04-27",
+      "lastSeen": "2026-04-27",
       "timesRepeated": 1,
       "status": "open"
     }
