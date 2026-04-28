@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T12:01:10.518Z",
+  "lastUpdated": "2026-04-28T12:01:03.286Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "65c39ff5cc4b",
-      "title": "Optimize for Session Duration Without Sacrificing Engagement",
-      "description": "Add internal linking widgets, related content sections, and progressive disclosure techniques to key pages like /customer-journey and /buy-iul-leads. Implement scroll-triggered content reveals and strategic CTAs to extend session time while maintaining the improved engagement rate.",
-      "expectedImpact": "15-25% increase in session duration while maintaining current engagement levels",
+      "id": "46db617c1059",
+      "title": "Capitalize on IUL Leads Search Momentum",
+      "description": "Create comprehensive IUL lead buying guides, comparison charts, and vendor reviews targeting 'aged IUL leads' and related queries. Add internal linking from the high-performing IUL leads page to related content. Develop FAQ sections addressing common IUL lead concerns.",
+      "expectedImpact": "Could increase organic clicks by 200-300% given current strong position 6.8 ranking",
       "priority": "high",
-      "firstSeen": "2026-04-27",
-      "lastSeen": "2026-04-27",
+      "firstSeen": "2026-04-28",
+      "lastSeen": "2026-04-28",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "96c200564582",
-      "title": "Scale Direct Traffic Success with Attribution Tracking",
-      "description": "Implement UTM parameters for all offline marketing, add branded search campaigns, and create dedicated landing pages for direct traffic sources. Set up Google Analytics 4 custom events to better understand the 89 direct sessions source.",
-      "expectedImpact": "Better attribution and 20-30% improvement in direct traffic conversion tracking",
+      "id": "d6c17f42de41",
+      "title": "Optimize Homepage for Lead Generation",
+      "description": "Since homepage receives 71 views (58% of total), add clear lead magnets, email capture forms, and prominent calls-to-action for lead buying guides. Create personalized pathways for different sales professional types (insurance, solar, mortgage).",
+      "expectedImpact": "Could improve conversion rate by 25-40% given high direct traffic volume",
       "priority": "high",
-      "firstSeen": "2026-04-27",
-      "lastSeen": "2026-04-27",
+      "firstSeen": "2026-04-28",
+      "lastSeen": "2026-04-28",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +68,35 @@
       "status": "open"
     },
     {
-      "id": "ba88fd040cee",
-      "title": "Expand IUL Content Hub Strategy",
-      "description": "Create comprehensive IUL lead working guides, comparison charts, and case studies around the successful 'aged iul leads' query (position 5.6). Build topic clusters linking to the main /buy-iul-leads page to capture more of the 20+ monthly impressions for aged life insurance terms.",
-      "expectedImpact": "25-40% increase in IUL-related organic traffic and improved topical authority",
+      "id": "77c4fec3e8f2",
+      "title": "Expand Customer Journey Content Hub",
+      "description": "The customer journey page shows perfect engagement (42 views, 42 users). Create a content series around B2C sales processes, lead nurturing stages, and conversion optimization specifically for internet leads.",
+      "expectedImpact": "Could increase page views per session by 30-50% and extend session duration",
       "priority": "medium",
-      "firstSeen": "2026-04-27",
-      "lastSeen": "2026-04-27",
+      "firstSeen": "2026-04-28",
+      "lastSeen": "2026-04-28",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "cbb6b2833727",
-      "title": "Recover Lost Impression Volume",
-      "description": "Audit recent content changes and technical issues that may have caused the 27.6% impression drop. Expand keyword targeting for analytical CRM terms (currently ranking 2.0-84.5) and create dedicated pages for high-impression, low-click queries like 'affordable life insurance leads' (30.9 position).",
-      "expectedImpact": "Recovery of 150-200 daily impressions and improved keyword coverage",
+      "id": "903ea21cdc64",
+      "title": "Develop CRM System Content Strategy",
+      "description": "Multiple CRM-related queries show strong impressions but low clicks. Create comparison guides, implementation checklists, and ROI calculators for CRM systems tailored to lead-based sales teams.",
+      "expectedImpact": "Could capture 15-20 additional organic clicks monthly from CRM queries",
       "priority": "medium",
-      "firstSeen": "2026-04-27",
-      "lastSeen": "2026-04-27",
+      "firstSeen": "2026-04-28",
+      "lastSeen": "2026-04-28",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8a80106a2526",
+      "title": "Implement Email Capture for Direct Traffic",
+      "description": "With 91 direct sessions indicating strong brand awareness, implement exit-intent popups, content upgrades, and newsletter signups to capture this engaged audience for nurturing.",
+      "expectedImpact": "Could build email list by 20-30 subscribers weekly from direct traffic",
+      "priority": "medium",
+      "firstSeen": "2026-04-28",
+      "lastSeen": "2026-04-28",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -101,13 +112,13 @@
       "status": "open"
     },
     {
-      "id": "3ba35e8f1fb3",
-      "title": "Optimize Contact Page Conversion Flow",
-      "description": "The contact page received 41 views from 40 users, indicating high intent. Add lead magnets, progressive forms, and clear value propositions to convert this high-intent traffic into qualified leads.",
-      "expectedImpact": "10-15% improvement in contact form completion rates",
+      "id": "53be460163ad",
+      "title": "Optimize Contact Page for Lead Generation",
+      "description": "Contact page receives 41 views but may not be optimized for lead generation. Add consultation booking, lead audit offers, or free resources to convert information-seekers into leads.",
+      "expectedImpact": "Could generate 5-10 additional qualified leads monthly",
       "priority": "low",
-      "firstSeen": "2026-04-27",
-      "lastSeen": "2026-04-27",
+      "firstSeen": "2026-04-28",
+      "lastSeen": "2026-04-28",
       "timesRepeated": 1,
       "status": "open"
     }
