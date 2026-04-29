@@ -34,7 +34,7 @@ export const landingPageQuery = groq`
         }
       }
     },
-    relatedPages[]-> {
+    relatedPages[defined(@->)]-> {
       _id,
       title,
       slug,
@@ -153,7 +153,7 @@ export const blogPostQuery = groq`
     excerpt,
     mainImage,
     content,
-    categories[]-> {
+    categories[defined(@->)]-> {
       _id,
       title,
       slug
@@ -177,7 +177,7 @@ export const allBlogPostsQuery = groq`
     slug,
     excerpt,
     mainImage,
-    categories[]-> {
+    categories[defined(@->)]-> {
       title,
       slug
     },
