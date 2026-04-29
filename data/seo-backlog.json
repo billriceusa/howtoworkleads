@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-04-22T10:01:50.606Z",
+  "lastUpdated": "2026-04-29T10:00:09.661Z",
   "items": [
     {
       "id": "finding-001",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 2,
       "category": "content-quality",
@@ -19,12 +19,12 @@
         "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-04-22"
+      "notes": "Re-identified in audit 2026-04-29"
     },
     {
       "id": "finding-002",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 2,
       "category": "content-quality",
@@ -38,12 +38,12 @@
         "/blog/tcpa-compliance-lead-buyers",
         "/blog/salesforce-leads-review"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-003",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 3,
       "category": "e-e-a-t",
@@ -57,12 +57,12 @@
         "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals",
         "/blog/aged-leads"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-004",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 3,
       "category": "content-authority",
@@ -76,12 +76,12 @@
         "/blog/mortgage-lead-conversion-playbook",
         "/blog/multi-channel-outreach-strategy"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-006",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 3,
       "category": "content-quality",
@@ -95,12 +95,12 @@
         "/blog/fcc-consent-rule-lead-buying",
         "/blog/state-by-state-lead-compliance-guide"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-007",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 3,
       "category": "internal-linking",
@@ -114,12 +114,12 @@
         "/categories/lead-management",
         "/categories/industry-strategies"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-008",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 3,
       "category": "technical-seo",
@@ -133,12 +133,12 @@
         "/blog/*",
         "/categories/*"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-010",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 4,
       "category": "structured-data",
@@ -153,12 +153,12 @@
         "/blog/how-to-evaluate-lead-vendor"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-04-22"
+      "notes": "Re-identified in audit 2026-04-29"
     },
     {
       "id": "finding-009",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 4,
       "category": "content-quality",
@@ -172,12 +172,12 @@
         "/blog/objection-handling-scripts",
         "/blog/text-messaging-compliance-guide"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-010",
-      "createdAt": "2026-04-22T10:01:50.606Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "createdAt": "2026-04-29T10:00:09.661Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 4,
       "category": "structured-data",
@@ -190,12 +190,12 @@
         "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals",
         "/blog/how-to-evaluate-lead-vendor"
       ],
-      "sourceAudit": "2026-04-22"
+      "sourceAudit": "2026-04-29"
     },
     {
       "id": "finding-011",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "open",
       "priority": 4,
       "category": "indexing",
@@ -208,12 +208,12 @@
         "/sitemap.xml"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-04-22"
+      "notes": "Re-identified in audit 2026-04-29"
     },
     {
       "id": "finding-002",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 2,
       "category": "content-quality",
@@ -228,12 +228,12 @@
         "/blog/sms-templates-home-services-leads"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-003",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 3,
       "category": "content-quality",
@@ -248,12 +248,12 @@
         "/blog/text-messaging-compliance-guide"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-004",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 3,
       "category": "structured-data",
@@ -266,12 +266,12 @@
         "All blog posts with Article schema"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-005",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 3,
       "category": "e-e-a-t",
@@ -285,12 +285,12 @@
         "/author/bill-rice"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-006",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 3,
       "category": "content-authority",
@@ -304,12 +304,12 @@
         "/blog/aged-lead-conversion-rates"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-008",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 3,
       "category": "internal-linking",
@@ -322,12 +322,12 @@
         "All blog posts and category pages"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-009",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 3,
       "category": "content-quality",
@@ -342,12 +342,12 @@
         "/blog/fcc-consent-rule-lead-buying"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     },
     {
       "id": "finding-007",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-04-22T10:01:50.606Z",
+      "updatedAt": "2026-04-29T10:00:09.661Z",
       "status": "completed",
       "priority": 4,
       "category": "technical-seo",
@@ -360,7 +360,7 @@
         "Site-wide performance monitoring needed"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-04-22 — appears resolved"
+      "notes": "Not found in audit 2026-04-29 — appears resolved"
     }
   ]
 }
