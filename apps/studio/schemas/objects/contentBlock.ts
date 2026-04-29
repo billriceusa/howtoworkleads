@@ -92,6 +92,8 @@ export default defineType({
             },
           ],
         },
+        { type: 'table' },
+        { type: 'codeBlock' },
       ],
     }),
   ],

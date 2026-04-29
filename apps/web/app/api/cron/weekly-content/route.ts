@@ -8,12 +8,17 @@ import {
 import { commitFilesToGitHub } from "@/lib/cron/git-commit";
 import { recordCronRun } from "@/lib/cron/heartbeat";
 import { sendWeeklyReport } from "@/lib/cron/notify";
+import {
+  generateAndUploadFeaturedImage,
+  patchDocumentImage,
+} from "@/lib/featured-image";
 import type {
   WeeklyReport,
   GeneratedArticle,
   PublishedArticle,
   SkippedArticle,
   FailedArticle,
+  ImageOutcomeReport,
   SEOAnalysis,
   WeeklyBrief,
 } from "@/lib/cron/types";
@@ -64,6 +69,8 @@ export async function GET(request: Request) {
   const articlesCreated: PublishedArticle[] = [];
   const articlesSkipped: SkippedArticle[] = [];
   const articlesFailed: FailedArticle[] = [];
+  const imageOutcomes: ImageOutcomeReport[] = [];
+  const seenPhotoIds = new Set<string>();
   let analysis: SEOAnalysis | null = null;
   let briefs: WeeklyBrief[] = [];
   let nextWeekPlan = "";
@@ -139,6 +146,48 @@ export async function GET(request: Request) {
               title: article.brief.title,
             });
             console.log(`[Publish] Created: ${article.brief.title}`);
+
+            try {
+              const imgOutcome = await generateAndUploadFeaturedImage(
+                article.brief.title,
+                article.brief.pillar,
+                { excludePhotoIds: seenPhotoIds }
+              );
+              if (imgOutcome.status === "created") {
+                seenPhotoIds.add(imgOutcome.photoId);
+                await patchDocumentImage(
+                  outcome.id,
+                  imgOutcome.assetId,
+                  article.brief.title,
+                  "mainImage"
+                );
+                imageOutcomes.push({
+                  title: article.brief.title,
+                  status: "created",
+                  photographer: imgOutcome.photographer,
+                });
+                console.log(
+                  `[Image] Attached to ${article.brief.title} (photo by ${imgOutcome.photographer})`
+                );
+              } else {
+                imageOutcomes.push({
+                  title: article.brief.title,
+                  status: imgOutcome.reason,
+                  detail: imgOutcome.detail,
+                });
+                console.warn(
+                  `[Image] Skipped for ${article.brief.title}: ${imgOutcome.reason}${imgOutcome.detail ? ` (${imgOutcome.detail})` : ""}`
+                );
+              }
+            } catch (imgErr) {
+              const detail = imgErr instanceof Error ? imgErr.message : String(imgErr);
+              imageOutcomes.push({
+                title: article.brief.title,
+                status: "upload-failed",
+                detail,
+              });
+              console.error(`[Image] Failed for ${article.brief.title}:`, imgErr);
+            }
           } else {
             articlesSkipped.push({
               title: article.brief.title,
@@ -170,6 +219,7 @@ export async function GET(request: Request) {
     articlesCreated,
     articlesSkipped,
     articlesFailed,
+    imageOutcomes,
     newBriefs: briefs,
     nextWeekPlan,
     errors,

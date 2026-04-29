@@ -71,17 +71,23 @@ export async function POST(req: NextRequest) {
 
   console.log(`Generating featured image for "${title}" (${_type})...`)
 
-  const result = await generateAndUploadFeaturedImage(title, category)
-  if (!result) {
-    return NextResponse.json({ error: 'Failed to generate image' }, { status: 500 })
+  const outcome = await generateAndUploadFeaturedImage(title, category)
+  if (outcome.status !== 'created') {
+    return NextResponse.json(
+      {
+        error: `Failed to generate image: ${outcome.reason}${outcome.detail ? ` — ${outcome.detail}` : ''}`,
+      },
+      { status: outcome.reason === 'rate-limited' ? 429 : 500 }
+    )
   }
 
   // Patch the document
-  await patchDocumentImage(_id, result._id, title, fieldName)
+  await patchDocumentImage(_id, outcome.assetId, title, fieldName)
 
   return NextResponse.json({
     success: true,
-    assetId: result._id,
-    assetUrl: result.url,
+    assetId: outcome.assetId,
+    assetUrl: outcome.url,
+    photographer: outcome.photographer,
   })
 }

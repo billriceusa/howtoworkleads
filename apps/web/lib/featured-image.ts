@@ -38,11 +38,28 @@ interface UnsplashPhoto {
   tags?: Array<{ title: string }>
 }
 
+/** Distinguish 403/429 rate-limit responses from genuine empty results. */
+export class UnsplashRateLimitError extends Error {
+  status: number
+  constructor(status: number) {
+    super(`Unsplash rate limited (HTTP ${status})`)
+    this.status = status
+  }
+}
+
 /**
  * Search Unsplash for professional photographs featuring people.
  * Fetches multiple candidates, scores each, returns the best match.
+ *
+ * Throws UnsplashRateLimitError on 403/429 so callers can distinguish
+ * rate-limiting from empty results. Accepts excludePhotoIds for batch
+ * dedup (e.g. cron publishing 3 articles in one run shouldn't get the
+ * same top-ranked photo on every record).
  */
-export async function searchUnsplash(query: string): Promise<UnsplashPhoto | null> {
+export async function searchUnsplash(
+  query: string,
+  excludePhotoIds: Set<string> = new Set(),
+): Promise<UnsplashPhoto | null> {
   const url = new URL('https://api.unsplash.com/search/photos')
   url.searchParams.set('query', query)
   url.searchParams.set('per_page', '20')
@@ -53,6 +70,9 @@ export async function searchUnsplash(query: string): Promise<UnsplashPhoto | nul
     headers: { Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}` },
   })
 
+  if (res.status === 403 || res.status === 429) {
+    throw new UnsplashRateLimitError(res.status)
+  }
   if (!res.ok) {
     console.error(`Unsplash API error: ${res.status} ${res.statusText}`)
     return null
@@ -63,7 +83,11 @@ export async function searchUnsplash(query: string): Promise<UnsplashPhoto | nul
 
   if (photos.length === 0) return null
 
-  const scored = photos.map((photo) => ({
+  const eligible = photos.filter((p) => !excludePhotoIds.has(p.id))
+  // If everything is already used, fall back to the full set.
+  const candidates = eligible.length > 0 ? eligible : photos
+
+  const scored = candidates.map((photo) => ({
     photo,
     score: scorePhoto(photo),
   }))
@@ -71,7 +95,7 @@ export async function searchUnsplash(query: string): Promise<UnsplashPhoto | nul
   scored.sort((a, b) => b.score - a.score)
 
   const best = scored[0].photo
-  console.log(`  Selected photo score: ${scored[0].score} (of ${photos.length} candidates)`)
+  console.log(`  Selected photo score: ${scored[0].score} (of ${candidates.length} candidates)`)
 
   // Trigger Unsplash download endpoint (required by API guidelines)
   fetch(best.links.download_location, {
@@ -79,6 +103,31 @@ export async function searchUnsplash(query: string): Promise<UnsplashPhoto | nul
   }).catch(() => {})
 
   return best
+}
+
+/**
+ * One-retry wrapper. Retries once after delayMs on transient failures
+ * (rate limits, 5xx, network blips). Doesn't retry on auth or
+ * permanent errors.
+ */
+async function withRetry<T>(fn: () => Promise<T>, delayMs = 2000): Promise<T> {
+  try {
+    return await fn()
+  } catch (e: unknown) {
+    const err = e as Error & { status?: number }
+    const isTransient =
+      err instanceof UnsplashRateLimitError ||
+      err.status === 429 ||
+      (typeof err.status === 'number' && err.status >= 500) ||
+      err.name === 'FetchError' ||
+      err.message?.includes('ECONNRESET') ||
+      err.message?.includes('ETIMEDOUT') ||
+      err.message?.includes('network')
+
+    if (!isTransient) throw e
+    await new Promise((r) => setTimeout(r, delayMs))
+    return await fn()
+  }
 }
 
 /**
@@ -194,11 +243,15 @@ function createYellowAccent(width: number, height: number): Buffer {
  * 4. Composite white dot grid + yellow accent rectangle
  * 5. Return the final image buffer (JPEG)
  */
-export async function generateBrandedImage(searchQuery: string): Promise<{
+export async function generateBrandedImage(
+  searchQuery: string,
+  excludePhotoIds: Set<string> = new Set(),
+): Promise<{
   buffer: Buffer
+  photoId: string
   credit: { name: string; url: string } | null
 } | null> {
-  const photo = await searchUnsplash(searchQuery)
+  const photo = await searchUnsplash(searchQuery, excludePhotoIds)
   if (!photo) return null
 
   // Download at optimal size, crop to faces
@@ -225,38 +278,98 @@ export async function generateBrandedImage(searchQuery: string): Promise<{
 
   return {
     buffer,
+    photoId: photo.id,
     credit: { name: photo.user.name, url: photo.user.links.html },
   }
 }
 
 /**
- * Generate a branded featured image and upload it to Sanity.
- * Returns the Sanity image asset document, or null on failure.
+ * Discriminated outcome type. Callers branch on `status` and, for skips,
+ * on `reason`. The `photoId` returned with `created` lets a batch caller
+ * add it to its dedup set so subsequent posts in the batch get a
+ * different photo.
+ */
+export type FeaturedImageOutcome =
+  | {
+      status: 'created'
+      assetId: string
+      url: string
+      photoId: string
+      photographer: string
+    }
+  | {
+      status: 'skipped'
+      reason: 'no-key' | 'no-results' | 'rate-limited' | 'upload-failed'
+      detail?: string
+    }
+
+export interface GenerateOptions {
+  /** Photos already used in this batch — will be excluded from selection. */
+  excludePhotoIds?: Set<string>
+}
+
+/**
+ * Generate, brand, and upload a featured image to Sanity. Returns a
+ * discriminated outcome instead of throwing on common failures so the
+ * cron can log outcomes without breaking the publish flow.
  */
 export async function generateAndUploadFeaturedImage(
   title: string,
   category: string,
-): Promise<{ _id: string; url: string } | null> {
+  options: GenerateOptions = {},
+): Promise<FeaturedImageOutcome> {
+  if (!UNSPLASH_ACCESS_KEY) {
+    return { status: 'skipped', reason: 'no-key' }
+  }
+
+  const exclude = options.excludePhotoIds || new Set<string>()
   const searchQuery = buildSearchQuery(title, category)
   console.log(`  Unsplash query: "${searchQuery}"`)
 
-  const result = await generateBrandedImage(searchQuery)
+  let result: Awaited<ReturnType<typeof generateBrandedImage>> = null
+  try {
+    result = await withRetry(() => generateBrandedImage(searchQuery, exclude))
+  } catch (e: unknown) {
+    if (e instanceof UnsplashRateLimitError) {
+      return { status: 'skipped', reason: 'rate-limited', detail: e.message }
+    }
+    return {
+      status: 'skipped',
+      reason: 'upload-failed',
+      detail: (e as Error).message,
+    }
+  }
+
   if (!result) {
-    console.error(`  No Unsplash result for "${searchQuery}"`)
-    return null
+    return { status: 'skipped', reason: 'no-results' }
   }
 
-  // Upload to Sanity
-  const asset = await writeClient.assets.upload('image', result.buffer, {
-    filename: `featured-${slugify(title)}.jpg`,
-    contentType: 'image/jpeg',
-  })
+  try {
+    const asset = await withRetry(() =>
+      writeClient.assets.upload('image', result.buffer, {
+        filename: `featured-${slugify(title)}.jpg`,
+        contentType: 'image/jpeg',
+      }),
+    )
 
-  if (result.credit) {
-    console.log(`  Photo credit: ${result.credit.name} (${result.credit.url})`)
+    if (result.credit) {
+      console.log(`  Photo credit: ${result.credit.name} (${result.credit.url})`)
+    }
+
+    return {
+      status: 'created',
+      assetId: asset._id,
+      url: asset.url,
+      photoId: result.photoId,
+      photographer: result.credit?.name || 'Unsplash',
+    }
+  } catch (e: unknown) {
+    return {
+      status: 'skipped',
+      reason: 'upload-failed',
+      detail: (e as Error).message,
+    }
   }
-
-  return { _id: asset._id, url: asset.url }
 }
 
 /**

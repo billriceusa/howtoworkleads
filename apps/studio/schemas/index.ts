@@ -14,6 +14,8 @@ import faqSection from './objects/faqSection'
 import comparisonTable from './objects/comparisonTable'
 import testimonial from './objects/testimonial'
 import leadMagnet from './objects/leadMagnet'
+import { table, tableRow } from './objects/table'
+import codeBlock from './objects/codeBlock'
 
 export const schemaTypes = [
   // Documents
@@ -31,4 +33,7 @@ export const schemaTypes = [
   comparisonTable,
   testimonial,
   leadMagnet,
+  table,
+  tableRow,
+  codeBlock,
 ]
