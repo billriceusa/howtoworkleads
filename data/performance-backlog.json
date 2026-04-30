@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-29T12:01:35.777Z",
+  "lastUpdated": "2026-04-30T12:01:09.930Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -24,24 +24,24 @@
       "status": "open"
     },
     {
-      "id": "048b79e3bf3b",
-      "title": "Optimize Content for Session Duration Extension",
-      "description": "Add internal linking within the first 30 seconds of page load, implement related content widgets, and create content clusters around high-performing topics like customer journey. Focus on the homepage and customer journey page which are getting traffic but may need better engagement hooks.",
-      "expectedImpact": "Increase average session duration by 20-30% and pageviews per session",
+      "id": "40e26cfcf218",
+      "title": "Optimize High-Performing IUL Content for Search",
+      "description": "The /buy-iul-leads page ranks at position 8.7 and receives clicks but has low traffic volume. Create supporting content around 'aged iul leads' (position 7.7) and 'affordable aged life leads' (position 9.0) queries. Develop comprehensive IUL lead buying guides, comparison charts, and FAQ sections.",
+      "expectedImpact": "Could increase organic clicks by 200-300% given strong existing positions",
       "priority": "high",
-      "firstSeen": "2026-04-29",
-      "lastSeen": "2026-04-29",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-04-30",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "d818fed77aeb",
-      "title": "Capitalize on IUL Lead Query Dominance",
-      "description": "Create comprehensive IUL lead buying guides, comparison content, and FAQ pages targeting 'aged iul leads' (position 7.1) and related terms. Expand content around IUL lead generation, pricing, and vendor comparisons.",
-      "expectedImpact": "Increase organic clicks by 40-50% for IUL-related terms",
+      "id": "b7cad2e2266f",
+      "title": "Extend Session Duration Through Content Depth",
+      "description": "Add 'Related Articles' sections, embedded calculators, and downloadable resources to key pages. Focus on the customer journey page (40 views) by adding interactive elements, case studies, and step-by-step implementation guides.",
+      "expectedImpact": "Target 25% increase in session duration while maintaining engagement rate",
       "priority": "high",
-      "firstSeen": "2026-04-29",
-      "lastSeen": "2026-04-29",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-04-30",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -68,24 +68,35 @@
       "status": "open"
     },
     {
-      "id": "7d3bd3e8f81c",
-      "title": "Diversify Organic Traffic Sources",
-      "description": "Launch targeted content marketing for insurance sales process keywords where you rank well but aren't getting clicks. Create pillar content around 'sales process' (position 82 needs work) and 'crm systems' (position 5.2 is excellent).",
-      "expectedImpact": "Reduce direct traffic dependency from 75% to 60%",
+      "id": "9856424e09aa",
+      "title": "Capitalize on SMS Templates Success",
+      "description": "The SMS templates page ranks at position 5.5 with clicks. Create a comprehensive SMS template library with industry-specific variations (insurance, solar, mortgage) and A/B testing guides. Build internal linking from high-traffic pages.",
+      "expectedImpact": "Could become a top-5 landing page and improve overall site authority",
       "priority": "medium",
-      "firstSeen": "2026-04-29",
-      "lastSeen": "2026-04-29",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-04-30",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "677b1ec411f6",
-      "title": "Optimize for ChatGPT and AI Discovery",
-      "description": "Structure content with clear Q&A formats, add FAQ sections, and optimize for conversational queries since ChatGPT is driving 7 sessions. Create content that answers specific insurance lead questions directly.",
-      "expectedImpact": "Increase AI-driven referral traffic by 100-150%",
+      "id": "302763593357",
+      "title": "Develop ChatGPT Discovery Strategy",
+      "description": "Since ChatGPT is driving 7 sessions, optimize content for AI discovery by adding clear, structured answers to common sales questions. Create FAQ sections and ensure content directly answers 'how to' queries that AI platforms commonly reference.",
+      "expectedImpact": "Potential to double AI-referred traffic within 30 days",
       "priority": "medium",
-      "firstSeen": "2026-04-29",
-      "lastSeen": "2026-04-29",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-04-30",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c61bbfb55f42",
+      "title": "Build Aged Leads Content Cluster",
+      "description": "Multiple aged lead queries show strong positions (aged life insurance leads at 17.4, aged health insurance leads at 21.5). Create a comprehensive aged leads section with vendor comparisons, pricing guides, and ROI calculators.",
+      "expectedImpact": "Could capture 50+ additional monthly clicks from aged lead queries",
+      "priority": "medium",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-04-30",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -103,11 +114,11 @@
     {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
-      "description": "Mobile generates only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize mobile page speed, improve mobile UX for lead buying pages, and ensure mobile-friendly content formatting.",
-      "expectedImpact": "Increase mobile organic clicks by 50-75%",
+      "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
+      "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "low",
-      "firstSeen": "2026-04-29",
-      "lastSeen": "2026-04-29",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-04-30",
       "timesRepeated": 1,
       "status": "open"
     }
