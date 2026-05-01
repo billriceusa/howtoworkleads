@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-30T12:01:09.930Z",
+  "lastUpdated": "2026-05-01T12:01:01.298Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -43,6 +43,39 @@
       "firstSeen": "2026-04-30",
       "lastSeen": "2026-04-30",
       "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "5bc8f6d527cd",
+      "title": "Optimize High-Ranking Pages for Better CTR",
+      "description": "Focus on the IUL leads page (pos 8.6) and SMS templates page (pos 6.1) by improving title tags and meta descriptions to include more compelling CTAs and benefit-focused language. Test titles like 'Buy Premium IUL Leads - Qualified Prospects Ready to Convert' instead of generic product names.",
+      "expectedImpact": "15-25% increase in organic clicks from existing rankings",
+      "priority": "high",
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-05-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "bd69a27cd4a6",
+      "title": "Extend Session Duration with Internal Linking Strategy",
+      "description": "Add contextual internal links within the customer journey content (34 views) to related lead buying guides and CRM resources. Create content hubs that guide users through a logical progression from education to lead purchasing decisions.",
+      "expectedImpact": "20-30% increase in session duration and 15% boost in pageviews per session",
+      "priority": "high",
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-05-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "e5837806021a",
+      "title": "Improve Mobile Search Performance",
+      "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
+      "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
+      "priority": "medium",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-05-01",
+      "timesRepeated": 2,
       "status": "open"
     },
     {
@@ -101,6 +134,17 @@
       "status": "open"
     },
     {
+      "id": "27bc3e53d4de",
+      "title": "Capitalize on Aged Insurance Lead Query Opportunities",
+      "description": "Create dedicated landing pages for 'aged life insurance leads' (20 impressions, pos 18.8) and 'aged insurance leads' (14 impressions, pos 27.5) queries. These show commercial intent but aren't converting to clicks yet.",
+      "expectedImpact": "5-8 additional organic clicks per week from high-intent queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-05-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -112,13 +156,13 @@
       "status": "open"
     },
     {
-      "id": "e5837806021a",
-      "title": "Improve Mobile Search Performance",
-      "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
-      "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
+      "id": "0f5095144356",
+      "title": "Develop Email List from Direct Traffic Surge",
+      "description": "With 67 direct sessions indicating strong brand awareness, implement lead magnets on high-traffic pages like the customer journey content to capture emails for nurturing sequences.",
+      "expectedImpact": "10-15% email capture rate from direct traffic, building owned audience",
       "priority": "low",
-      "firstSeen": "2026-04-30",
-      "lastSeen": "2026-04-30",
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-05-01",
       "timesRepeated": 1,
       "status": "open"
     }
