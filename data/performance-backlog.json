@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-01T12:01:01.298Z",
+  "lastUpdated": "2026-05-02T12:00:57.866Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -64,6 +64,28 @@
       "priority": "high",
       "firstSeen": "2026-05-01",
       "lastSeen": "2026-05-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "49b597c08bbd",
+      "title": "Optimize High-Performing IUL Content for Search Expansion",
+      "description": "Create additional IUL-focused content targeting related keywords like 'best iul leads', 'iul lead generation', and 'iul sales training'. Build internal linking from the successful /buy-iul-leads page to new supporting content.",
+      "expectedImpact": "20-30% increase in IUL-related organic traffic within 60 days",
+      "priority": "high",
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "496e4fb59764",
+      "title": "Develop Customer Journey Content Series",
+      "description": "The customer journey page (32 views, 26 users) shows strong engagement. Create a comprehensive series covering each stage with downloadable resources, templates, and case studies for different lead types.",
+      "expectedImpact": "Increase average pages per session by 25% and improve lead magnet conversions",
+      "priority": "high",
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-02",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -145,6 +167,28 @@
       "status": "open"
     },
     {
+      "id": "d1a2b23d7d41",
+      "title": "Implement Search Impression Recovery Strategy",
+      "description": "Audit recent Google algorithm updates impact on aged insurance lead keywords. Refresh meta descriptions for top-ranking pages and add FAQ schemas to capture more SERP real estate.",
+      "expectedImpact": "15-20% recovery in search impressions within 30 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "de5b633bf9ae",
+      "title": "Capitalize on AI Platform Visibility",
+      "description": "Optimize content structure with clear headings, bullet points, and definitive answers that AI platforms prefer to reference. Add structured data markup to key educational pages.",
+      "expectedImpact": "Double AI platform referral traffic and improve brand authority",
+      "priority": "medium",
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -163,6 +207,17 @@
       "priority": "low",
       "firstSeen": "2026-05-01",
       "lastSeen": "2026-05-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "05c0a14404e1",
+      "title": "Enhance Contact Page Conversion Elements",
+      "description": "The contact page received 20 views from 20 users, indicating high intent. Add lead magnets, testimonials, and clear value propositions to convert visitors into leads.",
+      "expectedImpact": "10-15% improvement in contact form submissions",
+      "priority": "low",
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-02",
       "timesRepeated": 1,
       "status": "open"
     }
