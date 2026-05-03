@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-02T12:00:57.866Z",
+  "lastUpdated": "2026-05-03T12:01:25.415Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -86,6 +86,28 @@
       "priority": "high",
       "firstSeen": "2026-05-02",
       "lastSeen": "2026-05-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "2fd026111d7a",
+      "title": "Optimize High-Impression, Low-CTR Queries",
+      "description": "Focus on 'aged insurance leads' (13 impressions, 0 clicks, pos 27.8) and 'affordable life insurance leads' (8 impressions, 0 clicks, pos 32.1). Rewrite meta descriptions and titles for these pages to improve CTR from current 0.23% average.",
+      "expectedImpact": "Could increase clicks by 30-50% on high-impression queries",
+      "priority": "high",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "1334f6487b8b",
+      "title": "Expand Customer Journey Content Series",
+      "description": "The customer journey page is the #2 performer with strong engagement. Create related content around sales process stages, objection handling, and follow-up sequences to capture more of this high-performing topic cluster.",
+      "expectedImpact": "15-25% increase in organic traffic from sales process queries",
+      "priority": "high",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-03",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -189,6 +211,28 @@
       "status": "open"
     },
     {
+      "id": "0c0350521a3e",
+      "title": "Leverage AI Tool Recommendations",
+      "description": "Since ChatGPT is referring traffic, optimize content for AI consumption by adding clear, structured answers to common lead management questions. Create FAQ sections and bullet-point summaries.",
+      "expectedImpact": "Increase AI referral traffic by 2-3x over next 30 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "20d66a05507e",
+      "title": "Improve Search Console Coverage",
+      "description": "With only 1.4 clicks from 634.7 impressions, focus on long-tail insurance lead queries where you rank 15-25. Target 'aged final expense leads' (pos 30) and 'aged health insurance leads' (pos 21.5) with dedicated landing pages.",
+      "expectedImpact": "Double organic click volume within 60 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -218,6 +262,17 @@
       "priority": "low",
       "firstSeen": "2026-05-02",
       "lastSeen": "2026-05-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "e8d7d1a226b7",
+      "title": "Optimize Newsletter Engagement",
+      "description": "Newsletter traffic (8 sessions) shows good engagement. Add lead magnet CTAs to high-performing pages like the customer journey content to grow the email list and increase direct traffic.",
+      "expectedImpact": "20% increase in newsletter signups and return visits",
+      "priority": "low",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-03",
       "timesRepeated": 1,
       "status": "open"
     }
