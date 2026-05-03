@@ -1,0 +1,183 @@
+{
+  "runDate": "2026-05-03T06:02:37.085Z",
+  "weekStartDate": "2026-05-04",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong coverage across all five pillars with 90+ published posts, demonstrating comprehensive expertise in lead management and sales processes. We've built particularly strong authority in industry-specific guides (insurance, mortgage, solar, home services) and CRM systems, with solid coverage of compliance topics. However, we have gaps in advanced lead analytics, team management strategies, and emerging AI applications beyond basic follow-up. Our recent focus on vertical-specific 'how to work' guides has been smart for long-tail SEO but we need more strategic, high-level content that addresses business growth challenges.",
+    "competitiveInsights": "AgedLeadStore.com continues focusing on product promotion rather than strategic education, while AgedLeadSales.com remains narrow in scope. We have clear opportunities in advanced lead analytics and performance optimization that neither competitor addresses comprehensively. There's growing search volume around lead quality assessment tools, team scaling strategies, and ROI measurement beyond basic conversion rates. The compliance landscape is evolving rapidly with new state regulations and AI usage guidelines, creating content opportunities around emerging legal requirements and best practices.",
+    "newOpportunities": [
+      "Advanced lead analytics and KPI tracking beyond basic conversion rates",
+      "Team scaling and management strategies for growing lead operations",
+      "Emerging AI compliance requirements and ethical usage guidelines",
+      "State-specific lead generation regulations and compliance updates",
+      "Lead quality prediction models and early warning systems"
+    ],
+    "trendingTopics": [
+      "AI compliance in lead follow-up",
+      "Lead quality prediction and scoring",
+      "Team productivity and management systems",
+      "Advanced CRM analytics and reporting",
+      "State-level regulatory changes affecting lead buyers"
+    ],
+    "recommendedUpdates": [
+      "Prioritize advanced analytics and measurement content to differentiate from basic conversion advice",
+      "Develop more strategic business growth content for established lead buyers",
+      "Create compliance update series addressing new state regulations and AI usage"
+    ]
+  },
+  "articlesCreated": [
+    {
+      "title": "Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track",
+      "slug": "lead-quality-metrics-kpis-lead-buyers-track",
+      "publishDate": "2026-05-04",
+      "primaryKeyword": "lead quality metrics",
+      "pillar": "BUYING LEADS"
+    },
+    {
+      "title": "Pipeline Management Framework: Never Lose Track of a Lead",
+      "slug": "pipeline-management-framework-never-lose-track-lead",
+      "publishDate": "2026-05-06",
+      "primaryKeyword": "pipeline management",
+      "pillar": "LEAD MANAGEMENT"
+    },
+    {
+      "title": "Closing Techniques for Internet Leads: 10 Methods That Work",
+      "slug": "closing-techniques-internet-leads-10-methods-work",
+      "publishDate": "2026-05-08",
+      "primaryKeyword": "closing techniques",
+      "pillar": "SALES PROCESS"
+    }
+  ],
+  "articlesSkipped": [],
+  "articlesFailed": [],
+  "imageOutcomes": [
+    {
+      "title": "Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Pipeline Management Framework: Never Lose Track of a Lead",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Closing Techniques for Internet Leads: 10 Methods That Work",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    }
+  ],
+  "newBriefs": [
+    {
+      "day": "Mon",
+      "publishDate": "2026-05-04",
+      "slug": "lead-quality-metrics-kpis-lead-buyers-track",
+      "title": "Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track",
+      "pillar": "BUYING LEADS",
+      "primaryKeyword": "lead quality metrics",
+      "secondaryKeywords": [
+        "lead KPIs",
+        "lead performance metrics",
+        "lead quality assessment",
+        "lead buyer analytics"
+      ],
+      "targetCategories": [
+        "buying-leads",
+        "lead-management"
+      ],
+      "wordCount": "2,800-3,200",
+      "competitiveAngle": "Goes beyond basic conversion rates to advanced quality indicators that predict lead value and vendor performance",
+      "outline": [
+        "Why Basic Conversion Rates Don't Tell the Full Story",
+        "The 8 Essential Lead Quality KPIs",
+        "Contact Rate and Speed-to-Contact Metrics",
+        "Lead Age and Decay Rate Analysis",
+        "Source Quality Scoring Models",
+        "Vendor Performance Benchmarking",
+        "Setting Up Your Lead Quality Dashboard",
+        "Using Metrics to Negotiate Better Lead Pricing"
+      ],
+      "internalLinks": [
+        "/blog/aged-lead-conversion-rates",
+        "/blog/how-to-evaluate-lead-vendors",
+        "/guides/buying-aged-leads"
+      ]
+    },
+    {
+      "day": "Wed",
+      "publishDate": "2026-05-06",
+      "slug": "pipeline-management-framework-never-lose-track-lead",
+      "title": "Pipeline Management Framework: Never Lose Track of a Lead",
+      "pillar": "LEAD MANAGEMENT",
+      "primaryKeyword": "pipeline management",
+      "secondaryKeywords": [
+        "lead pipeline",
+        "sales pipeline management",
+        "lead tracking system",
+        "pipeline framework"
+      ],
+      "targetCategories": [
+        "lead-management",
+        "sales-process"
+      ],
+      "wordCount": "2,600-3,000",
+      "competitiveAngle": "Provides a systematic framework for pipeline management specific to internet leads, addressing unique challenges like lead aging and multi-source tracking",
+      "outline": [
+        "The Internet Lead Pipeline Challenge",
+        "The 5-Stage Pipeline Framework",
+        "Stage 1: Lead Intake and Initial Qualification",
+        "Stage 2: Active Pursuit and Contact Attempts",
+        "Stage 3: Engaged Prospects and Nurturing",
+        "Stage 4: Qualified Opportunities and Closing",
+        "Stage 5: Won/Lost Analysis and Follow-up",
+        "Pipeline Metrics That Matter",
+        "Common Pipeline Leaks and How to Fix Them"
+      ],
+      "internalLinks": [
+        "/blog/lead-management",
+        "/blog/crm-automation-workflows",
+        "/guides/crm-setup-guide"
+      ]
+    },
+    {
+      "day": "Fri",
+      "publishDate": "2026-05-08",
+      "slug": "closing-techniques-internet-leads-10-methods-work",
+      "title": "Closing Techniques for Internet Leads: 10 Methods That Work",
+      "pillar": "SALES PROCESS",
+      "primaryKeyword": "closing techniques",
+      "secondaryKeywords": [
+        "internet lead closing",
+        "sales closing methods",
+        "lead closing strategies",
+        "close internet leads"
+      ],
+      "targetCategories": [
+        "sales-process",
+        "lead-management"
+      ],
+      "wordCount": "2,700-3,100",
+      "competitiveAngle": "Focuses specifically on closing techniques adapted for internet leads, addressing unique challenges like reduced trust and remote sales processes",
+      "outline": [
+        "Why Traditional Closing Techniques Fall Short with Internet Leads",
+        "The Trust-Building Close for Cold Internet Leads",
+        "The Urgency Close: Creating Scarcity Without Pressure",
+        "The Assumption Close for Qualified Online Prospects",
+        "The Alternative Choice Close for Decision-Averse Leads",
+        "The Summary Close for Complex Products",
+        "The Objection-Handling Close",
+        "The Follow-Up Close for Nurture Campaigns",
+        "The Referral Close for Satisfied Internet Lead Clients",
+        "The Soft Close for Relationship Building",
+        "The Direct Close for Ready Buyers",
+        "Closing Technique Selection by Lead Type and Stage"
+      ],
+      "internalLinks": [
+        "/blog/objection-handling-scripts",
+        "/blog/appointment-setting-scripts",
+        "/guides/sales-process"
+      ]
+    }
+  ],
+  "nextWeekPlan": "Selected three existing briefs from the editorial calendar that address current market needs: advanced lead analytics (Monday), systematic pipeline management (Wednesday), and specialized closing techniques (Friday). This rotation covers Buying Leads → Lead Management → Sales Process pillars while avoiding overlap with our extensive published content. These topics fill strategic gaps in our coverage and target high-value keywords our competitors aren't addressing comprehensively.",
+  "errors": []
+}
