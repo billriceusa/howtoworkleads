@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-03T12:01:25.415Z",
+  "lastUpdated": "2026-05-04T12:00:57.183Z",
   "items": [
     {
       "id": "4d43293968f6",
@@ -108,6 +108,28 @@
       "priority": "high",
       "firstSeen": "2026-05-03",
       "lastSeen": "2026-05-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "477ae603ebca",
+      "title": "Optimize High-Performing IUL Content",
+      "description": "Expand the IUL leads content cluster by creating supporting pages around 'aged IUL leads' (ranking #7) and 'best IUL leads' queries. Add internal linking from the customer journey page to IUL-specific content to capitalize on the 31 views.",
+      "expectedImpact": "15-25% increase in IUL-related organic traffic within 30 days",
+      "priority": "high",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-05-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "b2aed8d571a5",
+      "title": "Address Session Duration Decline",
+      "description": "Add related content suggestions, internal linking widgets, and downloadable resources to key pages. Focus on the customer journey page (31 views) and homepage (54 views) to extend engagement time.",
+      "expectedImpact": "10-15% improvement in session duration and pages per session",
+      "priority": "high",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-05-04",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -233,6 +255,28 @@
       "status": "open"
     },
     {
+      "id": "c78da7c6edbd",
+      "title": "Capitalize on Aged Leads Search Opportunity",
+      "description": "Create comprehensive aged leads comparison content targeting 'aged life insurance leads' (position 19.4) and 'aged insurance leads' (position 28). These queries show consistent search volume with room for ranking improvement.",
+      "expectedImpact": "5-8 additional organic clicks per week from aged leads queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-05-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "857349dca795",
+      "title": "Expand Email Newsletter Strategy",
+      "description": "With 8 sessions from newsletter traffic, create lead magnet content around lead negotiation and pricing guides. Use the strong engagement rate (47.25%) to build email list from current visitors.",
+      "expectedImpact": "20-30% increase in newsletter-driven traffic within 60 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-05-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -273,6 +317,17 @@
       "priority": "low",
       "firstSeen": "2026-05-03",
       "lastSeen": "2026-05-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "088660111850",
+      "title": "Optimize Mobile Search Experience",
+      "description": "With only 4 mobile clicks vs 7 desktop clicks despite mobile's growing search share, improve mobile page speed and user experience for lead buying pages.",
+      "expectedImpact": "10-15% improvement in mobile CTR and engagement",
+      "priority": "low",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-05-04",
       "timesRepeated": 1,
       "status": "open"
     }
