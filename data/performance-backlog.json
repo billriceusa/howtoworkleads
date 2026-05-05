@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-05-04T12:00:57.183Z",
+  "lastUpdated": "2026-05-05T12:01:36.881Z",
   "items": [
+    {
+      "id": "1334f6487b8b",
+      "title": "Expand Customer Journey Content Series",
+      "description": "The customer journey page is the #2 performer with strong engagement. Create related content around sales process stages, objection handling, and follow-up sequences to capture more of this high-performing topic cluster.",
+      "expectedImpact": "15-25% increase in organic traffic from sales process queries",
+      "priority": "high",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-05",
+      "timesRepeated": 2,
+      "status": "open"
+    },
     {
       "id": "4d43293968f6",
       "title": "Optimize Title Tags and Meta Descriptions for Better CTR",
@@ -101,17 +112,6 @@
       "status": "open"
     },
     {
-      "id": "1334f6487b8b",
-      "title": "Expand Customer Journey Content Series",
-      "description": "The customer journey page is the #2 performer with strong engagement. Create related content around sales process stages, objection handling, and follow-up sequences to capture more of this high-performing topic cluster.",
-      "expectedImpact": "15-25% increase in organic traffic from sales process queries",
-      "priority": "high",
-      "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-03",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "477ae603ebca",
       "title": "Optimize High-Performing IUL Content",
       "description": "Expand the IUL leads content cluster by creating supporting pages around 'aged IUL leads' (ranking #7) and 'best IUL leads' queries. Add internal linking from the customer journey page to IUL-specific content to capitalize on the 31 views.",
@@ -130,6 +130,28 @@
       "priority": "high",
       "firstSeen": "2026-05-04",
       "lastSeen": "2026-05-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c4b0ea292363",
+      "title": "Optimize meta titles and descriptions for aged leads content",
+      "description": "Rewrite meta titles for aged leads pages to include compelling CTAs and benefits. Focus on 'aged life insurance leads' (position 20) and 'aged insurance leads' (position 23.4) queries. Add urgency and value propositions like 'Same Day Delivery' and 'Affordable Prices'.",
+      "expectedImpact": "Increase CTR from 0.18% to 0.4-0.6% within 30 days",
+      "priority": "high",
+      "firstSeen": "2026-05-05",
+      "lastSeen": "2026-05-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "03cd736761ed",
+      "title": "Create comprehensive aged leads landing page",
+      "description": "Build a dedicated aged leads hub page targeting the cluster of aged lead queries. Include comparison tables, pricing guides, and vendor recommendations. Link to existing aged leads blog content and buying guides.",
+      "expectedImpact": "Capture 15-25 additional organic clicks per week from aged lead searches",
+      "priority": "high",
+      "firstSeen": "2026-05-05",
+      "lastSeen": "2026-05-05",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -277,6 +299,17 @@
       "status": "open"
     },
     {
+      "id": "aa8061418c0e",
+      "title": "Develop IUL leads content cluster",
+      "description": "IUL leads page ranks well (position 7.3) and gets consistent traffic. Create supporting content like 'IUL Lead Qualification', 'IUL Sales Scripts', and 'IUL Market Trends' to dominate this niche.",
+      "expectedImpact": "Increase IUL-related organic traffic by 40-60%",
+      "priority": "medium",
+      "firstSeen": "2026-05-05",
+      "lastSeen": "2026-05-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -328,6 +361,17 @@
       "priority": "low",
       "firstSeen": "2026-05-04",
       "lastSeen": "2026-05-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c615f33a1411",
+      "title": "Implement email capture on high-traffic pages",
+      "description": "Add lead magnets to the homepage (49 views) and customer journey page (28 views). Offer downloadable guides like 'Lead Scoring Checklist' or 'Sales Script Templates' to convert anonymous visitors.",
+      "expectedImpact": "Generate 5-10 email subscribers per week from top pages",
+      "priority": "low",
+      "firstSeen": "2026-05-05",
+      "lastSeen": "2026-05-05",
       "timesRepeated": 1,
       "status": "open"
     }
