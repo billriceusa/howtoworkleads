@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-05T12:01:36.881Z",
+  "lastUpdated": "2026-05-06T12:01:02.810Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -156,14 +156,36 @@
       "status": "open"
     },
     {
+      "id": "d0e03a8b2714",
+      "title": "Expand IUL Lead Content Strategy",
+      "description": "Create comprehensive IUL lead buying guides, comparison content, and vendor reviews. Focus on long-tail keywords like 'best aged IUL leads 2024' and 'IUL lead pricing comparison'. Add FAQ sections and calculator tools to capture more search volume around IUL terms.",
+      "expectedImpact": "20-30% increase in IUL-related organic traffic and improved conversion rates",
+      "priority": "high",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-05-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "85e8d8bb1b00",
+      "title": "Optimize High-Performing Content for Search",
+      "description": "The customer journey page is driving strong engagement but isn't appearing in search results. Add targeted keywords like 'insurance sales customer journey' and 'lead conversion process' to the content. Create internal linking from other sales process pages.",
+      "expectedImpact": "Potential to capture 50-100 additional monthly organic sessions",
+      "priority": "high",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-05-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
       "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "medium",
       "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-01",
-      "timesRepeated": 2,
+      "lastSeen": "2026-05-06",
+      "timesRepeated": 3,
       "status": "open"
     },
     {
@@ -310,6 +332,28 @@
       "status": "open"
     },
     {
+      "id": "43ecf704687c",
+      "title": "Develop Email Nurture Sequence",
+      "description": "With 10 newsletter email sessions showing strong engagement, create a 5-part email series covering lead buying basics, working techniques, and vendor selection. Use the high-performing contact page traffic to build the email list.",
+      "expectedImpact": "15-25% increase in repeat visitors and improved conversion rates",
+      "priority": "medium",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-05-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "b2673c2c6ca4",
+      "title": "Create Aged Lead Pricing Calculator",
+      "description": "The aged lead pricing guide is ranking well (position 4.8) but not getting clicks. Develop an interactive pricing calculator tool and promote it through the existing content to capture more search traffic and improve CTR.",
+      "expectedImpact": "Improve CTR from 0.20% to 0.35% for aged lead queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-05-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -372,6 +416,17 @@
       "priority": "low",
       "firstSeen": "2026-05-05",
       "lastSeen": "2026-05-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "e924c1278573",
+      "title": "Expand Home Improvement Lead Content",
+      "description": "Home improvement leads page shows consistent performance. Create seasonal content around peak home improvement periods, contractor lead management guides, and ROI calculators for home improvement lead investments.",
+      "expectedImpact": "10-15% increase in home services vertical traffic",
+      "priority": "low",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-05-06",
       "timesRepeated": 1,
       "status": "open"
     }
