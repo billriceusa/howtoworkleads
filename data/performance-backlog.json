@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-06T12:01:02.810Z",
+  "lastUpdated": "2026-05-07T12:01:23.693Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -178,14 +178,36 @@
       "status": "open"
     },
     {
+      "id": "6c6916c6c3da",
+      "title": "Expand High-Performing Insurance Content",
+      "description": "Create additional content around IUL leads, aged life insurance leads, and final expense leads. Develop comprehensive guides for 'aged iul leads' (ranking #8) and 'aged life insurance leads' (ranking #20.8) queries. Add FAQ sections and comparison charts to existing pages.",
+      "expectedImpact": "20-30% increase in organic clicks from insurance-related queries within 60 days",
+      "priority": "high",
+      "firstSeen": "2026-05-07",
+      "lastSeen": "2026-05-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "ae74f18c802f",
+      "title": "Optimize for Featured Snippets",
+      "description": "Target the 'aged leads for life insurance' query where you rank #5 but have 0 clicks. Create structured content with definitions, bullet points, and clear answers. Also optimize for 'lead vendor negotiation guide' (position 3.4) and 'aged lead pricing guide' (position 4.7).",
+      "expectedImpact": "Capture featured snippets could increase CTR to 15-25% for targeted queries",
+      "priority": "high",
+      "firstSeen": "2026-05-07",
+      "lastSeen": "2026-05-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
       "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "medium",
       "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-06",
-      "timesRepeated": 3,
+      "lastSeen": "2026-05-07",
+      "timesRepeated": 4,
       "status": "open"
     },
     {
@@ -354,6 +376,28 @@
       "status": "open"
     },
     {
+      "id": "119c46280b6a",
+      "title": "Develop CRM Content Cluster",
+      "description": "Build on the 'analytical crm' queries showing in search console. Create comprehensive content around CRM evolution, operational vs analytical CRM, and B2B vs B2C lead management. Internal link to existing CRM pages.",
+      "expectedImpact": "Establish authority in CRM space, potentially 15-20% increase in CRM-related organic traffic",
+      "priority": "medium",
+      "firstSeen": "2026-05-07",
+      "lastSeen": "2026-05-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "0dba1345c337",
+      "title": "Enhance Internal Linking Strategy",
+      "description": "The 56.5% increase in page views suggests good content discovery. Systematically add contextual internal links between lead buying guides, sales process content, and CRM systems. Create topic clusters with pillar pages.",
+      "expectedImpact": "Further reduce bounce rate to under 40% and increase session duration to 90+ seconds",
+      "priority": "medium",
+      "firstSeen": "2026-05-07",
+      "lastSeen": "2026-05-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -427,6 +471,17 @@
       "priority": "low",
       "firstSeen": "2026-05-06",
       "lastSeen": "2026-05-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "1531c7fee9c2",
+      "title": "Diversify Traffic Sources",
+      "description": "While direct traffic is strong, develop content marketing strategy for LinkedIn, industry forums, and guest posting on sales/insurance sites. Create shareable resources and lead magnets to reduce over-reliance on direct traffic.",
+      "expectedImpact": "25-30% increase in referral traffic and improved brand reach",
+      "priority": "low",
+      "firstSeen": "2026-05-07",
+      "lastSeen": "2026-05-07",
       "timesRepeated": 1,
       "status": "open"
     }
