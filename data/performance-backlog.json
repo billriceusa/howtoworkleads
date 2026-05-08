@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T12:01:23.693Z",
+  "lastUpdated": "2026-05-08T12:00:52.110Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -200,14 +200,36 @@
       "status": "open"
     },
     {
+      "id": "f3b2887438d5",
+      "title": "Optimize High-Impression, Zero-Click Keywords",
+      "description": "Focus on the 31 impressions for 'aged life insurance leads' (position 21.1) and 13 impressions for 'aged insurance leads' (position 22.3). Create dedicated landing pages with better title tags and meta descriptions to capture these clicks.",
+      "expectedImpact": "Could increase daily clicks by 3-5 based on improved CTR for high-volume terms",
+      "priority": "high",
+      "firstSeen": "2026-05-08",
+      "lastSeen": "2026-05-08",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "31dfebe00036",
+      "title": "Scale Content Around Customer Journey Page Success",
+      "description": "The /sales-process/the-customer-journey page is performing exceptionally well (26 views, 28 users). Create a content series around sales process optimization, lead nurturing stages, and conversion techniques.",
+      "expectedImpact": "Could increase organic traffic by 25-30% by expanding successful content themes",
+      "priority": "high",
+      "firstSeen": "2026-05-08",
+      "lastSeen": "2026-05-08",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
       "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "medium",
       "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-07",
-      "timesRepeated": 4,
+      "lastSeen": "2026-05-08",
+      "timesRepeated": 5,
       "status": "open"
     },
     {
@@ -398,6 +420,17 @@
       "status": "open"
     },
     {
+      "id": "ecb4ee3f409a",
+      "title": "Capitalize on Email Newsletter Growth",
+      "description": "Email traffic (8 sessions from newsletter) is performing well. Create lead magnets around aged lead pricing and vendor negotiation guides (both showing strong page performance) to grow the email list.",
+      "expectedImpact": "Could increase direct traffic by 20-25% through improved email engagement",
+      "priority": "medium",
+      "firstSeen": "2026-05-08",
+      "lastSeen": "2026-05-08",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -482,6 +515,17 @@
       "priority": "low",
       "firstSeen": "2026-05-07",
       "lastSeen": "2026-05-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "7cc9cc664438",
+      "title": "Develop CRM Content Strategy",
+      "description": "CRM-related queries are appearing in search data ('analytical crm', 'crm systems') but with poor positions (59-81). Create comprehensive CRM guides targeting sales professionals working with internet leads.",
+      "expectedImpact": "Could capture additional 10-15 monthly clicks in underserved CRM niche",
+      "priority": "low",
+      "firstSeen": "2026-05-08",
+      "lastSeen": "2026-05-08",
       "timesRepeated": 1,
       "status": "open"
     }
