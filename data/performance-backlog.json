@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T12:00:52.110Z",
+  "lastUpdated": "2026-05-09T12:01:01.436Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -200,24 +200,24 @@
       "status": "open"
     },
     {
-      "id": "f3b2887438d5",
-      "title": "Optimize High-Impression, Zero-Click Keywords",
-      "description": "Focus on the 31 impressions for 'aged life insurance leads' (position 21.1) and 13 impressions for 'aged insurance leads' (position 22.3). Create dedicated landing pages with better title tags and meta descriptions to capture these clicks.",
-      "expectedImpact": "Could increase daily clicks by 3-5 based on improved CTR for high-volume terms",
+      "id": "f5214ff2417e",
+      "title": "Optimize High-Impression, Low-CTR Pages for Search",
+      "description": "Focus on the aged life insurance leads page (27 impressions, 0 clicks, pos 19.8) and aged insurance leads queries (14 impressions, pos 22.6). Rewrite titles and meta descriptions to be more compelling and action-oriented. Test titles like 'Buy Quality Aged Life Insurance Leads - Same Day Delivery' instead of generic titles.",
+      "expectedImpact": "Could increase organic clicks by 200-300% based on current impression volume",
       "priority": "high",
-      "firstSeen": "2026-05-08",
-      "lastSeen": "2026-05-08",
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-09",
       "timesRepeated": 1,
       "status": "open"
     },
     {
-      "id": "31dfebe00036",
-      "title": "Scale Content Around Customer Journey Page Success",
-      "description": "The /sales-process/the-customer-journey page is performing exceptionally well (26 views, 28 users). Create a content series around sales process optimization, lead nurturing stages, and conversion techniques.",
-      "expectedImpact": "Could increase organic traffic by 25-30% by expanding successful content themes",
+      "id": "d30b8c6c5fb4",
+      "title": "Capitalize on Customer Journey Content Success",
+      "description": "The /sales-process/the-customer-journey page is performing exceptionally well (31 views, 100% engagement). Create related content like 'Customer Journey Mapping for Insurance Agents' and 'Converting Leads at Each Journey Stage' to build a content cluster around this high-performing topic.",
+      "expectedImpact": "Could increase page views by 40-50% and improve search rankings for sales process queries",
       "priority": "high",
-      "firstSeen": "2026-05-08",
-      "lastSeen": "2026-05-08",
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-09",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -228,8 +228,8 @@
       "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "medium",
       "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-08",
-      "timesRepeated": 5,
+      "lastSeen": "2026-05-07",
+      "timesRepeated": 4,
       "status": "open"
     },
     {
@@ -420,13 +420,24 @@
       "status": "open"
     },
     {
-      "id": "ecb4ee3f409a",
-      "title": "Capitalize on Email Newsletter Growth",
-      "description": "Email traffic (8 sessions from newsletter) is performing well. Create lead magnets around aged lead pricing and vendor negotiation guides (both showing strong page performance) to grow the email list.",
-      "expectedImpact": "Could increase direct traffic by 20-25% through improved email engagement",
+      "id": "9add3f77d273",
+      "title": "Develop Email List Building Strategy",
+      "description": "With 38 contact page views and strong engagement rates, implement lead magnets like 'Lead Conversion Calculator' or 'Sales Process Checklist' on high-traffic pages. Add exit-intent popups and content upgrades to capture emails from the 63.92% engaged users.",
+      "expectedImpact": "Could capture 15-20% of engaged visitors as email subscribers",
       "priority": "medium",
-      "firstSeen": "2026-05-08",
-      "lastSeen": "2026-05-08",
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "a8ce2404fe93",
+      "title": "Create Content for High-Impression Insurance Queries",
+      "description": "Target the aged final expense leads (7 impressions, pos 38.3) and aged health insurance leads (3 impressions, pos 33.3) with dedicated landing pages. These queries show search demand but the site isn't ranking well enough to capture clicks.",
+      "expectedImpact": "Could add 50-100 additional monthly organic sessions",
+      "priority": "medium",
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-09",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -519,13 +530,13 @@
       "status": "open"
     },
     {
-      "id": "7cc9cc664438",
-      "title": "Develop CRM Content Strategy",
-      "description": "CRM-related queries are appearing in search data ('analytical crm', 'crm systems') but with poor positions (59-81). Create comprehensive CRM guides targeting sales professionals working with internet leads.",
-      "expectedImpact": "Could capture additional 10-15 monthly clicks in underserved CRM niche",
+      "id": "4b6fb825e550",
+      "title": "Investigate Direct Traffic Sources",
+      "description": "With 61% direct traffic, audit referral sources and implement UTM tracking for all marketing activities. This high direct traffic could indicate untracked referral sources or bookmark behavior that should be better understood.",
+      "expectedImpact": "Better attribution and potential discovery of high-value traffic sources",
       "priority": "low",
-      "firstSeen": "2026-05-08",
-      "lastSeen": "2026-05-08",
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-09",
       "timesRepeated": 1,
       "status": "open"
     }
