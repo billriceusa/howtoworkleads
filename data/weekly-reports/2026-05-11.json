@@ -1,0 +1,182 @@
+{
+  "runDate": "2026-05-10T06:03:08.295Z",
+  "weekStartDate": "2026-05-11",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong coverage across all five pillars with 98 published posts, demonstrating comprehensive expertise in internet lead management. We've built particularly strong foundations in industry-specific strategies (insurance, mortgage, legal, home services) and lead management fundamentals. However, we have notable gaps in advanced CRM automation beyond basic setup, lead attribution and multi-touch conversion tracking, and emerging compliance challenges beyond TCPA basics. Our 'How to Work' series has become a strong brand differentiator, but we need more tactical, day-to-day operational content that addresses the granular challenges experienced reps face.",
+    "competitiveInsights": "AgedLeadStore.com continues to focus on product-centric content around their lead inventory, while AgedLeadSales.com remains narrowly focused on aged lead tactics. This leaves significant opportunities in fresh lead working strategies, multi-vendor lead management, and advanced conversion optimization. Keyword research reveals growing search volume around 'lead attribution software,' 'multi-touch lead tracking,' and 'lead conversion benchmarks by industry.' There's also emerging interest in 'lead fraud detection' and 'fake lead identification' as lead quality concerns increase across industries. Our competitors aren't addressing the operational complexity of managing leads from multiple vendors simultaneously.",
+    "newOpportunities": [
+      "Lead fraud detection and fake lead identification",
+      "Multi-vendor lead management workflows",
+      "Lead attribution and multi-touch conversion tracking",
+      "Industry-specific conversion benchmarks and KPIs",
+      "Advanced lead scoring beyond basic demographics",
+      "Lead recycling automation strategies"
+    ],
+    "trendingTopics": [
+      "AI-powered lead qualification",
+      "Multi-vendor lead operations",
+      "Lead fraud prevention",
+      "Attribution modeling for lead buyers",
+      "Conversion rate optimization tactics",
+      "Lead quality assessment frameworks"
+    ],
+    "recommendedUpdates": [
+      "Expand CRM automation content beyond basic workflows",
+      "Create more tactical, day-to-day operational guides",
+      "Develop content around managing leads from multiple sources",
+      "Address emerging compliance and fraud concerns"
+    ]
+  },
+  "articlesCreated": [
+    {
+      "title": "Lead Attribution and Multi-Touch Tracking: Know Which Touchpoints Drive Conversions",
+      "slug": "lead-attribution-multi-touch-tracking",
+      "publishDate": "2026-05-11",
+      "primaryKeyword": "lead attribution tracking",
+      "pillar": "CRM Systems"
+    },
+    {
+      "title": "Managing Multiple Lead Vendors: Workflows, Quality Control, and ROI Optimization",
+      "slug": "managing-multiple-lead-vendors",
+      "publishDate": "2026-05-13",
+      "primaryKeyword": "multiple lead vendors",
+      "pillar": "Buying Leads"
+    },
+    {
+      "title": "Lead Fraud Detection: How to Identify and Avoid Fake Internet Leads",
+      "slug": "lead-fraud-detection-fake-leads",
+      "publishDate": "2026-05-15",
+      "primaryKeyword": "lead fraud detection",
+      "pillar": "Lead Management"
+    }
+  ],
+  "articlesSkipped": [],
+  "articlesFailed": [],
+  "imageOutcomes": [
+    {
+      "title": "Lead Attribution and Multi-Touch Tracking: Know Which Touchpoints Drive Conversions",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Managing Multiple Lead Vendors: Workflows, Quality Control, and ROI Optimization",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Lead Fraud Detection: How to Identify and Avoid Fake Internet Leads",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    }
+  ],
+  "newBriefs": [
+    {
+      "day": "Mon",
+      "publishDate": "2026-05-11",
+      "slug": "lead-attribution-multi-touch-tracking",
+      "title": "Lead Attribution and Multi-Touch Tracking: Know Which Touchpoints Drive Conversions",
+      "pillar": "CRM Systems",
+      "primaryKeyword": "lead attribution tracking",
+      "secondaryKeywords": [
+        "multi-touch attribution",
+        "lead conversion tracking",
+        "lead source attribution",
+        "conversion path analysis"
+      ],
+      "targetCategories": [
+        "crm-systems",
+        "lead-management"
+      ],
+      "wordCount": "2,800-3,200",
+      "competitiveAngle": "First comprehensive guide to attribution modeling specifically for internet lead buyers - competitors focus on basic lead source tracking, not multi-touch conversion paths",
+      "outline": [
+        "Why Single-Touch Attribution Fails for Internet Leads",
+        "Multi-Touch Attribution Models Explained",
+        "Setting Up Attribution Tracking in Popular CRMs",
+        "Measuring Cross-Channel Lead Journeys",
+        "Attribution Data for Budget Allocation Decisions",
+        "Common Attribution Tracking Mistakes",
+        "ROI Calculations Using Attribution Data"
+      ],
+      "internalLinks": [
+        "/blog/lead-source-roi-tracking",
+        "/blog/crm-automation-workflows",
+        "/guides/crm-setup-guide"
+      ]
+    },
+    {
+      "day": "Wed",
+      "publishDate": "2026-05-13",
+      "slug": "managing-multiple-lead-vendors",
+      "title": "Managing Multiple Lead Vendors: Workflows, Quality Control, and ROI Optimization",
+      "pillar": "Buying Leads",
+      "primaryKeyword": "multiple lead vendors",
+      "secondaryKeywords": [
+        "lead vendor management",
+        "multi-vendor workflows",
+        "lead quality comparison",
+        "vendor performance tracking"
+      ],
+      "targetCategories": [
+        "buying-leads",
+        "lead-management"
+      ],
+      "wordCount": "2,600-3,000",
+      "competitiveAngle": "Addresses the reality that most successful lead buyers work with 3-5+ vendors simultaneously - competitors assume single-vendor relationships",
+      "outline": [
+        "Why Most Successful Lead Buyers Use Multiple Vendors",
+        "Vendor Performance Tracking Systems",
+        "Quality Control Across Multiple Sources",
+        "Workflow Management for Multi-Vendor Operations",
+        "Budget Allocation Between Vendors",
+        "Vendor Relationship Management",
+        "Avoiding Over-Dependence on Single Sources",
+        "Technology Stack for Multi-Vendor Management"
+      ],
+      "internalLinks": [
+        "/blog/how-to-evaluate-lead-vendors",
+        "/blog/lead-quality-metrics",
+        "/guides/vendor-comparison"
+      ]
+    },
+    {
+      "day": "Fri",
+      "publishDate": "2026-05-15",
+      "slug": "lead-fraud-detection-fake-leads",
+      "title": "Lead Fraud Detection: How to Identify and Avoid Fake Internet Leads",
+      "pillar": "Lead Management",
+      "primaryKeyword": "lead fraud detection",
+      "secondaryKeywords": [
+        "fake leads",
+        "lead quality verification",
+        "fraudulent leads",
+        "lead validation",
+        "lead fraud prevention"
+      ],
+      "targetCategories": [
+        "lead-management",
+        "buying-leads"
+      ],
+      "wordCount": "2,500-2,900",
+      "competitiveAngle": "First comprehensive guide to lead fraud detection for internet lead buyers - emerging issue not covered by competitors",
+      "outline": [
+        "The Growing Problem of Lead Fraud",
+        "Common Types of Fake Internet Leads",
+        "Red Flags in Lead Data",
+        "Phone Number and Email Verification",
+        "Geographic and Demographic Validation",
+        "Behavioral Pattern Analysis",
+        "Vendor Accountability and Fraud Policies",
+        "Building Fraud Detection Into Your Workflow",
+        "Legal Recourse for Fraudulent Leads"
+      ],
+      "internalLinks": [
+        "/blog/lead-quality-metrics",
+        "/blog/how-to-evaluate-lead-vendors",
+        "/guides/lead-buying-compliance"
+      ]
+    }
+  ],
+  "nextWeekPlan": "Selected three high-opportunity topics not covered by competitors, rotating pillars (CRM Systems → Buying Leads → Lead Management). All address emerging operational challenges faced by experienced lead buyers. Lead attribution fills a major gap in our CRM content, multi-vendor management addresses real-world complexity, and fraud detection tackles a growing industry concern. These topics target mid-to-advanced practitioners rather than beginners, complementing our existing foundational content.",
+  "errors": []
+}
