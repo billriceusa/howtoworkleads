@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T12:01:01.436Z",
+  "lastUpdated": "2026-05-10T12:00:50.170Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -222,14 +222,36 @@
       "status": "open"
     },
     {
+      "id": "bb8bbb3cea4b",
+      "title": "Optimize Search Snippets for Better CTR",
+      "description": "Rewrite title tags and meta descriptions for top-ranking pages (positions 5-25) to include compelling CTAs and benefit-focused language. Focus on aged life insurance leads, IUL leads, and home improvement leads pages that rank well but have low CTR.",
+      "expectedImpact": "15-25% increase in organic CTR, translating to 3-5 additional daily clicks",
+      "priority": "high",
+      "firstSeen": "2026-05-10",
+      "lastSeen": "2026-05-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "94b3665640ac",
+      "title": "Scale Customer Journey Content Strategy",
+      "description": "The customer journey page shows perfect engagement (31 views, 31 users). Create similar process-focused content for each lead type: 'Insurance Lead Customer Journey,' 'Solar Lead Sales Process,' etc. Target long-tail keywords around sales processes.",
+      "expectedImpact": "20-30% increase in organic traffic and improved engagement across lead-type pages",
+      "priority": "high",
+      "firstSeen": "2026-05-10",
+      "lastSeen": "2026-05-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
       "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "medium",
       "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-07",
-      "timesRepeated": 4,
+      "lastSeen": "2026-05-10",
+      "timesRepeated": 5,
       "status": "open"
     },
     {
@@ -438,6 +460,28 @@
       "priority": "medium",
       "firstSeen": "2026-05-09",
       "lastSeen": "2026-05-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "cd4523a98dde",
+      "title": "Capitalize on Direct Traffic Momentum",
+      "description": "With 55 direct sessions indicating strong brand recall, implement exit-intent popups offering lead-buying guides or email courses. Add prominent newsletter signup on high-traffic pages to capture this engaged audience.",
+      "expectedImpact": "25-40% increase in email subscribers and improved visitor retention",
+      "priority": "medium",
+      "firstSeen": "2026-05-10",
+      "lastSeen": "2026-05-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "805d6515362f",
+      "title": "Expand IUL and Life Insurance Content",
+      "description": "IUL leads page ranks at position 10.6 with 2 clicks, and aged life insurance leads rank at 19.8. Create comprehensive guides: 'Complete IUL Lead Buying Guide' and 'Aged Life Insurance Lead Conversion Strategies' to capture more search volume.",
+      "expectedImpact": "40-60% increase in life insurance related organic traffic",
+      "priority": "medium",
+      "firstSeen": "2026-05-10",
+      "lastSeen": "2026-05-10",
       "timesRepeated": 1,
       "status": "open"
     },
