@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-10T12:00:50.170Z",
+  "lastUpdated": "2026-05-11T12:01:28.308Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -8,8 +8,8 @@
       "expectedImpact": "15-25% increase in organic traffic from sales process queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-05",
-      "timesRepeated": 2,
+      "lastSeen": "2026-05-11",
+      "timesRepeated": 3,
       "status": "open"
     },
     {
@@ -240,6 +240,28 @@
       "priority": "high",
       "firstSeen": "2026-05-10",
       "lastSeen": "2026-05-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c6047e353728",
+      "title": "Capitalize on Engagement Momentum with Internal Linking",
+      "description": "With users now viewing 2.4 pages per session, implement strategic internal linking from high-traffic pages (homepage, customer journey) to conversion pages (contact, lead buying guides). Add contextual links within content and related article sections.",
+      "expectedImpact": "Increase page views per session to 3+ and drive more contact page visits",
+      "priority": "high",
+      "firstSeen": "2026-05-11",
+      "lastSeen": "2026-05-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "15d2415b4ac7",
+      "title": "Optimize for 'Aged Life Insurance Leads' Rankings",
+      "description": "Target the 31 monthly impressions for 'aged life insurance leads' at position 19.8. Create dedicated landing page content, optimize existing aged leads pages with this exact phrase, and build supporting blog content around aged lead benefits.",
+      "expectedImpact": "Move to first page (position 10) to capture 3-5 additional clicks monthly",
+      "priority": "high",
+      "firstSeen": "2026-05-11",
+      "lastSeen": "2026-05-11",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -486,6 +508,17 @@
       "status": "open"
     },
     {
+      "id": "fc1963d9ad5a",
+      "title": "Develop Mobile-First Content Strategy",
+      "description": "Mobile accounts for only 560 of 5,465 total impressions (10.2%). Optimize existing content for mobile, create mobile-specific lead working guides, and ensure fast loading times for mobile users.",
+      "expectedImpact": "Increase mobile traffic share to 25% and improve mobile CTR",
+      "priority": "medium",
+      "firstSeen": "2026-05-11",
+      "lastSeen": "2026-05-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -581,6 +614,17 @@
       "priority": "low",
       "firstSeen": "2026-05-09",
       "lastSeen": "2026-05-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "1c9d1100f0c8",
+      "title": "Leverage Direct Traffic for Email Capture",
+      "description": "With 59.6% direct traffic showing high brand awareness, implement lead magnets on high-traffic pages. Create downloadable guides like 'Lead Conversion Checklist' or 'Aged Lead Pricing Calculator' to capture emails.",
+      "expectedImpact": "Convert 10-15% of direct traffic into email subscribers for nurturing",
+      "priority": "low",
+      "firstSeen": "2026-05-11",
+      "lastSeen": "2026-05-11",
       "timesRepeated": 1,
       "status": "open"
     }
