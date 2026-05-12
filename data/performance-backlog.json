@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-11T12:01:28.308Z",
+  "lastUpdated": "2026-05-12T12:01:32.486Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -8,8 +8,8 @@
       "expectedImpact": "15-25% increase in organic traffic from sales process queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-11",
-      "timesRepeated": 3,
+      "lastSeen": "2026-05-12",
+      "timesRepeated": 4,
       "status": "open"
     },
     {
@@ -262,6 +262,17 @@
       "priority": "high",
       "firstSeen": "2026-05-11",
       "lastSeen": "2026-05-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c2754ffd396e",
+      "title": "Optimize High-Impression, Low-CTR Pages",
+      "description": "Focus on the aged life insurance leads page (34 impressions, 0 clicks, pos 19.4) and aged insurance leads (17 impressions, 0 clicks, pos 23.6). Rewrite title tags and meta descriptions to be more compelling and action-oriented. Test titles like 'Buy Quality Aged Life Insurance Leads - Same Day Delivery' instead of generic titles.",
+      "expectedImpact": "Could increase CTR from 0.26% to 1-2%, potentially doubling organic traffic",
+      "priority": "high",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-12",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -519,6 +530,39 @@
       "status": "open"
     },
     {
+      "id": "aacc99878456",
+      "title": "Reduce Direct Traffic Dependency",
+      "description": "With 52% direct traffic, implement email capture on high-performing pages and create a weekly newsletter featuring lead generation tips. Add social sharing buttons and guest posting strategy to diversify traffic sources.",
+      "expectedImpact": "Reduce direct traffic to 35-40% while increasing referral and social traffic by 25%",
+      "priority": "medium",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c0203e5e6c2e",
+      "title": "Capitalize on IUL Leads Ranking Success",
+      "description": "The IUL leads page ranks at position 10.6 and drives clicks. Create supporting content like 'IUL vs Term Life Insurance Leads Comparison' and 'Best IUL Lead Sources 2024' to capture related queries and build topical authority.",
+      "expectedImpact": "Could increase IUL-related traffic by 40-60% and improve main page ranking to top 10",
+      "priority": "medium",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "baf74eaf3f87",
+      "title": "Improve Session Duration Through Internal Linking",
+      "description": "Session duration dropped 20% despite higher engagement. Add contextual internal links within content, create 'related articles' sections, and implement a 'recommended reading' widget to encourage deeper site exploration.",
+      "expectedImpact": "Increase average session duration back to 75+ seconds and reduce bounce rate further",
+      "priority": "medium",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -625,6 +669,17 @@
       "priority": "low",
       "firstSeen": "2026-05-11",
       "lastSeen": "2026-05-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8c8b79cd31d6",
+      "title": "Mobile Experience Optimization",
+      "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
+      "expectedImpact": "Improve mobile CTR from current 1.09% to match desktop performance at 0.17%",
+      "priority": "low",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-12",
       "timesRepeated": 1,
       "status": "open"
     }
