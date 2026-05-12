@@ -93,9 +93,14 @@ async function main() {
       const searchQuery = buildSearchQuery(doc.title, doc.category || 'business')
       console.log(`  Query: "${searchQuery}"`)
 
-      const result = await generateBrandedImage(searchQuery)
+      let result = await generateBrandedImage(searchQuery)
       if (!result) {
-        console.log('  SKIP: No Unsplash result\n')
+        const fallbackQuery = buildFallbackQuery(doc.category || 'business')
+        console.log(`  Retry with fallback query: "${fallbackQuery}"`)
+        result = await generateBrandedImage(fallbackQuery)
+      }
+      if (!result) {
+        console.log('  SKIP: No Unsplash result (after fallback)\n')
         failed++
         continue
       }
@@ -136,6 +141,16 @@ async function main() {
   console.log(`\nDone! Processed: ${processed}, Failed: ${failed}`)
 }
 
+// Industry acronyms and brand terms that don't surface relevant Unsplash photos.
+// Expanded to broader english terms before query construction.
+const ACRONYM_EXPANSIONS: Record<string, string> = {
+  nonqm: 'mortgage', dscr: 'realestate', heloc: 'home',
+  iul: 'insurance', aca: 'health', ssdi: 'disability',
+  tcpa: 'compliance', fcc: 'compliance', mva: 'accident',
+  crm: 'office', sms: 'phone', salesforce: 'office',
+  hubspot: 'office',
+}
+
 function buildSearchQuery(title: string, category: string): string {
   const stopWords = new Set([
     'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
@@ -143,7 +158,8 @@ function buildSearchQuery(title: string, category: string): string {
     'buy', 'buying', 'complete', 'guide', 'best', 'top',
   ])
   const titleWords = title.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/)
-    .filter((w) => w.length > 2 && !stopWords.has(w))
+    .map((w) => ACRONYM_EXPANSIONS[w] || w)
+    .filter((w) => w.length > 2 && !stopWords.has(w) && !/^\d+$/.test(w))
   const keywords = [...titleWords.slice(0, 2)]
   const contextMap: Record<string, string> = {
     'buying-leads': 'sales', 'lead-management': 'office',
@@ -153,6 +169,20 @@ function buildSearchQuery(title: string, category: string): string {
   if (!keywords.includes(ctx)) keywords.push(ctx)
   keywords.push('people', 'professional')
   return keywords.join(' ')
+}
+
+function buildFallbackQuery(category: string): string {
+  const contextMap: Record<string, string> = {
+    'buying-leads': 'sales',
+    'lead-management': 'office',
+    'sales-process': 'business',
+    'crm-systems': 'technology',
+    'insurance-leads': 'insurance',
+    'legal-leads': 'legal',
+    'home-services-leads': 'construction',
+  }
+  const ctx = contextMap[category.toLowerCase()] || 'business'
+  return `${ctx} office people professional`
 }
 
 function slugify(text: string): string {
