@@ -1,3 +1,5 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -11,9 +13,20 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['sharp', '@anthropic-ai/sdk', 'google-auth-library'],
   },
-  // Ensure Vercel can resolve sharp native bindings
+  // Trace from the monorepo root so hoisted node_modules resolve.
+  outputFileTracingRoot: path.join(__dirname, '../../'),
+  // sharp v0.33+ ships its native binary in separate @img/sharp-{platform}-{arch}
+  // packages, so trace those too — otherwise Vercel's serverless bundle can't
+  // load the linux-x64 binary at runtime.
   outputFileTracingIncludes: {
-    '/api/generate-featured-image': ['./node_modules/sharp/**/*'],
+    '/api/generate-featured-image': [
+      './node_modules/sharp/**/*',
+      './node_modules/@img/**/*',
+    ],
+    '/api/cron/weekly-content': [
+      './node_modules/sharp/**/*',
+      './node_modules/@img/**/*',
+    ],
   },
   async redirects() {
     return [
