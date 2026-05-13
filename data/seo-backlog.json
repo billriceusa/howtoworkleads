@@ -1,217 +1,236 @@
 {
-  "lastUpdated": "2026-05-06T10:01:40.533Z",
+  "lastUpdated": "2026-05-13T10:02:04.266Z",
   "items": [
     {
       "id": "finding-001",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 2,
       "category": "content-quality",
       "severity": "high",
       "title": "87 Posts Missing SEO Meta Descriptions",
-      "description": "The majority of blog posts lack optimized meta descriptions, which are critical for search result click-through rates and Google's understanding of content relevance. This directly impacts performance under the March 2024 Core Update's emphasis on content quality signals.",
-      "recommendation": "Create compelling 150-160 character meta descriptions for all posts, prioritizing high-traffic potential content first. Include primary keyword, value proposition, and call-to-action. Focus on Bill Rice's expertise angle (e.g., 'Learn proven lead conversion strategies from 30+ year industry expert Bill Rice').",
+      "description": "The majority of blog posts lack meta descriptions, which are critical for click-through rates from search results and provide Google with content summaries. This is particularly problematic given the March 2024 Core Update's emphasis on content that demonstrates clear value and purpose.",
+      "recommendation": "Create compelling 150-160 character meta descriptions for all posts, focusing on the specific value proposition and actionable outcomes. Prioritize the 10 most recent posts first, then work through high-traffic content. Include power words like 'convert,' 'system,' 'guide,' and specific ROI benefits.",
       "effort": "large",
       "affectedPages": [
-        "All 87 posts listed in snapshot"
+        "/blog/how-to-buy-mortgage-leads",
+        "/blog/how-to-work-aged-leads-the-complete-system-for-maximum-roi",
+        "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-05-06"
+      "notes": "Re-identified in audit 2026-05-13"
     },
     {
       "id": "finding-002",
-      "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 2,
       "category": "content-quality",
       "severity": "high",
-      "title": "Missing Featured Images Impact Rich Results",
-      "description": "64 posts lack featured images, reducing eligibility for rich results and social media sharing optimization. Visual content is increasingly important for educational content under Google's enhanced quality signals.",
-      "recommendation": "Create custom featured images for all posts using consistent branding. Include relevant screenshots, process diagrams, or infographics that support the educational content. Optimize images with descriptive alt text and proper sizing for Core Web Vitals.",
+      "title": "Missing Featured Images Reduce Rich Results Eligibility",
+      "description": "Over 60 posts lack featured images, which negatively impacts social sharing, rich results eligibility, and visual appeal in search results. The Helpful Content System Update emphasizes user-focused content presentation.",
+      "recommendation": "Create custom featured images for all posts using a consistent design template. Include relevant icons, process diagrams, or infographics that reinforce the content's educational value. Optimize images at 1200x630px for social sharing and implement proper alt text with target keywords.",
       "effort": "large",
       "affectedPages": [
-        "64 posts without featured images"
+        "/blog/how-to-work-family-law-leads",
+        "/blog/how-to-work-bankruptcy-leads",
+        "/blog/ai-lead-scoring-prioritization"
       ],
-      "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-05-06"
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-003",
-      "createdAt": "2026-05-06T10:01:40.533Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 3,
       "category": "e-e-a-t",
       "severity": "medium",
       "title": "Author Expertise Signals Need Enhancement",
-      "description": "While Bill Rice has Person schema and credentials, the author expertise signals could be strengthened to better align with Google's Enhanced Author Authority Signals update from September 2024.",
-      "recommendation": "Enhance author bio sections with specific achievements, case studies, and quantifiable results. Add author bylines to all content, implement author archive pages, and create an expanded About page with detailed credentials, speaking engagements, and industry recognition.",
+      "description": "While Bill Rice has Person schema and basic credentials, the March 2024 Core Update's focus on first-hand experience requires more prominent display of specific achievements, case studies, and quantifiable results from his 30+ years in lead conversion.",
+      "recommendation": "Enhance author bio sections with specific achievements: 'Generated $50M+ in client revenue from lead conversion,' 'Trained 500+ sales professionals,' 'Converted 100,000+ aged leads.' Add testimonials, case study links, and speaking credentials. Include author bylines with mini-bios on each post.",
       "effort": "medium",
       "affectedPages": [
         "/about",
-        "All blog posts",
-        "Author archive pages"
+        "/blog/*"
       ],
-      "sourceAudit": "2026-05-06"
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-004",
-      "createdAt": "2026-05-06T10:01:40.533Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 3,
       "category": "content-authority",
       "severity": "medium",
-      "title": "Educational Content Lacks Measurable Outcomes",
-      "description": "Content doesn't consistently include specific metrics, case studies, or measurable results that align with Google's October 2024 Educational Content Quality Signals update emphasizing practical applicability.",
-      "recommendation": "Add quantifiable results to educational content: conversion rate improvements, ROI percentages, time-to-close metrics, and real case studies. Create before/after scenarios and include specific performance benchmarks for each lead type and strategy.",
-      "effort": "medium",
+      "title": "Content Depth Insufficient for Educational Authority",
+      "description": "The Helpful Content System Update and Search Quality Guidelines emphasize comprehensive, actionable content. Some posts may lack the depth needed to establish topical authority in lead conversion education.",
+      "recommendation": "Expand core content pieces to 3000+ words with detailed sections: prerequisites, step-by-step processes, common mistakes, troubleshooting, advanced techniques, and measurable outcomes. Add downloadable resources, checklists, and templates that provide unique value.",
+      "effort": "large",
       "affectedPages": [
-        "All how-to guides",
-        "Strategy posts",
-        "Industry-specific content"
+        "/blog/how-to-work-leads-the-simple-4-step-system-for-sales-professionals",
+        "/blog/aged-leads",
+        "/blog/how-to-work-mortgage-leads"
       ],
-      "sourceAudit": "2026-05-06"
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-005",
-      "createdAt": "2026-05-06T10:01:40.533Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 3,
       "category": "structured-data",
       "severity": "medium",
-      "title": "Article Schema Missing Educational Properties",
-      "description": "Current Article schema implementation doesn't leverage educational content properties that could improve visibility under the July 2024 Structured Data Enhancement update.",
-      "recommendation": "Enhance Article schema with educational properties: learningResourceType, educationalLevel, teaches, and competencyRequired. Add HowTo schema for step-by-step guides and FAQ schema for common questions sections.",
+      "title": "Article Schema Missing Key Educational Elements",
+      "description": "Current Article schema may not fully leverage educational content markup opportunities introduced in recent structured data enhancements. Missing elements could include course-like content structure and enhanced author attribution.",
+      "recommendation": "Enhance Article schema with educationalUse: 'professional development', learningResourceType: 'how-to guide', and detailed author qualifications. For multi-part series, implement Course schema. Add FAQ schema for common questions sections.",
       "effort": "medium",
       "affectedPages": [
-        "All blog posts",
-        "How-to guides",
-        "Educational content"
+        "/blog/*"
       ],
-      "sourceAudit": "2026-05-06"
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-006",
-      "createdAt": "2026-05-06T10:01:40.533Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 3,
       "category": "content-quality",
       "severity": "medium",
-      "title": "Content Freshness Critical for Compliance Topics",
-      "description": "Regulatory and compliance content (TCPA, FCC rules, state regulations) requires regular updates to maintain accuracy and authority, especially important for YMYL-adjacent content.",
-      "recommendation": "Implement quarterly review schedule for all compliance content. Add 'Last Updated' dates prominently, create content freshness tracking system, and establish alerts for regulatory changes. Prioritize TCPA, FCC consent rules, and state-specific compliance guides.",
+      "title": "Compliance Content Requires Regular Updates",
+      "description": "Posts covering TCPA compliance, state regulations, and FCC rules need frequent updates to maintain accuracy and authority. The October 2023 Core Update particularly scrutinizes outdated information in business-critical topics.",
+      "recommendation": "Implement quarterly review schedule for all compliance content. Add 'Last Updated' timestamps prominently. Create alerts for regulatory changes. Consider adding disclaimer sections and links to official regulatory sources.",
       "effort": "medium",
       "affectedPages": [
-        "/tcpa-compliance-lead-buyers",
-        "/fcc-consent-rule-lead-buying",
-        "/state-by-state-lead-compliance-guide"
+        "/blog/tcpa-compliance-lead-buyers",
+        "/blog/state-by-state-lead-compliance-guide",
+        "/blog/fcc-consent-rule-lead-buying"
       ],
-      "sourceAudit": "2026-05-06"
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-007",
-      "createdAt": "2026-05-06T10:01:40.533Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 3,
       "category": "internal-linking",
       "severity": "medium",
       "title": "Pillar-Cluster Architecture Needs Strengthening",
-      "description": "Content covers comprehensive topics but lacks strong pillar-cluster internal linking structure to maximize topical authority and help Google understand content relationships.",
-      "recommendation": "Create pillar pages for each main content category (Lead Management, Sales Process, CRM Systems, Buying Leads, Industry Strategies). Implement systematic internal linking from cluster content to pillars and between related cluster pieces. Add contextual links within content body, not just navigation.",
-      "effort": "medium",
+      "description": "With 87 blog posts across multiple industries, the site needs stronger topical clustering and internal linking to establish clear authority hierarchies and help Google understand content relationships.",
+      "recommendation": "Create clear pillar pages for each main topic cluster. Implement contextual internal linking with descriptive anchor text. Add 'Related Articles' sections to each post. Create topic-based landing pages that link to relevant how-to guides.",
+      "effort": "large",
       "affectedPages": [
-        "All content pages",
-        "Category pages",
-        "Landing pages"
+        "/blog/*",
+        "/categories/*"
       ],
-      "sourceAudit": "2026-05-06"
-    },
-    {
-      "id": "finding-003",
-      "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
-      "status": "open",
-      "priority": 3,
-      "category": "content-quality",
-      "severity": "low",
-      "title": "Short Excerpts Reduce Content Discovery",
-      "description": "14 posts have short excerpts that don't effectively communicate content value or include target keywords, potentially reducing click-through rates from search results and internal discovery.",
-      "recommendation": "Expand excerpts to 150-200 characters with compelling value propositions and primary keywords. Use excerpts as mini-meta descriptions that entice readers and clearly communicate the specific benefit or outcome they'll achieve.",
-      "effort": "small",
-      "affectedPages": [
-        "14 posts with short excerpts as listed in snapshot"
-      ],
-      "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-05-06"
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-008",
-      "createdAt": "2026-05-06T10:01:40.533Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 4,
       "category": "technical-seo",
       "severity": "low",
-      "title": "Core Web Vitals Monitoring for INP Thresholds",
-      "description": "With the May 2024 update replacing FID with INP and new thresholds (<200ms for good), Next.js sites need specific monitoring for interaction responsiveness.",
-      "recommendation": "Implement INP monitoring using Google's web-vitals library. Optimize JavaScript bundle splitting, implement proper loading states for forms, and ensure smooth interactions on mobile devices. Focus on lead generation forms and CRM integration points.",
+      "title": "Core Web Vitals Monitoring for Updated INP Thresholds",
+      "description": "The May 2024 Core Web Vitals update introduced stricter Interaction to Next Paint (INP) thresholds. Next.js/Vercel sites need monitoring to ensure compliance with the new 200ms threshold for 'Good' rating.",
+      "recommendation": "Implement Core Web Vitals monitoring focusing on INP. Optimize JavaScript bundle splitting, minimize main thread blocking, and ensure interactive elements respond within 200ms. Use Vercel Analytics and Google PageSpeed Insights for ongoing monitoring.",
       "effort": "small",
       "affectedPages": [
-        "All pages with interactive elements",
-        "Contact forms",
-        "Lead generation pages"
+        "/"
       ],
-      "sourceAudit": "2026-05-06"
+      "sourceAudit": "2026-05-13"
+    },
+    {
+      "id": "finding-009",
+      "createdAt": "2026-05-13T10:02:04.266Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
+      "status": "open",
+      "priority": 4,
+      "category": "content-quality",
+      "severity": "low",
+      "title": "Short Excerpts Limit Content Discovery",
+      "description": "Several posts have short excerpts that don't effectively communicate the content's value proposition, potentially reducing click-through rates from category pages and search results.",
+      "recommendation": "Expand excerpts to 150-200 characters that clearly communicate the specific value, target audience, and key takeaways. Use action-oriented language and include relevant keywords naturally.",
+      "effort": "small",
+      "affectedPages": [
+        "/blog/multi-channel-outreach-strategy",
+        "/blog/objection-handling-scripts",
+        "/blog/text-messaging-compliance-guide"
+      ],
+      "sourceAudit": "2026-05-13"
     },
     {
       "id": "finding-010",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "open",
       "priority": 4,
       "category": "structured-data",
       "severity": "low",
       "title": "FAQ Schema Opportunities for How-To Content",
-      "description": "Educational how-to content could benefit from FAQ schema to capture featured snippets and improve visibility for question-based queries.",
-      "recommendation": "Add FAQ schema to how-to guides that address common questions. Create dedicated FAQ sections within content or standalone FAQ pages for each industry vertical. Target question-based keywords like 'how long to work aged leads' or 'what's the best CRM for insurance leads'.",
-      "effort": "small",
+      "description": "Many how-to guides could benefit from FAQ schema markup to capture featured snippets and provide direct answers to common questions about lead conversion processes.",
+      "recommendation": "Add FAQ sections to major how-to guides covering common questions like 'How long should I follow up on aged leads?' or 'What's the best time to call mortgage leads?' Implement FAQ schema markup for these sections.",
+      "effort": "medium",
       "affectedPages": [
-        "How-to guides",
-        "Industry-specific content",
-        "Tool comparison pages"
+        "/blog/how-to-work-aged-leads-the-complete-system-for-maximum-roi",
+        "/blog/how-to-work-mortgage-leads",
+        "/blog/aged-lead-follow-up-cadence"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-05-06"
+      "notes": "Re-identified in audit 2026-05-13"
     },
     {
-      "id": "finding-011",
+      "id": "finding-002",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
-      "status": "open",
-      "priority": 4,
-      "category": "indexing",
-      "severity": "low",
-      "title": "Sitemap Optimization for Content Discovery",
-      "description": "With 138 sitemap entries across 133 total pages, there may be opportunities to optimize sitemap structure and priority signals for better crawl efficiency.",
-      "recommendation": "Implement priority tags in sitemap (1.0 for pillar content, 0.8 for cluster content, 0.6 for supporting pages). Add changefreq tags based on content type (weekly for blog posts, monthly for evergreen guides, yearly for static pages). Consider separate sitemaps for different content types.",
-      "effort": "small",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
+      "status": "completed",
+      "priority": 2,
+      "category": "content-quality",
+      "severity": "high",
+      "title": "Missing Featured Images Impact Rich Results",
+      "description": "Multiple posts lack featured images, which reduces eligibility for rich results and social sharing optimization. Images are increasingly important for Google's understanding of content quality and user engagement, especially for educational content.",
+      "recommendation": "Create custom featured images for all posts using consistent branding. Images should visually represent the lead type or process being discussed. Include relevant alt text with target keywords. Prioritize high-performing posts and recent content first.",
+      "effort": "large",
       "affectedPages": [
-        "Sitemap configuration",
-        "All indexed pages"
+        "/blog/how-to-work-family-law-leads",
+        "/blog/how-to-work-bankruptcy-leads",
+        "/blog/sms-templates-home-services-leads"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Re-identified in audit 2026-05-06"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
+    },
+    {
+      "id": "finding-003",
+      "createdAt": "2026-04-15T10:00:25.752Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
+      "status": "completed",
+      "priority": 3,
+      "category": "content-quality",
+      "severity": "medium",
+      "title": "Short Excerpts Reduce Content Discovery",
+      "description": "Several posts have short excerpts that don't adequately summarize the content value, potentially impacting internal search and content discovery. Post excerpts serve as internal meta descriptions and help users understand content value.",
+      "recommendation": "Expand excerpts to 150-200 characters that clearly communicate the post's value proposition and key takeaways. Include primary keywords naturally and focus on the specific outcomes readers will achieve.",
+      "effort": "medium",
+      "affectedPages": [
+        "/blog/multi-channel-outreach-strategy",
+        "/blog/objection-handling-scripts",
+        "/blog/text-messaging-compliance-guide"
+      ],
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     },
     {
       "id": "finding-004",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "completed",
       "priority": 3,
       "category": "structured-data",
@@ -224,12 +243,12 @@
         "All blog posts with Article schema"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-05-06 — appears resolved"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     },
     {
       "id": "finding-005",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "completed",
       "priority": 3,
       "category": "e-e-a-t",
@@ -243,12 +262,12 @@
         "/author/bill-rice"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-05-06 — appears resolved"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     },
     {
       "id": "finding-006",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "completed",
       "priority": 3,
       "category": "content-authority",
@@ -262,12 +281,12 @@
         "/blog/aged-lead-conversion-rates"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-05-06 — appears resolved"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     },
     {
       "id": "finding-008",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "completed",
       "priority": 3,
       "category": "internal-linking",
@@ -280,12 +299,12 @@
         "All blog posts and category pages"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-05-06 — appears resolved"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     },
     {
       "id": "finding-009",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "completed",
       "priority": 3,
       "category": "content-quality",
@@ -300,12 +319,12 @@
         "/blog/fcc-consent-rule-lead-buying"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-05-06 — appears resolved"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     },
     {
       "id": "finding-007",
       "createdAt": "2026-04-15T10:00:25.752Z",
-      "updatedAt": "2026-05-06T10:01:40.533Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
       "status": "completed",
       "priority": 4,
       "category": "technical-seo",
@@ -318,7 +337,25 @@
         "Site-wide performance monitoring needed"
       ],
       "sourceAudit": "2026-04-15",
-      "notes": "Not found in audit 2026-05-06 — appears resolved"
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
+    },
+    {
+      "id": "finding-011",
+      "createdAt": "2026-04-15T10:00:25.752Z",
+      "updatedAt": "2026-05-13T10:02:04.266Z",
+      "status": "completed",
+      "priority": 4,
+      "category": "indexing",
+      "severity": "low",
+      "title": "Sitemap Optimization for Content Discovery",
+      "description": "With 138 sitemap entries and growing content, sitemap organization can be optimized to help Google understand content hierarchy and update frequency patterns.",
+      "recommendation": "Consider implementing separate sitemaps for different content types (blog posts, landing pages, category pages) with appropriate priority and changefreq values. Set higher priority for pillar content and more frequent changefreq for regularly updated compliance content.",
+      "effort": "small",
+      "affectedPages": [
+        "Sitemap structure optimization"
+      ],
+      "sourceAudit": "2026-04-15",
+      "notes": "Not found in audit 2026-05-13 — appears resolved"
     }
   ]
 }
