@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T12:01:32.486Z",
+  "lastUpdated": "2026-05-13T12:00:59.553Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -273,6 +273,28 @@
       "priority": "high",
       "firstSeen": "2026-05-12",
       "lastSeen": "2026-05-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "d63c7f907404",
+      "title": "Optimize High-Performing Life Insurance Content",
+      "description": "The buy-life-insurance-leads page is generating strong search traffic (5 clicks, position 43.9) and page views (13 views). Expand this content with related subtopics, add internal linking to IUL and final expense pages, and create supporting blog content around 'life insurance leads' queries.",
+      "expectedImpact": "Could increase organic traffic by 30-40% and improve conversion funnel",
+      "priority": "high",
+      "firstSeen": "2026-05-13",
+      "lastSeen": "2026-05-13",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "e7516b262c9e",
+      "title": "Address New User Acquisition Decline",
+      "description": "With new users down 17%, implement targeted content marketing campaigns focusing on the 'aged insurance leads' keyword cluster (23.1 avg position). Create comprehensive guides and comparison content to capture users earlier in the buying journey.",
+      "expectedImpact": "Reverse new user decline and increase organic reach by 25%",
+      "priority": "high",
+      "firstSeen": "2026-05-13",
+      "lastSeen": "2026-05-13",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -563,6 +585,39 @@
       "status": "open"
     },
     {
+      "id": "4afd814250ec",
+      "title": "Leverage Improved Engagement Metrics",
+      "description": "With engagement rate up 34.9% and bounce rate down 22.8%, add strategic CTAs and lead magnets to high-engagement pages like /sales-process/the-customer-journey (28 views, 28 users). Implement exit-intent popups and newsletter signups.",
+      "expectedImpact": "Convert improved engagement into 15-20% more leads",
+      "priority": "medium",
+      "firstSeen": "2026-05-13",
+      "lastSeen": "2026-05-13",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "1c7eb91ecbd7",
+      "title": "Expand AI Referral Traffic Strategy",
+      "description": "ChatGPT and Claude.ai are sending qualified referral traffic (6 sessions combined). Create AI-optimized content formats, FAQ sections, and ensure content is structured for AI citation and recommendation.",
+      "expectedImpact": "Increase AI referral traffic by 50-75%",
+      "priority": "medium",
+      "firstSeen": "2026-05-13",
+      "lastSeen": "2026-05-13",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "36e8a4acc83a",
+      "title": "Optimize Contact Page Conversion",
+      "description": "The contact page has 36 views from 31 users, indicating high intent. Add social proof, testimonials, and clear value propositions. Implement form optimization and A/B test different layouts.",
+      "expectedImpact": "Improve contact form conversion by 20-30%",
+      "priority": "medium",
+      "firstSeen": "2026-05-13",
+      "lastSeen": "2026-05-13",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -680,6 +735,17 @@
       "priority": "low",
       "firstSeen": "2026-05-12",
       "lastSeen": "2026-05-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c0bd74eb1377",
+      "title": "Improve Session Duration",
+      "description": "Despite better engagement, session duration dropped 11.9% to 69.7s. Add related content suggestions, improve internal linking between lead type pages, and create content series to encourage deeper exploration.",
+      "expectedImpact": "Increase session duration back to 79+ seconds",
+      "priority": "low",
+      "firstSeen": "2026-05-13",
+      "lastSeen": "2026-05-13",
       "timesRepeated": 1,
       "status": "open"
     }
