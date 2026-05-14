@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T12:00:59.553Z",
+  "lastUpdated": "2026-05-14T12:00:56.502Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -8,8 +8,8 @@
       "expectedImpact": "15-25% increase in organic traffic from sales process queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-12",
-      "timesRepeated": 4,
+      "lastSeen": "2026-05-14",
+      "timesRepeated": 5,
       "status": "open"
     },
     {
@@ -295,6 +295,17 @@
       "priority": "high",
       "firstSeen": "2026-05-13",
       "lastSeen": "2026-05-13",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "149dc8aa419b",
+      "title": "Optimize Life Insurance Lead Content for Search",
+      "description": "Focus on improving the life insurance leads page ranking from position 73.6. Add comprehensive comparison tables, pricing guides, and vendor reviews. Create supporting content around 'affordable life insurance leads' and 'aged life insurance leads' queries that are showing impressions but no clicks.",
+      "expectedImpact": "Could increase search clicks by 200-300% based on current impression volume of 84 for main query",
+      "priority": "high",
+      "firstSeen": "2026-05-14",
+      "lastSeen": "2026-05-14",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -618,6 +629,28 @@
       "status": "open"
     },
     {
+      "id": "bdc0ba977c72",
+      "title": "Create Aged Lead Comparison Hub",
+      "description": "Multiple aged lead queries are showing good positioning (aged IUL leads at pos 6.0, aged life leads at pos 17.2). Create a comprehensive aged leads comparison page with pricing, quality metrics, and vendor comparisons to capture this traffic cluster.",
+      "expectedImpact": "Could capture 20-30 additional monthly clicks from aged lead query cluster",
+      "priority": "medium",
+      "firstSeen": "2026-05-14",
+      "lastSeen": "2026-05-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "cbfb25114104",
+      "title": "Implement Contact Page Conversion Optimization",
+      "description": "Contact page has 36 views from 31 users, indicating strong intent. Add lead magnets, consultation booking calendar, and clear value propositions. Test different CTA placements and messaging.",
+      "expectedImpact": "Could improve conversion rate by 25-40% from current high-intent traffic",
+      "priority": "medium",
+      "firstSeen": "2026-05-14",
+      "lastSeen": "2026-05-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -746,6 +779,17 @@
       "priority": "low",
       "firstSeen": "2026-05-13",
       "lastSeen": "2026-05-13",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "6e9dee0d3249",
+      "title": "Develop Mobile-Specific Content Strategy",
+      "description": "Mobile accounts for only 6 clicks vs 10 desktop clicks despite significant mobile search volume. Optimize page loading speed and create mobile-friendly lead comparison tools.",
+      "expectedImpact": "Could increase mobile search clicks by 50-75%",
+      "priority": "low",
+      "firstSeen": "2026-05-14",
+      "lastSeen": "2026-05-14",
       "timesRepeated": 1,
       "status": "open"
     }
