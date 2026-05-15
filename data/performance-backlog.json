@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T12:00:56.502Z",
+  "lastUpdated": "2026-05-15T12:01:10.626Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -306,6 +306,28 @@
       "priority": "high",
       "firstSeen": "2026-05-14",
       "lastSeen": "2026-05-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "324d31dc620c",
+      "title": "Launch Targeted Content Marketing Campaign",
+      "description": "Create weekly blog content targeting long-tail keywords around 'aged insurance leads', 'life insurance lead conversion', and 'CRM for insurance agents'. Focus on the queries showing impressions but no clicks (aged final expense leads, b2b lead management). Publish 2-3 articles per week with internal linking to high-performing pages like /buying-leads/buy-life-insurance-leads.",
+      "expectedImpact": "15-25% increase in organic impressions and 10-15% boost in new user acquisition within 60 days",
+      "priority": "high",
+      "firstSeen": "2026-05-15",
+      "lastSeen": "2026-05-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "251cdb0ffe68",
+      "title": "Optimize High-Impression, Low-Click Queries",
+      "description": "Rewrite meta titles and descriptions for pages targeting 'life insurance leads' (73 impressions, 1 click) and 'aged life insurance leads' (29 impressions, 0 clicks). Add compelling CTAs like 'Get Premium Leads Today' or 'Compare Lead Prices'. Test different title formats emphasizing value propositions.",
+      "expectedImpact": "30-50% CTR improvement on targeted queries, potentially doubling organic clicks",
+      "priority": "high",
+      "firstSeen": "2026-05-15",
+      "lastSeen": "2026-05-15",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -651,6 +673,50 @@
       "status": "open"
     },
     {
+      "id": "b7dd095957a6",
+      "title": "Expand IUL Lead Content Hub",
+      "description": "The /buying-leads/buy-iul-leads page shows strong performance (position 8.4, 3 clicks). Create supporting content around IUL lead strategies, pricing guides, and conversion techniques. Build a content cluster with 5-7 related articles linking back to the main IUL page.",
+      "expectedImpact": "20-30% increase in IUL-related organic traffic and improved topical authority",
+      "priority": "medium",
+      "firstSeen": "2026-05-15",
+      "lastSeen": "2026-05-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "31668adf6542",
+      "title": "Implement Lead Magnet Strategy",
+      "description": "Create downloadable resources like 'Lead Conversion Checklist' or 'CRM Setup Guide' to capture emails from the 59.3% engaged visitors. Place opt-in forms on high-traffic pages like /contact (31 views) and /sales-process/the-customer-journey (25 views).",
+      "expectedImpact": "10-15% email capture rate from engaged visitors, building nurture funnel for future conversions",
+      "priority": "medium",
+      "firstSeen": "2026-05-15",
+      "lastSeen": "2026-05-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "ecec209240db",
+      "title": "Strengthen Referral Traffic Sources",
+      "description": "Leverage the existing referral relationship with agedleadstore.com (7 sessions) by creating co-marketing content or guest posts. Explore partnerships with other lead vendors and industry sites to diversify traffic sources beyond direct and organic.",
+      "expectedImpact": "25-40% increase in referral traffic, reducing dependence on direct traffic",
+      "priority": "medium",
+      "firstSeen": "2026-05-15",
+      "lastSeen": "2026-05-15",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8c8b79cd31d6",
+      "title": "Mobile Experience Optimization",
+      "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
+      "expectedImpact": "Improve mobile CTR from current 1.09% to match desktop performance at 0.17%",
+      "priority": "low",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-15",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
       "id": "d00b2bbbadc2",
       "title": "Optimize for Voice Search and AI Queries",
       "description": "Add FAQ sections targeting conversational queries like 'what are the best aged insurance leads' and 'how much do IUL leads cost'. Structure content to answer specific questions that AI tools and voice assistants can easily extract.",
@@ -757,17 +823,6 @@
       "priority": "low",
       "firstSeen": "2026-05-11",
       "lastSeen": "2026-05-11",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "8c8b79cd31d6",
-      "title": "Mobile Experience Optimization",
-      "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
-      "expectedImpact": "Improve mobile CTR from current 1.09% to match desktop performance at 0.17%",
-      "priority": "low",
-      "firstSeen": "2026-05-12",
-      "lastSeen": "2026-05-12",
       "timesRepeated": 1,
       "status": "open"
     },
