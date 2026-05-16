@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T12:01:10.626Z",
+  "lastUpdated": "2026-05-16T12:01:41.638Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -332,6 +332,28 @@
       "status": "open"
     },
     {
+      "id": "fcb97db40fd6",
+      "title": "Expand IUL and life insurance content cluster",
+      "description": "Create comprehensive content around IUL leads (ranking #8.1) and aged life insurance leads (ranking #17.4). Develop supporting pages for 'best IUL leads,' 'IUL lead conversion strategies,' and 'aged vs fresh life insurance leads comparison.' Target the 63 monthly impressions for 'life insurance leads' with better-optimized content.",
+      "expectedImpact": "Could capture 15-25 additional monthly clicks from insurance-related queries currently ranking on page 2-3",
+      "priority": "high",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3752ffe18df1",
+      "title": "Optimize session duration through content depth",
+      "description": "Add comprehensive sections to top-performing pages like /sales-process/the-customer-journey (29 views) and /buying-leads/buy-life-insurance-leads (13 views). Include case studies, step-by-step processes, and downloadable resources to increase time-on-page and provide more value per visit.",
+      "expectedImpact": "Increase average session duration by 20-30% while maintaining current engagement rates",
+      "priority": "high",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -340,6 +362,17 @@
       "firstSeen": "2026-04-30",
       "lastSeen": "2026-05-10",
       "timesRepeated": 5,
+      "status": "open"
+    },
+    {
+      "id": "088660111850",
+      "title": "Optimize Mobile Search Experience",
+      "description": "With only 4 mobile clicks vs 7 desktop clicks despite mobile's growing search share, improve mobile page speed and user experience for lead buying pages.",
+      "expectedImpact": "10-15% improvement in mobile CTR and engagement",
+      "priority": "medium",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-05-16",
+      "timesRepeated": 2,
       "status": "open"
     },
     {
@@ -706,6 +739,28 @@
       "status": "open"
     },
     {
+      "id": "6fcf725550ed",
+      "title": "Develop new user acquisition content",
+      "description": "Create beginner-focused content targeting broader keywords like 'how to work leads,' 'lead management for beginners,' and 'sales process for new agents.' Focus on educational content that attracts users earlier in their journey to offset the 4.3% decline in new users.",
+      "expectedImpact": "Reverse new user decline and add 10-15% more new user acquisition within 60 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3b207a9e6e6b",
+      "title": "Leverage ChatGPT and AI referral traffic",
+      "description": "Since ChatGPT and Claude.ai are driving referral traffic (6 sessions), create AI-optimized content summaries and ensure key pages have clear, quotable statistics and frameworks that AI tools can reference. Add structured data markup to key pages.",
+      "expectedImpact": "Increase AI referral traffic by 50-100% as AI tools increasingly reference the site",
+      "priority": "medium",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -757,17 +812,6 @@
       "priority": "low",
       "firstSeen": "2026-05-03",
       "lastSeen": "2026-05-03",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "088660111850",
-      "title": "Optimize Mobile Search Experience",
-      "description": "With only 4 mobile clicks vs 7 desktop clicks despite mobile's growing search share, improve mobile page speed and user experience for lead buying pages.",
-      "expectedImpact": "10-15% improvement in mobile CTR and engagement",
-      "priority": "low",
-      "firstSeen": "2026-05-04",
-      "lastSeen": "2026-05-04",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -845,6 +889,17 @@
       "priority": "low",
       "firstSeen": "2026-05-14",
       "lastSeen": "2026-05-14",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "71b662b74c31",
+      "title": "Expand aged leads content strategy",
+      "description": "Build content around 'aged insurance leads' (position 23.4) and 'aged leads' (position 33.3) queries. Create comparison guides, pricing information, and success stories specifically for aged lead strategies since this appears to be a growing search interest.",
+      "expectedImpact": "Capture 5-10 additional monthly clicks from aged lead-related queries",
+      "priority": "low",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-16",
       "timesRepeated": 1,
       "status": "open"
     }
