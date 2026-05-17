@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-16T12:01:41.638Z",
+  "lastUpdated": "2026-05-17T12:01:26.905Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -8,8 +8,8 @@
       "expectedImpact": "15-25% increase in organic traffic from sales process queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-14",
-      "timesRepeated": 5,
+      "lastSeen": "2026-05-17",
+      "timesRepeated": 6,
       "status": "open"
     },
     {
@@ -350,6 +350,17 @@
       "priority": "high",
       "firstSeen": "2026-05-16",
       "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "66beb88b19db",
+      "title": "Optimize high-performing IUL content for featured snippets",
+      "description": "The IUL leads pages are ranking well (positions 8-10) with strong CTR. Create FAQ sections, comparison tables, and structured data markup for 'best IUL leads' and related queries to capture position 0.",
+      "expectedImpact": "20-30% increase in organic clicks from IUL-related queries",
+      "priority": "high",
+      "firstSeen": "2026-05-17",
+      "lastSeen": "2026-05-17",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -761,6 +772,28 @@
       "status": "open"
     },
     {
+      "id": "254e816b5530",
+      "title": "Implement internal linking strategy for lead buying pages",
+      "description": "IUL and life insurance lead pages are performing well individually. Create hub-and-spoke internal linking between related lead types and add contextual links from high-traffic pages like the homepage and customer journey content.",
+      "expectedImpact": "10-15% improvement in page authority and user flow",
+      "priority": "medium",
+      "firstSeen": "2026-05-17",
+      "lastSeen": "2026-05-17",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "41c6c16f6461",
+      "title": "Develop aged leads comparison content",
+      "description": "Aged leads queries show strong impressions but low clicks. Create comprehensive comparison content (aged vs fresh, pricing guides, vendor comparisons) targeting the 31 impressions for 'aged life insurance leads'.",
+      "expectedImpact": "Double aged leads page traffic within 30 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-17",
+      "lastSeen": "2026-05-17",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -900,6 +933,17 @@
       "priority": "low",
       "firstSeen": "2026-05-16",
       "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "41fba1b5b7a4",
+      "title": "Optimize contact page for lead capture",
+      "description": "Contact page ranks #2 in traffic (34 views, 33 users) but may not be converting. Add lead magnets, consultation booking, or resource downloads to capture visitor information.",
+      "expectedImpact": "5-10% increase in qualified lead generation",
+      "priority": "low",
+      "firstSeen": "2026-05-17",
+      "lastSeen": "2026-05-17",
       "timesRepeated": 1,
       "status": "open"
     }
