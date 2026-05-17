@@ -1,56 +1,53 @@
 {
-  "lastRun": "2026-05-10T06:03:08.295Z",
-  "weekOf": "2026-05-11",
+  "lastRun": "2026-05-17T06:03:06.766Z",
+  "weekOf": "2026-05-18",
   "analysis": {
-    "strategyReview": "Our content strategy shows strong coverage across all five pillars with 98 published posts, demonstrating comprehensive expertise in internet lead management. We've built particularly strong foundations in industry-specific strategies (insurance, mortgage, legal, home services) and lead management fundamentals. However, we have notable gaps in advanced CRM automation beyond basic setup, lead attribution and multi-touch conversion tracking, and emerging compliance challenges beyond TCPA basics. Our 'How to Work' series has become a strong brand differentiator, but we need more tactical, day-to-day operational content that addresses the granular challenges experienced reps face.",
-    "competitiveInsights": "AgedLeadStore.com continues to focus on product-centric content around their lead inventory, while AgedLeadSales.com remains narrowly focused on aged lead tactics. This leaves significant opportunities in fresh lead working strategies, multi-vendor lead management, and advanced conversion optimization. Keyword research reveals growing search volume around 'lead attribution software,' 'multi-touch lead tracking,' and 'lead conversion benchmarks by industry.' There's also emerging interest in 'lead fraud detection' and 'fake lead identification' as lead quality concerns increase across industries. Our competitors aren't addressing the operational complexity of managing leads from multiple vendors simultaneously.",
+    "strategyReview": "Our content strategy shows strong vertical coverage with comprehensive 'How to Work X Leads' guides across insurance, mortgage, legal, and home services sectors. We've built a solid foundation in lead management fundamentals and CRM systems. However, we have significant gaps in advanced sales psychology, lead nurturing automation beyond basic drip campaigns, and emerging compliance challenges. Our buying leads pillar is well-developed, but we're missing content on lead quality assessment tools and vendor performance tracking that goes beyond basic ROI.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and basic lead working tips, while AgedLeadSales.com stays narrow on aged lead tactics. We have opportunities in advanced lead qualification frameworks, multi-touch attribution modeling, and compliance automation tools. Search volume is increasing for 'lead scoring automation,' 'AI compliance monitoring,' and 'multi-vendor lead management.' There's also growing interest in 'lead conversion psychology' and 'behavioral triggers in lead follow-up' that neither competitor addresses comprehensively.",
     "newOpportunities": [
-      "Lead fraud detection and fake lead identification",
-      "Multi-vendor lead management workflows",
-      "Lead attribution and multi-touch conversion tracking",
-      "Industry-specific conversion benchmarks and KPIs",
-      "Advanced lead scoring beyond basic demographics",
-      "Lead recycling automation strategies"
+      "Lead qualification frameworks beyond basic scoring",
+      "Behavioral psychology in lead conversion",
+      "Multi-vendor performance dashboards",
+      "Compliance automation workflows",
+      "Advanced lead nurturing psychology"
     ],
     "trendingTopics": [
-      "AI-powered lead qualification",
-      "Multi-vendor lead operations",
-      "Lead fraud prevention",
-      "Attribution modeling for lead buyers",
-      "Conversion rate optimization tactics",
-      "Lead quality assessment frameworks"
+      "AI compliance monitoring",
+      "Lead conversion psychology",
+      "Multi-touch attribution",
+      "Behavioral triggers",
+      "Advanced qualification frameworks"
     ],
     "recommendedUpdates": [
       "Expand CRM automation content beyond basic workflows",
-      "Create more tactical, day-to-day operational guides",
-      "Develop content around managing leads from multiple sources",
-      "Address emerging compliance and fraud concerns"
+      "Create advanced lead psychology content series",
+      "Develop compliance automation guides"
     ]
   },
   "articlesCreated": [
     {
-      "title": "Lead Attribution and Multi-Touch Tracking: Know Which Touchpoints Drive Conversions",
-      "slug": "lead-attribution-multi-touch-tracking",
-      "publishDate": "2026-05-11",
-      "primaryKeyword": "lead attribution tracking",
-      "pillar": "CRM Systems"
-    },
-    {
-      "title": "Managing Multiple Lead Vendors: Workflows, Quality Control, and ROI Optimization",
-      "slug": "managing-multiple-lead-vendors",
-      "publishDate": "2026-05-13",
-      "primaryKeyword": "multiple lead vendors",
-      "pillar": "Buying Leads"
-    },
-    {
-      "title": "Lead Fraud Detection: How to Identify and Avoid Fake Internet Leads",
-      "slug": "lead-fraud-detection-fake-leads",
-      "publishDate": "2026-05-15",
-      "primaryKeyword": "lead fraud detection",
+      "title": "Lead Qualification Framework: Score and Prioritize Internet Leads for Maximum ROI",
+      "slug": "lead-qualification-framework-internet-leads",
+      "publishDate": "2026-05-18",
+      "primaryKeyword": "lead qualification framework",
       "pillar": "Lead Management"
+    },
+    {
+      "title": "Conversion Psychology for Internet Leads: Behavioral Triggers That Drive Sales",
+      "slug": "conversion-psychology-internet-leads",
+      "publishDate": "2026-05-20",
+      "primaryKeyword": "conversion psychology",
+      "pillar": "Sales Process"
+    },
+    {
+      "title": "Multi-Vendor Lead Performance Dashboard: Track ROI Across All Your Lead Sources",
+      "slug": "multi-vendor-lead-performance-dashboard",
+      "publishDate": "2026-05-22",
+      "primaryKeyword": "multi-vendor lead tracking",
+      "pillar": "Buying Leads"
     }
   ],
   "articlesSkipped": [],
   "articlesFailed": [],
-  "briefsForNextWeek": "Selected three high-opportunity topics not covered by competitors, rotating pillars (CRM Systems → Buying Leads → Lead Management). All address emerging operational challenges faced by experienced lead buyers. Lead attribution fills a major gap in our CRM content, multi-vendor management addresses real-world complexity, and fraud detection tackles a growing industry concern. These topics target mid-to-advanced practitioners rather than beginners, complementing our existing foundational content."
+  "briefsForNextWeek": "Selected 3 new briefs addressing identified content gaps rather than existing calendar items. Monday focuses on advanced lead management (qualification frameworks), Wednesday covers sales psychology (a major gap vs competitors), and Friday addresses multi-vendor tracking (buying leads pillar). All topics are trending and not covered by existing content."
 }

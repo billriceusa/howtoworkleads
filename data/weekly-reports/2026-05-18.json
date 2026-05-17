@@ -1,0 +1,176 @@
+{
+  "runDate": "2026-05-17T06:03:06.766Z",
+  "weekStartDate": "2026-05-18",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong vertical coverage with comprehensive 'How to Work X Leads' guides across insurance, mortgage, legal, and home services sectors. We've built a solid foundation in lead management fundamentals and CRM systems. However, we have significant gaps in advanced sales psychology, lead nurturing automation beyond basic drip campaigns, and emerging compliance challenges. Our buying leads pillar is well-developed, but we're missing content on lead quality assessment tools and vendor performance tracking that goes beyond basic ROI.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and basic lead working tips, while AgedLeadSales.com stays narrow on aged lead tactics. We have opportunities in advanced lead qualification frameworks, multi-touch attribution modeling, and compliance automation tools. Search volume is increasing for 'lead scoring automation,' 'AI compliance monitoring,' and 'multi-vendor lead management.' There's also growing interest in 'lead conversion psychology' and 'behavioral triggers in lead follow-up' that neither competitor addresses comprehensively.",
+    "newOpportunities": [
+      "Lead qualification frameworks beyond basic scoring",
+      "Behavioral psychology in lead conversion",
+      "Multi-vendor performance dashboards",
+      "Compliance automation workflows",
+      "Advanced lead nurturing psychology"
+    ],
+    "trendingTopics": [
+      "AI compliance monitoring",
+      "Lead conversion psychology",
+      "Multi-touch attribution",
+      "Behavioral triggers",
+      "Advanced qualification frameworks"
+    ],
+    "recommendedUpdates": [
+      "Expand CRM automation content beyond basic workflows",
+      "Create advanced lead psychology content series",
+      "Develop compliance automation guides"
+    ]
+  },
+  "articlesCreated": [
+    {
+      "title": "Lead Qualification Framework: Score and Prioritize Internet Leads for Maximum ROI",
+      "slug": "lead-qualification-framework-internet-leads",
+      "publishDate": "2026-05-18",
+      "primaryKeyword": "lead qualification framework",
+      "pillar": "Lead Management"
+    },
+    {
+      "title": "Conversion Psychology for Internet Leads: Behavioral Triggers That Drive Sales",
+      "slug": "conversion-psychology-internet-leads",
+      "publishDate": "2026-05-20",
+      "primaryKeyword": "conversion psychology",
+      "pillar": "Sales Process"
+    },
+    {
+      "title": "Multi-Vendor Lead Performance Dashboard: Track ROI Across All Your Lead Sources",
+      "slug": "multi-vendor-lead-performance-dashboard",
+      "publishDate": "2026-05-22",
+      "primaryKeyword": "multi-vendor lead tracking",
+      "pillar": "Buying Leads"
+    }
+  ],
+  "articlesSkipped": [],
+  "articlesFailed": [],
+  "imageOutcomes": [
+    {
+      "title": "Lead Qualification Framework: Score and Prioritize Internet Leads for Maximum ROI",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Conversion Psychology for Internet Leads: Behavioral Triggers That Drive Sales",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Multi-Vendor Lead Performance Dashboard: Track ROI Across All Your Lead Sources",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    }
+  ],
+  "newBriefs": [
+    {
+      "day": "Mon",
+      "publishDate": "2026-05-18",
+      "slug": "lead-qualification-framework-internet-leads",
+      "title": "Lead Qualification Framework: Score and Prioritize Internet Leads for Maximum ROI",
+      "pillar": "Lead Management",
+      "primaryKeyword": "lead qualification framework",
+      "secondaryKeywords": [
+        "internet lead scoring",
+        "lead prioritization system",
+        "qualified lead criteria",
+        "lead assessment process"
+      ],
+      "targetCategories": [
+        "lead-management",
+        "crm-systems"
+      ],
+      "wordCount": "2,800-3,200",
+      "competitiveAngle": "Goes beyond basic lead scoring to create a comprehensive qualification framework with behavioral triggers and multi-factor assessment",
+      "outline": [
+        "The Cost of Unqualified Lead Pursuit",
+        "BANT vs Modern Internet Lead Qualification",
+        "The 5-Factor Internet Lead Qualification Model",
+        "Behavioral Qualification Triggers",
+        "Technology Stack for Automated Qualification",
+        "Industry-Specific Qualification Criteria",
+        "Qualification Workflow Implementation"
+      ],
+      "internalLinks": [
+        "/blog/lead-scoring-models",
+        "/blog/crm-automation-workflows",
+        "/guides/crm-setup"
+      ]
+    },
+    {
+      "day": "Wed",
+      "publishDate": "2026-05-20",
+      "slug": "conversion-psychology-internet-leads",
+      "title": "Conversion Psychology for Internet Leads: Behavioral Triggers That Drive Sales",
+      "pillar": "Sales Process",
+      "primaryKeyword": "conversion psychology",
+      "secondaryKeywords": [
+        "lead conversion psychology",
+        "behavioral triggers sales",
+        "internet lead psychology",
+        "sales psychology techniques"
+      ],
+      "targetCategories": [
+        "sales-process",
+        "lead-management"
+      ],
+      "wordCount": "3,000-3,500",
+      "competitiveAngle": "First comprehensive guide applying behavioral psychology principles specifically to internet lead conversion, not generic sales psychology",
+      "outline": [
+        "Why Internet Leads Behave Differently",
+        "The 6 Psychological Drivers of Internet Lead Conversion",
+        "Timing and Urgency Psychology",
+        "Trust Building with Anonymous Leads",
+        "Cognitive Biases in Lead Decision Making",
+        "Emotional Triggers by Industry Vertical",
+        "Psychological Follow-Up Sequences"
+      ],
+      "internalLinks": [
+        "/blog/objection-handling-scripts",
+        "/blog/closing-techniques-internet-leads",
+        "/guides/sales-training"
+      ]
+    },
+    {
+      "day": "Fri",
+      "publishDate": "2026-05-22",
+      "slug": "multi-vendor-lead-performance-dashboard",
+      "title": "Multi-Vendor Lead Performance Dashboard: Track ROI Across All Your Lead Sources",
+      "pillar": "Buying Leads",
+      "primaryKeyword": "multi-vendor lead tracking",
+      "secondaryKeywords": [
+        "lead vendor performance",
+        "lead source dashboard",
+        "multi-source lead ROI",
+        "vendor comparison metrics"
+      ],
+      "targetCategories": [
+        "buying-leads",
+        "crm-systems"
+      ],
+      "wordCount": "2,600-3,000",
+      "competitiveAngle": "Comprehensive guide to building performance dashboards for buyers using multiple lead vendors, not covered by vendor-specific competitors",
+      "outline": [
+        "The Multi-Vendor Challenge",
+        "Essential Performance Metrics to Track",
+        "Building Your Vendor Comparison Dashboard",
+        "Automated Data Collection Setup",
+        "Performance Benchmarking by Vendor",
+        "Cost Per Acquisition Analysis",
+        "Vendor Negotiation Using Performance Data",
+        "Dashboard Tools and Implementation"
+      ],
+      "internalLinks": [
+        "/blog/lead-vendor-negotiation",
+        "/blog/lead-source-roi-tracking",
+        "/guides/vendor-evaluation"
+      ]
+    }
+  ],
+  "nextWeekPlan": "Selected 3 new briefs addressing identified content gaps rather than existing calendar items. Monday focuses on advanced lead management (qualification frameworks), Wednesday covers sales psychology (a major gap vs competitors), and Friday addresses multi-vendor tracking (buying leads pillar). All topics are trending and not covered by existing content.",
+  "errors": []
+}
