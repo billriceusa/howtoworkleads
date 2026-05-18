@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-17T12:01:26.905Z",
+  "lastUpdated": "2026-05-18T12:01:04.692Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -365,6 +365,28 @@
       "status": "open"
     },
     {
+      "id": "e6403d206074",
+      "title": "Optimize High-Performing IUL Content for Conversion",
+      "description": "The /buying-leads/buy-iul-leads page is ranking well (position 8.1) and driving clicks. Add clear CTAs, lead magnets, and conversion elements to capitalize on this high-intent traffic. Create supporting content around IUL lead best practices and pricing guides.",
+      "expectedImpact": "20-30% increase in lead generation from IUL-related traffic",
+      "priority": "high",
+      "firstSeen": "2026-05-18",
+      "lastSeen": "2026-05-18",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8c626030ba4a",
+      "title": "Expand Content Around Top-Performing Queries",
+      "description": "Create comprehensive content targeting 'aged life insurance leads' (31 impressions, position 18.2) and 'life insurance leads' (45 impressions, position 61.2). These have high search volume but need better positioning through dedicated landing pages and supporting blog content.",
+      "expectedImpact": "50-100% increase in organic clicks from insurance lead queries",
+      "priority": "high",
+      "firstSeen": "2026-05-18",
+      "lastSeen": "2026-05-18",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -383,6 +405,28 @@
       "priority": "medium",
       "firstSeen": "2026-05-04",
       "lastSeen": "2026-05-16",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "baf74eaf3f87",
+      "title": "Improve Session Duration Through Internal Linking",
+      "description": "Session duration dropped 20% despite higher engagement. Add contextual internal links within content, create 'related articles' sections, and implement a 'recommended reading' widget to encourage deeper site exploration.",
+      "expectedImpact": "Increase average session duration back to 75+ seconds and reduce bounce rate further",
+      "priority": "medium",
+      "firstSeen": "2026-05-12",
+      "lastSeen": "2026-05-18",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "41fba1b5b7a4",
+      "title": "Optimize contact page for lead capture",
+      "description": "Contact page ranks #2 in traffic (34 views, 33 users) but may not be converting. Add lead magnets, consultation booking, or resource downloads to capture visitor information.",
+      "expectedImpact": "5-10% increase in qualified lead generation",
+      "priority": "medium",
+      "firstSeen": "2026-05-17",
+      "lastSeen": "2026-05-18",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -651,17 +695,6 @@
       "status": "open"
     },
     {
-      "id": "baf74eaf3f87",
-      "title": "Improve Session Duration Through Internal Linking",
-      "description": "Session duration dropped 20% despite higher engagement. Add contextual internal links within content, create 'related articles' sections, and implement a 'recommended reading' widget to encourage deeper site exploration.",
-      "expectedImpact": "Increase average session duration back to 75+ seconds and reduce bounce rate further",
-      "priority": "medium",
-      "firstSeen": "2026-05-12",
-      "lastSeen": "2026-05-12",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "4afd814250ec",
       "title": "Leverage Improved Engagement Metrics",
       "description": "With engagement rate up 34.9% and bounce rate down 22.8%, add strategic CTAs and lead magnets to high-engagement pages like /sales-process/the-customer-journey (28 views, 28 users). Implement exit-intent popups and newsletter signups.",
@@ -790,6 +823,17 @@
       "priority": "medium",
       "firstSeen": "2026-05-17",
       "lastSeen": "2026-05-17",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "4d0383baaf33",
+      "title": "Leverage AI Assistant Referral Traffic",
+      "description": "ChatGPT and Claude.ai are sending qualified traffic (6 sessions combined). Create AI-optimized content summaries and ensure key pages are easily discoverable by AI tools through clear structure and comprehensive answers.",
+      "expectedImpact": "2-3x increase in AI-driven referral traffic",
+      "priority": "medium",
+      "firstSeen": "2026-05-18",
+      "lastSeen": "2026-05-18",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -933,17 +977,6 @@
       "priority": "low",
       "firstSeen": "2026-05-16",
       "lastSeen": "2026-05-16",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "41fba1b5b7a4",
-      "title": "Optimize contact page for lead capture",
-      "description": "Contact page ranks #2 in traffic (34 views, 33 users) but may not be converting. Add lead magnets, consultation booking, or resource downloads to capture visitor information.",
-      "expectedImpact": "5-10% increase in qualified lead generation",
-      "priority": "low",
-      "firstSeen": "2026-05-17",
-      "lastSeen": "2026-05-17",
       "timesRepeated": 1,
       "status": "open"
     }
