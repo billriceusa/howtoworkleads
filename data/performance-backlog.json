@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T12:01:04.692Z",
+  "lastUpdated": "2026-05-19T12:00:52.040Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -10,6 +10,28 @@
       "firstSeen": "2026-05-03",
       "lastSeen": "2026-05-17",
       "timesRepeated": 6,
+      "status": "open"
+    },
+    {
+      "id": "d0e03a8b2714",
+      "title": "Expand IUL Lead Content Strategy",
+      "description": "Create comprehensive IUL lead buying guides, comparison content, and vendor reviews. Focus on long-tail keywords like 'best aged IUL leads 2024' and 'IUL lead pricing comparison'. Add FAQ sections and calculator tools to capture more search volume around IUL terms.",
+      "expectedImpact": "20-30% increase in IUL-related organic traffic and improved conversion rates",
+      "priority": "high",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-05-19",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "251cdb0ffe68",
+      "title": "Optimize High-Impression, Low-Click Queries",
+      "description": "Rewrite meta titles and descriptions for pages targeting 'life insurance leads' (73 impressions, 1 click) and 'aged life insurance leads' (29 impressions, 0 clicks). Add compelling CTAs like 'Get Premium Leads Today' or 'Compare Lead Prices'. Test different title formats emphasizing value propositions.",
+      "expectedImpact": "30-50% CTR improvement on targeted queries, potentially doubling organic clicks",
+      "priority": "high",
+      "firstSeen": "2026-05-15",
+      "lastSeen": "2026-05-19",
+      "timesRepeated": 2,
       "status": "open"
     },
     {
@@ -152,17 +174,6 @@
       "priority": "high",
       "firstSeen": "2026-05-05",
       "lastSeen": "2026-05-05",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "d0e03a8b2714",
-      "title": "Expand IUL Lead Content Strategy",
-      "description": "Create comprehensive IUL lead buying guides, comparison content, and vendor reviews. Focus on long-tail keywords like 'best aged IUL leads 2024' and 'IUL lead pricing comparison'. Add FAQ sections and calculator tools to capture more search volume around IUL terms.",
-      "expectedImpact": "20-30% increase in IUL-related organic traffic and improved conversion rates",
-      "priority": "high",
-      "firstSeen": "2026-05-06",
-      "lastSeen": "2026-05-06",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -314,17 +325,6 @@
       "title": "Launch Targeted Content Marketing Campaign",
       "description": "Create weekly blog content targeting long-tail keywords around 'aged insurance leads', 'life insurance lead conversion', and 'CRM for insurance agents'. Focus on the queries showing impressions but no clicks (aged final expense leads, b2b lead management). Publish 2-3 articles per week with internal linking to high-performing pages like /buying-leads/buy-life-insurance-leads.",
       "expectedImpact": "15-25% increase in organic impressions and 10-15% boost in new user acquisition within 60 days",
-      "priority": "high",
-      "firstSeen": "2026-05-15",
-      "lastSeen": "2026-05-15",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "251cdb0ffe68",
-      "title": "Optimize High-Impression, Low-Click Queries",
-      "description": "Rewrite meta titles and descriptions for pages targeting 'life insurance leads' (73 impressions, 1 click) and 'aged life insurance leads' (29 impressions, 0 clicks). Add compelling CTAs like 'Get Premium Leads Today' or 'Compare Lead Prices'. Test different title formats emphasizing value propositions.",
-      "expectedImpact": "30-50% CTR improvement on targeted queries, potentially doubling organic clicks",
       "priority": "high",
       "firstSeen": "2026-05-15",
       "lastSeen": "2026-05-15",
@@ -838,6 +838,39 @@
       "status": "open"
     },
     {
+      "id": "0854e7d6adfa",
+      "title": "Develop Organic Search Content Pipeline",
+      "description": "Create weekly blog content targeting long-tail insurance lead queries. Focus on 'how-to' guides, pricing comparisons, and conversion strategies to reduce direct traffic dependency and grow organic search from 18% to 35% of total traffic.",
+      "expectedImpact": "40-60% increase in organic search sessions within 90 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-19",
+      "lastSeen": "2026-05-19",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "f6ae49270fe4",
+      "title": "Enhance Session Duration with Internal Linking",
+      "description": "Implement strategic internal linking between high-traffic pages (/customer-journey, /buy-iul-leads) and supporting content. Add 'related articles' sections and contextual links to increase average session duration from 73.1s to 90s+.",
+      "expectedImpact": "15-25% increase in pages per session and session duration",
+      "priority": "medium",
+      "firstSeen": "2026-05-19",
+      "lastSeen": "2026-05-19",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3b2bf4da9e3c",
+      "title": "Mobile Search Optimization",
+      "description": "Optimize for mobile search performance (currently 11 clicks vs 9 desktop despite 623 mobile impressions). Improve mobile page speed, adjust content formatting, and enhance mobile UX for lead generation forms.",
+      "expectedImpact": "25-40% improvement in mobile search CTR and conversions",
+      "priority": "medium",
+      "firstSeen": "2026-05-19",
+      "lastSeen": "2026-05-19",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -977,6 +1010,17 @@
       "priority": "low",
       "firstSeen": "2026-05-16",
       "lastSeen": "2026-05-16",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "7d309518b083",
+      "title": "Leverage AI Assistant Traffic",
+      "description": "Create content specifically optimized for AI assistant queries (ChatGPT, Claude referrals observed). Develop FAQ-style content and structured data to capture growing AI-mediated search traffic.",
+      "expectedImpact": "10-20% increase in AI assistant referral traffic",
+      "priority": "low",
+      "firstSeen": "2026-05-19",
+      "lastSeen": "2026-05-19",
       "timesRepeated": 1,
       "status": "open"
     }
