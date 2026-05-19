@@ -60,8 +60,8 @@ async function buildSiteSnapshot(): Promise<SiteSnapshot> {
       title,
       "slug": slug.current,
       excerpt,
-      "hasSeo": defined(seo.metaTitle) && defined(seo.metaDescription),
-      "hasImage": defined(mainImage),
+      "hasSeo": (defined(seoTitle) || defined(title)) && (defined(seoDescription) || defined(excerpt)),
+      "hasImage": defined(mainImage.asset),
       publishedAt
     },
     "landingPageCount": count(*[_type == "landingPage"]),
