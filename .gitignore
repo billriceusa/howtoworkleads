@@ -45,6 +45,10 @@ next-env.d.ts
 *.swp
 *.swo
 
+# Claude Code (local worktrees + machine-local settings; never commit
+# the bg-isolation toggle to the shared repo)
+.claude/
+
 # Sanity
 .sanity
 .env*.local
