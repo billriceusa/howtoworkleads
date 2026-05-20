@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T12:00:52.040Z",
+  "lastUpdated": "2026-05-20T12:01:23.069Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -10,6 +10,17 @@
       "firstSeen": "2026-05-03",
       "lastSeen": "2026-05-17",
       "timesRepeated": 6,
+      "status": "open"
+    },
+    {
+      "id": "2fd026111d7a",
+      "title": "Optimize High-Impression, Low-CTR Queries",
+      "description": "Focus on 'aged insurance leads' (13 impressions, 0 clicks, pos 27.8) and 'affordable life insurance leads' (8 impressions, 0 clicks, pos 32.1). Rewrite meta descriptions and titles for these pages to improve CTR from current 0.23% average.",
+      "expectedImpact": "Could increase clicks by 30-50% on high-impression queries",
+      "priority": "high",
+      "firstSeen": "2026-05-03",
+      "lastSeen": "2026-05-20",
+      "timesRepeated": 2,
       "status": "open"
     },
     {
@@ -119,17 +130,6 @@
       "priority": "high",
       "firstSeen": "2026-05-02",
       "lastSeen": "2026-05-02",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "2fd026111d7a",
-      "title": "Optimize High-Impression, Low-CTR Queries",
-      "description": "Focus on 'aged insurance leads' (13 impressions, 0 clicks, pos 27.8) and 'affordable life insurance leads' (8 impressions, 0 clicks, pos 32.1). Rewrite meta descriptions and titles for these pages to improve CTR from current 0.23% average.",
-      "expectedImpact": "Could increase clicks by 30-50% on high-impression queries",
-      "priority": "high",
-      "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-03",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -383,6 +383,17 @@
       "priority": "high",
       "firstSeen": "2026-05-18",
       "lastSeen": "2026-05-18",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3cf043758c1d",
+      "title": "Capitalize on IUL Lead Search Momentum",
+      "description": "Create comprehensive IUL lead buying guides, comparison content, and landing pages targeting 'best iul leads' (position 8.5) and 'iul leads' (position 17.9). Add internal linking from high-traffic pages to IUL content and create supporting content around IUL lead qualification and conversion strategies.",
+      "expectedImpact": "Could increase IUL-related clicks by 50-100% and improve positions to top 5 for primary terms",
+      "priority": "high",
+      "firstSeen": "2026-05-20",
+      "lastSeen": "2026-05-20",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -867,6 +878,39 @@
       "priority": "medium",
       "firstSeen": "2026-05-19",
       "lastSeen": "2026-05-19",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "53aa70f48926",
+      "title": "Extend Session Duration with Content Depth",
+      "description": "Add 'Related Articles' sections, downloadable resources, and internal content recommendations to high-performing pages like '/sales-process/the-customer-journey' (42 views) to increase time on site and reduce the 15.2% session duration decline.",
+      "expectedImpact": "Increase average session duration by 20-30% and improve content discoverability",
+      "priority": "medium",
+      "firstSeen": "2026-05-20",
+      "lastSeen": "2026-05-20",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "05a2cc8688b1",
+      "title": "Leverage Contact Page Traffic for Lead Generation",
+      "description": "The /contact page receives 46 views from 44 users, indicating high commercial intent. Add lead magnets, consultation booking forms, and targeted CTAs to convert this traffic into qualified leads for the business.",
+      "expectedImpact": "Convert 10-20% of contact page visitors into qualified leads or newsletter subscribers",
+      "priority": "medium",
+      "firstSeen": "2026-05-20",
+      "lastSeen": "2026-05-20",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3a5374fd1f44",
+      "title": "Expand Aged Lead Content Strategy",
+      "description": "With strong performance in aged lead queries and the 'aged-lead-pricing-guide' ranking at position 4.7, create comprehensive aged lead content including ROI calculators, vendor comparisons, and conversion case studies to capture more of this market segment.",
+      "expectedImpact": "Increase aged lead-related organic traffic by 40-60% within 60 days",
+      "priority": "medium",
+      "firstSeen": "2026-05-20",
+      "lastSeen": "2026-05-20",
       "timesRepeated": 1,
       "status": "open"
     },
