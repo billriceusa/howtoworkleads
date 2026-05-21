@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T12:01:23.069Z",
+  "lastUpdated": "2026-05-21T12:00:56.298Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -394,6 +394,28 @@
       "priority": "high",
       "firstSeen": "2026-05-20",
       "lastSeen": "2026-05-20",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "716d0dd8f8cd",
+      "title": "Optimize Aged Leads Content Titles and Meta Descriptions",
+      "description": "Rewrite titles and meta descriptions for aged leads pages currently ranking 9-26 but getting zero clicks. Focus on benefit-driven language like 'Proven ROI' and 'Exclusive Access'. Test titles like 'Buy Aged Life Insurance Leads - 40% Lower Cost, Proven Results' vs current generic titles.",
+      "expectedImpact": "Could increase aged leads traffic by 200-300% based on current impression volume of 25+ daily",
+      "priority": "high",
+      "firstSeen": "2026-05-21",
+      "lastSeen": "2026-05-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "a41cee637204",
+      "title": "Create IUL Lead Generation Landing Page Cluster",
+      "description": "Build comprehensive IUL content hub with pages for 'IUL Lead Conversion Strategies', 'IUL vs Term Lead Comparison', and 'IUL Lead ROI Calculator'. Link internally from the high-performing buy-iul-leads page (position 8.8) to capture more long-tail traffic.",
+      "expectedImpact": "Could capture additional 50-100 monthly organic sessions from IUL-related long-tail queries",
+      "priority": "high",
+      "firstSeen": "2026-05-21",
+      "lastSeen": "2026-05-21",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -915,6 +937,39 @@
       "status": "open"
     },
     {
+      "id": "b41d422b6dbd",
+      "title": "Develop Email List Building Strategy for Direct Traffic",
+      "description": "Add lead magnets to high-traffic pages like customer journey (46 views) and contact page (53 views). Create 'Lead Conversion Calculator' or 'ROI Tracking Spreadsheet' to convert direct traffic into email subscribers for nurturing.",
+      "expectedImpact": "Could convert 10-15% of direct traffic (10+ weekly subscribers) into qualified leads",
+      "priority": "medium",
+      "firstSeen": "2026-05-21",
+      "lastSeen": "2026-05-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "e4a54e25021a",
+      "title": "Expand State Compliance Content Based on Strong Performance",
+      "description": "The state compliance guide ranks at position 6.2 with 2 clicks. Create individual state pages for top insurance markets (CA, TX, FL, NY) with specific compliance requirements and lead buying regulations.",
+      "expectedImpact": "Could capture 20-30 additional monthly clicks from state-specific compliance queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-21",
+      "lastSeen": "2026-05-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "72e80491ca8f",
+      "title": "Optimize Mobile Experience for Search Traffic",
+      "description": "With 12 mobile clicks vs 11 desktop clicks but much lower mobile impressions (745 vs 5330), improve mobile page speed and user experience. Focus on buy-iul-leads and buy-life-insurance-leads pages.",
+      "expectedImpact": "Could improve mobile CTR by 25-50% and increase overall mobile search visibility",
+      "priority": "medium",
+      "firstSeen": "2026-05-21",
+      "lastSeen": "2026-05-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1065,6 +1120,17 @@
       "priority": "low",
       "firstSeen": "2026-05-19",
       "lastSeen": "2026-05-19",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "2daebe3b73f0",
+      "title": "Create Content for Home Improvement Lead Queries",
+      "description": "Capitalize on the 'home improvement leads for sale' query ranking at position 7.7. Develop comprehensive home improvement lead buying guides and vendor comparisons to capture this high-intent traffic.",
+      "expectedImpact": "Could add 15-25 monthly organic sessions from home improvement vertical",
+      "priority": "low",
+      "firstSeen": "2026-05-21",
+      "lastSeen": "2026-05-21",
       "timesRepeated": 1,
       "status": "open"
     }
