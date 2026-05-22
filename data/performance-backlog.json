@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-21T12:00:56.298Z",
+  "lastUpdated": "2026-05-22T12:01:28.233Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -19,8 +19,8 @@
       "expectedImpact": "Could increase clicks by 30-50% on high-impression queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-20",
-      "timesRepeated": 2,
+      "lastSeen": "2026-05-22",
+      "timesRepeated": 3,
       "status": "open"
     },
     {
@@ -416,6 +416,17 @@
       "priority": "high",
       "firstSeen": "2026-05-21",
       "lastSeen": "2026-05-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "09a7a7d19cde",
+      "title": "Expand IUL Content Hub with Commercial Intent Pages",
+      "description": "Create 5-7 additional IUL-focused pages targeting 'best IUL leads 2024', 'IUL lead conversion tips', and 'IUL vs term life leads comparison'. Build internal linking between existing IUL pages and add comparison tables with lead providers.",
+      "expectedImpact": "Could increase IUL-related organic traffic by 150-200% based on current 8 clicks from limited content",
+      "priority": "high",
+      "firstSeen": "2026-05-22",
+      "lastSeen": "2026-05-22",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -970,6 +981,28 @@
       "status": "open"
     },
     {
+      "id": "84bfde23fa49",
+      "title": "Leverage Direct Traffic with Lead Magnets",
+      "description": "Since 66% of traffic is direct, add prominent lead magnets on homepage and top pages: 'Lead Conversion Calculator', 'State Compliance Checklist', and 'ROI Tracking Template'. Gate with email capture.",
+      "expectedImpact": "Could convert 15-20% of direct traffic into email subscribers, building owned audience",
+      "priority": "medium",
+      "firstSeen": "2026-05-22",
+      "lastSeen": "2026-05-22",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "0c97a9b1cf98",
+      "title": "Create Aged Leads Content Series",
+      "description": "Build on the 3 clicks for aged leads content by creating comprehensive guides: 'Aged Leads Pricing by Industry', 'Aged Lead Conversion Scripts', and 'When to Buy Fresh vs Aged'. Target 20+ aged lead queries showing impressions.",
+      "expectedImpact": "Could capture additional 10-15 weekly clicks from aged lead queries currently getting impressions but no clicks",
+      "priority": "medium",
+      "firstSeen": "2026-05-22",
+      "lastSeen": "2026-05-22",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1131,6 +1164,17 @@
       "priority": "low",
       "firstSeen": "2026-05-21",
       "lastSeen": "2026-05-21",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "edcb792ea029",
+      "title": "Improve Mobile Search Experience",
+      "description": "Since mobile generates 13 clicks from only 778 impressions (1.67% CTR vs 0.29% desktop), optimize mobile page speed and add mobile-specific CTAs on lead buying pages.",
+      "expectedImpact": "Could improve mobile CTR to 2%+, adding 5-8 additional mobile sessions weekly",
+      "priority": "low",
+      "firstSeen": "2026-05-22",
+      "lastSeen": "2026-05-22",
       "timesRepeated": 1,
       "status": "open"
     }
