@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-22T12:01:28.233Z",
+  "lastUpdated": "2026-05-23T12:01:51.966Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -427,6 +427,28 @@
       "priority": "high",
       "firstSeen": "2026-05-22",
       "lastSeen": "2026-05-22",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "24ea32eba025",
+      "title": "Expand IUL content cluster for search dominance",
+      "description": "Create comprehensive IUL lead working guides, comparison content, and state-specific IUL regulations. Target 'how to work iul leads', 'iul lead conversion tips', and 'iul vs whole life leads' queries. Build internal linking between existing IUL pages.",
+      "expectedImpact": "Could increase IUL-related organic traffic by 200-300% based on current strong positioning",
+      "priority": "high",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-05-23",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "ade3fbaaa77c",
+      "title": "Optimize life insurance lead pages for better rankings",
+      "description": "The buy-life-insurance-leads page ranks at position 35.8 with 45 impressions. Improve on-page SEO, add comparison tables, pricing guides, and success stories. Target long-tail queries like 'affordable life insurance leads for agents'.",
+      "expectedImpact": "Moving from position 35 to 15-20 could triple click volume",
+      "priority": "high",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-05-23",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -999,6 +1021,39 @@
       "priority": "medium",
       "firstSeen": "2026-05-22",
       "lastSeen": "2026-05-22",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "f2a77fb3f9db",
+      "title": "Develop organic traffic acquisition strategy",
+      "description": "With 77% direct traffic dependency, create topic clusters around 'lead working strategies', 'sales process optimization', and 'lead conversion techniques'. Focus on how-to content that ranks for informational queries before promoting lead buying pages.",
+      "expectedImpact": "Could reduce direct traffic dependency to 50% while doubling organic sessions",
+      "priority": "medium",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-05-23",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "393b81aeb783",
+      "title": "Leverage email newsletter success for content amplification",
+      "description": "Newsletter traffic (18 sessions combined) shows strong engagement. Create newsletter-exclusive content previews, then publish full versions on-site with social sharing optimization to amplify reach.",
+      "expectedImpact": "Could increase page views per newsletter subscriber by 40-60%",
+      "priority": "medium",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-05-23",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "4b960d991848",
+      "title": "Create mobile-optimized content experience",
+      "description": "Mobile accounts for only 12 clicks vs 18 desktop clicks despite mobile-first indexing. Optimize page load speeds, improve mobile UX for lead buying pages, and create mobile-specific CTAs.",
+      "expectedImpact": "Could increase mobile click share from 40% to 60% of total clicks",
+      "priority": "medium",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-05-23",
       "timesRepeated": 1,
       "status": "open"
     },
