@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23T12:01:51.966Z",
+  "lastUpdated": "2026-05-24T12:01:37.379Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -453,14 +453,36 @@
       "status": "open"
     },
     {
+      "id": "5a778beeb20a",
+      "title": "Optimize High-Impression, Low-CTR Search Queries",
+      "description": "Target 'buy life insurance leads' (39 impressions, position 35.6) and 'aged life insurance leads' (20 impressions, position 19.1) with improved title tags and meta descriptions. Create dedicated landing pages for these high-volume queries with compelling value propositions.",
+      "expectedImpact": "Could increase daily organic clicks by 3-5 based on impression volume and improved CTR",
+      "priority": "high",
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c229e04c1cca",
+      "title": "Scale Newsletter and Email Marketing Success",
+      "description": "Newsletter traffic contributed 25 sessions (18 + 7 from ALS newsletter). Increase email frequency, create lead nurture sequences, and develop newsletter-exclusive content to capitalize on this high-converting channel.",
+      "expectedImpact": "30-50% increase in email-driven sessions within 30 days",
+      "priority": "high",
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
       "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
       "priority": "medium",
       "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-10",
-      "timesRepeated": 5,
+      "lastSeen": "2026-05-24",
+      "timesRepeated": 6,
       "status": "open"
     },
     {
@@ -1058,6 +1080,17 @@
       "status": "open"
     },
     {
+      "id": "b3a18bd741d0",
+      "title": "Expand Content Around Customer Journey Success",
+      "description": "The customer journey page attracted 44 unique users with perfect engagement. Create a content series covering lead qualification, objection handling, and closing techniques for internet leads to build on this momentum.",
+      "expectedImpact": "15-20% increase in pages per session and session duration",
+      "priority": "medium",
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1230,6 +1263,17 @@
       "priority": "low",
       "firstSeen": "2026-05-22",
       "lastSeen": "2026-05-22",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "ce5f3f052d4e",
+      "title": "Capitalize on AI Assistant Referral Traffic",
+      "description": "ChatGPT referred 4 sessions, indicating AI platforms are recommending the site. Create AI-optimized content with clear, structured answers to common lead-working questions to increase AI referrals.",
+      "expectedImpact": "10-15% increase in referral traffic from AI platforms",
+      "priority": "low",
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24",
       "timesRepeated": 1,
       "status": "open"
     }
