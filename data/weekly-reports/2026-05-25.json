@@ -1,0 +1,174 @@
+{
+  "runDate": "2026-05-24T06:03:01.242Z",
+  "weekStartDate": "2026-05-25",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong depth in industry-specific lead working guides and compliance content, with excellent coverage of aged leads, CRM systems, and vertical-specific strategies. We've built comprehensive resources for insurance agents, mortgage professionals, and home improvement contractors. However, we have gaps in advanced lead management tactics, particularly around lead data analysis, performance optimization, and scaling operations beyond basic workflows. Our CRM coverage is strong on setup but light on advanced automation and integration strategies.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product promotion and basic lead working tips, while AgedLeadSales.com stays narrow on aged lead tactics. We have opportunities to dominate advanced lead analytics, multi-channel attribution, and ROI optimization content. Current trending searches show high interest in AI integration, lead quality assessment, and compliance updates following recent FCC changes. There's significant search volume around 'lead conversion analytics,' 'lead performance tracking,' and 'lead vendor comparison' that we can capture with data-driven content.",
+    "newOpportunities": [
+      "Advanced lead analytics and performance tracking systems",
+      "Lead vendor comparison matrices with real pricing data",
+      "Multi-touch attribution models for lead conversion",
+      "Lead quality assessment frameworks",
+      "Advanced CRM reporting and dashboard creation"
+    ],
+    "trendingTopics": [
+      "AI integration in lead management workflows",
+      "Post-FCC rule change compliance strategies",
+      "Lead quality vs quantity optimization",
+      "Multi-vendor lead portfolio management",
+      "Advanced lead scoring methodologies"
+    ],
+    "recommendedUpdates": [
+      "Expand CRM automation content beyond basic workflows",
+      "Create more data-driven lead buying guides",
+      "Develop advanced lead management frameworks",
+      "Build comprehensive vendor comparison resources"
+    ]
+  },
+  "articlesCreated": [
+    {
+      "title": "CRM Integration Checklist: Connect Your Lead Tools for Maximum Efficiency",
+      "slug": "crm-integration-checklist-lead-tools",
+      "publishDate": "2026-05-27",
+      "primaryKeyword": "CRM integration",
+      "pillar": "CRM SYSTEMS"
+    },
+    {
+      "title": "Solar Lead Conversion: Close More Deals From Internet Solar Leads",
+      "slug": "solar-lead-conversion-internet-leads",
+      "publishDate": "2026-05-29",
+      "primaryKeyword": "solar lead conversion",
+      "pillar": "INDUSTRY STRATEGIES"
+    }
+  ],
+  "articlesSkipped": [
+    {
+      "title": "Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track",
+      "slug": "lead-quality-metrics-kpis-tracking",
+      "reason": "Title too similar to existing post \"Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track\" (lead-quality-metrics-kpis-lead-buyers-track)"
+    }
+  ],
+  "articlesFailed": [],
+  "imageOutcomes": [
+    {
+      "title": "CRM Integration Checklist: Connect Your Lead Tools for Maximum Efficiency",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Solar Lead Conversion: Close More Deals From Internet Solar Leads",
+      "status": "no-results"
+    }
+  ],
+  "newBriefs": [
+    {
+      "day": "Mon",
+      "publishDate": "2026-05-25",
+      "slug": "lead-quality-metrics-kpis-tracking",
+      "title": "Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track",
+      "pillar": "BUYING LEADS",
+      "primaryKeyword": "lead quality metrics",
+      "secondaryKeywords": [
+        "lead KPIs",
+        "lead performance tracking",
+        "lead quality assessment",
+        "lead ROI metrics"
+      ],
+      "targetCategories": [
+        "buying-leads",
+        "lead-management"
+      ],
+      "wordCount": "2,800-3,200",
+      "competitiveAngle": "Provides specific, measurable KPIs with benchmarks rather than generic quality advice",
+      "outline": [
+        "Why Most Lead Buyers Track the Wrong Metrics",
+        "The 8 Essential Lead Quality KPIs",
+        "Contact Rate vs Connection Rate: The Difference That Matters",
+        "Lead-to-Appointment Conversion Tracking",
+        "Cost Per Qualified Lead (CPQL) Calculation",
+        "Lead Aging Impact on Conversion Rates",
+        "Vendor Performance Comparison Framework",
+        "Setting Up Your Lead Quality Dashboard"
+      ],
+      "internalLinks": [
+        "/blog/lead-vendor-comparison",
+        "/blog/aged-lead-conversion-rates",
+        "/guides/crm-setup-guide"
+      ]
+    },
+    {
+      "day": "Wed",
+      "publishDate": "2026-05-27",
+      "slug": "crm-integration-checklist-lead-tools",
+      "title": "CRM Integration Checklist: Connect Your Lead Tools for Maximum Efficiency",
+      "pillar": "CRM SYSTEMS",
+      "primaryKeyword": "CRM integration",
+      "secondaryKeywords": [
+        "CRM setup",
+        "lead management tools",
+        "CRM automation",
+        "lead tool integration"
+      ],
+      "targetCategories": [
+        "crm-systems",
+        "lead-management"
+      ],
+      "wordCount": "2,600-3,000",
+      "competitiveAngle": "Step-by-step integration checklist with specific tool recommendations rather than generic CRM advice",
+      "outline": [
+        "The Cost of Disconnected Lead Tools",
+        "Pre-Integration Planning: Mapping Your Lead Flow",
+        "Essential CRM Integrations for Lead Buyers",
+        "Lead Source Integration Setup",
+        "Dialer and Communication Tool Connections",
+        "Email Marketing Platform Integration",
+        "Lead Vendor API Connections",
+        "Testing and Troubleshooting Your Integrations",
+        "Maintaining Integration Health"
+      ],
+      "internalLinks": [
+        "/blog/crm-automation-workflows",
+        "/blog/gohighlevel-aged-leads-setup",
+        "/guides/crm-comparison"
+      ]
+    },
+    {
+      "day": "Fri",
+      "publishDate": "2026-05-29",
+      "slug": "solar-lead-conversion-internet-leads",
+      "title": "Solar Lead Conversion: Close More Deals From Internet Solar Leads",
+      "pillar": "INDUSTRY STRATEGIES",
+      "primaryKeyword": "solar lead conversion",
+      "secondaryKeywords": [
+        "solar leads",
+        "solar sales",
+        "renewable energy leads",
+        "solar appointment setting"
+      ],
+      "targetCategories": [
+        "industry-strategies",
+        "sales-process"
+      ],
+      "wordCount": "3,000-3,500",
+      "competitiveAngle": "Solar-specific conversion strategies addressing unique objections and sales cycle challenges",
+      "outline": [
+        "Why Solar Leads Require Different Conversion Strategies",
+        "The Solar Lead Qualification Framework",
+        "Overcoming the 'Too Expensive' Objection",
+        "Navigating HOA and Permit Concerns",
+        "Federal Tax Credit and Incentive Conversations",
+        "The Solar Consultation Appointment Process",
+        "Follow-Up Sequences for Long Solar Sales Cycles",
+        "Seasonal Solar Lead Conversion Strategies",
+        "Solar Lead Nurture Campaign Templates"
+      ],
+      "internalLinks": [
+        "/blog/how-to-work-aged-solar-leads",
+        "/blog/appointment-setting-scripts",
+        "/guides/home-improvement-leads"
+      ]
+    }
+  ],
+  "nextWeekPlan": "Selected three high-value topics from existing editorial calendar that address current market needs. Lead Quality Metrics fills a gap in data-driven lead buying content. CRM Integration Checklist provides practical technical guidance our audience needs. Solar Lead Conversion targets the growing renewable energy market with industry-specific strategies. All three rotate pillars appropriately and avoid overlap with published content.",
+  "errors": []
+}

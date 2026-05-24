@@ -1,53 +1,53 @@
 {
-  "lastRun": "2026-05-17T06:03:06.766Z",
-  "weekOf": "2026-05-18",
+  "lastRun": "2026-05-24T06:03:01.242Z",
+  "weekOf": "2026-05-25",
   "analysis": {
-    "strategyReview": "Our content strategy shows strong vertical coverage with comprehensive 'How to Work X Leads' guides across insurance, mortgage, legal, and home services sectors. We've built a solid foundation in lead management fundamentals and CRM systems. However, we have significant gaps in advanced sales psychology, lead nurturing automation beyond basic drip campaigns, and emerging compliance challenges. Our buying leads pillar is well-developed, but we're missing content on lead quality assessment tools and vendor performance tracking that goes beyond basic ROI.",
-    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and basic lead working tips, while AgedLeadSales.com stays narrow on aged lead tactics. We have opportunities in advanced lead qualification frameworks, multi-touch attribution modeling, and compliance automation tools. Search volume is increasing for 'lead scoring automation,' 'AI compliance monitoring,' and 'multi-vendor lead management.' There's also growing interest in 'lead conversion psychology' and 'behavioral triggers in lead follow-up' that neither competitor addresses comprehensively.",
+    "strategyReview": "Our content strategy shows strong depth in industry-specific lead working guides and compliance content, with excellent coverage of aged leads, CRM systems, and vertical-specific strategies. We've built comprehensive resources for insurance agents, mortgage professionals, and home improvement contractors. However, we have gaps in advanced lead management tactics, particularly around lead data analysis, performance optimization, and scaling operations beyond basic workflows. Our CRM coverage is strong on setup but light on advanced automation and integration strategies.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product promotion and basic lead working tips, while AgedLeadSales.com stays narrow on aged lead tactics. We have opportunities to dominate advanced lead analytics, multi-channel attribution, and ROI optimization content. Current trending searches show high interest in AI integration, lead quality assessment, and compliance updates following recent FCC changes. There's significant search volume around 'lead conversion analytics,' 'lead performance tracking,' and 'lead vendor comparison' that we can capture with data-driven content.",
     "newOpportunities": [
-      "Lead qualification frameworks beyond basic scoring",
-      "Behavioral psychology in lead conversion",
-      "Multi-vendor performance dashboards",
-      "Compliance automation workflows",
-      "Advanced lead nurturing psychology"
+      "Advanced lead analytics and performance tracking systems",
+      "Lead vendor comparison matrices with real pricing data",
+      "Multi-touch attribution models for lead conversion",
+      "Lead quality assessment frameworks",
+      "Advanced CRM reporting and dashboard creation"
     ],
     "trendingTopics": [
-      "AI compliance monitoring",
-      "Lead conversion psychology",
-      "Multi-touch attribution",
-      "Behavioral triggers",
-      "Advanced qualification frameworks"
+      "AI integration in lead management workflows",
+      "Post-FCC rule change compliance strategies",
+      "Lead quality vs quantity optimization",
+      "Multi-vendor lead portfolio management",
+      "Advanced lead scoring methodologies"
     ],
     "recommendedUpdates": [
       "Expand CRM automation content beyond basic workflows",
-      "Create advanced lead psychology content series",
-      "Develop compliance automation guides"
+      "Create more data-driven lead buying guides",
+      "Develop advanced lead management frameworks",
+      "Build comprehensive vendor comparison resources"
     ]
   },
   "articlesCreated": [
     {
-      "title": "Lead Qualification Framework: Score and Prioritize Internet Leads for Maximum ROI",
-      "slug": "lead-qualification-framework-internet-leads",
-      "publishDate": "2026-05-18",
-      "primaryKeyword": "lead qualification framework",
-      "pillar": "Lead Management"
+      "title": "CRM Integration Checklist: Connect Your Lead Tools for Maximum Efficiency",
+      "slug": "crm-integration-checklist-lead-tools",
+      "publishDate": "2026-05-27",
+      "primaryKeyword": "CRM integration",
+      "pillar": "CRM SYSTEMS"
     },
     {
-      "title": "Conversion Psychology for Internet Leads: Behavioral Triggers That Drive Sales",
-      "slug": "conversion-psychology-internet-leads",
-      "publishDate": "2026-05-20",
-      "primaryKeyword": "conversion psychology",
-      "pillar": "Sales Process"
-    },
-    {
-      "title": "Multi-Vendor Lead Performance Dashboard: Track ROI Across All Your Lead Sources",
-      "slug": "multi-vendor-lead-performance-dashboard",
-      "publishDate": "2026-05-22",
-      "primaryKeyword": "multi-vendor lead tracking",
-      "pillar": "Buying Leads"
+      "title": "Solar Lead Conversion: Close More Deals From Internet Solar Leads",
+      "slug": "solar-lead-conversion-internet-leads",
+      "publishDate": "2026-05-29",
+      "primaryKeyword": "solar lead conversion",
+      "pillar": "INDUSTRY STRATEGIES"
     }
   ],
-  "articlesSkipped": [],
+  "articlesSkipped": [
+    {
+      "title": "Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track",
+      "slug": "lead-quality-metrics-kpis-tracking",
+      "reason": "Title too similar to existing post \"Lead Quality Metrics: 8 KPIs Every Lead Buyer Should Track\" (lead-quality-metrics-kpis-lead-buyers-track)"
+    }
+  ],
   "articlesFailed": [],
-  "briefsForNextWeek": "Selected 3 new briefs addressing identified content gaps rather than existing calendar items. Monday focuses on advanced lead management (qualification frameworks), Wednesday covers sales psychology (a major gap vs competitors), and Friday addresses multi-vendor tracking (buying leads pillar). All topics are trending and not covered by existing content."
+  "briefsForNextWeek": "Selected three high-value topics from existing editorial calendar that address current market needs. Lead Quality Metrics fills a gap in data-driven lead buying content. CRM Integration Checklist provides practical technical guidance our audience needs. Solar Lead Conversion targets the growing renewable energy market with industry-specific strategies. All three rotate pillars appropriately and avoid overlap with published content."
 }
