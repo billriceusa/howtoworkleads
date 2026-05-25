@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-24T12:01:37.379Z",
+  "lastUpdated": "2026-05-25T12:01:19.696Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -475,6 +475,28 @@
       "status": "open"
     },
     {
+      "id": "6ed6000bb436",
+      "title": "Optimize IUL leads landing page for position 10 breakthrough",
+      "description": "The /buy-iul-leads page ranks 13.2 for 'iul leads' with 3 clicks from 53 impressions. Add schema markup, improve page speed, and enhance content with comparison tables and pricing transparency to break into top 10.",
+      "expectedImpact": "Move from position 13 to position 8-10, potentially doubling click volume to 6-8 clicks daily",
+      "priority": "high",
+      "firstSeen": "2026-05-25",
+      "lastSeen": "2026-05-25",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "beb7e74659dd",
+      "title": "Scale content production around aged insurance leads",
+      "description": "Create comprehensive aged lead guides for each insurance vertical (life, health, final expense) targeting the 20+ aged lead queries showing impressions but zero clicks. Focus on comparison content and buyer guides.",
+      "expectedImpact": "Capture 15-25 additional daily clicks from aged lead queries currently ranking 15-40",
+      "priority": "high",
+      "firstSeen": "2026-05-25",
+      "lastSeen": "2026-05-25",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -492,8 +514,8 @@
       "expectedImpact": "10-15% improvement in mobile CTR and engagement",
       "priority": "medium",
       "firstSeen": "2026-05-04",
-      "lastSeen": "2026-05-16",
-      "timesRepeated": 2,
+      "lastSeen": "2026-05-25",
+      "timesRepeated": 3,
       "status": "open"
     },
     {
@@ -1087,6 +1109,28 @@
       "priority": "medium",
       "firstSeen": "2026-05-24",
       "lastSeen": "2026-05-24",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "5f4d3342a0ef",
+      "title": "Implement internal linking strategy from homepage",
+      "description": "Homepage receives 73 views but visitors aren't flowing to conversion pages. Add prominent CTAs and internal links to top-performing lead buying pages, especially IUL and life insurance lead pages.",
+      "expectedImpact": "Increase page views per session from 2.2 to 3.0+ and reduce bounce rate below 45%",
+      "priority": "medium",
+      "firstSeen": "2026-05-25",
+      "lastSeen": "2026-05-25",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "14fd458602e3",
+      "title": "Expand email list building on high-traffic pages",
+      "description": "Customer journey page (38 views) and contact page (44 views) need lead magnets. Create downloadable lead conversion checklists and compliance guides to capture emails from engaged visitors.",
+      "expectedImpact": "Increase email subscriber acquisition by 25-40 new subscribers weekly",
+      "priority": "medium",
+      "firstSeen": "2026-05-25",
+      "lastSeen": "2026-05-25",
       "timesRepeated": 1,
       "status": "open"
     },
