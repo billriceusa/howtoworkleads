@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-25T12:01:19.696Z",
+  "lastUpdated": "2026-05-26T12:01:29.187Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -493,6 +493,28 @@
       "priority": "high",
       "firstSeen": "2026-05-25",
       "lastSeen": "2026-05-25",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "25beadaefa44",
+      "title": "Optimize IUL leads page for conversion",
+      "description": "The IUL leads page is your top organic performer with 42% of search clicks. Add clear CTAs, lead magnets, and conversion tracking. Create related content like 'IUL Lead Conversion Scripts' and 'Working IUL Leads: Agent Success Stories' to capture the full funnel.",
+      "expectedImpact": "20-30% increase in conversion rate from organic search traffic",
+      "priority": "high",
+      "firstSeen": "2026-05-26",
+      "lastSeen": "2026-05-26",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "83e11c9d1377",
+      "title": "Improve engagement for new organic traffic",
+      "description": "Create internal linking between high-traffic pages and engagement-focused content. Add 'Related Articles' sections to IUL and life insurance lead pages. Implement exit-intent popups with lead magnets to capture bouncing visitors.",
+      "expectedImpact": "Reduce bounce rate by 5-8% and increase pages per session",
+      "priority": "high",
+      "firstSeen": "2026-05-26",
+      "lastSeen": "2026-05-26",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1135,6 +1157,28 @@
       "status": "open"
     },
     {
+      "id": "872478225801",
+      "title": "Expand aged leads content cluster",
+      "description": "Multiple aged lead queries show strong impressions but low clicks. Create comprehensive aged leads landing page, optimize existing aged lead blog posts for featured snippets, and build topic cluster around 'aged vs fresh leads' comparison content.",
+      "expectedImpact": "Capture additional 10-15 monthly organic clicks from aged lead queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-26",
+      "lastSeen": "2026-05-26",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "7837f7915234",
+      "title": "Leverage email list for content amplification",
+      "description": "With 27 email-driven sessions showing strong engagement, create email sequences promoting top-performing content. Send weekly 'Lead Working Tips' featuring your best-performing blog posts to drive repeat traffic and social sharing.",
+      "expectedImpact": "15-20% increase in email-driven traffic and improved content reach",
+      "priority": "medium",
+      "firstSeen": "2026-05-26",
+      "lastSeen": "2026-05-26",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1318,6 +1362,17 @@
       "priority": "low",
       "firstSeen": "2026-05-24",
       "lastSeen": "2026-05-24",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "19679f75b286",
+      "title": "Optimize for mobile search experience",
+      "description": "Mobile generated only 10 of 26 search clicks despite representing significant search volume. Audit mobile page speed, improve mobile UX for lead buying pages, and ensure mobile-friendly content formatting.",
+      "expectedImpact": "Improve mobile CTR by 25-40%",
+      "priority": "low",
+      "firstSeen": "2026-05-26",
+      "lastSeen": "2026-05-26",
       "timesRepeated": 1,
       "status": "open"
     }
