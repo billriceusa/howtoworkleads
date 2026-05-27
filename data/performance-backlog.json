@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26T12:01:29.187Z",
+  "lastUpdated": "2026-05-27T12:01:17.903Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -515,6 +515,28 @@
       "priority": "high",
       "firstSeen": "2026-05-26",
       "lastSeen": "2026-05-26",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "bcad54c3434b",
+      "title": "Optimize IUL Content for Position 10+ Rankings",
+      "description": "The 'iul leads' query ranks at 12.2 and drives significant traffic. Create comprehensive IUL lead guides, add FAQ sections, and build internal linking from related insurance content to push this page into top 10.",
+      "expectedImpact": "Could increase clicks by 50-100% if ranking improves to position 8-10",
+      "priority": "high",
+      "firstSeen": "2026-05-27",
+      "lastSeen": "2026-05-27",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "e143ff367587",
+      "title": "Expand High-Performing Content Categories",
+      "description": "Customer journey and CRM evolution pages show strong engagement. Create series content around sales process optimization, lead nurturing workflows, and CRM implementation guides targeting the same user intent.",
+      "expectedImpact": "20-30% increase in pages per session and improved topical authority",
+      "priority": "high",
+      "firstSeen": "2026-05-27",
+      "lastSeen": "2026-05-27",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1179,6 +1201,28 @@
       "status": "open"
     },
     {
+      "id": "963563437026",
+      "title": "Address Bounce Rate on Homepage",
+      "description": "Homepage has 56 views but users may not be finding clear navigation to relevant content. Add prominent CTAs for lead buying guides, implement content recommendations based on user type (insurance vs mortgage vs solar).",
+      "expectedImpact": "5-10% reduction in bounce rate, improved user flow to conversion pages",
+      "priority": "medium",
+      "firstSeen": "2026-05-27",
+      "lastSeen": "2026-05-27",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "0360df35f165",
+      "title": "Leverage Email Newsletter Performance",
+      "description": "Newsletter traffic (24 sessions combined) shows strong engagement. Create newsletter-exclusive content previews and use email to drive traffic to new content within 24-48 hours of publishing.",
+      "expectedImpact": "15-25% increase in newsletter-driven traffic and faster content indexing",
+      "priority": "medium",
+      "firstSeen": "2026-05-27",
+      "lastSeen": "2026-05-27",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1373,6 +1417,17 @@
       "priority": "low",
       "firstSeen": "2026-05-26",
       "lastSeen": "2026-05-26",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "f67563e13700",
+      "title": "Optimize for 'Aged Leads' Long-tail Queries",
+      "description": "Multiple aged lead queries show impressions but no clicks. Create dedicated landing pages for 'aged life insurance leads' and 'aged final expense leads' with clear value propositions and lead source recommendations.",
+      "expectedImpact": "Capture additional 5-10 clicks per week from long-tail aged lead searches",
+      "priority": "low",
+      "firstSeen": "2026-05-27",
+      "lastSeen": "2026-05-27",
       "timesRepeated": 1,
       "status": "open"
     }
