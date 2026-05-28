@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27T12:01:17.903Z",
+  "lastUpdated": "2026-05-28T12:02:15.739Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -541,6 +541,28 @@
       "status": "open"
     },
     {
+      "id": "82943c84cca8",
+      "title": "Optimize IUL Content Cluster",
+      "description": "Create comprehensive IUL lead buying guide, comparison charts, and related content to capture the 54 daily impressions for 'iul leads'. Add internal linking from existing IUL page to new supporting content.",
+      "expectedImpact": "Increase IUL-related traffic by 40-60% and improve position from 12.2 to top 10",
+      "priority": "high",
+      "firstSeen": "2026-05-28",
+      "lastSeen": "2026-05-28",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "767a50df909e",
+      "title": "Fix Engagement Rate Conversion Funnel",
+      "description": "Audit the contact page (13 views, 10 users) and add clear CTAs to high-traffic pages. Implement exit-intent popups and improve newsletter signup placement on top-performing content.",
+      "expectedImpact": "Increase engagement rate from 36.73% back to 42%+ baseline",
+      "priority": "high",
+      "firstSeen": "2026-05-28",
+      "lastSeen": "2026-05-28",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -570,6 +592,17 @@
       "priority": "medium",
       "firstSeen": "2026-05-12",
       "lastSeen": "2026-05-18",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "71b662b74c31",
+      "title": "Expand aged leads content strategy",
+      "description": "Build content around 'aged insurance leads' (position 23.4) and 'aged leads' (position 33.3) queries. Create comparison guides, pricing information, and success stories specifically for aged lead strategies since this appears to be a growing search interest.",
+      "expectedImpact": "Capture 5-10 additional monthly clicks from aged lead-related queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-28",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -1223,6 +1256,17 @@
       "status": "open"
     },
     {
+      "id": "ebbf8f6656ff",
+      "title": "Improve Life Insurance Lead Rankings",
+      "description": "The 'buy life insurance leads' page ranks at position 35.9 with 45 impressions. Optimize content depth, add comparison tables, and build topical authority through related content.",
+      "expectedImpact": "Move from position 35.9 to top 20, potentially doubling clicks",
+      "priority": "medium",
+      "firstSeen": "2026-05-28",
+      "lastSeen": "2026-05-28",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1355,17 +1399,6 @@
       "status": "open"
     },
     {
-      "id": "71b662b74c31",
-      "title": "Expand aged leads content strategy",
-      "description": "Build content around 'aged insurance leads' (position 23.4) and 'aged leads' (position 33.3) queries. Create comparison guides, pricing information, and success stories specifically for aged lead strategies since this appears to be a growing search interest.",
-      "expectedImpact": "Capture 5-10 additional monthly clicks from aged lead-related queries",
-      "priority": "low",
-      "firstSeen": "2026-05-16",
-      "lastSeen": "2026-05-16",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "7d309518b083",
       "title": "Leverage AI Assistant Traffic",
       "description": "Create content specifically optimized for AI assistant queries (ChatGPT, Claude referrals observed). Develop FAQ-style content and structured data to capture growing AI-mediated search traffic.",
@@ -1428,6 +1461,17 @@
       "priority": "low",
       "firstSeen": "2026-05-27",
       "lastSeen": "2026-05-27",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "00c98c62b6cb",
+      "title": "Leverage Email Traffic Success",
+      "description": "Email drives 27 sessions (27% of traffic). Create email-specific landing pages and track email subscriber conversion rates to optimize newsletter content strategy.",
+      "expectedImpact": "Increase email-driven conversions by 25-30%",
+      "priority": "low",
+      "firstSeen": "2026-05-28",
+      "lastSeen": "2026-05-28",
       "timesRepeated": 1,
       "status": "open"
     }
