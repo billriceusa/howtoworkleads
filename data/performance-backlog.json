@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-28T12:02:15.739Z",
+  "lastUpdated": "2026-05-29T12:01:33.738Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -559,6 +559,28 @@
       "priority": "high",
       "firstSeen": "2026-05-28",
       "lastSeen": "2026-05-28",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "037872a68de6",
+      "title": "Optimize High-Bounce Landing Pages",
+      "description": "Focus on the homepage (30 views, likely high bounce) and top traffic pages. Add clear value propositions, internal linking, and calls-to-action within the first screen. Test different headline variations and content layouts to reduce the 67% bounce rate.",
+      "expectedImpact": "Reduce bounce rate by 10-15% and increase page views per session",
+      "priority": "high",
+      "firstSeen": "2026-05-29",
+      "lastSeen": "2026-05-29",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c808b2d511bb",
+      "title": "Scale IUL Content Strategy",
+      "description": "IUL leads content is your top performer with 9 search clicks and strong rankings (pos 10-16). Create additional IUL-focused content: comparison guides, state-specific regulations, conversion case studies, and advanced sales techniques for IUL leads.",
+      "expectedImpact": "Increase IUL-related traffic by 30-50% within 60 days",
+      "priority": "high",
+      "firstSeen": "2026-05-29",
+      "lastSeen": "2026-05-29",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1267,14 +1289,47 @@
       "status": "open"
     },
     {
+      "id": "60d2b31be929",
+      "title": "Expand Email Newsletter Reach",
+      "description": "Email traffic represents 24% of sessions with likely high engagement. Create lead magnets on top-performing pages, implement exit-intent popups, and develop a weekly newsletter featuring aged lead market insights and conversion tips.",
+      "expectedImpact": "Increase email subscribers by 25% and email-driven traffic by 40%",
+      "priority": "medium",
+      "firstSeen": "2026-05-29",
+      "lastSeen": "2026-05-29",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "f090db7d047b",
+      "title": "Target Long-Tail Insurance Queries",
+      "description": "You're ranking well for specific terms like 'aged auto insurance leads' (pos 9) and 'aged lead store' (pos 3) but getting zero clicks. Optimize title tags and meta descriptions for these high-potential, low-competition queries.",
+      "expectedImpact": "Capture 5-10 additional clicks per week from long-tail queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-29",
+      "lastSeen": "2026-05-29",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "9e2b9bbf9277",
+      "title": "Create DSCR Lead Content Hub",
+      "description": "DSCR leads query shows strong performance (pos 11.8) and growing interest. Develop comprehensive DSCR content including lead sources, conversion strategies, and market analysis to capture this emerging opportunity.",
+      "expectedImpact": "Establish authority in DSCR space and capture 15-20% more mortgage-related traffic",
+      "priority": "medium",
+      "firstSeen": "2026-05-29",
+      "lastSeen": "2026-05-29",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
       "expectedImpact": "Improve mobile CTR from current 1.09% to match desktop performance at 0.17%",
       "priority": "low",
       "firstSeen": "2026-05-12",
-      "lastSeen": "2026-05-15",
-      "timesRepeated": 2,
+      "lastSeen": "2026-05-29",
+      "timesRepeated": 3,
       "status": "open"
     },
     {
