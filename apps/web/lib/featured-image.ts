@@ -250,36 +250,55 @@ export async function generateBrandedImage(
   buffer: Buffer
   photoId: string
   credit: { name: string; url: string } | null
+  branded: boolean
 } | null> {
   const photo = await searchUnsplash(searchQuery, excludePhotoIds)
   if (!photo) return null
 
-  // Download at optimal size, crop to faces
-  const downloadUrl = `${photo.urls.raw}&w=${IMAGE_WIDTH}&h=${IMAGE_HEIGHT}&fit=crop&crop=faces,center&q=80`
+  // Download at optimal size, crop to faces. Unsplash returns the photo
+  // already at exactly IMAGE_WIDTH x IMAGE_HEIGHT (fit=crop, crop=faces),
+  // so this buffer is a valid OG image on its own. fm=jpg guarantees a
+  // JPEG for the no-sharp fallback path below.
+  const downloadUrl = `${photo.urls.raw}&w=${IMAGE_WIDTH}&h=${IMAGE_HEIGHT}&fit=crop&crop=faces,center&q=80&fm=jpg`
   const rawBuffer = await downloadImage(downloadUrl)
 
-  // Process: resize -> grayscale -> yellow tint -> composites
-  const sharp = await getSharp()
-  const base = sharp(rawBuffer)
-    .resize(IMAGE_WIDTH, IMAGE_HEIGHT, { fit: 'cover', position: 'centre' })
-    .grayscale()
-    .tint({ r: 210, g: 180, b: 0 }) // HTWL yellow-gold tint
+  // Apply the HTWL brand treatment (yellow duotone + dot grid + accent)
+  // via sharp. Sharp's platform binary is unreliable in the Vercel
+  // serverless runtime; if it can't load or fails, fall back to the
+  // raw (already correctly-cropped) Unsplash photo. A relevant unbranded
+  // photo beats no image every week — the local backfill script (run on
+  // macOS where sharp works) can re-brand later with --replace.
+  let buffer = rawBuffer
+  let branded = false
+  try {
+    const sharp = await getSharp()
+    const base = sharp(rawBuffer)
+      .resize(IMAGE_WIDTH, IMAGE_HEIGHT, { fit: 'cover', position: 'centre' })
+      .grayscale()
+      .tint({ r: 210, g: 180, b: 0 }) // HTWL yellow-gold tint
 
-  const dotGrid = createDotGrid(IMAGE_WIDTH, IMAGE_HEIGHT)
-  const yellowAccent = createYellowAccent(IMAGE_WIDTH, IMAGE_HEIGHT)
+    const dotGrid = createDotGrid(IMAGE_WIDTH, IMAGE_HEIGHT)
+    const yellowAccent = createYellowAccent(IMAGE_WIDTH, IMAGE_HEIGHT)
 
-  const buffer = await base
-    .composite([
-      { input: yellowAccent, blend: 'over' },
-      { input: dotGrid, blend: 'over' },
-    ])
-    .jpeg({ quality: 85 })
-    .toBuffer()
+    buffer = await base
+      .composite([
+        { input: yellowAccent, blend: 'over' },
+        { input: dotGrid, blend: 'over' },
+      ])
+      .jpeg({ quality: 85 })
+      .toBuffer()
+    branded = true
+  } catch (e: unknown) {
+    console.warn(
+      `  [Image] Sharp branding unavailable, using raw Unsplash photo: ${(e as Error).message}`,
+    )
+  }
 
   return {
     buffer,
     photoId: photo.id,
     credit: { name: photo.user.name, url: photo.user.links.html },
+    branded,
   }
 }
 
