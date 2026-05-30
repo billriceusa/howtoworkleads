@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-29T12:01:33.738Z",
+  "lastUpdated": "2026-05-30T12:01:33.708Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -42,6 +42,17 @@
       "priority": "high",
       "firstSeen": "2026-05-15",
       "lastSeen": "2026-05-19",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "24ea32eba025",
+      "title": "Expand IUL content cluster for search dominance",
+      "description": "Create comprehensive IUL lead working guides, comparison content, and state-specific IUL regulations. Target 'how to work iul leads', 'iul lead conversion tips', and 'iul vs whole life leads' queries. Build internal linking between existing IUL pages.",
+      "expectedImpact": "Could increase IUL-related organic traffic by 200-300% based on current strong positioning",
+      "priority": "high",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-05-30",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -431,17 +442,6 @@
       "status": "open"
     },
     {
-      "id": "24ea32eba025",
-      "title": "Expand IUL content cluster for search dominance",
-      "description": "Create comprehensive IUL lead working guides, comparison content, and state-specific IUL regulations. Target 'how to work iul leads', 'iul lead conversion tips', and 'iul vs whole life leads' queries. Build internal linking between existing IUL pages.",
-      "expectedImpact": "Could increase IUL-related organic traffic by 200-300% based on current strong positioning",
-      "priority": "high",
-      "firstSeen": "2026-05-23",
-      "lastSeen": "2026-05-23",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "ade3fbaaa77c",
       "title": "Optimize life insurance lead pages for better rankings",
       "description": "The buy-life-insurance-leads page ranks at position 35.8 with 45 impressions. Improve on-page SEO, add comparison tables, pricing guides, and success stories. Target long-tail queries like 'affordable life insurance leads for agents'.",
@@ -585,6 +585,28 @@
       "status": "open"
     },
     {
+      "id": "b8e742d04d2b",
+      "title": "Implement internal linking strategy to reduce bounce rate",
+      "description": "Add 3-5 contextual internal links to related content within the first 200 words of high-traffic pages, especially the homepage and IUL content. Focus on linking to complementary lead types and educational content to encourage exploration.",
+      "expectedImpact": "Reduce bounce rate by 15-20% and increase pages per session",
+      "priority": "high",
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-05-30",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "272f96448964",
+      "title": "Optimize homepage for better user flow",
+      "description": "The homepage receives 38 views but likely contributes to high bounce rate. Add clear navigation paths, featured content sections, and lead type categorization to guide visitors to relevant content based on their industry.",
+      "expectedImpact": "Improve engagement rate by 25-30% and reduce homepage bounce rate",
+      "priority": "high",
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-05-30",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -602,8 +624,8 @@
       "expectedImpact": "10-15% improvement in mobile CTR and engagement",
       "priority": "medium",
       "firstSeen": "2026-05-04",
-      "lastSeen": "2026-05-25",
-      "timesRepeated": 3,
+      "lastSeen": "2026-05-30",
+      "timesRepeated": 4,
       "status": "open"
     },
     {
@@ -1318,6 +1340,28 @@
       "priority": "medium",
       "firstSeen": "2026-05-29",
       "lastSeen": "2026-05-29",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "fcd01b46e5cb",
+      "title": "Develop DSCR loan content strategy",
+      "description": "DSCR leads show strong search potential (pos 11.8) but limited content. Create comprehensive DSCR lead working guides, pricing information, and conversion strategies to capture this emerging market.",
+      "expectedImpact": "Add 15-20 new organic clicks monthly from DSCR-related queries",
+      "priority": "medium",
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-05-30",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "bc45d481dc40",
+      "title": "Implement exit-intent lead magnets",
+      "description": "Add exit-intent popups offering lead scripts, pricing guides, or industry reports to capture bouncing visitors. Focus on pages with high bounce rates but good search rankings.",
+      "expectedImpact": "Convert 10-15% of bouncing visitors into email subscribers",
+      "priority": "medium",
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-05-30",
       "timesRepeated": 1,
       "status": "open"
     },
