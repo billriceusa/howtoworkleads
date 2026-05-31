@@ -1,0 +1,176 @@
+{
+  "runDate": "2026-05-31T06:02:21.793Z",
+  "weekStartDate": "2026-06-01",
+  "analysis": {
+    "strategyReview": "Our content strategy shows strong coverage across all five pillars with 106 published posts, demonstrating comprehensive expertise in lead management fundamentals. We've built particularly strong authority in aged leads, compliance topics, and CRM systems. However, we have gaps in emerging technologies like AI-powered lead qualification, advanced attribution modeling, and cross-industry lead sharing strategies. Our industry-specific content is well-developed for insurance and mortgage but could expand into newer verticals like cybersecurity services, business coaching, and cryptocurrency/fintech leads.",
+    "competitiveInsights": "AgedLeadStore.com focuses heavily on product features and vendor comparisons but lacks strategic implementation guidance. AgedLeadSales.com covers aged lead basics well but misses advanced topics like lead velocity optimization, multi-generational lead nurturing, and cross-channel attribution. We have significant opportunities in long-tail keywords around 'lead response time optimization,' 'lead scoring automation,' and 'compliance automation tools.' The competitors also lack coverage of emerging compliance challenges like state-level AI disclosure requirements and new FTC telemarketing rule interpretations.",
+    "newOpportunities": [
+      "Lead velocity optimization for high-volume operations",
+      "State-level AI disclosure requirements for lead follow-up",
+      "Cross-generational lead nurturing (Gen Z vs Boomer approaches)",
+      "Lead sharing compliance between partner agencies",
+      "Predictive lead scoring using behavioral data"
+    ],
+    "trendingTopics": [
+      "AI disclosure compliance requirements",
+      "Lead response time automation",
+      "Cross-channel lead attribution",
+      "Compliance automation workflows",
+      "Lead quality degradation patterns"
+    ],
+    "recommendedUpdates": [
+      "Expand AI automation coverage beyond basic tools",
+      "Create more vertical-specific conversion strategies",
+      "Develop advanced compliance automation content",
+      "Build out lead velocity and response time optimization"
+    ]
+  },
+  "articlesCreated": [
+    {
+      "title": "Lead Velocity Optimization: Accelerate Your Sales Pipeline for Maximum Revenue",
+      "slug": "lead-velocity-optimization-guide",
+      "publishDate": "2026-06-01",
+      "primaryKeyword": "lead velocity optimization",
+      "pillar": "Lead Management"
+    },
+    {
+      "title": "Cross-Channel Lead Attribution: Track Every Touchpoint From Click to Close",
+      "slug": "cross-channel-lead-attribution-tracking",
+      "publishDate": "2026-06-03",
+      "primaryKeyword": "lead attribution tracking",
+      "pillar": "CRM Systems"
+    },
+    {
+      "title": "Compliance Automation Workflows: Bulletproof Your Lead Operation in 2026",
+      "slug": "compliance-automation-workflows-2026",
+      "publishDate": "2026-06-05",
+      "primaryKeyword": "compliance automation",
+      "pillar": "Buying Leads"
+    }
+  ],
+  "articlesSkipped": [],
+  "articlesFailed": [],
+  "imageOutcomes": [
+    {
+      "title": "Lead Velocity Optimization: Accelerate Your Sales Pipeline for Maximum Revenue",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    },
+    {
+      "title": "Cross-Channel Lead Attribution: Track Every Touchpoint From Click to Close",
+      "status": "no-results"
+    },
+    {
+      "title": "Compliance Automation Workflows: Bulletproof Your Lead Operation in 2026",
+      "status": "upload-failed",
+      "detail": "Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    }
+  ],
+  "newBriefs": [
+    {
+      "day": "Mon",
+      "publishDate": "2026-06-01",
+      "slug": "lead-velocity-optimization-guide",
+      "title": "Lead Velocity Optimization: Accelerate Your Sales Pipeline for Maximum Revenue",
+      "pillar": "Lead Management",
+      "primaryKeyword": "lead velocity optimization",
+      "secondaryKeywords": [
+        "sales pipeline acceleration",
+        "lead response time optimization",
+        "pipeline velocity metrics",
+        "lead flow automation"
+      ],
+      "targetCategories": [
+        "lead-management",
+        "crm-systems"
+      ],
+      "wordCount": "2,800-3,200",
+      "competitiveAngle": "Focuses on velocity as a revenue multiplier rather than just speed-to-lead, includes cross-channel optimization strategies not covered by competitors",
+      "outline": [
+        "Understanding Lead Velocity vs Speed-to-Lead",
+        "The 5 Velocity Bottlenecks Killing Your Pipeline",
+        "Measuring True Velocity: Metrics That Matter",
+        "Automation Workflows for Velocity Optimization",
+        "Cross-Channel Velocity Strategies",
+        "Industry-Specific Velocity Benchmarks",
+        "ROI Impact of Velocity Improvements"
+      ],
+      "internalLinks": [
+        "/blog/speed-to-lead-response-time-guide",
+        "/blog/crm-automation-workflows",
+        "/guides/pipeline-management"
+      ]
+    },
+    {
+      "day": "Wed",
+      "publishDate": "2026-06-03",
+      "slug": "cross-channel-lead-attribution-tracking",
+      "title": "Cross-Channel Lead Attribution: Track Every Touchpoint From Click to Close",
+      "pillar": "CRM Systems",
+      "primaryKeyword": "lead attribution tracking",
+      "secondaryKeywords": [
+        "multi-touch attribution",
+        "cross-channel tracking",
+        "lead source attribution",
+        "conversion path analysis"
+      ],
+      "targetCategories": [
+        "crm-systems",
+        "buying-leads"
+      ],
+      "wordCount": "2,600-3,000",
+      "competitiveAngle": "Provides practical implementation for small-to-medium sales teams rather than enterprise-only solutions, includes specific CRM setup instructions",
+      "outline": [
+        "Why Single-Touch Attribution Fails for Internet Leads",
+        "Multi-Touch Attribution Models That Work",
+        "Setting Up Cross-Channel Tracking in Popular CRMs",
+        "Attribution Data That Drives Better Lead Buying",
+        "Measuring Assisted Conversions and Influence",
+        "Attribution Reporting for ROI Optimization",
+        "Common Attribution Tracking Mistakes"
+      ],
+      "internalLinks": [
+        "/blog/lead-attribution-multi-touch-tracking",
+        "/blog/crm-integration-checklist",
+        "/guides/lead-source-roi-tracking"
+      ]
+    },
+    {
+      "day": "Fri",
+      "publishDate": "2026-06-05",
+      "slug": "compliance-automation-workflows-2026",
+      "title": "Compliance Automation Workflows: Bulletproof Your Lead Operation in 2026",
+      "pillar": "Buying Leads",
+      "primaryKeyword": "compliance automation",
+      "secondaryKeywords": [
+        "TCPA compliance automation",
+        "DNC scrubbing automation",
+        "consent management workflows",
+        "compliance monitoring tools"
+      ],
+      "targetCategories": [
+        "compliance",
+        "crm-systems"
+      ],
+      "wordCount": "2,700-3,100",
+      "competitiveAngle": "Focuses on automated compliance workflows rather than manual processes, includes 2026-specific regulatory updates and AI disclosure requirements",
+      "outline": [
+        "The New Compliance Landscape for 2026",
+        "Automated DNC Scrubbing and List Hygiene",
+        "Consent Management Automation Workflows",
+        "AI Disclosure and Documentation Requirements",
+        "Real-Time Compliance Monitoring Systems",
+        "Automated Violation Prevention and Alerts",
+        "Building Compliance into Your CRM Workflows",
+        "ROI of Compliance Automation vs Manual Processes"
+      ],
+      "internalLinks": [
+        "/blog/tcpa-compliance-lead-buyers",
+        "/blog/text-messaging-compliance-guide",
+        "/guides/lead-buying-compliance-checklist"
+      ]
+    }
+  ],
+  "nextWeekPlan": "Selected three new briefs addressing emerging opportunities rather than existing calendar items. Lead velocity optimization fills a gap in advanced pipeline management beyond basic speed-to-lead. Cross-channel attribution addresses a sophisticated tracking need not covered by competitors. Compliance automation tackles 2026-specific regulatory challenges with practical implementation focus. All three topics leverage our authority while expanding into more advanced territory that competitors haven't adequately covered.",
+  "errors": []
+}
