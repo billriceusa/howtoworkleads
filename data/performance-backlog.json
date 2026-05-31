@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-30T12:01:33.708Z",
+  "lastUpdated": "2026-05-31T12:01:42.904Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -53,6 +53,17 @@
       "priority": "high",
       "firstSeen": "2026-05-23",
       "lastSeen": "2026-05-30",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "b8e742d04d2b",
+      "title": "Implement internal linking strategy to reduce bounce rate",
+      "description": "Add 3-5 contextual internal links to related content within the first 200 words of high-traffic pages, especially the homepage and IUL content. Focus on linking to complementary lead types and educational content to encourage exploration.",
+      "expectedImpact": "Reduce bounce rate by 15-20% and increase pages per session",
+      "priority": "high",
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-05-31",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -585,17 +596,6 @@
       "status": "open"
     },
     {
-      "id": "b8e742d04d2b",
-      "title": "Implement internal linking strategy to reduce bounce rate",
-      "description": "Add 3-5 contextual internal links to related content within the first 200 words of high-traffic pages, especially the homepage and IUL content. Focus on linking to complementary lead types and educational content to encourage exploration.",
-      "expectedImpact": "Reduce bounce rate by 15-20% and increase pages per session",
-      "priority": "high",
-      "firstSeen": "2026-05-30",
-      "lastSeen": "2026-05-30",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "272f96448964",
       "title": "Optimize homepage for better user flow",
       "description": "The homepage receives 38 views but likely contributes to high bounce rate. Add clear navigation paths, featured content sections, and lead type categorization to guide visitors to relevant content based on their industry.",
@@ -603,6 +603,17 @@
       "priority": "high",
       "firstSeen": "2026-05-30",
       "lastSeen": "2026-05-30",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "beb2d826c66a",
+      "title": "Optimize for 'aged life insurance leads' query cluster",
+      "description": "Target the 26 impressions for 'aged life insurance leads' (position 21.0) by creating dedicated landing pages and optimizing existing content. Focus on long-tail variations that are currently ranking but not converting clicks.",
+      "expectedImpact": "Capture 3-5 additional clicks per week from this query cluster",
+      "priority": "high",
+      "firstSeen": "2026-05-31",
+      "lastSeen": "2026-05-31",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1366,6 +1377,28 @@
       "status": "open"
     },
     {
+      "id": "633ae9b5edfa",
+      "title": "Create content series around high-performing topics",
+      "description": "Develop comprehensive content hubs around IUL leads and aged leads, leveraging the strong search performance. Create pillar pages with supporting articles to capture more search real estate.",
+      "expectedImpact": "Increase organic impressions by 25% and establish topical authority",
+      "priority": "medium",
+      "firstSeen": "2026-05-31",
+      "lastSeen": "2026-05-31",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "40f612401871",
+      "title": "Enhance mobile experience and page speed",
+      "description": "With mobile generating only 5 clicks vs 11 desktop clicks despite reasonable impression volume, optimize mobile page load times and user experience to improve mobile CTR and engagement.",
+      "expectedImpact": "Increase mobile CTR by 40% and improve overall engagement rate",
+      "priority": "medium",
+      "firstSeen": "2026-05-31",
+      "lastSeen": "2026-05-31",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1571,6 +1604,17 @@
       "priority": "low",
       "firstSeen": "2026-05-28",
       "lastSeen": "2026-05-28",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "7b7100a8740b",
+      "title": "Expand email campaign frequency and segmentation",
+      "description": "Email traffic (15 sessions combined) shows good engagement. Increase newsletter frequency and create segmented campaigns based on lead type interests (IUL, aged leads, etc.).",
+      "expectedImpact": "Increase email-driven traffic by 30% and improve user retention",
+      "priority": "low",
+      "firstSeen": "2026-05-31",
+      "lastSeen": "2026-05-31",
       "timesRepeated": 1,
       "status": "open"
     }
