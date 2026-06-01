@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-31T12:01:42.904Z",
+  "lastUpdated": "2026-06-01T12:01:02.226Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -618,6 +618,28 @@
       "status": "open"
     },
     {
+      "id": "950255270fc6",
+      "title": "Optimize Landing Pages for Bounce Rate Reduction",
+      "description": "Focus on the homepage and /buy-iul-leads page which receive the most traffic. Add clear value propositions above the fold, implement internal linking to related content, and create compelling calls-to-action. Test different layouts for mobile users who show lower engagement.",
+      "expectedImpact": "Reduce bounce rate from 76% to target 60%, increase page views per session by 25%",
+      "priority": "high",
+      "firstSeen": "2026-06-01",
+      "lastSeen": "2026-06-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "acb34b77b6de",
+      "title": "Expand IUL and DSCR Lead Content Strategy",
+      "description": "Create comprehensive content clusters around 'iul leads' (11 clicks in 90 days) and 'dscr leads' (position 11). Develop comparison guides, pricing breakdowns, and conversion strategy content. Target long-tail variations like 'best iul leads' and 'dscr loan lead conversion'.",
+      "expectedImpact": "Increase organic clicks by 40% within 60 days, improve average position from 29.6 to 25",
+      "priority": "high",
+      "firstSeen": "2026-06-01",
+      "lastSeen": "2026-06-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -637,6 +659,17 @@
       "firstSeen": "2026-05-04",
       "lastSeen": "2026-05-30",
       "timesRepeated": 4,
+      "status": "open"
+    },
+    {
+      "id": "43ecf704687c",
+      "title": "Develop Email Nurture Sequence",
+      "description": "With 10 newsletter email sessions showing strong engagement, create a 5-part email series covering lead buying basics, working techniques, and vendor selection. Use the high-performing contact page traffic to build the email list.",
+      "expectedImpact": "15-25% increase in repeat visitors and improved conversion rates",
+      "priority": "medium",
+      "firstSeen": "2026-05-06",
+      "lastSeen": "2026-06-01",
+      "timesRepeated": 2,
       "status": "open"
     },
     {
@@ -669,6 +702,17 @@
       "priority": "medium",
       "firstSeen": "2026-05-17",
       "lastSeen": "2026-05-18",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "4b960d991848",
+      "title": "Create mobile-optimized content experience",
+      "description": "Mobile accounts for only 12 clicks vs 18 desktop clicks despite mobile-first indexing. Optimize page load speeds, improve mobile UX for lead buying pages, and create mobile-specific CTAs.",
+      "expectedImpact": "Could increase mobile click share from 40% to 60% of total clicks",
+      "priority": "medium",
+      "firstSeen": "2026-05-23",
+      "lastSeen": "2026-06-01",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -812,17 +856,6 @@
       "priority": "medium",
       "firstSeen": "2026-05-05",
       "lastSeen": "2026-05-05",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "43ecf704687c",
-      "title": "Develop Email Nurture Sequence",
-      "description": "With 10 newsletter email sessions showing strong engagement, create a 5-part email series covering lead buying basics, working techniques, and vendor selection. Use the high-performing contact page traffic to build the email list.",
-      "expectedImpact": "15-25% increase in repeat visitors and improved conversion rates",
-      "priority": "medium",
-      "firstSeen": "2026-05-06",
-      "lastSeen": "2026-05-06",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1223,17 +1256,6 @@
       "status": "open"
     },
     {
-      "id": "4b960d991848",
-      "title": "Create mobile-optimized content experience",
-      "description": "Mobile accounts for only 12 clicks vs 18 desktop clicks despite mobile-first indexing. Optimize page load speeds, improve mobile UX for lead buying pages, and create mobile-specific CTAs.",
-      "expectedImpact": "Could increase mobile click share from 40% to 60% of total clicks",
-      "priority": "medium",
-      "firstSeen": "2026-05-23",
-      "lastSeen": "2026-05-23",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "b3a18bd741d0",
       "title": "Expand Content Around Customer Journey Success",
       "description": "The customer journey page attracted 44 unique users with perfect engagement. Create a content series covering lead qualification, objection handling, and closing techniques for internet leads to build on this momentum.",
@@ -1395,6 +1417,17 @@
       "priority": "medium",
       "firstSeen": "2026-05-31",
       "lastSeen": "2026-05-31",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "aca805e052a4",
+      "title": "Implement Technical SEO Audit",
+      "description": "Address the 20% impression drop by conducting comprehensive technical SEO review. Check for crawl errors, page speed issues, and mobile usability problems. Ensure proper schema markup for lead generation content and fix any indexing issues.",
+      "expectedImpact": "Recover 15% of lost impressions, improve mobile CTR by 30%",
+      "priority": "medium",
+      "firstSeen": "2026-06-01",
+      "lastSeen": "2026-06-01",
       "timesRepeated": 1,
       "status": "open"
     },
