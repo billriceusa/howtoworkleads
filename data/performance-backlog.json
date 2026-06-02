@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01T12:01:02.226Z",
+  "lastUpdated": "2026-06-02T12:01:48.970Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -640,6 +640,28 @@
       "status": "open"
     },
     {
+      "id": "338d616852d5",
+      "title": "Implement Emergency Engagement Recovery Strategy",
+      "description": "Add interactive elements to top-performing pages: lead calculators on aged lead pricing guide, comparison tools on IUL leads page, and clear next-step CTAs. Install scroll tracking to identify drop-off points and add strategic internal links at 50% scroll depth.",
+      "expectedImpact": "Reduce bounce rate by 15-20% and increase engagement rate to 35%+",
+      "priority": "high",
+      "firstSeen": "2026-06-02",
+      "lastSeen": "2026-06-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "289df213d13e",
+      "title": "Optimize High-CTR Search Content",
+      "description": "Expand the aged lead pricing guide (currently ranking 5.8) with more comprehensive pricing tiers, ROI calculators, and vendor comparisons. Add FAQ sections targeting long-tail queries like 'aged insurance leads for agents'.",
+      "expectedImpact": "Increase organic clicks by 25-30% and improve average position to top 5",
+      "priority": "high",
+      "firstSeen": "2026-06-02",
+      "lastSeen": "2026-06-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -657,8 +679,8 @@
       "expectedImpact": "10-15% improvement in mobile CTR and engagement",
       "priority": "medium",
       "firstSeen": "2026-05-04",
-      "lastSeen": "2026-05-30",
-      "timesRepeated": 4,
+      "lastSeen": "2026-06-02",
+      "timesRepeated": 5,
       "status": "open"
     },
     {
@@ -1428,6 +1450,28 @@
       "priority": "medium",
       "firstSeen": "2026-06-01",
       "lastSeen": "2026-06-01",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "5003226f3427",
+      "title": "Create IUL Lead Conversion Funnel",
+      "description": "Build a dedicated landing page sequence: IUL leads overview → pricing comparison → vendor directory → conversion scripts. Link these pages strategically from the high-performing /buying-leads/buy-iul-leads page.",
+      "expectedImpact": "Increase page views per session by 40% and reduce bounce rate on IUL content",
+      "priority": "medium",
+      "firstSeen": "2026-06-02",
+      "lastSeen": "2026-06-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "6b0f3817e346",
+      "title": "Expand DSCR Lead Content Cluster",
+      "description": "The single DSCR lead click indicates opportunity. Create comprehensive DSCR content: qualification criteria, conversion scripts, vendor comparisons, and market analysis. Target position 11.0 ranking for improvement.",
+      "expectedImpact": "Capture 5-10 additional monthly clicks and establish authority in DSCR niche",
+      "priority": "medium",
+      "firstSeen": "2026-06-02",
+      "lastSeen": "2026-06-02",
       "timesRepeated": 1,
       "status": "open"
     },
