@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-02T12:01:48.970Z",
+  "lastUpdated": "2026-06-03T12:01:21.262Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -658,6 +658,28 @@
       "priority": "high",
       "firstSeen": "2026-06-02",
       "lastSeen": "2026-06-02",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "5c82104aed82",
+      "title": "Emergency Page Speed and UX Audit",
+      "description": "Immediately audit page load times, mobile responsiveness, and content layout for the top 5 landing pages. The 25.4% bounce rate increase suggests technical issues. Run PageSpeed Insights, check Core Web Vitals, and test mobile experience. Fix any loading issues within 48 hours.",
+      "expectedImpact": "Reduce bounce rate by 10-15% and improve engagement rate to 35%+",
+      "priority": "high",
+      "firstSeen": "2026-06-03",
+      "lastSeen": "2026-06-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "fe9b828a34b6",
+      "title": "Implement Internal Linking Strategy for Insurance Pages",
+      "description": "Add contextual internal links within IUL and life insurance lead pages to guide users to related content like pricing guides and scripts. Create a 'Related Resources' section at the bottom of each buying guide page linking to 3-4 relevant blog posts.",
+      "expectedImpact": "Increase pages per session by 40% and reduce bounce rate by 8-12%",
+      "priority": "high",
+      "firstSeen": "2026-06-03",
+      "lastSeen": "2026-06-03",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1476,6 +1498,28 @@
       "status": "open"
     },
     {
+      "id": "c0f840576846",
+      "title": "Expand DSCR Lead Content Strategy",
+      "description": "Capitalize on the successful DSCR leads ranking by creating 2-3 additional DSCR-focused pages: 'DSCR Lead Conversion Tips', 'DSCR vs Traditional Mortgage Leads', and 'DSCR Lead Pricing Guide'. Target related queries like 'dscr loan leads' and 'debt service coverage ratio leads'.",
+      "expectedImpact": "Capture 15-20 additional monthly clicks from mortgage/real estate vertical",
+      "priority": "medium",
+      "firstSeen": "2026-06-03",
+      "lastSeen": "2026-06-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3743b192f257",
+      "title": "Optimize Aged Lead Content for Featured Snippets",
+      "description": "Restructure aged lead pricing guide and conversion content with clear headings, bullet points, and FAQ sections. Target position 0 for queries like 'aged insurance leads pricing' and 'how to work aged leads' where you're ranking 5-8.",
+      "expectedImpact": "Increase CTR by 25% and capture 10+ additional daily clicks",
+      "priority": "medium",
+      "firstSeen": "2026-06-03",
+      "lastSeen": "2026-06-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1692,6 +1736,17 @@
       "priority": "low",
       "firstSeen": "2026-05-31",
       "lastSeen": "2026-05-31",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3b163b871715",
+      "title": "Create Lead Lifecycle Email Sequence",
+      "description": "Develop a 5-email sequence for new visitors covering: lead qualification, conversion techniques, pricing strategies, compliance, and advanced scripts. Use the existing newsletter infrastructure to nurture the 72% of visitors who bounce.",
+      "expectedImpact": "Convert 15-20% of bounced visitors into engaged email subscribers",
+      "priority": "low",
+      "firstSeen": "2026-06-03",
+      "lastSeen": "2026-06-03",
       "timesRepeated": 1,
       "status": "open"
     }
