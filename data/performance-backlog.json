@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-03T12:01:21.262Z",
+  "lastUpdated": "2026-06-04T12:01:28.133Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -684,6 +684,28 @@
       "status": "open"
     },
     {
+      "id": "5f78aa8e5320",
+      "title": "Optimize High-Bounce Pages for User Intent",
+      "description": "Audit the homepage and top landing pages to improve content relevance and reduce bounce rate. Add clear value propositions, improve page load speed, and ensure content matches search intent. Focus on the life insurance leads page which has high traffic but may not be converting well.",
+      "expectedImpact": "Reduce bounce rate by 10-15% and increase session duration by 20-30 seconds",
+      "priority": "high",
+      "firstSeen": "2026-06-04",
+      "lastSeen": "2026-06-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8f128afb58e9",
+      "title": "Expand DSCR and Commercial Real Estate Content",
+      "description": "Capitalize on the strong DSCR leads ranking by creating comprehensive content around commercial real estate lead generation, DSCR loan processes, and related topics. Target 'dscr loan leads', 'commercial real estate leads', and 'investment property leads'.",
+      "expectedImpact": "Capture 50-100 additional monthly clicks from commercial real estate vertical",
+      "priority": "high",
+      "firstSeen": "2026-06-04",
+      "lastSeen": "2026-06-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -701,8 +723,8 @@
       "expectedImpact": "10-15% improvement in mobile CTR and engagement",
       "priority": "medium",
       "firstSeen": "2026-05-04",
-      "lastSeen": "2026-06-02",
-      "timesRepeated": 5,
+      "lastSeen": "2026-06-04",
+      "timesRepeated": 6,
       "status": "open"
     },
     {
@@ -1520,6 +1542,17 @@
       "status": "open"
     },
     {
+      "id": "6acd7b1cd74a",
+      "title": "Improve Aged Leads Content Depth",
+      "description": "The aged leads pricing guide is performing well (position 5.3) but only getting 3 clicks. Expand this into a comprehensive aged leads hub with comparison tables, ROI calculators, and vendor reviews to capture more of the aged leads search volume.",
+      "expectedImpact": "Increase aged leads related traffic by 40-60% and improve conversion rates",
+      "priority": "medium",
+      "firstSeen": "2026-06-04",
+      "lastSeen": "2026-06-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1747,6 +1780,17 @@
       "priority": "low",
       "firstSeen": "2026-06-03",
       "lastSeen": "2026-06-03",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "3925fcc16fd0",
+      "title": "Develop Email Newsletter Content Strategy",
+      "description": "Email traffic (8 sessions from newsletter sources) shows engagement. Create weekly lead generation tips, industry updates, and case studies to build this owned media channel and reduce dependence on search traffic.",
+      "expectedImpact": "Build consistent traffic base of 20-30 weekly sessions from email",
+      "priority": "low",
+      "firstSeen": "2026-06-04",
+      "lastSeen": "2026-06-04",
       "timesRepeated": 1,
       "status": "open"
     }
