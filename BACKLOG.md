@@ -6,7 +6,29 @@
 **Newsletter:** 8 issues written. **Only 3 subscribers in Resend audience** — Issue 1 (broadcast 2a47893d) is still in DRAFT, never actually sent despite earlier claims. Weekly cron IS sending Sunday 8 AM UTC to those 3 addresses. Treat newsletter as non-channel until subscriber acquisition happens.
 **Content automation:** Weekly cron publishes 3/week Mon/Wed/Fri (confirmed healthy April 14). Avoid manual bursts — the April 8 backfill of 13 articles may have triggered quality dampening.
 **AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
-**Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. Script pattern in `scripts/hub-link-sprint.mjs` / `iul-pillar-expansion.mjs`.
+**Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. **Token scope flag required**: `--scopes=https://www.googleapis.com/auth/webmasters.readonly` (default token 403s). Set account `bill@billricestrategy.com` first. Ahrefs is blind to this domain (DR≈0) — GSC is the only ground truth.
+
+---
+
+## 2026-06-05 — GSC-grounded SEO review (supersedes April plan)
+
+**28-day GSC (May 6–Jun 2):** 20,342 impressions → **79 clicks → 0.39% CTR**, weighted avg position **27.2**.
+**vs April 14 baseline:** CTR up (0.15%→0.39%) and impressions growing (content cron), but avg position *worsened* (24.7→27.2). The site ranks for MORE queries but DEEPER. **Impressions aren't the problem; position depth is.**
+
+**Root-cause diagnosis (query-level):**
+- The site ranks for the *right* commercial queries but on **page 3–6**. `buy-life-insurance-leads` ranks for **241 buyer queries** ("life insurance leads for sale", "buy life insurance leads", "term/whole/exclusive life insurance leads") all at **pos 35–58** → 5,551 impr / 2 clicks. CTR can't fix page-5 rankings.
+- On-page levers are **already exhausted**: 86 pages link to buy-iul-leads, 87 to buy-life-insurance-leads (April hub sprint maxed internal linking); titles/meta already rewritten; life pillar already expanded — and it *still* slipped to pos 37.6. **The binding constraint is domain authority (DR≈0).**
+- High blog-page impression counts are mostly **synthetic/hidden-tail queries** (e.g. "hubspot lead management *features review*") that no human types → ~0 CTR regardless of title. Blanket title rewrites = low value; DROPPED.
+
+**The one genuinely winnable on-page target:** `buy-iul-leads` — pos 9–14 for real queries ("iul leads", "iul leads for sale", "best iul leads"), already 24 clicks/28d. Lower competition; on the cusp of page 1.
+
+**Revised growth plan (authority-first):**
+1. **P0 — Backlinks / domain authority** (the real constraint). The ALS cross-link partnership (Troy) was "confirmed complete April 14" yet DR is still ~0 and money pages sit at pos 40 — re-verify the ALS links are live, indexed, and dofollow; expand off-site link building. Nothing on-page moves the needle until this does.
+2. **P1 — Stop over-producing thin content.** 167 pages on a DR≈0 domain risks site-quality dampening (noted April). Consider pausing/throttling the weekly-content cron and pruning low-value synthetic-query pages instead of adding more.
+3. **P1 — Concentrate on winnable niche terms** (like IUL) where DR matters less, rather than head terms ("buy life insurance leads") owned by established vendors.
+4. **P2 — Audit what the content cron optimizes for** — it appears to be generating keyword-stuffed "X features review" variants that draw junk impressions, not buyer clicks.
+
+**Not done this session (deliberately):** blanket title rewrites and more internal links — data shows both are exhausted/low-value. Shipped instead: llms.txt/llms-full.txt now Sanity-generated (79→172 URLs).
 
 ---
 
