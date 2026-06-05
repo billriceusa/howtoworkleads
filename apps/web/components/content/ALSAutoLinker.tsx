@@ -75,7 +75,7 @@ export function ALSAutoLinker({ children, utmCampaign = 'in-content' }: { childr
       const link = document.createElement('a')
       link.href = href
       link.target = '_blank'
-      link.rel = 'noopener noreferrer'
+      link.rel = 'sponsored noopener noreferrer'
       link.textContent = matched
       fragment.appendChild(link)
 

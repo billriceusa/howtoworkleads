@@ -75,13 +75,16 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       if (isExternalSite) {
         const isALS = href.includes('agedleadstore.com')
         const finalHref = isALS ? appendALSUtm(href, utmCampaign) : href
+        // ALS links are affiliate links — mark rel="sponsored" per Google policy
+        // (also stops this low-authority domain from donating link equity).
+        const relValue = isALS ? 'sponsored noopener noreferrer' : 'noopener noreferrer'
 
         return (
           <a
             href={finalHref}
             className={combinedClassName}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={relValue}
             onClick={() => {
               trackEvent('cta_click', {
                 link_url: finalHref,
