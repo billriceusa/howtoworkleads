@@ -50,6 +50,14 @@ const nextConfig = {
         destination: '/crm-systems',
         permanent: true,
       },
+      // 2026-06-05 — rescue an inbound ALS backlink that was placed with a typo'd
+      // singular slug (buy-iul-lead → 404). 301 forwards the link equity to the
+      // real IUL page. Source link on agedleadstore.com should also be corrected.
+      {
+        source: '/buying-leads/buy-iul-lead',
+        destination: '/buying-leads/buy-iul-leads',
+        permanent: true,
+      },
       // 2026-06-05 — consolidate cron-generated near-duplicates (all 0 impressions
       // except the kept canonical) to concentrate authority and kill cannibalization.
       {
