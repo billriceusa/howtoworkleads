@@ -90,17 +90,21 @@ export async function analyzeAndPlan(
 - Already published from calendar: ${publishedSlugs.join(", ")}
 
 ## CRITICAL: Avoid Duplicate Content
-You MUST NOT propose any brief whose title substantially overlaps with an existing post above. "Substantial overlap" means covering the same primary topic, even with different wording. If your first instinct is a topic near a published one, pick a different angle, a sub-topic, or a narrower case study. Published posts listed above are OFF-LIMITS as topics.
+You MUST NOT propose any brief whose title OR slug substantially overlaps with an existing post above. "Substantial overlap" means covering the same primary topic, even with different wording. NEVER create a near-variant of an existing slug by adding a suffix (e.g. if "pipeline-management-framework" exists, do NOT create "pipeline-management-framework-leads"). Before finalizing, compare your proposed slug token-by-token against every published slug. Published posts listed above are OFF-LIMITS as topics.
 
-## This Week's Publishing Dates
-- Monday: ${weekDates.monday}
-- Wednesday: ${weekDates.wednesday}
-- Friday: ${weekDates.friday}
+## STRATEGIC PRIORITIES (this domain is low-authority — quality and focus beat volume)
+- **One post per week. Depth over breadth.** We have 150+ pages already; most get little traffic. Do NOT pad the site with thin new posts. A single excellent, deep post beats three shallow ones.
+- **Lead into our moat:** educational "how to work [vertical] leads" content — our differentiator vs transactional competitors (AgedLeadStore/AgedLeadSales). This is where we actually rank.
+- **AVOID generic high-competition theory** (generic "what is a CRM", "what is a sales process", broad "lead management" / "sales methodology" terms). We cannot rank these against HubSpot/Salesforce at our authority; they become dead weight.
+- **Prefer DEEPENING an existing high-potential page** (expand, add FAQ, freshen) over creating a new URL, whenever the editorial calendar gap can be served that way — note this in recommendedUpdates.
+
+## This Week's Publishing Date
+- Monday: ${weekDates.monday} (single weekly post)
 
 ## Your Tasks
 1. **SEO Strategy Review**: Assess current content gaps and strengths based on our published content vs the full editorial plan.
-2. **Competitive Research**: Identify keyword opportunities, trending topics, or new angles in the internet lead space that we haven't covered. Think about what insurance agents, mortgage brokers, solar reps, and home improvement salespeople are searching for RIGHT NOW.
-3. **Content Plan**: Select 3 content briefs for this week. Prefer existing unpublished briefs from the editorial calendar when they're timely and relevant. Create new briefs only if you identify a compelling opportunity that outranks existing options.
+2. **Competitive Research**: Identify keyword opportunities aligned with the moat above — what insurance agents, mortgage brokers, solar reps, and home-improvement salespeople search when learning to WORK their leads.
+3. **Content Plan**: Select exactly ONE content brief for this week (publishing Monday). Prefer a strong existing unpublished brief from the editorial calendar; create a new brief only if it clearly outranks existing options AND fits the strategic priorities above.
 
 Respond with valid JSON matching this structure exactly:
 {
@@ -125,9 +129,7 @@ Respond with valid JSON matching this structure exactly:
       "competitiveAngle": "What makes this unique vs competitors",
       "outline": ["Section 1 topic", "Section 2 topic", ...],
       "internalLinks": ["/blog/related-post", "/guides/landing-page"]
-    },
-    { "day": "Wed", ... },
-    { "day": "Fri", ... }
+    }
   ],
   "calendarNotes": "Summary of calendar decisions and reasoning"
 }`;
