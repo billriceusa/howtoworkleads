@@ -71,11 +71,17 @@
   </table>
   <p class="muted">Cadence note: ship these over ~1–2 weeks rather than all in one hour (natural link velocity). Then we measure before Batch 2.</p>
 
-  <h3>Next iteration — queued <span class="pill next">on Bill's go</span></h3>
+  <h3>Content re-aim + duplicate consolidation <span class="pill done">done · live</span></h3>
+  <p class="muted">Root cause found: <strong>over-production on a DR-3 domain</strong> — 72/155 pages are &lt;60 days old; ~36 pages have zero impressions in 90 days. The cron was manufacturing invisible pages (incl. 3 near-identical <code>pipeline-management-framework*</code> variants).</p>
   <ul>
-    <li><strong>Re-aim the content engine</strong> — throttle the weekly cron's transactional "buy X" output (unwinnable at DR3); redirect to the educational "how to work X" moat that already ranks page 1–2.</li>
-    <li><strong>Prune dead weight</strong> — generic CRM/sales-process guide pages at pos ~44 (e.g. <code>/crm-systems/the-evolution-of-crm</code>, <code>/sales-process/b2c-vs-b2b-sales-process</code>) dilute authority. Consolidate or remove.</li>
-    <li><strong>CTR pass on page-1 pages</strong> — FAQ schema + title tune only where the site already ranks top 10 on real queries (that's where CTR work converts).</li>
+    <li><strong>Cron throttled 3 → 1 post/week</strong>, re-weighted to the educational "how to work X" moat, depth over breadth, with an explicit ban on generic CRM/sales-theory terms we can't rank and a hardened anti-duplicate (slug-token) guard.</li>
+    <li><strong>5 confirmed duplicates 301'd</strong> into their canonical page (all 0-impression except the kept one) — kills cannibalization, concentrates authority.</li>
+  </ul>
+
+  <h3>Deferred to re-eval <span class="pill next">decide June 26</span></h3>
+  <ul>
+    <li><strong>36 zero-impression pages</strong> — NOT pruned blind. Many are money/moat pages where the constraint is authority (which the ALS links now address) or non-indexing, not "delete me." Re-decide after the link equity lands: which revive vs. which to cut/noindex.</li>
+    <li><strong>CTR pass</strong> on pages ranking top-10 on real queries (FAQ schema + title tune) — where CTR work actually converts.</li>
     <li><strong>Optional defensive</strong> — disavow the ~150 PBN spam refdomains.</li>
   </ul>
 
