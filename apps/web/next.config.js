@@ -50,6 +50,33 @@ const nextConfig = {
         destination: '/crm-systems',
         permanent: true,
       },
+      // 2026-06-05 — consolidate cron-generated near-duplicates (all 0 impressions
+      // except the kept canonical) to concentrate authority and kill cannibalization.
+      {
+        source: '/blog/closing-techniques-internet-leads-10-methods-work',
+        destination: '/blog/closing-techniques-internet-leads',
+        permanent: true,
+      },
+      {
+        source: '/blog/pipeline-management-framework-leads',
+        destination: '/blog/pipeline-management-framework',
+        permanent: true,
+      },
+      {
+        source: '/blog/pipeline-management-framework-never-lose-track-lead',
+        destination: '/blog/pipeline-management-framework',
+        permanent: true,
+      },
+      {
+        source: '/blog/lead-attribution-multi-touch-tracking',
+        destination: '/blog/cross-channel-lead-attribution-tracking',
+        permanent: true,
+      },
+      {
+        source: '/blog/multi-vendor-lead-performance-dashboard',
+        destination: '/blog/managing-multiple-lead-vendors',
+        permanent: true,
+      },
     ];
   },
 }
