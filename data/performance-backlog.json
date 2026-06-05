@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-04T12:01:28.133Z",
+  "lastUpdated": "2026-06-05T12:00:50.013Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -702,6 +702,28 @@
       "priority": "high",
       "firstSeen": "2026-06-04",
       "lastSeen": "2026-06-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "6da5a4faea61",
+      "title": "Implement content depth optimization for engagement",
+      "description": "Add comprehensive FAQ sections, comparison tables, and interactive elements to top-performing pages (/buy-iul-leads, /buy-life-insurance-leads) to increase session duration and reduce bounce rate. Include pricing calculators and lead quality checklists.",
+      "expectedImpact": "15-25% improvement in session duration and 10-15% reduction in bounce rate",
+      "priority": "high",
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-06-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "920a652d9aa6",
+      "title": "Capitalize on improved CTR with impression recovery strategy",
+      "description": "Create topic cluster content around high-CTR aged leads queries. Develop comprehensive guides for 'aged medicare leads' (position 2) and 'aged leads for life insurance' (position 8) to capture more impressions while maintaining strong CTR.",
+      "expectedImpact": "20-30% increase in organic impressions while maintaining 0.4%+ CTR",
+      "priority": "high",
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-06-05",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1553,6 +1575,28 @@
       "status": "open"
     },
     {
+      "id": "8b6bb934139c",
+      "title": "Expand successful referral partnership strategy",
+      "description": "Leverage the AgedLeadStore partnership success by creating co-branded content, guest posts, and cross-promotional campaigns with other lead generation companies. Develop affiliate program for lead brokers.",
+      "expectedImpact": "25-40% increase in referral traffic and new partnership opportunities",
+      "priority": "medium",
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-06-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c24226230827",
+      "title": "Optimize homepage for lead generation conversion",
+      "description": "Homepage receives 27 views but likely has poor conversion. Add lead magnet (free lead scoring template), clear value proposition for each lead type, and prominent CTA buttons for lead buying guides.",
+      "expectedImpact": "10-20% improvement in homepage engagement rate and lead capture",
+      "priority": "medium",
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-06-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1791,6 +1835,17 @@
       "priority": "low",
       "firstSeen": "2026-06-04",
       "lastSeen": "2026-06-04",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "f7b316a69c57",
+      "title": "Develop mobile-specific content experience",
+      "description": "With 7 mobile clicks vs 7 desktop clicks but significantly fewer mobile impressions, create mobile-optimized landing pages for aged leads with simplified navigation and thumb-friendly CTAs.",
+      "expectedImpact": "15-25% increase in mobile organic visibility and engagement",
+      "priority": "low",
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-06-05",
       "timesRepeated": 1,
       "status": "open"
     }
