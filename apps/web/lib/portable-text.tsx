@@ -23,7 +23,7 @@ export function autoLinkALS(text: string, utmCampaign: string = 'in-content', sl
           key={i}
           href={appendALSUtm(alsUrl, utmCampaign)}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="sponsored noopener noreferrer"
         >
           {part}
         </a>

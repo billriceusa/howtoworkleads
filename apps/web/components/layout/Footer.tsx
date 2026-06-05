@@ -98,7 +98,7 @@ export async function Footer() {
                 <a
                   href={appendALSUtm('https://agedleadstore.com/all-lead-types/', 'footer')}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="sponsored noopener noreferrer"
                   className="text-sm text-white/70 hover:text-white transition-colors"
                 >
                   Browse Leads ↗
@@ -108,7 +108,7 @@ export async function Footer() {
                 <a
                   href={appendALSUtm('https://agedleadstore.com/register', 'footer')}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="sponsored noopener noreferrer"
                   className="text-sm text-white/70 hover:text-white transition-colors"
                 >
                   Create Free Account ↗

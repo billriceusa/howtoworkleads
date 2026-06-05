@@ -37,7 +37,7 @@ export function StickyMobileCTA() {
           <a
             href={href}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             className="inline-flex flex-shrink-0 items-center justify-center bg-brand-yellow px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-black transition-all hover:bg-brand-yellow-hover"
           >
             Shop Leads
