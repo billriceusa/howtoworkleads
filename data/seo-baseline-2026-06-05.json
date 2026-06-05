@@ -1,0 +1,52 @@
+{
+ "baselineDate": "2026-06-05",
+ "window": "2026-05-06_to_2026-06-02",
+ "source": "GSC sc-domain:howtoworkleads.com (impersonated brsg-analytics-reader)",
+ "note": "Pre-ALS-link-program baseline. Re-evaluate ~3 weeks after batch-1 links land.",
+ "totals": {
+  "clicks": 79,
+  "impressions": 20342,
+  "ctr": 0.0039,
+  "wtd_avg_position": 27.2,
+  "pages_with_impressions": 154
+ },
+ "domainRating_ahrefs": 3.0,
+ "linkTargets_batch1": [
+  {
+   "target": "/blog/aged-lead-pricing-guide",
+   "pos": 5.4,
+   "impr": 1088,
+   "why": "real pricing intent, pos 5.4->top3, also a hub (lifts spokes)"
+  },
+  {
+   "target": "/buying-leads/buy-home-improvement-leads",
+   "pos": 11.0,
+   "impr": 971,
+   "why": "money page, real query 'home improvement leads for sale' pos 6.7"
+  },
+  {
+   "target": "/buying-leads/buy-iul-leads",
+   "pos": 10.4,
+   "impr": 678,
+   "why": "proven winner (24 clk), push onto page 1"
+  },
+  {
+   "target": "/buying-leads/buy-life-insurance-leads",
+   "pos": 37.6,
+   "impr": 6865,
+   "why": "biggest ceiling (34% of all impr); multi-iteration climb"
+  },
+  {
+   "target": "/blog/state-by-state-lead-compliance-guide",
+   "pos": 7.6,
+   "impr": 341,
+   "why": "real, page 1, compliance authority"
+  },
+  {
+   "target": "/",
+   "pos": null,
+   "impr": null,
+   "why": "homepage/domain-authority foundation - lifts all pages incl deep money pages"
+  }
+ ]
+}

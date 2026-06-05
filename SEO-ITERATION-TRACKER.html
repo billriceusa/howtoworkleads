@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HowToWorkLeads · SEO Iteration Tracker</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--ink:#e8eaed;--mut:#9aa3b2;--yellow:#FFD500;--green:#34d399;--red:#f87171;--blue:#60a5fa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:40px 24px}
+  .wrap{max-width:1040px;margin:0 auto}
+  h1{font-size:26px;margin:0 0 4px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  h3{font-size:15px;margin:18px 0 8px;color:var(--yellow)}
+  .sub{color:var(--mut);margin:0 0 8px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .card .n{font-size:24px;font-weight:700}
+  .card .l{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+  code{background:#11141a;border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12.5px;color:#cbd5e1}
+  .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+  .done{background:rgba(52,211,153,.15);color:var(--green)}
+  .now{background:rgba(255,213,0,.15);color:var(--yellow)}
+  .next{background:rgba(96,165,250,.15);color:var(--blue)}
+  .anchor{color:var(--yellow);font-weight:600}
+  ul{margin:6px 0 6px 0;padding-left:20px}
+  li{margin:4px 0}
+  .muted{color:var(--mut)}
+  .foot{margin-top:30px;color:var(--mut);font-size:12.5px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>HowToWorkLeads.com — SEO Iteration Tracker</h1>
+  <p class="sub">North stars: <strong>① more organic traffic &nbsp;② higher CTR</strong> · Loop: document → analyze → re-evaluate → iterate. Source of truth for the SEO program.</p>
+
+  <h2>Baseline — 2026-06-05 <span class="muted" style="font-size:13px;font-weight:400">(GSC, 28d: May 6 – Jun 2)</span></h2>
+  <div class="cards">
+    <div class="card"><div class="n">20,342</div><div class="l">Impressions / 28d</div></div>
+    <div class="card"><div class="n">79</div><div class="l">Clicks / 28d</div></div>
+    <div class="card"><div class="n">0.39%</div><div class="l">Sitewide CTR</div></div>
+    <div class="card"><div class="n">27.2</div><div class="l">Avg position</div></div>
+    <div class="card"><div class="n">DR 3</div><div class="l">Domain rating (Ahrefs)</div></div>
+  </div>
+  <p class="muted">Diagnosis: the site ranks for the right commercial queries but on <strong>page 3–6</strong>. Traffic is gated by <strong>domain authority</strong>, not content volume or title tweaks. On-page levers (internal links, titles) were already maxed by the April sprint. <strong>The unlock: ALS backlinks are on-demand</strong> — authority is now a renewable resource we aim precisely.</p>
+
+  <h2>Iteration 1 — 2026-06-05</h2>
+
+  <h3>Shipped on-page <span class="pill done">done · live</span></h3>
+  <ul>
+    <li><strong>llms.txt + llms-full.txt now generate from Sanity</strong> — 79 → 172 URLs. AI-crawler surface (GPTBot/Claude/Perplexity) went from half-blind to complete; self-maintaining.</li>
+    <li><strong>ALS affiliate links → <code>rel="sponsored"</code></strong> — Google-compliant; stops the DR-3 domain donating equity to ALS on all 167 pages. Revenue/UTMs unaffected.</li>
+  </ul>
+
+  <h3>ALS link placements — Batch 1 <span class="pill now">action: Bill places now</span></h3>
+  <p class="muted">Aimed at highest-ROI targets (high impressions × striking-distance position, real buyer intent). Anchors varied (branded / partial / exact / descriptive) to stay natural. CRM-review pages deliberately skipped — their impressions are synthetic "features review" junk.</p>
+  <table>
+    <thead><tr><th>#</th><th>Link FROM (ALS page)</th><th>Link TO (HTWL)</th><th>Anchor text</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>F1</td><td>agedleadstore.com footer / about <span class="muted">(sitewide if easy)</span></td><td><code>/</code> (homepage)</td><td class="anchor">HowToWorkLeads</td><td>Domain-authority foundation — lifts every page, incl. deep money pages</td></tr>
+      <tr><td>L1</td><td>/life-insurance-leads/</td><td><code>/buying-leads/buy-life-insurance-leads</code></td><td class="anchor">buying life insurance leads</td><td>Biggest ceiling: 6,865 impr but pos 38. Multi-iteration climb starts here</td></tr>
+      <tr><td>L2</td><td>/indexed-universal-life-insurance-leads/</td><td><code>/buying-leads/buy-iul-leads</code></td><td class="anchor">buy IUL leads</td><td>Proven winner (24 clicks, pos 10) — push onto page 1</td></tr>
+      <tr><td>L3</td><td>/buy-home-improvement-leads-lp/</td><td><code>/buying-leads/buy-home-improvement-leads</code></td><td class="anchor">home improvement leads for sale</td><td>Money page; matches exact query already at pos 6.7 w/ 0 clicks</td></tr>
+      <tr><td>L4</td><td>/all-lead-types/ or pricing/FAQ page</td><td><code>/blog/aged-lead-pricing-guide</code></td><td class="anchor">what aged leads cost</td><td>Top ROI: real intent, pos 5.4 → top 3; also a hub (lifts spokes)</td></tr>
+      <tr><td>L5</td><td>any ALS compliance / blog page</td><td><code>/blog/state-by-state-lead-compliance-guide</code></td><td class="anchor">state-by-state lead compliance</td><td>Real, page 1 (pos 7.6); builds topical/E-E-A-T authority</td></tr>
+      <tr><td>L6</td><td>/life-insurance-leads/ <span class="muted">(2nd contextual)</span></td><td><code>/blog/how-to-work-life-insurance-leads</code></td><td class="anchor">how to work life insurance leads</td><td>Reinforces the educational moat; internally feeds L1</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Cadence note: ship these over ~1–2 weeks rather than all in one hour (natural link velocity). Then we measure before Batch 2.</p>
+
+  <h3>Next iteration — queued <span class="pill next">on Bill's go</span></h3>
+  <ul>
+    <li><strong>Re-aim the content engine</strong> — throttle the weekly cron's transactional "buy X" output (unwinnable at DR3); redirect to the educational "how to work X" moat that already ranks page 1–2.</li>
+    <li><strong>Prune dead weight</strong> — generic CRM/sales-process guide pages at pos ~44 (e.g. <code>/crm-systems/the-evolution-of-crm</code>, <code>/sales-process/b2c-vs-b2b-sales-process</code>) dilute authority. Consolidate or remove.</li>
+    <li><strong>CTR pass on page-1 pages</strong> — FAQ schema + title tune only where the site already ranks top 10 on real queries (that's where CTR work converts).</li>
+    <li><strong>Optional defensive</strong> — disavow the ~150 PBN spam refdomains.</li>
+  </ul>
+
+  <h2>Re-evaluation</h2>
+  <p><strong>Next review: ~2026-06-26</strong> (≈3 weeks, after Batch-1 links are crawled). Pull GSC vs. this baseline; check movement on the 6 link targets specifically; decide Batch 2 based on what moved. Tell Claude: <em>"Re-evaluate the HTWL SEO iteration against the 2026-06-05 baseline."</em></p>
+
+  <div class="foot">Baseline data: <code>data/seo-baseline-2026-06-05.json</code> · GSC via impersonated <code>brsg-analytics-reader</code> (scope <code>webmasters.readonly</code>) · Ahrefs blind to this domain — GSC is ground truth.</div>
+</div>
+</body>
+</html>
