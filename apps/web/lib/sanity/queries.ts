@@ -225,3 +225,30 @@ export const sitemapQuery = groq`
     }
   }
 `
+
+// llms.txt / llms-full.txt query — full content inventory for AI crawlers.
+// Pulls every published page so the generated files never drift from the live site.
+export const llmsContentQuery = groq`
+  {
+    "categories": *[_type == "categoryPage" && defined(slug.current)] | order(order asc) {
+      "slug": slug.current,
+      title,
+      description,
+      seoDescription
+    },
+    "landingPages": *[_type == "landingPage" && defined(slug.current)] | order(title asc) {
+      title,
+      "slug": slug.current,
+      "category": category->slug.current,
+      seoDescription,
+      focusKeyword
+    },
+    "blogPosts": *[_type == "blogPost" && defined(slug.current)] | order(publishedAt desc) {
+      title,
+      "slug": slug.current,
+      excerpt,
+      seoDescription,
+      publishedAt
+    }
+  }
+`
