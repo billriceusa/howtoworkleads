@@ -48,5 +48,31 @@
    "impr": null,
    "why": "homepage/domain-authority foundation - lifts all pages incl deep money pages"
   }
+ ],
+ "source_3mo_export": "data/gsc-export-2026-06-05/ (GSC UI export, Last 3 months, Web)",
+ "totals_3mo": {
+  "clicks": 179,
+  "impressions": 71192,
+  "ctr": 0.0025,
+  "avg_position": 29
+ },
+ "device_split": {
+  "desktop": {
+   "impr": 60099,
+   "clicks": 111,
+   "ctr": 0.0018
+  },
+  "mobile": {
+   "impr": 10910,
+   "clicks": 68,
+   "ctr": 0.0062
+  },
+  "note": "mobile CTR 3.4x desktop; desktop volume is deep/feature-saturated"
+ },
+ "refined_insights_2026-06-05": [
+  "home-improvement 'for sale' (3358 impr, pos 8, ~0 CTR) = brutal SERP (Reddit DR95/Houzz DR92/Fixr DR78 + sitelinks + PAA); buried, low ROI \u2014 DEPRIORITIZED vs batch-1",
+  "IUL is the best winnable converter: 'iul leads' 3.5% CTR pos15.7, 'aged iul leads' 4.8% pos8.2 \u2014 weight batch-2 links here",
+  "aged-life-insurance long-tail (buy/cheap/exclusive aged life leads) ranks page-1 pos5-9 at 0 CTR \u2014 snippet opportunity for life page",
+  "mobile converts 3.4x desktop"
  ]
 }
