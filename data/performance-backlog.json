@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-05T12:00:50.013Z",
+  "lastUpdated": "2026-06-06T12:01:12.911Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -728,6 +728,28 @@
       "status": "open"
     },
     {
+      "id": "7ed33dc73a5e",
+      "title": "Optimize high-impression, zero-click aged lead content",
+      "description": "Focus on aged insurance leads queries showing 14+ impressions but zero clicks. Improve title tags and meta descriptions for 'aged insurance leads' and 'aged life insurance leads' pages to increase CTR from current strong rankings.",
+      "expectedImpact": "Could increase daily clicks by 3-5 based on current impression volume and improved CTR",
+      "priority": "high",
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "f9a153710ded",
+      "title": "Reduce bounce rate on top-performing pages",
+      "description": "Add internal linking, related content suggestions, and clear CTAs to IUL and life insurance lead pages. Create content hubs linking buying guides to educational content about working those specific lead types.",
+      "expectedImpact": "Target 10-15% bounce rate reduction and 20% increase in session duration",
+      "priority": "high",
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "e5837806021a",
       "title": "Improve Mobile Search Performance",
       "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
@@ -790,6 +812,17 @@
       "priority": "medium",
       "firstSeen": "2026-05-17",
       "lastSeen": "2026-05-18",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "edcb792ea029",
+      "title": "Improve Mobile Search Experience",
+      "description": "Since mobile generates 13 clicks from only 778 impressions (1.67% CTR vs 0.29% desktop), optimize mobile page speed and add mobile-specific CTAs on lead buying pages.",
+      "expectedImpact": "Could improve mobile CTR to 2%+, adding 5-8 additional mobile sessions weekly",
+      "priority": "medium",
+      "firstSeen": "2026-05-22",
+      "lastSeen": "2026-06-06",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -1597,6 +1630,17 @@
       "status": "open"
     },
     {
+      "id": "bfea49a9d377",
+      "title": "Expand aged lead content cluster",
+      "description": "Create comprehensive aged lead guides for auto insurance (ranking position 9.5) and homeowners insurance (position 5.0) to capitalize on strong existing rankings and build topical authority.",
+      "expectedImpact": "Potential to capture 5-10 additional daily clicks from high-ranking positions",
+      "priority": "medium",
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1751,17 +1795,6 @@
       "status": "open"
     },
     {
-      "id": "edcb792ea029",
-      "title": "Improve Mobile Search Experience",
-      "description": "Since mobile generates 13 clicks from only 778 impressions (1.67% CTR vs 0.29% desktop), optimize mobile page speed and add mobile-specific CTAs on lead buying pages.",
-      "expectedImpact": "Could improve mobile CTR to 2%+, adding 5-8 additional mobile sessions weekly",
-      "priority": "low",
-      "firstSeen": "2026-05-22",
-      "lastSeen": "2026-05-22",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
       "id": "ce5f3f052d4e",
       "title": "Capitalize on AI Assistant Referral Traffic",
       "description": "ChatGPT referred 4 sessions, indicating AI platforms are recommending the site. Create AI-optimized content with clear, structured answers to common lead-working questions to increase AI referrals.",
@@ -1846,6 +1879,17 @@
       "priority": "low",
       "firstSeen": "2026-06-05",
       "lastSeen": "2026-06-05",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "53e8bb13205f",
+      "title": "Leverage voicemail script content success",
+      "description": "Both voicemail script pages rank in top 6 positions. Create additional script content for other lead types (solar, home improvement) and cross-link to lead buying guides.",
+      "expectedImpact": "Expand content authority and capture additional long-tail traffic",
+      "priority": "low",
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-06",
       "timesRepeated": 1,
       "status": "open"
     }
