@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-06T12:01:12.911Z",
+  "lastUpdated": "2026-06-07T12:02:19.740Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -21,6 +21,17 @@
       "firstSeen": "2026-05-03",
       "lastSeen": "2026-05-22",
       "timesRepeated": 3,
+      "status": "open"
+    },
+    {
+      "id": "477ae603ebca",
+      "title": "Optimize High-Performing IUL Content",
+      "description": "Expand the IUL leads content cluster by creating supporting pages around 'aged IUL leads' (ranking #7) and 'best IUL leads' queries. Add internal linking from the customer journey page to IUL-specific content to capitalize on the 31 views.",
+      "expectedImpact": "15-25% increase in IUL-related organic traffic within 30 days",
+      "priority": "high",
+      "firstSeen": "2026-05-04",
+      "lastSeen": "2026-06-07",
+      "timesRepeated": 2,
       "status": "open"
     },
     {
@@ -152,17 +163,6 @@
       "priority": "high",
       "firstSeen": "2026-05-02",
       "lastSeen": "2026-05-02",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "477ae603ebca",
-      "title": "Optimize High-Performing IUL Content",
-      "description": "Expand the IUL leads content cluster by creating supporting pages around 'aged IUL leads' (ranking #7) and 'best IUL leads' queries. Add internal linking from the customer journey page to IUL-specific content to capitalize on the 31 views.",
-      "expectedImpact": "15-25% increase in IUL-related organic traffic within 30 days",
-      "priority": "high",
-      "firstSeen": "2026-05-04",
-      "lastSeen": "2026-05-04",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -750,14 +750,14 @@
       "status": "open"
     },
     {
-      "id": "e5837806021a",
-      "title": "Improve Mobile Search Performance",
-      "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
-      "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
-      "priority": "medium",
-      "firstSeen": "2026-04-30",
-      "lastSeen": "2026-05-24",
-      "timesRepeated": 6,
+      "id": "bc15043e751c",
+      "title": "Capture Aged Lead Search Opportunities",
+      "description": "Multiple aged lead queries show strong positions (2-15) but zero clicks. Optimize meta descriptions and titles for aged insurance, life, and Medicare lead pages. Add compelling CTAs and benefit-focused snippets.",
+      "expectedImpact": "30-50% CTR improvement for aged lead queries",
+      "priority": "high",
+      "firstSeen": "2026-06-07",
+      "lastSeen": "2026-06-07",
+      "timesRepeated": 1,
       "status": "open"
     },
     {
@@ -767,7 +767,18 @@
       "expectedImpact": "10-15% improvement in mobile CTR and engagement",
       "priority": "medium",
       "firstSeen": "2026-05-04",
-      "lastSeen": "2026-06-04",
+      "lastSeen": "2026-06-07",
+      "timesRepeated": 7,
+      "status": "open"
+    },
+    {
+      "id": "e5837806021a",
+      "title": "Improve Mobile Search Performance",
+      "description": "Mobile accounts for only 3 clicks vs 7 desktop clicks despite mobile-first indexing. Optimize page speed, improve mobile UX, and ensure CTA buttons are mobile-friendly on lead buying pages.",
+      "expectedImpact": "15-20% increase in mobile organic traffic and conversions",
+      "priority": "medium",
+      "firstSeen": "2026-04-30",
+      "lastSeen": "2026-05-24",
       "timesRepeated": 6,
       "status": "open"
     },
@@ -1637,6 +1648,28 @@
       "priority": "medium",
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-06-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "a1f9d1ccc552",
+      "title": "Improve Content Depth and Internal Linking",
+      "description": "Address the 45.3% page view decline by adding related content sections, internal link suggestions, and content hubs. Create topic clusters around insurance types, lead management, and sales processes.",
+      "expectedImpact": "20-30% increase in pages per session",
+      "priority": "medium",
+      "firstSeen": "2026-06-07",
+      "lastSeen": "2026-06-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "698f94ba56a3",
+      "title": "Expand Voicemail Script Content",
+      "description": "The voicemail script pages show strong search positions (3.5-6.2). Create additional script variations for different industries, follow-up sequences, and A/B testing guides.",
+      "expectedImpact": "10-15% increase in organic clicks from script-related queries",
+      "priority": "medium",
+      "firstSeen": "2026-06-07",
+      "lastSeen": "2026-06-07",
       "timesRepeated": 1,
       "status": "open"
     },
