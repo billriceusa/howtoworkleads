@@ -18,14 +18,23 @@ const nextConfig = {
   // sharp v0.33+ ships its native binary in separate @img/sharp-{platform}-{arch}
   // packages, so trace those too — otherwise Vercel's serverless bundle can't
   // load the linux-x64 binary at runtime.
+  // NOTE (2026-06-08): in this npm-workspaces monorepo the @img/* native-binary
+  // packages are hoisted to the ROOT node_modules, while sharp's JS resolves from
+  // apps/web. Tracing only ./node_modules/@img missed the hoisted binaries, so the
+  // lambda threw "Could not load the sharp module using the linux-x64 runtime" and
+  // the featured-image webhook failed silently. Trace both locations.
   outputFileTracingIncludes: {
     '/api/generate-featured-image': [
       './node_modules/sharp/**/*',
       './node_modules/@img/**/*',
+      '../../node_modules/sharp/**/*',
+      '../../node_modules/@img/**/*',
     ],
     '/api/cron/weekly-content': [
       './node_modules/sharp/**/*',
       './node_modules/@img/**/*',
+      '../../node_modules/sharp/**/*',
+      '../../node_modules/@img/**/*',
     ],
   },
   async redirects() {
@@ -83,6 +92,13 @@ const nextConfig = {
       {
         source: '/blog/multi-vendor-lead-performance-dashboard',
         destination: '/blog/managing-multiple-lead-vendors',
+        permanent: true,
+      },
+      // 2026-06-08 — word-order duplicate of buy-refinance-mortgage-leads (the
+      // canonical that carries the optimized title/meta). Loser unpublished in Sanity.
+      {
+        source: '/buying-leads/buy-mortgage-refinance-leads',
+        destination: '/buying-leads/buy-refinance-mortgage-leads',
         permanent: true,
       },
     ];

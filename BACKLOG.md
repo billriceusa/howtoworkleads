@@ -1,6 +1,6 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** April 14, 2026 (end of SEO sprint session)
+**Last updated:** June 8, 2026 (meta-description hygiene sprint)
 **Site status:** 119+ pages live (36 landing + 77 blog + 9 category + download pages + 2 interactive tools)
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
 **Newsletter:** 8 issues written. **Only 3 subscribers in Resend audience** — Issue 1 (broadcast 2a47893d) is still in DRAFT, never actually sent despite earlier claims. Weekly cron IS sending Sunday 8 AM UTC to those 3 addresses. Treat newsletter as non-channel until subscriber acquisition happens.
@@ -29,6 +29,27 @@
 4. **P2 — Audit what the content cron optimizes for** — it appears to be generating keyword-stuffed "X features review" variants that draw junk impressions, not buyer clicks.
 
 **Not done this session (deliberately):** blanket title rewrites and more internal links — data shows both are exhausted/low-value. Shipped instead: llms.txt/llms-full.txt now Sanity-generated (79→172 URLs).
+
+---
+
+## 2026-06-08 — Meta-description hygiene sprint <!-- /brsg-session -->
+
+Ran WITHOUT GSC query-level data (gcloud not installed on this machine; the impersonation note above needs that binary). So this was baseline hygiene, not a data-targeted play. **Defer to the June 5 strategy above: domain authority/backlinks is the binding constraint; on-page CTR work is low-leverage until DR moves.** This sprint only fixed pages that had *no* meta at all (Google was auto-generating their snippets) — never wrong to fix, but don't expect it to move clicks much on its own.
+
+- [x] **43 pages: added missing `seoTitle`/`seoDescription`** via Sanity MCP (workspace `howtoworkleads`, `e9k38j42`) — 5 Buying-Leads landing pages, the 11-page `how-to-work-*` series + aged-leads pillar (desc only), 27 blog posts (title+desc). Verified live in production HTML. Titles 39–62 chars, descriptions 137–160.
+  - Note: 2 of those 27 (`lead-attribution-multi-touch-tracking`, `multi-vendor-lead-performance-dashboard`) were redirect *losers* per the June 5 consolidation — meta on them is moot; unpublished them in Sanity to match (see below).
+- [x] **1 new redirect** added to `next.config.js`: `/buying-leads/buy-mortgage-refinance-leads` → `/buying-leads/buy-refinance-mortgage-leads` (word-order dupe; the other 3 dupes I found were already redirected June 5).
+- [x] **6 dupe/loser docs unpublished in Sanity** so they leave the sitemap (301s already handle the URLs): closing-techniques-...-10-methods-work, pipeline-management-framework-leads, pipeline-management-framework-never-lose-track-lead, buy-mortgage-refinance-leads, lead-attribution-multi-touch-tracking, multi-vendor-lead-performance-dashboard.
+
+### OPEN — still queued
+
+- [ ] **P1 — Featured images for 8 bare blog posts** (`mainImage` empty): compliance-automation-workflows-2026, conversion-psychology-internet-leads, crm-integration-checklist-lead-tools, cross-channel-lead-attribution-tracking, lead-qualification-framework-internet-leads, lead-velocity-optimization-guide, multi-vendor-lead-performance-dashboard*, solar-lead-conversion-internet-leads. Generator = live `/api/generate-featured-image` (Unsplash, branded), triggered by Sanity webhook or `Bearer SANITY_WEBHOOK_SECRET`. Needs the secret (not in local env). *(multi-vendor now redirected — drop it from the list.)*
+- [ ] **P0 (per June 5) — verify the ALS backlinks are live, indexed, dofollow.** This is the real lever; nothing on-page moves the needle until DR rises.
+
+### Drift flagged this session
+
+- **`apps/web/.env.local` is MISSING locally** (only `.env.example`). Sanity-patch/publish scripts + `backfill-featured-images.ts` won't run locally without it; used the Sanity MCP instead. Restore it (or pull from Vercel) before running repo scripts.
+- **gcloud is NOT installed** on this machine — couldn't pull GSC live (June 5's analytics note assumes it). Local repo HEAD was also stale (June 4) so the June 5 push wasn't visible until a push collision surfaced it — **`git pull` before starting a session here.**
 
 ---
 
