@@ -81,8 +81,12 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  // Patch the document
-  await patchDocumentImage(_id, outcome.assetId, title, fieldName)
+  // Patch the document (with Unsplash attribution + source ID)
+  await patchDocumentImage(_id, outcome.assetId, title, fieldName, {
+    photoId: outcome.photoId,
+    photographer: outcome.photographer,
+    photographerUrl: outcome.photographerUrl,
+  })
 
   return NextResponse.json({
     success: true,

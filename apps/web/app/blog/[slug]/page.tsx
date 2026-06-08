@@ -62,6 +62,8 @@ interface BlogPost {
   mainImage?: {
     asset: any
     alt?: string
+    photographer?: string
+    photographerUrl?: string
   }
   content?: any[]
   categories?: {
@@ -271,15 +273,43 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <article className="lg:col-span-8">
             {/* Featured Image */}
             {post.mainImage?.asset && (
-              <div className="relative aspect-video overflow-hidden rounded-xl mb-8">
-                <Image
-                  src={urlForImage(post.mainImage).width(800).height(450).url()}
-                  alt={post.mainImage.alt || post.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <figure className="mb-8">
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <Image
+                    src={urlForImage(post.mainImage).width(800).height(450).url()}
+                    alt={post.mainImage.alt || post.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {post.mainImage.photographer && (
+                  <figcaption className="mt-2 text-xs text-gray-400">
+                    Photo by{' '}
+                    {post.mainImage.photographerUrl ? (
+                      <a
+                        href={`${post.mainImage.photographerUrl}?utm_source=howtoworkleads&utm_medium=referral`}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="underline hover:text-gray-600"
+                      >
+                        {post.mainImage.photographer}
+                      </a>
+                    ) : (
+                      post.mainImage.photographer
+                    )}{' '}
+                    on{' '}
+                    <a
+                      href="https://unsplash.com/?utm_source=howtoworkleads&utm_medium=referral"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="underline hover:text-gray-600"
+                    >
+                      Unsplash
+                    </a>
+                  </figcaption>
+                )}
+              </figure>
             )}
 
             {/* Categories */}

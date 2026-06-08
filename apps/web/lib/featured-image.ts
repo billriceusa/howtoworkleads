@@ -296,6 +296,7 @@ export type FeaturedImageOutcome =
       url: string
       photoId: string
       photographer: string
+      photographerUrl: string | null
     }
   | {
       status: 'skipped'
@@ -329,6 +330,16 @@ export async function generateAndUploadFeaturedImage(
   let result: Awaited<ReturnType<typeof generateBrandedImage>> = null
   try {
     result = await withRetry(() => generateBrandedImage(searchQuery, exclude))
+
+    // No results for the title-derived query (common for acronym-heavy or
+    // unusual titles, e.g. "Cross-Channel Attribution"). Retry once with a
+    // generic category query so the post still gets an on-brand photo
+    // instead of shipping bare.
+    if (!result) {
+      const fallbackQuery = buildFallbackQuery(category)
+      console.log(`  No results — retrying with fallback query: "${fallbackQuery}"`)
+      result = await withRetry(() => generateBrandedImage(fallbackQuery, exclude))
+    }
   } catch (e: unknown) {
     if (e instanceof UnsplashRateLimitError) {
       return { status: 'skipped', reason: 'rate-limited', detail: e.message }
@@ -362,6 +373,7 @@ export async function generateAndUploadFeaturedImage(
       url: asset.url,
       photoId: result.photoId,
       photographer: result.credit?.name || 'Unsplash',
+      photographerUrl: result.credit?.url || null,
     }
   } catch (e: unknown) {
     return {
@@ -372,14 +384,24 @@ export async function generateAndUploadFeaturedImage(
   }
 }
 
+/** Unsplash attribution + source identity persisted alongside the image. */
+export interface ImageCredit {
+  photoId?: string
+  photographer?: string
+  photographerUrl?: string | null
+}
+
 /**
  * Patch a Sanity document to set its ogImage (for landing pages) or mainImage (for blog posts).
+ * When `credit` is provided, the Unsplash photographer + photo ID are stored on the
+ * image object — satisfying Unsplash's attribution requirement and enabling cross-run dedup.
  */
 export async function patchDocumentImage(
   docId: string,
   assetId: string,
   altText: string,
   fieldName: 'ogImage' | 'mainImage' = 'ogImage',
+  credit?: ImageCredit,
 ): Promise<void> {
   await writeClient
     .patch(docId)
@@ -388,19 +410,73 @@ export async function patchDocumentImage(
         _type: 'image',
         alt: altText,
         asset: { _type: 'reference', _ref: assetId },
+        ...(credit?.photographer ? { photographer: credit.photographer } : {}),
+        ...(credit?.photographerUrl ? { photographerUrl: credit.photographerUrl } : {}),
+        ...(credit?.photoId ? { unsplashId: credit.photoId } : {}),
       },
     })
     .commit()
 }
 
+/**
+ * Fetch Unsplash photo IDs already used across recent posts/pages so a new
+ * run can avoid re-selecting the same stock photo. Best-effort: returns an
+ * empty set on any failure so it never blocks publishing.
+ */
+export async function getUsedPhotoIds(): Promise<Set<string>> {
+  try {
+    const ids = await writeClient.fetch<string[]>(
+      `array::unique(
+        *[
+          _type in ["blogPost","landingPage"] &&
+          (defined(mainImage.unsplashId) || defined(ogImage.unsplashId))
+        ]{
+          "id": coalesce(mainImage.unsplashId, ogImage.unsplashId)
+        }.id
+      )`,
+    )
+    return new Set((ids || []).filter(Boolean))
+  } catch {
+    return new Set<string>()
+  }
+}
+
 // ── Helpers ──────────────────────────────────────────────────────────
+
+/**
+ * Industry acronyms and brand terms that don't surface relevant Unsplash
+ * photos on their own. Expanded to broader english terms before query
+ * construction so e.g. "DSCR" searches "realestate" instead of returning
+ * nothing.
+ */
+const ACRONYM_EXPANSIONS: Record<string, string> = {
+  nonqm: 'mortgage', dscr: 'realestate', heloc: 'home',
+  iul: 'insurance', aca: 'health', ssdi: 'disability',
+  tcpa: 'compliance', fcc: 'compliance', mva: 'accident',
+  crm: 'office', sms: 'phone', salesforce: 'office',
+  hubspot: 'office',
+}
+
+/** Category → generic context word. Shared by primary + fallback queries. */
+const CATEGORY_CONTEXT_MAP: Record<string, string> = {
+  'buying-leads': 'sales',
+  'lead-management': 'office',
+  'sales-process': 'business',
+  'crm-systems': 'technology',
+  'aged-leads': 'sales',
+  'insurance-leads': 'insurance',
+  'legal-leads': 'legal',
+  'home-services-leads': 'construction',
+}
 
 /**
  * Build an Unsplash search query from page title and category.
  * Always includes "people professional" to bias toward photographs
- * of real people in business/professional settings.
+ * of real people in business/professional settings. Acronyms are
+ * expanded and bare numbers dropped so unusual title tokens don't
+ * starve the search.
  */
-function buildSearchQuery(title: string, category: string): string {
+export function buildSearchQuery(title: string, category: string): string {
   const stopWords = new Set([
     'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
     'of', 'with', 'by', 'from', 'is', 'are', 'was', 'were', 'be', 'been',
@@ -415,24 +491,27 @@ function buildSearchQuery(title: string, category: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, '')
     .split(/\s+/)
-    .filter((w) => w.length > 2 && !stopWords.has(w))
+    .map((w) => ACRONYM_EXPANSIONS[w] || w)
+    .filter((w) => w.length > 2 && !stopWords.has(w) && !/^\d+$/.test(w))
 
   const keywords = [...titleWords.slice(0, 2)]
 
-  // Add category-specific context
-  const categoryContextMap: Record<string, string> = {
-    'buying-leads': 'sales',
-    'lead-management': 'office',
-    'sales-process': 'business',
-    'crm-systems': 'technology',
-    'aged-leads': 'sales',
-  }
-  const contextWord = categoryContextMap[category.toLowerCase()] || 'business'
+  const contextWord = CATEGORY_CONTEXT_MAP[category.toLowerCase()] || 'business'
   if (!keywords.includes(contextWord)) keywords.push(contextWord)
 
   keywords.push('people', 'professional')
 
   return keywords.join(' ')
+}
+
+/**
+ * Generic, title-free query used when the primary query returns no
+ * Unsplash results. Leans entirely on the category context so we still
+ * attach a relevant on-brand photo rather than leaving the post bare.
+ */
+export function buildFallbackQuery(category: string): string {
+  const ctx = CATEGORY_CONTEXT_MAP[category.toLowerCase()] || 'business'
+  return `${ctx} office people professional`
 }
 
 function slugify(text: string): string {

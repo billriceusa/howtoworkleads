@@ -115,6 +115,14 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      fields: [
+        { name: 'alt', type: 'string', title: 'Alt Text' },
+        // Auto-populated by the featured-image automation. Used for Unsplash
+        // attribution and cross-run dedup; safe to leave blank for manual uploads.
+        { name: 'photographer', type: 'string', title: 'Photographer', readOnly: true },
+        { name: 'photographerUrl', type: 'url', title: 'Photographer URL', readOnly: true },
+        { name: 'unsplashId', type: 'string', title: 'Unsplash Photo ID', readOnly: true },
+      ],
     }),
 
     // Related Content

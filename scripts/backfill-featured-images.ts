@@ -74,11 +74,16 @@ async function main() {
     return
   }
 
-  // Lazy import the image generation (needs sharp)
-  const { generateBrandedImage } = await import('../apps/web/lib/featured-image')
+  // Lazy import the image generation (needs sharp). Query builders are
+  // shared with the live cron/webhook path — single source of truth.
+  const { generateBrandedImage, buildSearchQuery, buildFallbackQuery } = await import(
+    '../apps/web/lib/featured-image'
+  )
 
   let processed = 0
   let failed = 0
+  // Avoid handing the same stock photo to multiple docs in one backfill run.
+  const usedPhotoIds = new Set<string>()
 
   for (const doc of docs) {
     console.log(`[${processed + 1}/${docs.length}] ${doc._type}: "${doc.title}" (${doc.slug})`)
@@ -93,17 +98,18 @@ async function main() {
       const searchQuery = buildSearchQuery(doc.title, doc.category || 'business')
       console.log(`  Query: "${searchQuery}"`)
 
-      let result = await generateBrandedImage(searchQuery)
+      let result = await generateBrandedImage(searchQuery, usedPhotoIds)
       if (!result) {
         const fallbackQuery = buildFallbackQuery(doc.category || 'business')
         console.log(`  Retry with fallback query: "${fallbackQuery}"`)
-        result = await generateBrandedImage(fallbackQuery)
+        result = await generateBrandedImage(fallbackQuery, usedPhotoIds)
       }
       if (!result) {
         console.log('  SKIP: No Unsplash result (after fallback)\n')
         failed++
         continue
       }
+      usedPhotoIds.add(result.photoId)
 
       // Upload to Sanity
       const asset = await client.assets.upload('image', result.buffer, {
@@ -111,7 +117,7 @@ async function main() {
         contentType: 'image/jpeg',
       })
 
-      // Patch document
+      // Patch document (with Unsplash attribution + source ID)
       await client
         .patch(doc._id)
         .set({
@@ -119,6 +125,9 @@ async function main() {
             _type: 'image',
             alt: doc.title,
             asset: { _type: 'reference', _ref: asset._id },
+            ...(result.credit ? { photographer: result.credit.name } : {}),
+            ...(result.credit ? { photographerUrl: result.credit.url } : {}),
+            unsplashId: result.photoId,
           },
         })
         .commit()
@@ -139,50 +148,6 @@ async function main() {
   }
 
   console.log(`\nDone! Processed: ${processed}, Failed: ${failed}`)
-}
-
-// Industry acronyms and brand terms that don't surface relevant Unsplash photos.
-// Expanded to broader english terms before query construction.
-const ACRONYM_EXPANSIONS: Record<string, string> = {
-  nonqm: 'mortgage', dscr: 'realestate', heloc: 'home',
-  iul: 'insurance', aca: 'health', ssdi: 'disability',
-  tcpa: 'compliance', fcc: 'compliance', mva: 'accident',
-  crm: 'office', sms: 'phone', salesforce: 'office',
-  hubspot: 'office',
-}
-
-function buildSearchQuery(title: string, category: string): string {
-  const stopWords = new Set([
-    'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-    'of', 'with', 'by', 'from', 'is', 'are', 'how', 'what', 'why', 'your',
-    'buy', 'buying', 'complete', 'guide', 'best', 'top',
-  ])
-  const titleWords = title.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/)
-    .map((w) => ACRONYM_EXPANSIONS[w] || w)
-    .filter((w) => w.length > 2 && !stopWords.has(w) && !/^\d+$/.test(w))
-  const keywords = [...titleWords.slice(0, 2)]
-  const contextMap: Record<string, string> = {
-    'buying-leads': 'sales', 'lead-management': 'office',
-    'sales-process': 'business', 'crm-systems': 'technology',
-  }
-  const ctx = contextMap[category.toLowerCase()] || 'business'
-  if (!keywords.includes(ctx)) keywords.push(ctx)
-  keywords.push('people', 'professional')
-  return keywords.join(' ')
-}
-
-function buildFallbackQuery(category: string): string {
-  const contextMap: Record<string, string> = {
-    'buying-leads': 'sales',
-    'lead-management': 'office',
-    'sales-process': 'business',
-    'crm-systems': 'technology',
-    'insurance-leads': 'insurance',
-    'legal-leads': 'legal',
-    'home-services-leads': 'construction',
-  }
-  const ctx = contextMap[category.toLowerCase()] || 'business'
-  return `${ctx} office people professional`
 }
 
 function slugify(text: string): string {

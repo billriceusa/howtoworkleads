@@ -11,6 +11,7 @@ import { sendWeeklyReport } from "@/lib/cron/notify";
 import {
   generateAndUploadFeaturedImage,
   patchDocumentImage,
+  getUsedPhotoIds,
 } from "@/lib/featured-image";
 import type {
   WeeklyReport,
@@ -83,6 +84,12 @@ export async function GET(request: Request) {
   try {
     const existingPosts = await getExistingPosts();
     console.log(`[State] ${existingPosts.length} posts`);
+
+    // Seed the dedup set with photos already used across the site so this
+    // run avoids re-selecting the same stock photo. Best-effort.
+    const priorPhotoIds = await getUsedPhotoIds();
+    priorPhotoIds.forEach((id) => seenPhotoIds.add(id));
+    console.log(`[State] ${priorPhotoIds.size} photos already in use (excluded from selection)`);
 
     try {
       console.log("[Planning] Analyzing SEO strategy and creating content plan...");
@@ -159,7 +166,12 @@ export async function GET(request: Request) {
                   outcome.id,
                   imgOutcome.assetId,
                   article.brief.title,
-                  "mainImage"
+                  "mainImage",
+                  {
+                    photoId: imgOutcome.photoId,
+                    photographer: imgOutcome.photographer,
+                    photographerUrl: imgOutcome.photographerUrl,
+                  }
                 );
                 imageOutcomes.push({
                   title: article.brief.title,
@@ -272,16 +284,27 @@ export async function GET(request: Request) {
     `[Weekly Content] Completed in ${(duration / 1000).toFixed(1)}s — created=${articlesCreated.length} skipped=${articlesSkipped.length} failed=${articlesFailed.length}`
   );
 
+  const imagesCreated = imageOutcomes.filter(
+    (o) => o.status === "created"
+  ).length;
+  // Publishing articles but attaching zero images is a silent pipeline failure
+  // (e.g. the sharp-on-Vercel breakage) — surface it as partial so the
+  // heartbeat alerts instead of reporting a clean "ok".
+  const imagePipelineDown =
+    articlesCreated.length > 0 && imagesCreated === 0;
+
   await recordCronRun({
     name: "weekly-content",
     status: fatalError
       ? "failed"
-      : articlesFailed.length > 0 || articlesCreated.length === 0
+      : articlesFailed.length > 0 ||
+          articlesCreated.length === 0 ||
+          imagePipelineDown
         ? "partial"
         : "ok",
     detail: fatalError
       ? fatalError
-      : `created=${articlesCreated.length} skipped=${articlesSkipped.length} failed=${articlesFailed.length}`,
+      : `created=${articlesCreated.length} skipped=${articlesSkipped.length} failed=${articlesFailed.length} images=${imagesCreated}/${imageOutcomes.length}${imagePipelineDown ? " [IMAGE PIPELINE DOWN]" : ""}`,
     durationMs: duration,
   });
 
