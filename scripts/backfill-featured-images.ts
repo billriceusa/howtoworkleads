@@ -79,6 +79,9 @@ async function main() {
 
   let processed = 0
   let failed = 0
+  // Dedupe selected photos ACROSS documents so similar generic queries
+  // (e.g. "office people professional") don't hand multiple posts the same image.
+  const usedPhotoIds = new Set<string>()
 
   for (const doc of docs) {
     console.log(`[${processed + 1}/${docs.length}] ${doc._type}: "${doc.title}" (${doc.slug})`)
@@ -93,11 +96,11 @@ async function main() {
       const searchQuery = buildSearchQuery(doc.title, doc.category || 'business')
       console.log(`  Query: "${searchQuery}"`)
 
-      let result = await generateBrandedImage(searchQuery)
+      let result = await generateBrandedImage(searchQuery, usedPhotoIds)
       if (!result) {
         const fallbackQuery = buildFallbackQuery(doc.category || 'business')
         console.log(`  Retry with fallback query: "${fallbackQuery}"`)
-        result = await generateBrandedImage(fallbackQuery)
+        result = await generateBrandedImage(fallbackQuery, usedPhotoIds)
       }
       if (!result) {
         console.log('  SKIP: No Unsplash result (after fallback)\n')
@@ -123,6 +126,7 @@ async function main() {
         })
         .commit()
 
+      usedPhotoIds.add(result.photoId)
       console.log(`  OK: ${asset.url}`)
       if (result.credit) {
         console.log(`  Credit: ${result.credit.name} (${result.credit.url})`)
