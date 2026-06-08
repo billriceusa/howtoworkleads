@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T12:02:19.740Z",
+  "lastUpdated": "2026-06-08T12:01:30.116Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -19,8 +19,8 @@
       "expectedImpact": "Could increase clicks by 30-50% on high-impression queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-05-22",
-      "timesRepeated": 3,
+      "lastSeen": "2026-06-08",
+      "timesRepeated": 4,
       "status": "open"
     },
     {
@@ -757,6 +757,17 @@
       "priority": "high",
       "firstSeen": "2026-06-07",
       "lastSeen": "2026-06-07",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "608ce9480e86",
+      "title": "Aggressive IUL Content Expansion",
+      "description": "Create 5-10 additional IUL-focused pages targeting long-tail keywords like 'best IUL lead companies', 'IUL lead conversion tips', and 'IUL vs whole life leads'. The /buy-iul-leads page is ranking at position 11.0 with strong CTR - build topic clusters around this success.",
+      "expectedImpact": "30-50% increase in IUL-related organic traffic within 60 days",
+      "priority": "high",
+      "firstSeen": "2026-06-08",
+      "lastSeen": "2026-06-08",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1674,14 +1685,36 @@
       "status": "open"
     },
     {
+      "id": "b966dc624358",
+      "title": "Aged Lead Content Strategy",
+      "description": "Develop comprehensive aged lead buying guides, comparison charts, and ROI calculators. Multiple aged lead queries are showing up - create pillar content for 'aged insurance leads', 'aged medicare leads', and 'aged auto insurance leads'.",
+      "expectedImpact": "20-30% increase in aged lead-related traffic and improved topical authority",
+      "priority": "medium",
+      "firstSeen": "2026-06-08",
+      "lastSeen": "2026-06-08",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8e9012f14985",
+      "title": "Email Newsletter Traffic Recovery",
+      "description": "The als-newsletter and newsletter email sources only drove 6 total sessions. Increase email frequency, improve subject lines, and create email-exclusive content to boost this owned media channel.",
+      "expectedImpact": "Double email-driven traffic to 12-15 sessions per week",
+      "priority": "medium",
+      "firstSeen": "2026-06-08",
+      "lastSeen": "2026-06-08",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
       "expectedImpact": "Improve mobile CTR from current 1.09% to match desktop performance at 0.17%",
       "priority": "low",
       "firstSeen": "2026-05-12",
-      "lastSeen": "2026-05-29",
-      "timesRepeated": 3,
+      "lastSeen": "2026-06-08",
+      "timesRepeated": 4,
       "status": "open"
     },
     {
