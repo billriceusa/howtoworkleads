@@ -85,6 +85,13 @@ const nextConfig = {
         destination: '/blog/managing-multiple-lead-vendors',
         permanent: true,
       },
+      // 2026-06-08 — word-order duplicate of buy-refinance-mortgage-leads (the
+      // canonical that carries the optimized title/meta). Loser unpublished in Sanity.
+      {
+        source: '/buying-leads/buy-mortgage-refinance-leads',
+        destination: '/buying-leads/buy-refinance-mortgage-leads',
+        permanent: true,
+      },
     ];
   },
 }
