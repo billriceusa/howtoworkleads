@@ -1,12 +1,37 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** June 8, 2026 (meta-description hygiene sprint)
+**Last updated:** June 9, 2026 (nav reorg + FAQ-schema rollout + content/newsletter crons paused)
 **Site status:** 119+ pages live (36 landing + 77 blog + 9 category + download pages + 2 interactive tools)
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
-**Newsletter:** 8 issues written. **Only 3 subscribers in Resend audience** — Issue 1 (broadcast 2a47893d) is still in DRAFT, never actually sent despite earlier claims. Weekly cron IS sending Sunday 8 AM UTC to those 3 addresses. Treat newsletter as non-channel until subscriber acquisition happens.
-**Content automation:** Weekly cron publishes 3/week Mon/Wed/Fri (confirmed healthy April 14). Avoid manual bursts — the April 8 backfill of 13 articles may have triggered quality dampening.
+**Newsletter:** **PAUSED June 9, 2026** (Bill's call) — `weekly-newsletter` cron removed from `apps/web/vercel.json`. 8 issues written; only 3 subscribers; Issue 1 (broadcast 2a47893d) never actually sent. Non-channel until subscriber acquisition. Resume by re-adding the cron line.
+**Content automation:** **PAUSED June 9, 2026** (Bill's call: quality concerns) — `weekly-content` cron removed from `apps/web/vercel.json`. No auto-publishing until resumed (re-add the cron line). Side effect: this neutralizes the broken featured-image webhook (P0 below), since no new posts auto-publish. Prior note: April 8 backfill of 13 articles may have triggered quality dampening.
 **AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
 **Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. **Token scope flag required**: `--scopes=https://www.googleapis.com/auth/webmasters.readonly` (default token 403s). Set account `bill@billricestrategy.com` first. Ahrefs is blind to this domain (DR≈0) — GSC is the only ground truth.
+
+---
+
+## 2026-06-09 — Nav reorg + FAQ-schema rollout + cron pause
+
+**Shipped (live):**
+- **Primary nav reorganized 8→4+CTA** (PR #40, merged to main, deployed). Intent-based mega-menus: **Lead Types** (Insurance / Mortgage / Home Services / Legal verticals) · **Guides** (Lead Management / Sales Process / CRM Systems + blog) · **Resources** · **About** · **Buy Leads** CTA (→ agedleadstore — the monetization). `apps/web/components/layout/HeaderClient.tsx` is now a curated config (not flat Sanity categories). All 22 linked URLs verified 200; clean bar confirmed via screenshot.
+- **FAQPage schema added to 7 buy-pages** (Sanity `faqSection` blocks → FAQPage JSON-LD, verified live): buy-home-improvement-leads, buy-aged-leads, buy-solar-leads, buy-mortgage-leads, health-insurance-leads, buy-dscr-loan-leads (prose→converted), buy-annuity-leads (prose→converted). Answer-first, targeting real question-queries (cost / what-is / where) for featured-snippet + AI-Overview capture. **13 of 20 buy-pages now have FAQ schema** (incl. pre-existing life, iul, auto, final-expense, medicare, mortgage-protection).
+- **Content + newsletter crons PAUSED** (see header notes).
+
+**Strategy update — supersedes the June 5 "on-page levers exhausted" thesis:** today's GA4 + GSC export showed the CTR problem is **SERP-environment, not just DR**. Clean niche/specialty SERPs convert (IUL pos 9.7 / **3.28% CTR**, DSCR **12.5%**); ad-saturated head terms stay buried even on page 1 (buy-life-insurance-leads: **10,640 impr at pos 36**, ~0 clicks). **FAQ structured data was an un-exhausted on-page lever** — shipped today. **ALS/backlinks moved OFF P0 per Bill** ("links from Aged Lead Store exist; slow down on backlinks, focus on content").
+
+### OPEN — queued from this session
+
+- [ ] **P1 — Finish FAQ-schema conversion on the remaining 7 buy-pages** (they have *prose* FAQs but no `faqSection` schema). Convert each: preserve the existing Q&As, wrap in a `faqSection`, remove the prose block. Sanity workspace `howtoworkleads`, project `e9k38j42`. Prose-FAQ block keys captured 6/9:
+  - **Standalone blocks (append faqSection + 1 whole-block unset each):** bank-statement `c9bdafe57620` · heloc `d473c376f912` · non-qm `d9fc4ccfe749` · pc `bb8a4e12f49c` · real-estate `8640afaf119b`
+  - **MIXED blocks (FAQ shares a contentBlock with a Revenue subsection — needs child-level removal, one unset op per call, like the DSCR conversion):** refinance `b5c773ff5550` · purchase `92e65123f4fe`
+  - Tooling note: the Sanity MCP patch rejects combined append+unset on the same array, and multiple unsets on one array — do append and each unset as separate calls.
+- [ ] **P1 — Niche concentration:** strengthen + interlink the winnable specialty cluster (IUL / DSCR / aged-specialty) where page-1 rankings actually earn clicks — vs fighting ad-saturated head terms.
+- [ ] **P2 — Measure (~June 20):** re-pull GSC for FAQ snippet capture + the nav-reorg CTR effect (this is the payoff check for today's work).
+- [ ] **P2 — GSC indexing gap** (104/148 URLs zero impressions): submit-or-prune. Submission needs the GSC API (gcloud not installed on this machine); pruning thin synthetic-query pages is doable in Sanity and overlaps with the content-cron pause rationale.
+
+### P0 status
+
+- **Featured-image webhook (sharp on Vercel)** — still technically broken, but **de-risked by the content-cron pause** (no auto-publishing = no new imageless posts; existing ones were backfilled June 8). Real lambda fix remains owned by the systemic sharp-on-Vercel effort across BRSG sites; port here when it lands. Not forked this session (Occam — the cron pause removes the active harm).
 
 ---
 
