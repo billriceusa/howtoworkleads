@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-08T12:01:30.116Z",
+  "lastUpdated": "2026-06-09T12:01:45.837Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -30,8 +30,8 @@
       "expectedImpact": "15-25% increase in IUL-related organic traffic within 30 days",
       "priority": "high",
       "firstSeen": "2026-05-04",
-      "lastSeen": "2026-06-07",
-      "timesRepeated": 2,
+      "lastSeen": "2026-06-09",
+      "timesRepeated": 3,
       "status": "open"
     },
     {
@@ -768,6 +768,17 @@
       "priority": "high",
       "firstSeen": "2026-06-08",
       "lastSeen": "2026-06-08",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "d4ada81d159f",
+      "title": "Improve Page Load Speed and User Experience",
+      "description": "Investigate the 22.7% drop in session duration by analyzing page load times, mobile responsiveness, and content layout. Implement lazy loading for images, optimize CSS/JS delivery, and ensure mobile-first design principles are followed.",
+      "expectedImpact": "10-15% improvement in session duration and engagement rate",
+      "priority": "high",
+      "firstSeen": "2026-06-09",
+      "lastSeen": "2026-06-09",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1707,6 +1718,28 @@
       "status": "open"
     },
     {
+      "id": "59bdf563f4d4",
+      "title": "Capitalize on Aged Lead Query Opportunities",
+      "description": "Target the 'aged insurance leads' queries showing strong positions (13.5, 7.3, 5.0) but zero clicks. Optimize meta titles and descriptions for aged lead pages to improve CTR. Create dedicated landing pages for aged auto insurance leads and aged homeowners insurance leads.",
+      "expectedImpact": "20-30% increase in aged lead-related organic clicks",
+      "priority": "medium",
+      "firstSeen": "2026-06-09",
+      "lastSeen": "2026-06-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "528055fbb79a",
+      "title": "Develop Content Hub Strategy",
+      "description": "Create comprehensive guide pages linking related content (e.g., 'Complete Guide to Working Insurance Leads' that connects IUL, life insurance, and aged lead content). This addresses the pageview decline by encouraging multi-page sessions.",
+      "expectedImpact": "25-35% increase in pages per session",
+      "priority": "medium",
+      "firstSeen": "2026-06-09",
+      "lastSeen": "2026-06-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -1956,6 +1989,17 @@
       "priority": "low",
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-06-06",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "508f39003557",
+      "title": "Expand Mobile-Specific Content",
+      "description": "With mobile generating 14 clicks from only 637 impressions (2.2% CTR vs 0.44% desktop), create mobile-optimized content formats like quick reference guides and checklists for lead management.",
+      "expectedImpact": "15-20% improvement in mobile engagement metrics",
+      "priority": "low",
+      "firstSeen": "2026-06-09",
+      "lastSeen": "2026-06-09",
       "timesRepeated": 1,
       "status": "open"
     }
