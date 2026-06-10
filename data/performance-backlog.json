@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-09T12:01:45.837Z",
+  "lastUpdated": "2026-06-10T12:01:41.497Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -779,6 +779,28 @@
       "priority": "high",
       "firstSeen": "2026-06-09",
       "lastSeen": "2026-06-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "fa43c2e160e5",
+      "title": "Implement Content Depth Strategy for High-Bounce Pages",
+      "description": "Focus on the homepage and insurance lead category pages that show high traffic but poor engagement. Add comprehensive lead working guides, success stories, and interactive elements like lead calculators or qualification checklists. Create internal linking to keep users engaged beyond the landing page.",
+      "expectedImpact": "Reduce bounce rate by 15-20% and increase pages per session",
+      "priority": "high",
+      "firstSeen": "2026-06-10",
+      "lastSeen": "2026-06-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "cc11c3b2b47b",
+      "title": "Capitalize on Improved CTR with Content Expansion",
+      "description": "Since CTR improved 136.4%, create more content targeting the high-performing aged lead queries. Develop comprehensive guides for 'aged iul leads' and 'aged life insurance leads' that currently rank at positions 19.3-19.5 but generate clicks.",
+      "expectedImpact": "Increase organic clicks by 30-40% within 30 days",
+      "priority": "high",
+      "firstSeen": "2026-06-10",
+      "lastSeen": "2026-06-10",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1740,6 +1762,28 @@
       "status": "open"
     },
     {
+      "id": "c9d19c9cf605",
+      "title": "Optimize High-Impression, Zero-Click Queries",
+      "description": "Target queries like 'aged auto insurance leads' (pos 7.3) and 'aged insurance leads' (pos 4.0) that show strong rankings but no clicks. Improve meta descriptions and titles to increase CTR for these high-potential terms.",
+      "expectedImpact": "Convert 5-10% of high-ranking impressions to clicks",
+      "priority": "medium",
+      "firstSeen": "2026-06-10",
+      "lastSeen": "2026-06-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "01bb5d315362",
+      "title": "Develop Mobile-Optimized Lead Working Templates",
+      "description": "With mobile generating 11 clicks from 510 impressions (2.16% CTR vs desktop's 0.42%), create mobile-first content like SMS templates, quick reference guides, and mobile-optimized lead tracking tools.",
+      "expectedImpact": "Increase mobile engagement rate by 25%",
+      "priority": "medium",
+      "firstSeen": "2026-06-10",
+      "lastSeen": "2026-06-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -2000,6 +2044,17 @@
       "priority": "low",
       "firstSeen": "2026-06-09",
       "lastSeen": "2026-06-09",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c49a2f304a47",
+      "title": "Create Cross-Selling Content Between Lead Types",
+      "description": "Leverage the strong performance of IUL and life insurance lead pages to create cross-selling content for DSCR loans, home improvement, and real estate leads that currently show minimal traffic.",
+      "expectedImpact": "Increase average pages per session by 20%",
+      "priority": "low",
+      "firstSeen": "2026-06-10",
+      "lastSeen": "2026-06-10",
       "timesRepeated": 1,
       "status": "open"
     }
