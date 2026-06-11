@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-10T12:01:41.497Z",
+  "lastUpdated": "2026-06-11T12:01:11.410Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -19,8 +19,8 @@
       "expectedImpact": "Could increase clicks by 30-50% on high-impression queries",
       "priority": "high",
       "firstSeen": "2026-05-03",
-      "lastSeen": "2026-06-08",
-      "timesRepeated": 4,
+      "lastSeen": "2026-06-11",
+      "timesRepeated": 5,
       "status": "open"
     },
     {
@@ -805,6 +805,17 @@
       "status": "open"
     },
     {
+      "id": "ba88fd040cee",
+      "title": "Expand IUL Content Hub Strategy",
+      "description": "Create 3-4 additional IUL-focused pages targeting 'best iul leads', 'iul leads for sale', and 'how to work iul leads effectively'. Build internal linking between existing IUL pages and new content. Add comparison tables and case studies.",
+      "expectedImpact": "25-40% increase in IUL-related organic traffic and improved topical authority",
+      "priority": "high",
+      "firstSeen": "2026-06-11",
+      "lastSeen": "2026-06-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "088660111850",
       "title": "Optimize Mobile Search Experience",
       "description": "With only 4 mobile clicks vs 7 desktop clicks despite mobile's growing search share, improve mobile page speed and user experience for lead buying pages.",
@@ -834,6 +845,17 @@
       "priority": "medium",
       "firstSeen": "2026-05-06",
       "lastSeen": "2026-06-01",
+      "timesRepeated": 2,
+      "status": "open"
+    },
+    {
+      "id": "fc1963d9ad5a",
+      "title": "Develop Mobile-First Content Strategy",
+      "description": "Mobile accounts for only 560 of 5,465 total impressions (10.2%). Optimize existing content for mobile, create mobile-specific lead working guides, and ensure fast loading times for mobile users.",
+      "expectedImpact": "Increase mobile traffic share to 25% and improve mobile CTR",
+      "priority": "medium",
+      "firstSeen": "2026-05-11",
+      "lastSeen": "2026-06-11",
       "timesRepeated": 2,
       "status": "open"
     },
@@ -1109,17 +1131,6 @@
       "priority": "medium",
       "firstSeen": "2026-05-10",
       "lastSeen": "2026-05-10",
-      "timesRepeated": 1,
-      "status": "open"
-    },
-    {
-      "id": "fc1963d9ad5a",
-      "title": "Develop Mobile-First Content Strategy",
-      "description": "Mobile accounts for only 560 of 5,465 total impressions (10.2%). Optimize existing content for mobile, create mobile-specific lead working guides, and ensure fast loading times for mobile users.",
-      "expectedImpact": "Increase mobile traffic share to 25% and improve mobile CTR",
-      "priority": "medium",
-      "firstSeen": "2026-05-11",
-      "lastSeen": "2026-05-11",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1784,6 +1795,17 @@
       "status": "open"
     },
     {
+      "id": "7288be3ce912",
+      "title": "Implement Email Newsletter Growth Campaign",
+      "description": "Email drove 11 sessions with good engagement. Create lead magnets for each vertical (IUL checklist, mortgage lead scripts, home improvement templates) and add exit-intent popups on top-performing pages.",
+      "expectedImpact": "30-50% increase in email subscribers and 20% boost in returning traffic",
+      "priority": "medium",
+      "firstSeen": "2026-06-11",
+      "lastSeen": "2026-06-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -2055,6 +2077,17 @@
       "priority": "low",
       "firstSeen": "2026-06-10",
       "lastSeen": "2026-06-10",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "ac06edd0b02f",
+      "title": "Build Referral Partnership Program",
+      "description": "Agedleadstore.com referred 7 sessions. Establish formal partnerships with lead vendors, create co-marketing content, and develop affiliate tracking for lead generation companies.",
+      "expectedImpact": "25-35% increase in referral traffic and improved industry authority",
+      "priority": "low",
+      "firstSeen": "2026-06-11",
+      "lastSeen": "2026-06-11",
       "timesRepeated": 1,
       "status": "open"
     }
