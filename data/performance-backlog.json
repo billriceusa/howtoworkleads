@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11T12:01:11.410Z",
+  "lastUpdated": "2026-06-12T12:01:57.376Z",
   "items": [
     {
       "id": "1334f6487b8b",
@@ -812,6 +812,28 @@
       "priority": "high",
       "firstSeen": "2026-06-11",
       "lastSeen": "2026-06-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "8f68917e8b58",
+      "title": "Optimize IUL Content Hub for Conversion",
+      "description": "Create a comprehensive IUL leads content cluster linking the high-performing /buy-iul-leads page with supporting blog content on working IUL leads, pricing guides, and conversion strategies. Add clear CTAs and lead magnets to capture email addresses from the 16 weekly visitors.",
+      "expectedImpact": "25-40% increase in email captures and improved session duration",
+      "priority": "high",
+      "firstSeen": "2026-06-12",
+      "lastSeen": "2026-06-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "c886c5d66b5a",
+      "title": "Capitalize on Aged Lead Query Dominance",
+      "description": "Create dedicated landing pages for 'aged homeowners insurance leads' (pos 2.5), 'aged auto insurance leads' (pos 8.0), and 'aged insurance leads' (pos 4.0). These high-ranking positions need conversion-optimized pages to capture the traffic.",
+      "expectedImpact": "50-100% increase in organic clicks from aged lead queries",
+      "priority": "high",
+      "firstSeen": "2026-06-12",
+      "lastSeen": "2026-06-12",
       "timesRepeated": 1,
       "status": "open"
     },
@@ -1806,6 +1828,28 @@
       "status": "open"
     },
     {
+      "id": "feee515250bb",
+      "title": "Improve Homepage Engagement",
+      "description": "The homepage receives 31 views but likely contributes to the high bounce rate. Add dynamic content showcasing top-performing lead types, recent blog posts, and clear navigation paths to buying guides and educational content.",
+      "expectedImpact": "15-20% reduction in bounce rate and improved internal linking",
+      "priority": "medium",
+      "firstSeen": "2026-06-12",
+      "lastSeen": "2026-06-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "a45483b7bfbf",
+      "title": "Scale Email Newsletter Strategy",
+      "description": "With 13 sessions from newsletter traffic, create a weekly lead generation tips series and promote it across all high-traffic pages. Add exit-intent popups and content upgrades to grow the subscriber base.",
+      "expectedImpact": "3x growth in email subscribers within 60 days",
+      "priority": "medium",
+      "firstSeen": "2026-06-12",
+      "lastSeen": "2026-06-12",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
       "id": "8c8b79cd31d6",
       "title": "Mobile Experience Optimization",
       "description": "Mobile accounts for 552 impressions but only 6 clicks compared to desktop's 4748 impressions and 8 clicks. Audit mobile page speed, improve mobile UX, and ensure CTAs are thumb-friendly.",
@@ -2088,6 +2132,17 @@
       "priority": "low",
       "firstSeen": "2026-06-11",
       "lastSeen": "2026-06-11",
+      "timesRepeated": 1,
+      "status": "open"
+    },
+    {
+      "id": "a7294cb0c832",
+      "title": "Optimize Mobile Experience",
+      "description": "Mobile accounts for 9 clicks vs 11 desktop clicks despite typically higher mobile search volume. Audit mobile page speed and user experience, particularly for the buying guide pages.",
+      "expectedImpact": "20-30% improvement in mobile engagement metrics",
+      "priority": "low",
+      "firstSeen": "2026-06-12",
+      "lastSeen": "2026-06-12",
       "timesRepeated": 1,
       "status": "open"
     }
