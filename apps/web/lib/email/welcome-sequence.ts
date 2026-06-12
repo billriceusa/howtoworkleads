@@ -1,8 +1,10 @@
 /**
- * Welcome Sequence — 5 automated emails sent after newsletter signup
+ * Welcome Sequence emails.
  *
- * Email 1 (Day 0): Sent immediately by /api/newsletter and /api/download routes
- * Emails 2-5 (Day 2, 4, 7, 10): Sent by /api/cron/welcome-sequence
+ * Email 1 (Day 0): sent immediately by /api/newsletter and /api/download (transactional).
+ * Emails 2-5 (Day 2, 4, 7, 10): drip automation retired with the content engine —
+ *   the /api/cron/welcome-sequence cron was removed, so these templates are kept
+ *   for reference but are no longer auto-sent.
  */
 
 const SITE_URL = 'https://howtoworkleads.com'
