@@ -1,12 +1,35 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** June 9, 2026 (nav reorg + FAQ-schema rollout + content/newsletter crons paused)
-**Site status:** 119+ pages live (36 landing + 77 blog + 9 category + download pages + 2 interactive tools)
+**Last updated:** June 13, 2026 (2 net-new aged-specialty landing pages + interlinks + pricing-guide deepen)
+**Site status:** 121+ pages live (38 landing + 77 blog + 9 category + download pages + 2 interactive tools)
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
 **Newsletter:** **PAUSED June 9, 2026** (Bill's call) — `weekly-newsletter` cron removed from `apps/web/vercel.json`. 8 issues written; only 3 subscribers; Issue 1 (broadcast 2a47893d) never actually sent. Non-channel until subscriber acquisition. Resume by re-adding the cron line.
 **Content automation:** **PAUSED June 9, 2026** (Bill's call: quality concerns) — `weekly-content` cron removed from `apps/web/vercel.json`. No auto-publishing until resumed (re-add the cron line). Side effect: this neutralizes the broken featured-image webhook (P0 below), since no new posts auto-publish. Prior note: April 8 backfill of 13 articles may have triggered quality dampening.
 **AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
 **Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. **Token scope flag required**: `--scopes=https://www.googleapis.com/auth/webmasters.readonly` (default token 403s). Set account `bill@billricestrategy.com` first. Ahrefs is blind to this domain (DR≈0) — GSC is the only ground truth.
+
+---
+
+## 2026-06-13 — Net-new aged-specialty content (differentiated, demand-grounded)
+
+**The content standard going forward (differentiation thesis):** depth over breadth on *winnable niche long-tail*, written from an operator's seat (real economics, real workflow), compliance-as-moat, answer-first + FAQ schema, and **zero fabrication** (verifiable data or framed illustrative, never invented stats/case studies). This is the deliberate opposite of the retired AI content engine. Pieces are shipped **staggered**, never batch (scaled-content signal).
+
+**Shipped (live):**
+- **NEW landing page — Aged Final Expense Leads** (`/buying-leads/aged-final-expense-leads`, landingPage `OaFr7w0gtvuvRc6QDrOLLA`). Demand: 200/mo, difficulty 1, $3 CPC (Ahrefs) — biggest net-new aged-specialty term. ~3k words, operator POV, comparison table, **faqSection (6 Q&As) → FAQPage JSON-LD verified live**, Bill Rice author, OG image, single ALS CTA. Verified: 200 OK, schema present, table rendered.
+- **Pricing-guide deepen** (`/blog/aged-lead-pricing-guide`, pos 5.4 / 1,088 impr) — added an answer-first **"Quick answer" block** (headline $0.15–$8 range) for featured-snippet capture. Additive, no disruption to the ranking page. (No `faqSection` — see schema-gap note below.)
+- **Anti-cannibalization + pillar↔cluster interlinks:** removed "aged final expense leads" from `buy-final-expense-leads` secondaryKeywords (handed the long-tail term to the new dedicated page); added `relatedPages` both directions FE pillar↔cluster and IUL pillar→aged-IUL (weak ref, resolves on publish).
+- **E-E-A-T:** Bill Rice author ref set on both new pages.
+
+**Scheduled (staggered +2d):**
+- **NEW landing page — Aged IUL Leads** (`/buying-leads/aged-iul-leads`, draft `drafts.aged-iul-leads-20260615`). Demand: `aged iul leads` **4.8% CTR @ pos 8.2** in live GSC, no dedicated page (clean gap; IUL = best winnable converter). Built identically (FAQ 6 Q&As + author + OG image + interlinks). **Sanity Scheduled Publishing** set to go live **2026-06-15 13:00 UTC** (schedule `sch-3F5xbY0S9pvj8ijNpzwMtgR8pvP`, server-side — no machine dependency).
+
+**Grounded course-corrections this session (why the plan changed):**
+- "Aged DSCR leads" hypothesis **dropped** — Ahrefs shows ~0 search volume. Every other aged-vertical term (FE, medicare, annuity, DSCR) is already claimed as a secondary keyword by its `buy-*` pillar; only IUL was an open gap. So: 1 net-new in an open gap (IUL) + 1 deep cluster page that takes the long-tail term off its pillar (FE).
+- **Schema gap found:** `blogPost.content` does NOT allow `faqSection` (only `landingPage` does), and FAQ JSON-LD renders only on the landingPage template. → new pieces built as landingPages; the pricing guide (blogPost) can't get `faqSection` without a schema+render change. **NEW BACKLOG ITEM (P2):** add `{type:'faqSection'}` to `blogPost.content` + render it in the blog template + FAQJsonLd wiring + regen `sanity.schema.json`/typegen — unlocks FAQ schema for all 77 blog posts (esp. the pos-5.4 pricing guide).
+- **Local `SANITY_API_TOKEN` in `apps/web/.env.local` is read-only**? No — it WRITES; the worktree just didn't have `.env.local` (gitignored). Copied it in (gitignored) to publish. The `publish-content.ts` script gained an optional `EMIT_JSON` hook (emits built doc JSON for MCP fallback when no write token is available).
+
+### ⚠ CORRECTION to the FAQ-conversion task below
+The 2026-06-09 note classified 5 of the 7 prose-FAQ blocks as "standalone — unset whole block." **That is wrong and would delete content.** Inspected `buy-bank-statement-loan-leads` block `c9bdafe57620`: it contains a **"Getting Started" 5-step section + closing CTAs** alongside the FAQ. Unsetting the whole block destroys the Getting Started content. **All 7 require child-level removal** — extract only the FAQ subsection (the `Frequently Asked Questions` h2 + each `h3` question / `normal` answer pair) into a `faqSection`, and unset ONLY those child blocks, preserving everything else. Deferred from this session deliberately (careful per-page surgical edits; not safe to batch at session-end). Slugs+ids confirmed: buy-bank-statement-loan-leads `4DZXQ06MV0KUYSdqrDeKrI` · buy-heloc-leads `OJl4e2TkVOqlZxtjk88v0F` · buy-non-qm-mortgage-leads `MjdSXFelIF5IivE64xqsqc` · buy-pc-insurance-leads `c883e258-0e24-44c2-83d8-d0c0e07586fc` · buy-real-estate-leads `MjdSXFelIF5IivE64yZpEa` · buy-refinance-mortgage-leads `MjdSXFelIF5IivE64xqsiS` · buy-purchase-mortgage-leads `OJl4e2TkVOqlZxtjk83YQF`.
 
 ---
 
@@ -21,11 +44,9 @@
 
 ### OPEN — queued from this session
 
-- [ ] **P1 — Finish FAQ-schema conversion on the remaining 7 buy-pages** (they have *prose* FAQs but no `faqSection` schema). Convert each: preserve the existing Q&As, wrap in a `faqSection`, remove the prose block. Sanity workspace `howtoworkleads`, project `e9k38j42`. Prose-FAQ block keys captured 6/9:
-  - **Standalone blocks (append faqSection + 1 whole-block unset each):** bank-statement `c9bdafe57620` · heloc `d473c376f912` · non-qm `d9fc4ccfe749` · pc `bb8a4e12f49c` · real-estate `8640afaf119b`
-  - **MIXED blocks (FAQ shares a contentBlock with a Revenue subsection — needs child-level removal, one unset op per call, like the DSCR conversion):** refinance `b5c773ff5550` · purchase `92e65123f4fe`
-  - Tooling note: the Sanity MCP patch rejects combined append+unset on the same array, and multiple unsets on one array — do append and each unset as separate calls.
-- [ ] **P1 — Niche concentration:** strengthen + interlink the winnable specialty cluster (IUL / DSCR / aged-specialty) where page-1 rankings actually earn clicks — vs fighting ad-saturated head terms.
+- [ ] **P1 — Finish FAQ-schema conversion on the remaining 7 buy-pages** (prose FAQs, no `faqSection`). **⚠ See the 2026-06-13 CORRECTION above: all 7 are MIXED blocks** (FAQ shares its contentBlock with Getting Started / Revenue / CTA content) — extract only the FAQ children into a `faqSection` and unset ONLY those, never the whole block. Block keys: bank-statement `c9bdafe57620` · heloc `d473c376f912` · non-qm `d9fc4ccfe749` · pc `bb8a4e12f49c` · real-estate `8640afaf119b` · refinance `b5c773ff5550` · purchase `92e65123f4fe` (doc ids in the correction note). Tooling: append and each unset as separate patch calls.
+- [ ] **P2 (NEW) — Add `faqSection` to `blogPost`** so blog posts can carry FAQPage JSON-LD (schema + blog-template render + FAQJsonLd + regen `sanity.schema.json`/typegen). Unblocks FAQ on the pos-5.4 `aged-lead-pricing-guide` and 76 other posts.
+- [~] **P1 — Niche concentration:** IN PROGRESS — 2026-06-13 added deep aged-FE + aged-IUL cluster pages with pillar↔cluster interlinks. Continue: deepen interlinking across the IUL/DSCR/aged clusters; consider aged-medicare (80–100/mo, $4.50 CPC) as the next deep cluster page.
 - [ ] **P2 — Measure (~June 20):** re-pull GSC for FAQ snippet capture + the nav-reorg CTR effect (this is the payoff check for today's work).
 - [ ] **P2 — GSC indexing gap** (104/148 URLs zero impressions): submit-or-prune. Submission needs the GSC API (gcloud not installed on this machine); pruning thin synthetic-query pages is doable in Sanity and overlaps with the content-cron pause rationale.
 
