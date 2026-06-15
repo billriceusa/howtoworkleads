@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:#fff;}
+  #stage{width:1200px;height:675px;background:#fff;position:relative;font-family:Arial,Helvetica,sans-serif;}
+  .accent{position:absolute;left:0;top:0;width:14px;height:675px;background:#FFD500;}
+  .title{position:absolute;left:56px;top:40px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.5px;}
+  .subtitle{position:absolute;left:56px;top:92px;font-size:21px;font-weight:400;color:#555;}
+  .source{position:absolute;left:56px;bottom:26px;font-size:15px;color:#9097A0;}
+  .brand{position:absolute;right:40px;bottom:24px;font-size:16px;font-weight:800;color:#1A1A1A;}
+  .brand span{color:#C9A800;}
+  svg{position:absolute;left:40px;top:150px;}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="accent"></div>
+  <div class="title" id="t"></div>
+  <div class="subtitle" id="s"></div>
+  <svg id="c" width="1140" height="460" viewBox="0 0 1140 460"></svg>
+  <div class="source" id="src"></div>
+  <div class="brand">howtoworkleads<span>.com</span></div>
+</div>
+<script>
+const INK="#1A1A1A", YEL="#FFD500", YELD="#C9A800", GRID="#EAEAEA", MUTE="#6B7280";
+
+const CHARTS = {
+  "answer-collapse": {
+    type:"line", title:"The phone has gone quiet",
+    subtitle:"% of calls from unknown numbers that go UNanswered",
+    source:"Source: Hiya, State of the Call (2024–2026).",
+    yMax:100, suffix:"%",
+    data:[{label:"2024",value:46},{label:"2025",value:80},{label:"2026",value:86,highlight:true}]
+  },
+  "text-optin": {
+    type:"line", title:"Consumers opted in to business texts",
+    subtitle:"% of U.S. consumers subscribed to texts from at least one business",
+    source:"Source: EZ Texting / SimpleTexting annual reports.",
+    yMax:100, suffix:"%",
+    data:[{label:"2021",value:66},{label:"2024",value:79},{label:"2025",value:85},{label:"2026",value:89,highlight:true}]
+  },
+  "advisory-rise": {
+    type:"bar", title:"Borrowers want advice, not a transaction",
+    subtitle:"% of mortgage customers giving top marks for “useful guidance”",
+    source:"Source: J.D. Power U.S. Mortgage Origination Satisfaction Study (2022–2025).",
+    yMax:100, suffix:"%",
+    data:[{label:"2022",value:69},{label:"2023",value:70},{label:"2024",value:76},{label:"2025",value:79,highlight:true}]
+  },
+  "tcpa-industry": {
+    type:"hbar", title:"Your verticals are the most-sued",
+    subtitle:"Share of 2025 TCPA lawsuits by industry",
+    source:"Source: CompliancePoint, TCPA Litigation Trends 2025 (Feb 2026).",
+    yMax:45, suffix:"%",
+    data:[
+      {label:"Financial services",value:39.2,highlight:true},
+      {label:"Retail",value:17.3},
+      {label:"Insurance",value:8.1,highlight:true},
+      {label:"All other industries",value:35.4}
+    ]
+  },
+  "capacity-curve": {
+    type:"capacity", title:"Even one lead a day buries a rep",
+    subtitle:"Open leads accumulate past serviceable capacity (illustrative)",
+    source:"Illustrative model based on documented multi-touch cadence + capacity research."
+  },
+  "cadence": {
+    type:"cadence", title:"A real-time first-touch cadence",
+    subtitle:"5 texts + 2 emails over the first 5 days, front-loaded",
+    source:"Source: Hatch first-touch benchmark (132,188 campaigns, 2024)."
+  }
+};
+
+const id = new URLSearchParams(location.search).get("c");
+const cfg = CHARTS[id];
+const svg = document.getElementById("c");
+const NS="http://www.w3.org/2000/svg";
+document.getElementById("t").textContent = cfg.title;
+document.getElementById("s").textContent = cfg.subtitle;
+document.getElementById("src").textContent = cfg.source;
+
+function el(n,a){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function txt(x,y,s,o){const t=el("text",{x,y,fill:o.fill||INK,"font-size":o.size||18,"font-weight":o.weight||400,"text-anchor":o.anchor||"start","font-family":"Arial"});t.textContent=s;svg.appendChild(t);return t;}
+
+// plot geometry
+const PX=120, PY=20, PW=980, PH=360, BASE=PY+PH; // bottom y
+
+function gridY(yMax){
+  for(let i=0;i<=5;i++){
+    const v=yMax*i/5, y=BASE-(PH*i/5);
+    svg.appendChild(el("line",{x1:PX,y1:y,x2:PX+PW,y2:y,stroke:GRID,"stroke-width":i===0?2:1}));
+    txt(PX-16,y+6,Math.round(v)+(cfg.suffix||""),{fill:MUTE,size:16,anchor:"end"});
+  }
+}
+
+if(cfg.type==="line"){
+  gridY(cfg.yMax);
+  const n=cfg.data.length, step=PW/(n-1);
+  const pts=cfg.data.map((d,i)=>({x:PX+step*i, y:BASE-PH*(d.value/cfg.yMax), d}));
+  // area
+  let ap=`M ${pts[0].x} ${BASE} `+pts.map(p=>`L ${p.x} ${p.y}`).join(" ")+` L ${pts[n-1].x} ${BASE} Z`;
+  svg.appendChild(el("path",{d:ap,fill:YEL,"fill-opacity":0.18}));
+  // line
+  svg.appendChild(el("polyline",{points:pts.map(p=>p.x+","+p.y).join(" "),fill:"none",stroke:INK,"stroke-width":5,"stroke-linejoin":"round"}));
+  pts.forEach(p=>{
+    svg.appendChild(el("circle",{cx:p.x,cy:p.y,r:p.d.highlight?11:8,fill:p.d.highlight?YEL:INK,stroke:INK,"stroke-width":3}));
+    txt(p.x,p.y-22,p.d.value+(cfg.suffix||""),{anchor:"middle",weight:800,size:24});
+    txt(p.x,BASE+34,p.d.label,{anchor:"middle",fill:MUTE,size:18});
+  });
+}
+
+if(cfg.type==="bar"){
+  gridY(cfg.yMax);
+  const n=cfg.data.length, slot=PW/n, bw=slot*0.5;
+  cfg.data.forEach((d,i)=>{
+    const x=PX+slot*i+(slot-bw)/2, h=PH*(d.value/cfg.yMax), y=BASE-h;
+    svg.appendChild(el("rect",{x,y,width:bw,height:h,fill:d.highlight?YEL:INK,rx:3}));
+    txt(x+bw/2,y-14,d.value+(cfg.suffix||""),{anchor:"middle",weight:800,size:24});
+    txt(x+bw/2,BASE+34,d.label,{anchor:"middle",fill:MUTE,size:18});
+  });
+}
+
+if(cfg.type==="hbar"){
+  const n=cfg.data.length, slot=PH/n, bh=slot*0.52;
+  const x0=360, maxW=PW-260;
+  // x grid
+  for(let i=0;i<=3;i++){const v=cfg.yMax*i/3, x=x0+maxW*i/3;
+    svg.appendChild(el("line",{x1:x,y1:PY,x2:x,y2:BASE,stroke:GRID,"stroke-width":i===0?2:1}));
+    txt(x,BASE+30,Math.round(v)+"%",{anchor:"middle",fill:MUTE,size:15});}
+  cfg.data.forEach((d,i)=>{
+    const y=PY+slot*i+(slot-bh)/2, w=maxW*(d.value/cfg.yMax);
+    txt(x0-20,y+bh/2+7,d.label,{anchor:"end",size:20,weight:d.highlight?800:400,fill:INK});
+    svg.appendChild(el("rect",{x:x0,y,width:w,height:bh,fill:d.highlight?YEL:INK,rx:3}));
+    txt(x0+w+14,y+bh/2+7,d.value+"%",{size:21,weight:800,fill:INK});
+  });
+}
+
+if(cfg.type==="capacity"){
+  const yMax=140; cfg.yMax=yMax; cfg.suffix="";
+  gridY(yMax);
+  txt(PX-70,PY-2+PH/2,"open leads",{anchor:"middle",fill:MUTE,size:15});
+  // capacity ceiling at 100
+  const yc=BASE-PH*(100/yMax);
+  svg.appendChild(el("line",{x1:PX,y1:yc,x2:PX+PW,y2:yc,stroke:YELD,"stroke-width":3,"stroke-dasharray":"10 7"}));
+  txt(PX+PW-6,yc-12,"serviceable capacity ≈ 100",{anchor:"end",fill:YELD,size:17,weight:800});
+  // accumulation curve: weeks 0..16, ~ leads = 7/wk net of some closes -> use a saturating-ish rising curve
+  const weeks=16; const pts=[];
+  for(let w=0;w<=weeks;w++){
+    // net open grows ~5.5/wk early, climbs steadily
+    let v=5.5*w + 0.18*w*w;
+    if(v>yMax)v=yMax;
+    pts.push({x:PX+PW*w/weeks, y:BASE-PH*(v/yMax), w, v});
+  }
+  // shade degradation zone (above ceiling)
+  // find crossing
+  let crossX=PX+PW;
+  for(let i=1;i<pts.length;i++){if(pts[i].v>=100){const p0=pts[i-1],p1=pts[i];const t=(100-p0.v)/(p1.v-p0.v);crossX=p0.x+(p1.x-p0.x)*t;break;}}
+  svg.appendChild(el("rect",{x:crossX,y:PY,width:(PX+PW)-crossX,height:yc-PY,fill:"#D64545","fill-opacity":0.08}));
+  txt((crossX+PX+PW)/2, PY+28, "conversion degrades", {anchor:"middle",fill:"#B23B3B",size:17,weight:700});
+  svg.appendChild(el("polyline",{points:pts.map(p=>p.x+","+p.y).join(" "),fill:"none",stroke:INK,"stroke-width":5,"stroke-linejoin":"round"}));
+  [0,4,8,12,16].forEach(w=>txt(PX+PW*w/weeks,BASE+34,"wk "+w,{anchor:"middle",fill:MUTE,size:16}));
+}
+
+if(cfg.type==="cadence"){
+  // 5 days, touches per day
+  const days=[
+    {d:"Day 1",t:["text","email"]},
+    {d:"Day 2",t:["text"]},
+    {d:"Day 3",t:["text"]},
+    {d:"Day 4",t:["text","email"]},
+    {d:"Day 5",t:["text"]}
+  ];
+  const slot=PW/days.length, cx0=PX;
+  // baseline
+  svg.appendChild(el("line",{x1:PX,y1:BASE-40,x2:PX+PW,y2:BASE-40,stroke:GRID,"stroke-width":2}));
+  days.forEach((day,i)=>{
+    const cx=cx0+slot*i+slot/2;
+    txt(cx,BASE+0,day.d,{anchor:"middle",fill:MUTE,size:19});
+    day.t.forEach((kind,j)=>{
+      const cy=BASE-90-j*78;
+      const isText=kind==="text";
+      svg.appendChild(el("circle",{cx,cy,r:30,fill:isText?YEL:INK,stroke:INK,"stroke-width":3}));
+      txt(cx,cy+6,isText?"SMS":"✉",{anchor:"middle",fill:isText?INK:"#fff",size:isText?18:24,weight:800});
+      svg.appendChild(el("line",{x1:cx,y1:cy+30,x2:cx,y2:BASE-42,stroke:GRID,"stroke-width":2}));
+    });
+  });
+  // legend
+  txt(PX, PY+6, "● 5 texts", {fill:YELD,size:20,weight:800});
+  txt(PX+170, PY+6, "● 2 emails", {fill:INK,size:20,weight:800});
+}
+document.title = "rendered";
+</script>
+</body>
+</html>

@@ -70,6 +70,18 @@ const LEAD_MAGNETS: Record<string, LeadMagnet> = {
     ],
     file: '/downloads/lead-vendor-comparison-scorecard.pdf',
   },
+  'real-time-lead-team-playbook': {
+    title: 'The Real-Time Lead Team Playbook',
+    description:
+      'The complete research-backed operating system for building a team that converts real-time internet leads in mortgage, insurance, solar, and education. Every chart, the lead-type comparison, and a TCPA compliance checklist in one file.',
+    benefits: [
+      'The 8-rule real-time lead operating system',
+      'Six data charts: speed, channel shift, capacity, and TCPA risk',
+      'Lead-type comparison: real-time vs referral vs trigger vs retail',
+      'A TCPA compliance checklist for mortgage, insurance, solar, and education',
+    ],
+    file: '/downloads/real-time-lead-team-playbook.pdf',
+  },
 }
 
 type Params = Promise<{ slug: string }>

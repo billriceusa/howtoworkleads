@@ -49,6 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '/downloads/insurance-lead-scripts-bundle', priority: 0.6 },
     { path: '/downloads/mortgage-lead-scripts-bundle', priority: 0.6 },
     { path: '/downloads/lead-vendor-comparison-scorecard', priority: 0.6 },
+    { path: '/downloads/real-time-lead-team-playbook', priority: 0.6 },
   ]
 
   for (const route of staticRoutes) {

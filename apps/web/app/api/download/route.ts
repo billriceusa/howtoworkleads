@@ -35,6 +35,10 @@ const LEAD_MAGNETS: Record<string, { title: string; file: string }> = {
     title: 'Lead Vendor Comparison Scorecard',
     file: '/downloads/lead-vendor-comparison-scorecard.pdf',
   },
+  'real-time-lead-team-playbook': {
+    title: 'Real-Time Lead Team Playbook',
+    file: '/downloads/real-time-lead-team-playbook.pdf',
+  },
 }
 
 export async function POST(request: NextRequest) {
