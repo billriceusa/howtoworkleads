@@ -1,6 +1,6 @@
 # LinkedIn Post — Real-Time Lead Team Report
 
-**Asset:** infographic at `/social/real-time-lead-team-linkedin.png` (1080×1350, portrait)
+**Asset:** infographic at `content-briefs/97-real-time-lead-team-linkedin.png` (1080×1350, portrait) — upload this file directly to LinkedIn
 **Link:** https://howtoworkleads.com/sales-process/how-to-build-a-real-time-internet-lead-team
 
 ---
@@ -29,7 +29,7 @@ Curious what the operators here are seeing — is text-first changing your conne
 ---
 
 ## Notes for posting
-- Attach the infographic image (`/social/real-time-lead-team-linkedin.png`).
+- Attach the infographic image (`content-briefs/97-real-time-lead-team-linkedin.png`) — uploaded directly, not hosted on the site.
 - No emojis (intentional).
 - The closing question is there to drive comments; LinkedIn rewards replies.
 - First comment idea (boost reach): drop the same link again in the first comment, since LinkedIn slightly suppresses posts with outbound links in the body.
