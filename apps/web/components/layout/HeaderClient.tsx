@@ -83,6 +83,7 @@ const BUY_LEADS_FEATURED: MenuLink[] = [
 const GUIDES_SLUGS = ['lead-management', 'sales-process', 'crm-systems']
 
 const RESOURCES_LINKS: MenuLink[] = [
+  { label: 'New Research: Build a Real-Time Lead Team', href: '/sales-process/how-to-build-a-real-time-internet-lead-team' },
   { label: 'The Complete Guide to Aged Leads', href: '/aged-leads' },
   { label: 'Free Tools & Calculators', href: '/tools' },
   { label: 'Free Downloads', href: '/downloads' },
