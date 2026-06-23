@@ -121,7 +121,7 @@ export const categoryPageQuery = groq`
         headline
       }
     },
-    "articles": *[_type == "blogPost" && references(^._id)] | order(publishedAt desc) {
+    "articles": *[_type == "blogPost" && references(^._id) && (!defined(publishedAt) || publishedAt <= now())] | order(publishedAt desc) {
       _id,
       title,
       slug,
@@ -171,7 +171,7 @@ export const blogPostQuery = groq`
 `
 
 export const allBlogPostsQuery = groq`
-  *[_type == "blogPost"] | order(publishedAt desc) {
+  *[_type == "blogPost" && (!defined(publishedAt) || publishedAt <= now())] | order(publishedAt desc) {
     _id,
     title,
     slug,
@@ -218,7 +218,7 @@ export const sitemapQuery = groq`
       "slug": slug.current,
       updatedAt
     },
-    "blogPosts": *[_type == "blogPost" && defined(slug.current)] {
+    "blogPosts": *[_type == "blogPost" && defined(slug.current) && (!defined(publishedAt) || publishedAt <= now())] {
       "slug": slug.current,
       updatedAt,
       publishedAt
@@ -243,7 +243,7 @@ export const llmsContentQuery = groq`
       seoDescription,
       focusKeyword
     },
-    "blogPosts": *[_type == "blogPost" && defined(slug.current)] | order(publishedAt desc) {
+    "blogPosts": *[_type == "blogPost" && defined(slug.current) && (!defined(publishedAt) || publishedAt <= now())] | order(publishedAt desc) {
       title,
       "slug": slug.current,
       excerpt,

@@ -1,12 +1,30 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** June 13, 2026 (2 net-new aged-specialty landing pages + interlinks + pricing-guide deepen)
-**Site status:** 121+ pages live (38 landing + 77 blog + 9 category + download pages + 2 interactive tools)
+**Last updated:** June 23, 2026 (IUL educational cluster — 4 blog posts, staggered — + scheduled-publish query gating)
+**Site status:** 121+ pages live (38 landing + 77 blog + 9 category + download pages + 2 interactive tools); +4 IUL-cluster blog posts publishing staggered through 2026-07-02
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
 **Newsletter:** **PAUSED June 9, 2026** (Bill's call) — `weekly-newsletter` cron removed from `apps/web/vercel.json`. 8 issues written; only 3 subscribers; Issue 1 (broadcast 2a47893d) never actually sent. Non-channel until subscriber acquisition. Resume by re-adding the cron line.
 **Content automation:** **PAUSED June 9, 2026** (Bill's call: quality concerns) — `weekly-content` cron removed from `apps/web/vercel.json`. No auto-publishing until resumed (re-add the cron line). Side effect: this neutralizes the broken featured-image webhook (P0 below), since no new posts auto-publish. Prior note: April 8 backfill of 13 articles may have triggered quality dampening.
 **AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
 **Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. **Token scope flag required**: `--scopes=https://www.googleapis.com/auth/webmasters.readonly` (default token 403s). Set account `bill@billricestrategy.com` first. Ahrefs is blind to this domain (DR≈0) — GSC is the only ground truth.
+
+---
+
+## 2026-06-23 — IUL content cluster (4 blog posts) + scheduled-publish capability
+
+**Strategy:** Depth on the one winnable niche — IUL (live GSC: `aged iul leads` 4.8% CTR @ pos 8.2; reinforces the 2026-06-13 aged-iul-leads landing page). Built a 4-post educational cluster around the IUL money pages, each linking up to `/buying-leads/buy-iul-leads`, the new `/buying-leads/aged-iul-leads` pillar, the `how-to-work-iul-leads` playbook, and the ROI calculator — concentrating authority on the best-converting niche.
+
+**4 blog posts (briefs 99–102), staggered to avoid batch-publish:**
+- `iul-vs-whole-life-leads` — comparison/decision intent — live 2026-06-23
+- `iul-leads-cost` — cost + ROI deep dive — scheduled 2026-06-26
+- `iul-lead-objection-scripts` — 10-objection script library — scheduled 2026-06-30
+- `iul-appointment-setting` — aged-lead appointment cadence + scripts — scheduled 2026-07-02
+
+All four: ~2,000–2,800 words, answer-first **prose** FAQ sections (AEO/snippet value), comparison tables, compliance-safe ("illustrated, not guaranteed"), Insurance Leads category, single `?ref=howtoworkleads` ALS CTA, zero fabricated stats (illustrative ranges only). **Note:** these are blogPosts, so the FAQ sections do NOT yet emit FAQPage JSON-LD — blocked on the open P2 "add faqSection to blogPost" schema item (see 2026-06-13). When that ships, these light up automatically. Built as blog posts deliberately to match the educational "how to work" moat cluster (vs. the buy-* landing pages).
+
+**New capability — scheduled publish:** blog-list / category-articles / sitemap / llms.txt queries previously showed ALL blog posts regardless of `publishedAt`, so a future-dated post surfaced immediately (batch-publish signal). Added a null-safe gate `(!defined(publishedAt) || publishedAt <= now())` to `allBlogPostsQuery`, the categoryPage `articles` sub-query, `sitemapQuery.blogPosts`, and `llmsContentQuery.blogPosts` (`apps/web/lib/sanity/queries.ts`). Future-dated posts now stay out of all listings + the sitemap until their date. Deployed before the future-dated Sanity docs were created. (Sanity also has native Scheduled Publishing, used for the 2026-06-13 landing page — this query gate is the equivalent for content created directly via `publish-content.ts` with a future `publishedAt`.)
+
+**Backlinks:** per Bill's 2026-06-09 steer ("ALS links exist; slow down on backlinks, focus on content"), no new ALS link asks this session — pure content concentration.
 
 ---
 
