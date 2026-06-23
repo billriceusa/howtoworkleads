@@ -24,6 +24,8 @@ All four: ~2,000–2,800 words, answer-first **prose** FAQ sections (AEO/snippet
 
 **New capability — scheduled publish:** blog-list / category-articles / sitemap / llms.txt queries previously showed ALL blog posts regardless of `publishedAt`, so a future-dated post surfaced immediately (batch-publish signal). Added a null-safe gate `(!defined(publishedAt) || publishedAt <= now())` to `allBlogPostsQuery`, the categoryPage `articles` sub-query, `sitemapQuery.blogPosts`, and `llmsContentQuery.blogPosts` (`apps/web/lib/sanity/queries.ts`). Future-dated posts now stay out of all listings + the sitemap until their date. Deployed before the future-dated Sanity docs were created. (Sanity also has native Scheduled Publishing, used for the 2026-06-13 landing page — this query gate is the equivalent for content created directly via `publish-content.ts` with a future `publishedAt`.)
 
+**Fixed — in-content ALS links now `rel="sponsored"` site-wide:** caught during live QC of post #99 — the portable-text `link` markDef renderer (`blog/[slug]`, `[category]/[slug]`, `[category]` templates) emitted only `noopener noreferrer`, so in-content affiliate links to agedleadstore.com leaked link equity. The Button/Footer/StickyMobileCTA/ALSAutoLinker surfaces were already sponsored (2026-06-05) but markdown *body* links were not. Added the `isALS = href.includes('agedleadstore.com')` → `sponsored` branch to all three templates — fixes every existing post + landing page, not just the new cluster.
+
 **Backlinks:** per Bill's 2026-06-09 steer ("ALS links exist; slow down on backlinks, focus on content"), no new ALS link asks this session — pure content concentration.
 
 ---

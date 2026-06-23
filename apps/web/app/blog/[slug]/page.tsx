@@ -176,7 +176,10 @@ const portableTextComponents = {
       // Open in new tab if explicitly set OR if it's an external site
       const shouldOpenNewTab = value.openInNewTab || isExternalSite
       const target = shouldOpenNewTab ? '_blank' : undefined
-      const rel = shouldOpenNewTab ? 'noopener noreferrer' : undefined
+      // ALS links are affiliate links — mark rel="sponsored" per Google policy
+      // (also stops this low-authority domain from donating link equity).
+      const isALS = value.href?.includes('agedleadstore.com')
+      const rel = shouldOpenNewTab ? (isALS ? 'sponsored noopener noreferrer' : 'noopener noreferrer') : undefined
       return (
         <a href={value.href} target={target} rel={rel}>
           {children}
