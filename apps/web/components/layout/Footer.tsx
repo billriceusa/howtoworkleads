@@ -18,6 +18,7 @@ const companyLinks = [
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
   { name: 'Privacy Policy', href: '/privacy-policy' },
+  { name: 'Affiliate Disclosure', href: '/affiliate-disclosure' },
   { name: 'Terms of Service', href: '/terms-of-service' },
 ]
 
@@ -134,6 +135,15 @@ export async function Footer() {
               Bill Rice
             </a>{' '}
             project.
+          </p>
+          <p className="text-xs text-white/50 text-center mt-4 max-w-2xl mx-auto">
+            Disclosure: HowToWorkLeads is operated by Bill Rice Strategy Group. AgedLeadStore.com is an
+            affiliated company; links to it are affiliate/related-company links, and we may earn a commission
+            when you sign up. Our recommendations are editorial and are not affected by these relationships.{' '}
+            <Link href="/affiliate-disclosure" className="underline hover:text-white transition-colors">
+              Read our full affiliate disclosure
+            </Link>
+            .
           </p>
         </div>
       </div>

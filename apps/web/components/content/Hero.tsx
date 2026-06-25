@@ -99,6 +99,17 @@ export function Hero({
                 </Button>
               )}
             </div>
+            {ctaLink?.includes('agedleadstore.com') && (
+              <p className={cn('text-xs text-secondary-500', centered && 'mx-auto max-w-xl')}>
+                AgedLeadStore.com is a company affiliated with Bill Rice Strategy Group, which operates this
+                site. Links to it are affiliate/related-company links, and we may earn a commission when you sign
+                up.{' '}
+                <a href="/affiliate-disclosure" className="underline hover:text-secondary-700">
+                  Affiliate disclosure
+                </a>
+                .
+              </p>
+            )}
             {subtext && (
               <p className="text-sm font-bold text-secondary-600">{subtext}</p>
             )}
