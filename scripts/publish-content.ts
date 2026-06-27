@@ -634,6 +634,11 @@ async function createBlogPost(
   }
 
   if (dryRun) {
+    if (process.env.EMIT_JSON_DIR) {
+      const out = `${process.env.EMIT_JSON_DIR}/${meta.slug}.json`
+      fs.writeFileSync(out, JSON.stringify(doc, null, 2))
+      console.log(`  Emitted doc JSON → ${out}`)
+    }
     console.log('\n  Document to create:')
     console.log(`    _type: blogPost`)
     console.log(`    title: ${doc.title}`)
