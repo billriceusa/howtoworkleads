@@ -118,6 +118,7 @@ export default defineType({
           ],
         },
         { type: 'comparisonTable' },
+        { type: 'faqSection' },
       ],
     }),
     defineField({

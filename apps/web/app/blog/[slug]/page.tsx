@@ -8,8 +8,8 @@ import { blogPostQuery } from '@/lib/sanity/queries'
 import { urlForImage } from '@/lib/sanity/image'
 import { Hero, CTASection, NewsletterForm, ALSAutoLinker, ContentUpgradeCTA, InlineNewsletterCTA } from '@/components/content'
 import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
-import { ArticleJsonLd } from '@/components/seo'
-import { Badge, Markdown } from '@/components/ui'
+import { ArticleJsonLd, FAQJsonLd } from '@/components/seo'
+import { Badge, Markdown, Accordion } from '@/components/ui'
 import { PortableText } from '@portabletext/react'
 import { formatDate, absoluteUrl } from '@/lib/utils'
 import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
@@ -126,6 +126,23 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 const portableTextComponents = {
   types: {
     ...sharedRendererTypes,
+    faqSection: ({ value }: any) => {
+      if (!value?.faqs?.length) return null
+      return (
+        <div className="not-prose my-12">
+          <h2 className="mb-6 text-2xl font-bold text-gray-900">
+            {value.title || 'Frequently Asked Questions'}
+          </h2>
+          <Accordion
+            items={value.faqs.map((faq: any, faqIndex: number) => ({
+              id: `faq-${faqIndex}`,
+              question: faq.question,
+              answer: faq.answer,
+            }))}
+          />
+        </div>
+      )
+    },
     comparisonTable: ({ value }: any) => {
       if (!value?.columns || !value?.rows) return null
       return (
@@ -247,6 +264,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     { label: post.title },
   ]
 
+  // Extract FAQs for structured data (FAQPage JSON-LD)
+  const faqSection = post.content?.find((block: any) => block._type === 'faqSection')
+  const faqs = faqSection?.faqs || []
+
   return (
     <>
       <BreadcrumbsJsonLd items={breadcrumbs} />
@@ -259,6 +280,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dateModified={post.updatedAt}
         authorName={post.author?.name}
       />
+      {faqs.length > 0 && <FAQJsonLd faqs={faqs} />}
 
       <Hero
         headline={post.title}
