@@ -52,7 +52,7 @@ A few things that trip people up:
 - **Re-scrub every 31 days.** The federal rule treats your scrub as stale after 31 days. A list you cleaned six weeks ago is no longer clean — people register every day.
 - **An Established Business Relationship (EBR) can be an exception**, but it's narrow and time-boxed (roughly 18 months from a purchase, 3 months from an inquiry) and it's on *you* to prove it. Don't assume a purchased lead gives you one.
 
-Cost ranges from **free** (there are no-cost DNC scrub tools, though they're slower and lighter on state coverage) up to roughly **a tenth of a cent per record** for bulk commercial scrubbing — call it $60 to clean 100,000 records at the cheap end. Compared to one DNC complaint, it's the best money you'll spend. We go deep on the mechanics in [DNC Compliance for Aged Leads](/aged-leads-dnc-compliance) and the state-by-state requirements in the [State-by-State Lead Compliance Guide](/state-by-state-lead-compliance-guide).
+Cost ranges from **free** (there are no-cost DNC scrub tools, though they're slower and lighter on state coverage) up to roughly **a tenth of a cent per record** for bulk commercial scrubbing — call it $60 to clean 100,000 records at the cheap end. Compared to one DNC complaint, it's the best money you'll spend. We compare the cheap and paid routes in [DNC Scrubbing on a Budget](/dnc-scrubbing-on-a-budget), go deep on the mechanics in [DNC Compliance for Aged Leads](/aged-leads-dnc-compliance), and cover the state-by-state requirements in the [State-by-State Lead Compliance Guide](/state-by-state-lead-compliance-guide).
 
 ### Layer 2 — Scrub for TCPA Litigators and Serial Plaintiffs
 
@@ -60,13 +60,13 @@ This is the layer most agents have never heard of, and it's the one that turns a
 
 A **litigator scrub** runs your list against databases of known serial filers and litigation-associated numbers and flags them so you can suppress them before you dial. The vendors maintaining these lists (BlacklistAlliance, DNC.com's Contact Center Compliance, TCPALitigatorList, and others) update them continuously because the plaintiff population moves.
 
-You don't need to know every vendor to act on this — you need to know the layer exists and to run it. It's inexpensive per record and it removes your single highest-dollar risk. We break down exactly how litigator scrubbing works, what it costs, and whether a solo agent needs it in a dedicated guide *(linked once published)*.
+You don't need to know every vendor to act on this — you need to know the layer exists and to run it. It's inexpensive per record and it removes your single highest-dollar risk. We break down exactly how litigator scrubbing works, what it costs, and whether a solo agent needs it in [TCPA Litigator Scrub Explained](/tcpa-litigator-scrub).
 
 ### Layer 3 — Remove Disconnected and Invalid Numbers
 
 Now the file is legally safer. Time to make it *productive*. Real-time and aged lists both rot — numbers get disconnected, people change carriers, and some records were never valid to begin with. A **phone validation** pass (sometimes called a "ping" or HLR lookup) checks each number against carrier records and tells you which are live, which are dead, and which are unassigned.
 
-Two payoffs here. The obvious one: you stop wasting dials on dead numbers, which directly lifts your contacts-per-hour. The less obvious one is legal — a number that was disconnected and **reassigned** to a new person is a classic TCPA trap, because the new owner never had any relationship with you. Validation (and checking against the FCC's Reassigned Numbers Database) is how you catch those. Expect to pay somewhere in the range of **half a cent to a few cents per lookup**, depending on depth and volume. On a list you paid real money for, it pays for itself in saved dialer time alone.
+Two payoffs here. The obvious one: you stop wasting dials on dead numbers, which directly lifts your contacts-per-hour. The less obvious one is legal — a number that was disconnected and **reassigned** to a new person is a classic TCPA trap, because the new owner never had any relationship with you. Validation (and checking against the FCC's Reassigned Numbers Database) is how you catch those. Expect to pay somewhere in the range of **half a cent to a few cents per lookup**, depending on depth and volume. On a list you paid real money for, it pays for itself in saved dialer time alone. We walk through exactly how to run this pass in [How to Remove Landlines and Disconnected Numbers Before You Dial](/remove-landlines-disconnected-numbers).
 
 ### Layer 4 — Split Landlines from Wireless (Line-Type Identification)
 
@@ -130,7 +130,7 @@ A clean list earns you the right to do the part that actually makes money — an
 
 These are **people**, not a list to grind, and they never consented to a relationship with you. So the compliant, effective sequence is: **warm up with a value-first email** that earns a little recognition; aim every first call at *a conversation*, not a pitch — the goal is a scheduled time to review their situation; and run a **politely persistent**, manual-dial call campaign on the clean numbers, honoring every opt-out the instant it happens. No texting that purchased data. No autodialer. Polite persistence beats brute force, and clean data is what makes the persistence pay.
 
-That's the whole game: clean the file, then work it like the people on it are worth treating well. For the legal backbone behind all of this, keep the [TCPA Compliance Guide for Lead Buyers](/tcpa-compliance-lead-buyers) and the [Lead Buyer's Regulatory Cheat Sheet](/lead-buyer-regulatory-cheat-sheet) within reach.
+That's the whole game: clean the file, then work it like the people on it are worth treating well. If you're still wondering where the legal line sits, [Is It Legal to Call Leads You Bought?](/is-it-legal-to-call-purchased-leads) lays out what you can and can't do with purchased data. And for the legal backbone behind all of this, keep the [TCPA Compliance Guide for Lead Buyers](/tcpa-compliance-lead-buyers) and the [Lead Buyer's Regulatory Cheat Sheet](/lead-buyer-regulatory-cheat-sheet) within reach.
 
 ## Frequently Asked Questions
 
