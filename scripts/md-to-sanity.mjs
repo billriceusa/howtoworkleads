@@ -5,7 +5,11 @@
 import { readFileSync } from 'fs';
 import { randomBytes } from 'crypto';
 
-const TOKEN = 'skis2pqTY12KO007aXXT1RQs8p5MYNYIW1LNYj593TEpl2KUKqkL9KAvcISd72ljeb1jbYFqT5LMeEjjm';
+const TOKEN = process.env.SANITY_API_TOKEN;
+if (!TOKEN) {
+  console.error('Missing SANITY_API_TOKEN env var. Set it before running (e.g. `source apps/web/.env.local`).');
+  process.exit(1);
+}
 const PROJECT = 'e9k38j42';
 const DATASET = 'production';
 const API = `https://${PROJECT}.api.sanity.io/v2024-01-01/data/mutate/${DATASET}`;
