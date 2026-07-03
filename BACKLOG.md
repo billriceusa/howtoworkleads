@@ -1,12 +1,44 @@
 # HowToWorkLeads.com -- Backlog
 
-**Last updated:** June 23, 2026 (IUL educational cluster — 4 blog posts, staggered — + scheduled-publish query gating)
-**Site status:** 121+ pages live (38 landing + 77 blog + 9 category + download pages + 2 interactive tools); +4 IUL-cluster blog posts publishing staggered through 2026-07-02
+**Last updated:** July 3, 2026 (published + interlinked the aged-life-insurance-leads landing page; verified live)
+**Site status:** 122+ pages live (39 landing + 77 blog + 9 category + download pages + 2 interactive tools)
 **Revenue:** $2,918/mo affiliate rev share (March 2026, 20% of $14,590 attributed ALS revenue)
 **Newsletter:** **PAUSED June 9, 2026** (Bill's call) — `weekly-newsletter` cron removed from `apps/web/vercel.json`. 8 issues written; only 3 subscribers; Issue 1 (broadcast 2a47893d) never actually sent. Non-channel until subscriber acquisition. Resume by re-adding the cron line.
 **Content automation:** **PAUSED June 9, 2026** (Bill's call: quality concerns) — `weekly-content` cron removed from `apps/web/vercel.json`. No auto-publishing until resumed (re-add the cron line). Side effect: this neutralizes the broken featured-image webhook (P0 below), since no new posts auto-publish. Prior note: April 8 backfill of 13 articles may have triggered quality dampening.
 **AI provider:** Anthropic SDK (claude-sonnet-4) -- OpenAI fully removed
 **Analytics access:** Local GA4 + GSC pulls work via `brsg-analytics-reader@brsg-mcp.iam.gserviceaccount.com` impersonation. **Token scope flag required**: `--scopes=https://www.googleapis.com/auth/webmasters.readonly` (default token 403s). Set account `bill@billricestrategy.com` first. Ahrefs is blind to this domain (DR≈0) — GSC is the only ground truth.
+
+---
+
+## 2026-06-29 — GSC-export session audit + workstream priorities <!-- /brsg-session -->
+
+**Source:** Bill's full GSC export (Last 3 months, Mar 28–Jun 27): 1,027 queries · 184 page rows · device + country splits. Far richer than the daily-performance bundle's top-10. All numbers below trace to that export or live checks — none fabricated.
+
+**Health (verified live this session):** all money pages 200; full schema present on `buy-iul-leads` (FAQPage + Article + Speakable + Breadcrumb); the 4 IUL scheduled posts published on time; server perf healthy (TTFB 0.12–0.31s, Vercel cache HIT). No live errors.
+
+**Headline numbers (3mo, both hosts combined):** ~217 clicks / ~60,200 impr / **0.36% CTR / avg pos ~27** — flat vs the June-5 read (pos 27.2). *Position depth, not impressions, remains the ceiling.*
+
+**Key data findings:**
+- **`buy-iul-leads` is the franchise page** — 60 clicks / 2,839 impr / **2.1% CTR / pos 9.7** (page 1). The proven winnable-niche converter. Everything that works points here.
+- **Net-new gap — aged-life-insurance-leads (404 today):** clear page-1 demand served only by the generic head-term page — "aged life insurance leads" 331 impr/pos 19.7, "buy aged life leads" pos 5.8, "cheap aged life leads" pos 7.1, "exclusive aged life leads" pos 8.1, "best way to buy aged insurance leads" pos 4.5. Mirrors the proven aged-FE + aged-IUL pattern (built 06-13). **Highest-confidence net-new content play.**
+- **www/non-www signal split (NOT a bug — infra is correct):** GSC shows **73 pages indexed under BOTH hosts; ~18,630 impr (≈47% of all impr) on www URLs.** BUT verified live: www **308-redirects** to non-www, www pages **self-canonical to non-www**, and sitemap is **100% non-www** — the textbook consolidation setup is already in place. This is Google consolidation lag, not a code fix. Lever = kill any internal www links + request indexing of canonical URLs + monitor decay. Modest.
+- **Device split:** Desktop 125cl/52,288im/**0.24%** CTR/pos 27 vs Mobile 92cl/7,819im/**1.18%** CTR/pos 23.9. Desktop = 87% of impr at 1/5 the CTR — but it's a query-mix artifact (desktop impressions dominated by the buy-life-insurance head-term cluster at pos 35+), not a device-UX problem.
+- **Authority-bound, do NOT invest on-page:** `buy-life-insurance-leads` (combined 56cl/**19,720 impr**/pos 34.7) + the "life insurance leads for sale / term / buy" head-term cluster all pos 35–58. Title/meta already optimized (verified on `buy-home-improvement-leads` too — strong title, still 0 clicks at pos 9.6 on "home improvement leads for sale" 1,743 impr). These move only when DR rises. The home-improvement 0-click-at-pos-9.6 is position/SERP-saturation, not a CTR rewrite.
+- **Synthetic-tail confirmed (drop):** "hubspot lead management features review" 407 impr/pos 5.6/0cl etc. — nobody types these; ranking is meaningless. Don't chase.
+
+**Prioritized workstream (weighted: performance · stability · traffic · conversion):**
+
+- [x] **P1 — Build `/buying-leads/aged-life-insurance-leads` landing page** — **DONE 2026-07-03** (`/brsg-session`). Published `htwl-aged-life-insurance-leads` (buying-leads, 5 blocks, Bill Rice author, FAQPage+Article+Breadcrumb schema, 11 `?ref=howtoworkleads` ALS links all `rel="sponsored"`). Interlinked bidirectionally: its `relatedPages` → buy-life/aged-FE/aged-IUL; the buy-life pillar (19,720 impr) + aged-FE + aged-IUL all link back. Auto-surfaces in nav (alphabetical), /buying-leads category, sitemap, llms.txt. Verified live 200 @ ttfb 0.20s. **De-cannibalization = no-op:** `buy-life-insurance-leads` had null `secondaryKeywords` — never targeted "aged life," nothing to strip.
+- [ ] **P1 — Deepen the IUL cluster around the pos-9.7 winner.** Finish interlinking the 4 new IUL blog posts up into `buy-iul-leads` / `aged-iul-leads`; concentrate authority on the page that's already converting. *Traffic + conversion.* **M.**
+- [ ] **P1 (security) — Rotate the committed Sanity write token in `scripts/md-to-sanity.mjs`.** A live write token is hardcoded in committed source (newer scripts like `life-pillar-expansion.mjs` already use `process.env.SANITY_API_TOKEN`). Rotate the token in Sanity → manage.sanity.io, switch the script to the env var, and scrub the value from git history (or accept it as burned and rely on rotation). *Stability / security.* **S.** <!-- flagged 2026-07-03 /brsg-session -->
+- [ ] **P2 — Speed Google's discovery of the new aged-life page.** Request indexing of `/buying-leads/aged-life-insurance-leads` in GSC; re-check its position on the 5 target queries ("aged life insurance leads" pos 19.7, "buy aged life leads" 5.8, "cheap" 7.1, "exclusive" 8.1) next export. *Traffic.* **S.** <!-- added 2026-07-03 /brsg-session -->
+- [ ] **P2 — `faqSection` on `blogPost`** (schema + blog render + FAQJsonLd + regen `sanity.schema.json`/typegen). Carried over. Lights up AEO structure on 77 posts incl. the 4 new IUL posts + the pos-5.1 pricing guide. *Honest caveat: post-2023 Google shows FAQ rich results only for authoritative gov/health sites — value here is AEO / AI-Overview, not a guaranteed SERP snippet.* **M.**
+- [ ] **P2 — www consolidation nudge + monitor.** Audit internal links for any `www.` emission; request indexing of canonical (non-www) URLs to speed Google's consolidation; re-check www impression share next export. Infra already correct. *Stability.* **S.**
+- [ ] **P2 — Establish a CWV measurement loop.** No live Core Web Vitals data exists (PSI keyless quota exhausted; no PSI key configured). Wire a PSI key into the audit or run a Lighthouse pass. Server perf looks healthy; this confirms real-user LCP/INP and honors the perf priority with data. *Performance.* **S.**
+- [ ] **P2 — Prune/consolidate the ~104 zero-impression URLs** (thin-content dampening on a DR≈3 domain). *Stability / traffic.* **M.**
+- [ ] **Bill's hands — ALS reciprocal backlinks (Troy).** Still the #1 lever on aggregate *position* (pos 27 won't move without authority); HTWL→ALS is wired, ALS→HTWL verified zero (June 5). Deprioritized June 9 ("slow down on backlinks"). Surfaced, not assumed.
+
+**Recommended single focus:** the **aged-life-insurance-leads page** — highest-confidence traffic+conversion work, fully in your control, on the proven aged-specialty pattern, filling a 404 against demonstrated page-1 demand.
 
 ---
 
