@@ -10,6 +10,22 @@
 
 ---
 
+## 2026-07-14 — Portfolio Performance Report priority anchor
+<!-- added 2026-07-14 — cross-portfolio prioritization from the BRSG Portfolio Performance Report (daily) -->
+
+**Report snapshot (2026-07-14 daily):** 223 sessions (+95.3%), **22 conv**.
+
+**Portfolio rank: TIER 1 — one of the two REAL converters** (~10% session→conv, $2,918/mo affiliate). This is a protect-and-scale site; conversion works, so the levers are content-engine health + authority. Work these existing items, in order:
+
+1. **Fix the `sharp` featured-image webhook** (P0 below) — every new post publishes imageless; it's only neutralized today because the content cron is paused, and it blocks safely resuming the content engine that drives this site's traffic.
+2. **Finish FAQ-schema conversion on the remaining 7 buy-pages** (P1 below) — AEO on the money pages. ⚠ mixed blocks: extract only the FAQ children, never unset the whole contentBlock.
+3. **Deepen the IUL cluster around the pos-9.7 `buy-iul-leads` winner** (P1, 4 drafts staged) — publish in Studio.
+4. **Bill's hands — ALS reciprocal backlinks (Troy)** (P0 below) — the #1 lever on aggregate position; nothing on-page moves the needle until DR rises.
+
+*Opportunistic: rotate the committed Sanity write token (P1 security below).*
+
+---
+
 ## 2026-06-29 — GSC-export session audit + workstream priorities <!-- /brsg-session -->
 
 **Source:** Bill's full GSC export (Last 3 months, Mar 28–Jun 27): 1,027 queries · 184 page rows · device + country splits. Far richer than the daily-performance bundle's top-10. All numbers below trace to that export or live checks — none fabricated.
