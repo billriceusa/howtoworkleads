@@ -56,8 +56,8 @@ export const landingPageQuery = groq`
       image,
       bio
     },
-    publishedAt,
-    updatedAt
+    "publishedAt": coalesce(publishedAt, _createdAt),
+    "updatedAt": coalesce(updatedAt, _updatedAt)
   }
 `
 
@@ -165,8 +165,8 @@ export const blogPostQuery = groq`
       image,
       bio
     },
-    publishedAt,
-    updatedAt
+    "publishedAt": coalesce(publishedAt, _createdAt),
+    "updatedAt": coalesce(updatedAt, publishedAt, _updatedAt)
   }
 `
 

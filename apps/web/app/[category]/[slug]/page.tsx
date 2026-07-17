@@ -8,7 +8,7 @@ import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd, FAQJsonLd } from '@/components/seo'
 import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/lib/sanity/image'
-import { extractHeadings, absoluteUrl } from '@/lib/utils'
+import { extractHeadings, absoluteUrl, formatDate } from '@/lib/utils'
 import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 import { sharedRendererTypes } from '@/lib/portable-text-renderers'
 import Image from 'next/image'
@@ -225,6 +225,11 @@ export default async function LandingPage({ params }: LandingPageProps) {
         <div className="lg:grid lg:grid-cols-12 lg:gap-12">
           {/* Main Content */}
           <article className="lg:col-span-8">
+            {page.updatedAt && (
+              <p className="mb-6 text-sm text-gray-500">
+                Updated <time dateTime={page.updatedAt}>{formatDate(page.updatedAt)}</time>
+              </p>
+            )}
             <ALSAutoLinker utmCampaign={`article-${params.slug}-in-content`}>
             <div className="prose-custom">
               {(() => {
