@@ -8,7 +8,7 @@ import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd, FAQJsonLd } from '@/components/seo'
 import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/lib/sanity/image'
-import { extractHeadings, absoluteUrl, formatDate } from '@/lib/utils'
+import { extractHeadings, absoluteUrl, formatDate, authorProfile } from '@/lib/utils'
 import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 import { sharedRendererTypes } from '@/lib/portable-text-renderers'
 import Image from 'next/image'
@@ -203,6 +203,8 @@ export default async function LandingPage({ params }: LandingPageProps) {
         datePublished={page.publishedAt}
         dateModified={page.updatedAt}
         authorName={page.author?.name}
+        authorUrl={authorProfile(page.author?.name).url}
+        authorSameAs={authorProfile(page.author?.name).sameAs}
       />
       {faqs.length > 0 && <FAQJsonLd faqs={faqs} />}
 

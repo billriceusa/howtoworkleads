@@ -8,6 +8,7 @@ interface ArticleJsonLdProps {
   authorName?: string
   authorJobTitle?: string
   authorUrl?: string
+  authorSameAs?: string[]
   speakable?: boolean
 }
 
@@ -21,6 +22,7 @@ export function ArticleJsonLd({
   authorName,
   authorJobTitle,
   authorUrl,
+  authorSameAs,
   speakable = true,
 }: ArticleJsonLdProps) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://howtoworkleads.com'
@@ -40,6 +42,7 @@ export function ArticleJsonLd({
         name: authorName,
         ...(authorJobTitle && { jobTitle: authorJobTitle }),
         ...(authorUrl && { url: authorUrl }),
+        ...(authorSameAs && authorSameAs.length > 0 && { sameAs: authorSameAs }),
       },
     }),
     publisher: {

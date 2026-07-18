@@ -31,6 +31,21 @@ export function absoluteUrl(path: string): string {
   return `${baseUrl}${path}`
 }
 
+// Canonical author identity for JSON-LD Person entities (E-E-A-T / AEO).
+// Keyed by author name so a future author never inherits another's profiles.
+export function authorProfile(name?: string): { url?: string; sameAs?: string[] } {
+  if (!name) return {}
+  switch (name.trim().toLowerCase()) {
+    case 'bill rice':
+      return {
+        url: 'https://billrice.com',
+        sameAs: ['https://www.linkedin.com/in/billrice'],
+      }
+    default:
+      return {}
+  }
+}
+
 export function extractHeadings(content: any[]): { text: string; slug: string; level: number }[] {
   const headings: { text: string; slug: string; level: number }[] = []
 

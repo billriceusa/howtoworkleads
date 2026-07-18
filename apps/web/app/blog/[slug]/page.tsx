@@ -11,7 +11,7 @@ import { Breadcrumbs, BreadcrumbsJsonLd } from '@/components/layout'
 import { ArticleJsonLd, FAQJsonLd } from '@/components/seo'
 import { Badge, Markdown, Accordion } from '@/components/ui'
 import { PortableText } from '@portabletext/react'
-import { formatDate, absoluteUrl } from '@/lib/utils'
+import { formatDate, absoluteUrl, authorProfile } from '@/lib/utils'
 import { containsMarkdown, extractTextFromBlock } from '@/lib/portable-text'
 import { sharedRendererTypes } from '@/lib/portable-text-renderers'
 
@@ -279,6 +279,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         datePublished={post.publishedAt}
         dateModified={post.updatedAt}
         authorName={post.author?.name}
+        authorUrl={authorProfile(post.author?.name).url}
+        authorSameAs={authorProfile(post.author?.name).sameAs}
       />
       {faqs.length > 0 && <FAQJsonLd faqs={faqs} />}
 
