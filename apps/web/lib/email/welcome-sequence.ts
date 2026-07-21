@@ -169,26 +169,27 @@ Just reply with your vertical — it helps me tailor the content I send you. I r
 // ── Email 5 — Day 10 ─────────────────────────────────────────────────
 
 function getEmail5(): WelcomeEmail {
-  const subject =
-    "You're one of 200+ agents getting this. Here's what they're saying."
+  const subject = 'Day 10: the part most agents skip'
 
-  const markdown = `You've been on The Aged Lead Playbook for 10 days. Here's what I've heard from other subscribers:
+  const markdown = `You've been on The Aged Lead Playbook for 10 days. If you take one thing from it, take this:
 
-> *"I was spending $3,000/month on fresh leads and closing 4 deals. Switched to aged leads with the cadence from your site and I'm closing 5 deals for $600."* — Insurance agent, Texas
+Aged leads don't have a lower ROI than fresh leads. They have a *different* ROI curve.
 
-> *"The GHL setup guide alone saved me 20 hours. My aged lead pipeline runs on autopilot now."* — Mortgage LO, Florida
+Fresh leads reward speed — first call wins. Aged leads reward **volume and persistence**. The agent who works 200 aged leads on a disciplined cadence beats the agent who works 20 of them like they're fresh, every time. That's the whole system:
 
-> *"I didn't realize aged leads needed a completely different approach than real-time leads. The scripts changed everything."* — Medicare agent, Ohio
+- **More volume**, because the contact rate per lead is lower
+- **A tighter cadence**, because the first touch rarely connects
+- **A CRM that doesn't drop anyone**, because the wins come from touch 5, not touch 1
 
-These aren't unicorns. They're agents who learned the system and committed to working it.
+Everything on the site — the Quick-Start Kit, the scripts, the cadence, the calculator — is built around that one idea. If you skipped any of it, the cadence guide is the one to go back to.
 
-**If you know someone who buys leads**, forward this email to them. They'll get the same resources you did — the Quick-Start Kit, the scripts, the cadence, the calculator — plus a tactical email every Tuesday.
+**If you know someone who buys leads**, forward this email to them. They'll get the same resources you did.
 
 **[Forward-friendly signup link: howtoworkleads.com/#newsletter](${SITE_URL}/#newsletter?${UTM_BASE}&utm_content=email-5-forward)**
 
 **Ready to put what you've learned into practice?** [Browse aged leads by vertical, geography, and age at AgedLeadStore.com](https://agedleadstore.com/all-lead-types/?utm_source=howtoworkleads&utm_medium=email&utm_campaign=welcome-sequence&utm_content=email-5-cta)
 
-Thanks for being here. See you Tuesday.
+Thanks for being here.
 
 — Bill
 
