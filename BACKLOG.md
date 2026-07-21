@@ -10,6 +10,13 @@
 
 ---
 
+## 2026-07-21 — Welcome-email integrity + the unfulfilled Tuesday promise <!-- /session -->
+
+- [x] **Welcome Email 5 anti-fabrication violation — FIXED** (`97246f2`) — removed the "You're one of 200+ agents getting this" subject claim (actual audience is a small fraction of that) and 3 fabricated testimonials attributed to invented personas ("Insurance agent, Texas" / "Mortgage LO, Florida" / "Medicare agent, Ohio"). Rewrote as a genuine teaching close on the different-ROI-curve framing; kept the forward-referral ask and the AgedLeadStore CTA with all UTM params (`email-5-forward`, `email-5-cta`, `email-5-footer`) intact.
+- [ ] **⚠ LIVE ISSUE — Email 1 promises a Tuesday newsletter that no pipeline sends.** `apps/web/lib/email/welcome-sequence.ts:54` tells every new subscriber "**Every Tuesday at 8 AM ET**, you'll get one email with…". Nothing produces it. This is the real subscriber-facing credibility gap. verifiedvector.com has the identical defect — it's a cross-site pattern, not a one-off. → next: Bill picks one — (a) build the scheduler and start sending, (b) rewrite Email 1 to promise only what ships, or (c) send a catch-up/reset note. (b) or (c) is cheap now and expensive later.
+- [ ] **Welcome emails 2–5 are dead code — decide keep-or-cut.** `WELCOME_SCHEDULE` (days 0/2/4/7/10) and `getEmailForDay()` exist, but both call sites (`apps/web/app/api/newsletter/route.ts:70`, `apps/web/app/api/download/route.ts:94`) hardcode `getWelcomeEmail(0)`; there is no `scheduledAt` and `apps/web/vercel.json` has no crons. The drip retired with the content engine and the file header documents this. → next: either wire the drip back up (they're written and now clean) or delete 2–5 so the next reader doesn't assume they ship.
+- [ ] **Disavow file staged for GSC upload — 278 domains, 14 whitelisted** (93% of the profile was toxic). At `~/Desktop/brsg-disavow-2026-07-21/howtoworkleads.com-disavow.txt`; `mav.website` and `rocketq.link` are protected. → next: Bill uploads at `search.google.com/search-console/disavow-links`. Each upload replaces, not merges.
+
 ## 2026-07-14 — Portfolio Performance Report priority anchor
 <!-- added 2026-07-14 — cross-portfolio prioritization from the BRSG Portfolio Performance Report (daily) -->
 
