@@ -33,13 +33,29 @@ export function absoluteUrl(path: string): string {
 
 // Canonical author identity for JSON-LD Person entities (E-E-A-T / AEO).
 // Keyed by author name so a future author never inherits another's profiles.
-export function authorProfile(name?: string): { url?: string; sameAs?: string[] } {
+/**
+ * Author identity for JSON-LD. Bill resolves to the canonical person URI shared
+ * across every property he owns — see ~/Code/_shared-docs/bill-rice-identity.md.
+ * The @id is what merges him with the same person on the other sites; matching
+ * sameAs lists alone never did.
+ */
+export function authorProfile(
+  name?: string
+): { id?: string; url?: string; sameAs?: string[] } {
   if (!name) return {}
   switch (name.trim().toLowerCase()) {
     case 'bill rice':
       return {
+        id: 'https://billrice.com/#person',
         url: 'https://billrice.com',
-        sameAs: ['https://www.linkedin.com/in/billrice'],
+        // Identity profiles only, all verified 2026-07-29.
+        sameAs: [
+          'https://www.wikidata.org/wiki/Q139037772',
+          'https://www.linkedin.com/in/billrice/',
+          'https://x.com/billrice',
+          'https://www.youtube.com/@billricestrategy',
+          'https://medium.com/@billrice',
+        ],
       }
     default:
       return {}

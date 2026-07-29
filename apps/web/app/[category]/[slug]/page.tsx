@@ -203,6 +203,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
         datePublished={page.publishedAt}
         dateModified={page.updatedAt}
         authorName={page.author?.name}
+        authorId={authorProfile(page.author?.name).id}
         authorUrl={authorProfile(page.author?.name).url}
         authorSameAs={authorProfile(page.author?.name).sameAs}
       />

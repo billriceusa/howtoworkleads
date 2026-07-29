@@ -7,6 +7,8 @@ interface ArticleJsonLdProps {
   dateModified?: string
   authorName?: string
   authorJobTitle?: string
+  /** Canonical entity URI for the author, when one exists. */
+  authorId?: string
   authorUrl?: string
   authorSameAs?: string[]
   speakable?: boolean
@@ -21,6 +23,7 @@ export function ArticleJsonLd({
   dateModified,
   authorName,
   authorJobTitle,
+  authorId,
   authorUrl,
   authorSameAs,
   speakable = true,
@@ -39,6 +42,9 @@ export function ArticleJsonLd({
     ...(authorName && {
       author: {
         '@type': 'Person',
+        // Carries the canonical URI when the author is a known entity, so this
+        // byline merges with the same person across every other property.
+        ...(authorId && { '@id': authorId }),
         name: authorName,
         ...(authorJobTitle && { jobTitle: authorJobTitle }),
         ...(authorUrl && { url: authorUrl }),
