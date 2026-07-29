@@ -279,6 +279,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         datePublished={post.publishedAt}
         dateModified={post.updatedAt}
         authorName={post.author?.name}
+        authorId={authorProfile(post.author?.name).id}
         authorUrl={authorProfile(post.author?.name).url}
         authorSameAs={authorProfile(post.author?.name).sameAs}
       />
