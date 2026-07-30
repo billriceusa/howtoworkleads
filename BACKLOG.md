@@ -10,6 +10,29 @@
 
 ---
 
+## 2026-07-17 — Agent-Ready crawl-stage pass + uniqueness push (BRSG "default answer" experiment)
+<!-- added 2026-07-17 — from the Agent-Ready Lead Generation program hub: ~/Code/sites/brsg/agent-ready-lead-gen -->
+
+HTWL is one of three BRSG test sites in the **Agent-Ready Lead Generation** experiment. **Its role: the "legible-but-generic" case** — AI-citation baseline **6** (Jul 16 2026; ChatGPT 1, Perplexity 1, Google AI Mode 1, Grok 3), spread thin across four platforms. It's already the *most* technically legible of the three (explicit `index,follow`, `max-snippet:-1`, clean clusters) yet earns the fewest citations. **Diagnosis: legibility is handled; the missing lever is content _uniqueness_.** Lead-conversion advice is a crowded, replaceable topic — models cite the source that has something the others don't.
+
+- **Full rationale + copy-paste JSON-LD (source of truth):** `~/Code/sites/brsg/agent-ready-lead-gen/fixes/howtoworkleads/FIXPACK.md`.
+- **Reconciled against what's live:** FAQPage schema already on 13/20 buy-pages (the open blogPost `faqSection` item below completes it); llms.txt/llms-full.txt already Sanity-generated (172 URLs) — **do NOT drop in the hub's static `llms.txt`** (it would regress the dynamic one; just verify coverage). So the schema part is small — **the uniqueness push is the real work.**
+
+### Part 1 — finish the cheap schema gaps (P2)
+- [ ] **P2 — `Article` + `BreadcrumbList` on guide/article pages.** The deep cluster paths (`/lead-management/the-lead-lifecycle`) make breadcrumbs high-value for agent context. Effort **S**.
+- [ ] **P2 — `DefinedTerm` on definition/explainer pages** (e.g. "What is a CRM system?"), and `FAQPage` where the page is Q&A-shaped — folds into the existing **P2 "add `faqSection` to blogPost"** item (that unblocks FAQ schema across 77 posts). Effort **S–M**.
+- [ ] **P2 — Sitewide `Organization` + `WebSite` + author `Person` graph**; make the editorial-independence disclosure machine-readable — a genuine E-E-A-T asset most affiliate sites lack. Effort **S**.
+
+### Part 2 — the uniqueness push (the real lever — P1)
+- [ ] **P1 — Turn benchmarks into a first-party `Dataset`** ("Internet Lead Conversion Benchmarks by Stage/Vertical"). The content already cites hard numbers (1–15% funnel-stage conversion, 7-stage lifecycle, 6-step process, "40% more"); a named, sourced benchmark table is the single most-cited content type in a crowded niche. **Guardrail: only real/verifiable numbers or clearly-framed illustrative ranges — zero fabrication** ([[shared/feedback_no_fabricated_data]]). Effort **M**.
+- [ ] **P1 — Lead with the aged-lead price index** (`agedleadsales.com/price-index`). Current market pricing is genuinely unique data that gets pulled into buyer-intent answers ("how much do X leads cost"). Surface it prominently, cite it in-content, mark it up. Effort **S–M**.
+- [ ] **P1 — Name the frameworks.** Give "the 7-stage lead lifecycle" / "the 6-step internet-lead process" ownable names + consistent definitions so a model attributes the *concept* to this site (the same "become the default answer" move as the pillar). Ties to the existing niche-concentration P1. Effort **S**.
+- [ ] **P1 — Add original operator proof** — first-party conversion data, screenshots, or mini case studies from real lead-buying. The affiliate/education competitors can't replicate operator data. Effort **M**.
+
+**Experiment discipline:** canonical **apex** (www 308s). Baseline **6**; **control** until staggered — ship **≥1 week after leadbuyerplaybook and ≥1 week apart from proinvestorhub**. This is the site to watch for the **content-vs-markup** question: if schema alone barely moves HTWL while PIH's schema *does* compound, that confirms uniqueness — not markup — is what earns the citation. Re-measure +30/+60 days via Ahrefs (mode=subdomains) — but **Ahrefs is near-blind to this DR≈0 domain**, so also track AI-assistant referrals in GA4/GSC as corroboration. Method: hub `research/ai-citation-baseline-2026-07.md`.
+
+---
+
 ## 2026-06-23 — IUL content cluster (4 blog posts) + scheduled-publish capability
 
 **Strategy:** Depth on the one winnable niche — IUL (live GSC: `aged iul leads` 4.8% CTR @ pos 8.2; reinforces the 2026-06-13 aged-iul-leads landing page). Built a 4-post educational cluster around the IUL money pages, each linking up to `/buying-leads/buy-iul-leads`, the new `/buying-leads/aged-iul-leads` pillar, the `how-to-work-iul-leads` playbook, and the ROI calculator — concentrating authority on the best-converting niche.
