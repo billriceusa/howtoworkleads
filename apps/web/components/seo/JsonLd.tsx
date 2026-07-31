@@ -1,3 +1,5 @@
+import { BILL_RICE_ID } from '@/lib/utils'
+
 interface ArticleJsonLdProps {
   title: string
   description: string
@@ -144,6 +146,10 @@ export function OrganizationJsonLd() {
     name: 'HowToWorkLeads',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
+    // Reference by @id only. Never inline a Person here — an anonymous Person
+    // node mints a second Bill Rice instead of resolving to the canonical one.
+    // Article pages already carry his full node; the homepage only needs the link.
+    founder: { '@id': BILL_RICE_ID },
     // Social profiles omitted until real accounts are created
     contactPoint: {
       '@type': 'ContactPoint',

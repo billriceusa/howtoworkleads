@@ -31,6 +31,13 @@ export function absoluteUrl(path: string): string {
   return `${baseUrl}${path}`
 }
 
+/**
+ * The one URI for Bill Rice, reused verbatim on every property he owns.
+ * @id is a URI, not a URL that has to live on the emitting host — reusing this
+ * everywhere is what merges the graph into a single person.
+ */
+export const BILL_RICE_ID = 'https://billrice.com/#person'
+
 // Canonical author identity for JSON-LD Person entities (E-E-A-T / AEO).
 // Keyed by author name so a future author never inherits another's profiles.
 /**
@@ -46,7 +53,7 @@ export function authorProfile(
   switch (name.trim().toLowerCase()) {
     case 'bill rice':
       return {
-        id: 'https://billrice.com/#person',
+        id: BILL_RICE_ID,
         url: 'https://billrice.com',
         // Identity profiles only, all verified 2026-07-29.
         sameAs: [
