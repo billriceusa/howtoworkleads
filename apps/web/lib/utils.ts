@@ -55,13 +55,15 @@ export function authorProfile(
       return {
         id: BILL_RICE_ID,
         url: 'https://billrice.com',
-        // Identity profiles only, all verified 2026-07-29.
+        // Identity profiles only. Entries 1-5 verified 2026-07-29;
+        // substack.com/@billrice verified and added 2026-07-31.
         sameAs: [
           'https://www.wikidata.org/wiki/Q139037772',
           'https://www.linkedin.com/in/billrice/',
           'https://x.com/billrice',
           'https://www.youtube.com/@billricestrategy',
           'https://medium.com/@billrice',
+          'https://substack.com/@billrice',
         ],
       }
     default:
