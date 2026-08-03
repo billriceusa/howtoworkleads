@@ -101,6 +101,31 @@ const nextConfig = {
         destination: '/buying-leads/buy-refinance-mortgage-leads',
         permanent: true,
       },
+      // ─── CUTOVER 2026-08-03 ────────────────────────────────────────────────
+      // howtoworkleads.com is retired into workagedleads.com. Everything above
+      // this line runs FIRST and normalises the path on the old host — the
+      // typo rescue, the near-duplicate consolidations — so the request that
+      // crosses over is the corrected one. Keep these LAST.
+      //
+      // Path is preserved. A URL whose path also changes on the target then
+      // takes a second hop through the rules generated from url-map.csv on
+      // workagedleads.com: /buying-leads/x -> /lead-types/y.
+      //
+      // /api is deliberately excluded. A 301 turns a POST into a GET, so
+      // redirecting the capture routes would silently drop a form submitted
+      // from a page a visitor already had open — lost leads, no error anywhere.
+      {
+        source: '/',
+        has: [{ type: 'host', value: '(www\\.)?howtoworkleads\\.com' }],
+        destination: 'https://workagedleads.com/',
+        permanent: true,
+      },
+      {
+        source: '/:path((?!api$|api/).*)',
+        has: [{ type: 'host', value: '(www\\.)?howtoworkleads\\.com' }],
+        destination: 'https://workagedleads.com/:path',
+        permanent: true,
+      },
     ];
   },
 }
