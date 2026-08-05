@@ -1,0 +1,310 @@
+{
+  "$generatedBy": "agedlead-sales/scripts/export-cross-host-redirects.mjs",
+  "$source": "agedlead-sales/data/migration/url-map.csv",
+  "$note": "Generated. Do not hand-edit — re-run the generator against url-map.csv.",
+  "pathChanges": [
+    {
+      "source": "/aged-leads",
+      "destination": "https://workagedleads.com/lead-types",
+      "action": "FOLD"
+    },
+    {
+      "source": "/blog/aged-lead-conversion-rates",
+      "destination": "https://workagedleads.com/blog/aged-lead-conversion-rates-by-industry-data-benchmarks",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/aged-lead-email-drip-campaigns",
+      "destination": "https://workagedleads.com/blog/email-outreach-aged-leads-templates",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/aged-lead-follow-up-cadence",
+      "destination": "https://workagedleads.com/guides/7-day-aged-lead-follow-up-cadence",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/aged-lead-scripts-templates",
+      "destination": "https://workagedleads.com/blog/aged-lead-scripts-that-work",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/aged-lead-vendor-comparison",
+      "destination": "https://workagedleads.com/blog/aged-lead-vendor-scorecard-evaluation",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/aged-leads-dnc-compliance",
+      "destination": "https://workagedleads.com/blog/tcpa-compliance-calling-aged-leads",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/ai-lead-scoring-prioritization",
+      "destination": "https://workagedleads.com/blog/ai-lead-scoring-aged-leads",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/real-cost-aged-vs-fresh-leads-2026",
+      "destination": "https://workagedleads.com/compare/aged-vs-real-time-leads",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/right-way-to-use-ai-lead-followup",
+      "destination": "https://workagedleads.com/blog/ai-guardrails-aged-lead-agents",
+      "action": "MERGE"
+    },
+    {
+      "source": "/blog/salesforce-leads-review",
+      "destination": "https://workagedleads.com/blog/aged-lead-crm-setup-guide",
+      "action": "MERGE"
+    },
+    {
+      "source": "/buying-leads",
+      "destination": "https://workagedleads.com/lead-types",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/aged-final-expense-leads",
+      "destination": "https://workagedleads.com/lead-types/final-expense-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/aged-iul-leads",
+      "destination": "https://workagedleads.com/lead-types/iul-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/aged-life-insurance-leads",
+      "destination": "https://workagedleads.com/lead-types/life-insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-aged-leads",
+      "destination": "https://workagedleads.com/lead-types",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-annuity-leads",
+      "destination": "https://workagedleads.com/lead-types/insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-auto-insurance-leads",
+      "destination": "https://workagedleads.com/lead-types/auto-insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-bank-statement-loan-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-dscr-loan-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-final-expense-leads",
+      "destination": "https://workagedleads.com/lead-types/final-expense-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-heloc-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-home-improvement-leads",
+      "destination": "https://workagedleads.com/lead-types/home-improvement-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-iul-leads",
+      "destination": "https://workagedleads.com/lead-types/iul-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-life-insurance-leads",
+      "destination": "https://workagedleads.com/lead-types/life-insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-medicare-leads",
+      "destination": "https://workagedleads.com/lead-types/medicare-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-mortgage-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-mortgage-protection-leads",
+      "destination": "https://workagedleads.com/lead-types/insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-non-qm-mortgage-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-pc-insurance-leads",
+      "destination": "https://workagedleads.com/lead-types/insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-purchase-mortgage-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-real-estate-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-refinance-mortgage-leads",
+      "destination": "https://workagedleads.com/lead-types/mortgage-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/buy-solar-leads",
+      "destination": "https://workagedleads.com/lead-types/solar-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/buying-leads/health-insurance-leads",
+      "destination": "https://workagedleads.com/lead-types/health-insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/downloads",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/downloads/7-day-follow-up-cadence",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/downloads/aged-lead-quick-start-kit",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/downloads/insurance-lead-scripts-bundle",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/downloads/lead-vendor-comparison-scorecard",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/downloads/mortgage-lead-scripts-bundle",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/downloads/real-time-lead-team-playbook",
+      "destination": "https://workagedleads.com/resources",
+      "action": "MERGE"
+    },
+    {
+      "source": "/home-services-leads",
+      "destination": "https://workagedleads.com/lead-types/home-improvement-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/insurance-leads",
+      "destination": "https://workagedleads.com/lead-types/insurance-leads",
+      "action": "FOLD"
+    },
+    {
+      "source": "/legal-leads",
+      "destination": "https://workagedleads.com/providers/best/legal",
+      "action": "MERGE"
+    },
+    {
+      "source": "/resources/about",
+      "destination": "https://workagedleads.com/about",
+      "action": "MERGE"
+    },
+    {
+      "source": "/sales-process/b2c-vs-b2b-sales-process",
+      "destination": "https://workagedleads.com/guides/7-day-aged-lead-follow-up-cadence",
+      "action": "MERGE"
+    },
+    {
+      "source": "/sales-process/how-to-build-a-real-time-internet-lead-team",
+      "destination": "https://workagedleads.com/blog/scaling-aged-lead-operation-solo-agent-to-team",
+      "action": "MERGE"
+    },
+    {
+      "source": "/sales-process/the-modern-b2c-sales-funnel",
+      "destination": "https://workagedleads.com/blog/aged-lead-conversion-rates-by-industry-data-benchmarks",
+      "action": "MERGE"
+    },
+    {
+      "source": "/tools",
+      "destination": "https://workagedleads.com/calculators",
+      "action": "MERGE"
+    },
+    {
+      "source": "/tools/aged-lead-roi-calculator",
+      "destination": "https://workagedleads.com/calculators/roi-calculator",
+      "action": "MERGE"
+    },
+    {
+      "source": "/tools/compliance-checklist",
+      "destination": "https://workagedleads.com/blog/tcpa-compliance-calling-aged-leads",
+      "action": "MERGE"
+    }
+  ],
+  "pruned": [
+    "/blog/aged-lead-case-studies",
+    "/blog/ai-sales-stack-lead-followup",
+    "/blog/ai-text-followup-aged-leads",
+    "/blog/ai-voice-sms-tools-working-leads",
+    "/blog/compare-aged-lead-vendors",
+    "/blog/crm-automation-workflows",
+    "/blog/crm-speedtolead-reports-lying-you",
+    "/blog/fcc-consent-rule-lead-buying",
+    "/blog/gohighlevel-aged-leads-setup",
+    "/blog/how-to-buy-mortgage-leads",
+    "/blog/how-to-work-aca-leads",
+    "/blog/how-to-work-aged-insurance-leads",
+    "/blog/how-to-work-aged-mortgage-leads",
+    "/blog/how-to-work-aged-solar-leads",
+    "/blog/how-to-work-auto-insurance-leads",
+    "/blog/how-to-work-final-expense-leads",
+    "/blog/how-to-work-pest-control-leads",
+    "/blog/how-to-work-purchase-mortgage-leads",
+    "/blog/how-to-work-roofing-leads",
+    "/blog/lead-generation-glossary",
+    "/blog/pipeline-management-framework",
+    "/blog/power-dialer-comparison-lead-workers",
+    "/blog/real-estate-lead-generation-strategies",
+    "/blog/speed-to-lead-aged-leads",
+    "/blog/text-messaging-compliance-guide",
+    "/crm-systems",
+    "/crm-systems/b2c-vs-b2b-crm",
+    "/crm-systems/crm-vs-lead-management",
+    "/crm-systems/operational-analytical-and-collaborative-crm",
+    "/crm-systems/the-evolution-of-crm",
+    "/crm-systems/what-is-a-crm-system",
+    "/lead-management",
+    "/lead-management/b2b-vs-b2c-lead-management",
+    "/lead-management/lead-management-vs-crm",
+    "/lead-management/lead-status-vs-lifecycle-stage",
+    "/lead-management/the-lead-lifecycle",
+    "/lead-management/what-is-lead-management",
+    "/sales-process",
+    "/sales-process/sales-process-vs-sales-methodology",
+    "/sales-process/the-customer-journey",
+    "/sales-process/what-is-a-sales-process"
+  ]
+}

@@ -1,5 +1,14 @@
 const path = require('path');
 
+// Generated from agedlead-sales/data/migration/url-map.csv by
+// scripts/export-cross-host-redirects.mjs in that repo. Do not hand-edit —
+// re-run the generator and commit the result in both repos.
+const crossHost = require('./data/migration/cross-host-redirects.json');
+
+const RETIRING_HOST = [
+  { type: 'host', value: '(www\\.)?howtoworkleads\\.com' },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -106,10 +115,26 @@ const nextConfig = {
       // this line runs FIRST and normalises the path on the old host — the
       // typo rescue, the near-duplicate consolidations — so the request that
       // crosses over is the corrected one. Keep these LAST.
+
+      // The 52 rows whose path ALSO changes on the target (FOLD + MERGE).
       //
-      // Path is preserved. A URL whose path also changes on the target then
-      // takes a second hop through the rules generated from url-map.csv on
-      // workagedleads.com: /buying-leads/x -> /lead-types/y.
+      // These must precede the catch-all: first match wins, and the catch-all
+      // only preserves the path. Without them a folded URL crossed over to
+      // workagedleads.com/<old path> and took a SECOND hop through that repo's
+      // migrationRedirects() to reach its real destination — two hops from the
+      // apex and three from www. Sending the final path from here makes it one.
+      //
+      // The `has` host guard matters: these paths only mean this on the
+      // retiring host. Vercel preview URLs and localhost must not match.
+      ...crossHost.pathChanges.map(({ source, destination }) => ({
+        source,
+        has: RETIRING_HOST,
+        destination,
+        permanent: true,
+      })),
+
+      // Path is preserved for everything else — MIGRATE and REHOST rows keep
+      // their path, so the catch-all below is already a single hop for them.
       //
       // /api is deliberately excluded. A 301 turns a POST into a GET, so
       // redirecting the capture routes would silently drop a form submitted
