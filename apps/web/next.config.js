@@ -58,11 +58,11 @@ const nextConfig = {
         destination: '/crm-systems',
         permanent: true,
       },
-      {
-        source: '/crm-systems/b2c-vs-b2b-crm',
-        destination: '/blog/best-crm-aged-leads',
-        permanent: true,
-      },
+      // /crm-systems/b2c-vs-b2b-crm used to be normalised here, on this host,
+      // and then cross over — two hops. It is now a MERGE row in url-map.csv,
+      // so the generated cross-host table below sends it straight to its final
+      // URL in one. Rules above the cutover line win on first match, so this
+      // one had to go for that to take effect.
       {
         source: '/crm-systems/operational-analytical-and-collaborative-crm',
         destination: '/crm-systems',

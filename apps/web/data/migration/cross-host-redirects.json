@@ -179,6 +179,11 @@
       "action": "FOLD"
     },
     {
+      "source": "/crm-systems/b2c-vs-b2b-crm",
+      "destination": "https://workagedleads.com/blog/best-crm-aged-leads",
+      "action": "MERGE"
+    },
+    {
       "source": "/downloads",
       "destination": "https://workagedleads.com/resources",
       "action": "MERGE"
@@ -291,7 +296,6 @@
     "/blog/speed-to-lead-aged-leads",
     "/blog/text-messaging-compliance-guide",
     "/crm-systems",
-    "/crm-systems/b2c-vs-b2b-crm",
     "/crm-systems/crm-vs-lead-management",
     "/crm-systems/operational-analytical-and-collaborative-crm",
     "/crm-systems/the-evolution-of-crm",
