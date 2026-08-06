@@ -139,12 +139,34 @@ const nextConfig = {
       // /api is deliberately excluded. A 301 turns a POST into a GET, so
       // redirecting the capture routes would silently drop a form submitted
       // from a page a visitor already had open — lost leads, no error anywhere.
+      // The homepage is `statusCode: 301`, not `permanent: true`, and the
+      // difference is not cosmetic. `permanent: true` emits a **308**. Google
+      // treats 301 and 308 identically for ranking signals, so this changes
+      // nothing about how equity moves — but the Change of Address tool in
+      // Search Console validates by fetching the old homepage and looking for a
+      // literal 301, and it fails with "Couldn't fetch the page" on a 308. CoA
+      // is the single biggest accelerator of consolidation, so the homepage
+      // speaks the dialect the validator understands.
+      //
+      // Only the homepage needs it: CoA checks the homepage and nothing else.
+      //
+      // NOTE for whoever runs the tool: this fixes the *https* apex. Vercel's
+      // automatic HTTPS enforcement 308s http→https at the edge, before any of
+      // this code, so a CoA run against the `http://howtoworkleads.com/`
+      // property still sees a 308 first and will fail no matter what we do
+      // here. Run it from the https or sc-domain property.
       {
         source: '/',
         has: [{ type: 'host', value: '(www\\.)?howtoworkleads\\.com' }],
         destination: 'https://workagedleads.com/',
-        permanent: true,
+        statusCode: 301,
       },
+      // Everything else stays `permanent: true` (308) ON PURPOSE. A 301 drops
+      // the method and body, turning a POST into a GET. `/api` is already
+      // excluded from this rule for exactly that reason, but 308 keeps the
+      // guarantee for any future POST-capable route outside /api — a server
+      // action posts to the page URL itself, not to /api. Nothing downstream
+      // cares whether this one is 301 or 308.
       {
         source: '/:path((?!api$|api/).*)',
         has: [{ type: 'host', value: '(www\\.)?howtoworkleads\\.com' }],
